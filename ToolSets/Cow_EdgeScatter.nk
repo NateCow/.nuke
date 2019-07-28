@@ -1,0 +1,215 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+push $cut_paste_input
+Group {
+ name Cow_EdgeScatter
+ tile_color 0xcc804eff
+ selected true
+ xpos 98
+ ypos -99
+ addUserKnob {20 cow_es l EdgeScatter}
+ addUserKnob {41 blursize l Scatter T Cow_EdgeScatter.blursize}
+ addUserKnob {41 edgeblur l "Edge Softness" T Cow_EdgeScatter.edgeblur}
+ addUserKnob {41 opacity l Opacity T Cow_EdgeScatter.opacity}
+}
+ Input {
+  inputs 0
+  name Input1
+  xpos 500
+  ypos 379
+ }
+ NoOp {
+  name Cow_EdgeScatter
+  xpos 500
+  ypos 425
+  addUserKnob {20 cow_es l EdgeScatter}
+  addUserKnob {7 blursize l Scatter R 0 100}
+  blursize 30
+  addUserKnob {7 edgeblur l "Edge Softness" R 0 50}
+  edgeblur 10
+  addUserKnob {7 opacity l Opacity}
+  opacity 0.155
+ }
+ Dot {
+  name Dot7
+  xpos 534
+  ypos 484
+ }
+set N71d6000 [stack 0]
+ Dot {
+  name Dot8
+  xpos 644
+  ypos 484
+ }
+set N71d7c00 [stack 0]
+ Invert {
+  channels alpha
+  name Invert2
+  xpos 760
+  ypos 474
+ }
+ Dot {
+  name Dot9
+  xpos 794
+  ypos 715
+ }
+set N71d7400 [stack 0]
+ Group {
+  name Edger2
+  tile_color 0xffff
+  xpos 760
+  ypos 854
+  addUserKnob {20 User}
+  addUserKnob {7 Erode_Trace R 0 50}
+ }
+  Input {
+   inputs 0
+   name Input1
+   xpos 695
+   ypos -118
+  }
+  Blur {
+   size 1.6
+   name Blur2
+   xpos 695
+   ypos -4
+  }
+set N57bef400 [stack 0]
+  Invert {
+   name Invert1
+   xpos 592
+   ypos 70
+  }
+push $N57bef400
+  Merge2 {
+   inputs 2
+   operation min
+   name Merge1
+   xpos 695
+   ypos 126
+  }
+  Multiply {
+   value 2
+   name Multiply1
+   xpos 695
+   ypos 151
+  }
+  FilterErode {
+   channels alpha
+   size {{parent.Erode_Trace*-1}}
+   filter gaussian
+   name FilterErode1
+   xpos 695
+   ypos 183
+  }
+  Blur {
+   size {{parent.Erode_Trace}}
+   name Blur1
+   xpos 695
+   ypos 215
+  }
+  Shuffle {
+   red alpha
+   green alpha
+   blue alpha
+   name Shuffle1
+   xpos 695
+   ypos 284
+  }
+  Output {
+   name Output1
+   xpos 695
+   ypos 349
+  }
+ end_group
+push $N71d6000
+push $N71d6000
+ Dot {
+  name Dot10
+  xpos 414
+  ypos 484
+ }
+set N232d800 [stack 0]
+push $N71d6000
+ Merge2 {
+  inputs 2
+  operation stencil
+  name Merge11
+  xpos 380
+  ypos 540
+ }
+ Blur {
+  size {{parent.Cow_EdgeScatter.blursize}}
+  name Blur4
+  xpos 380
+  ypos 637
+ }
+ set C232d000 [stack 0]
+ Merge2 {
+  inputs 2
+  operation mask
+  name Merge12
+  xpos 500
+  ypos 643
+ }
+push $N71d7400
+push $N71d7c00
+push $N71d6000
+ Merge2 {
+  inputs 2
+  operation mask
+  name Merge13
+  xpos 610
+  ypos 540
+ }
+clone $C232d000 {
+  xpos 610
+  ypos 595
+  selected false
+ }
+ Merge2 {
+  inputs 2
+  operation mask
+  name Merge14
+  xpos 610
+  ypos 711
+ }
+ Grade {
+  multiply 1.18
+  name Grade4
+  xpos 610
+  ypos 737
+ }
+ Merge2 {
+  inputs 2
+  mix 0.405
+  name Merge15
+  xpos 500
+  ypos 798
+ }
+ Blur {
+  inputs 1+1
+  size {{parent.Cow_EdgeScatter.edgeblur}}
+  name Blur5
+  xpos 500
+  ypos 848
+ }
+push $N232d800
+ Dot {
+  name Dot11
+  xpos 306
+  ypos 484
+ }
+ Merge2 {
+  inputs 2
+  mix {{parent.Cow_EdgeScatter.opacity}}
+  name Merge16
+  xpos 272
+  ypos 854
+ }
+ Output {
+  name Output2
+  xpos 272
+  ypos 1044
+ }
+end_group

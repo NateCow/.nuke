@@ -1,0 +1,269 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+BackdropNode {
+ inputs 0
+ name BackdropNode1
+ tile_color 0x212121ff
+ label <center>Smoke
+ note_font_size 42
+ selected true
+ xpos 3140
+ ypos -510
+ bdwidth 540
+ bdheight 422
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/14. Smoke/Dark_Smoke.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 409
+ frame_mode "start at"
+ frame 1001
+ origlast 409
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read9
+ selected true
+ xpos 3150
+ ypos -430
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/14. Smoke/Puffy_Smoke_01.mov"
+ format "1280 637 0 0 1280 637 0.999216 "
+ last 449
+ frame_mode "start at"
+ frame 1001
+ origlast 449
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read10
+ selected true
+ xpos 3260
+ ypos -430
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/14. Smoke/Puffy_Smoke_02.mov"
+ format "1280 637 0 0 1280 637 0.999216 "
+ last 603
+ frame_mode "start at"
+ frame 1001
+ origlast 603
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read11
+ selected true
+ xpos 3370
+ ypos -430
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/14. Smoke/Smoke_01.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 501
+ frame_mode "start at"
+ frame 1001
+ origlast 501
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read12
+ selected true
+ xpos 3480
+ ypos -430
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/14. Smoke/Smoke_02.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 501
+ frame_mode "start at"
+ frame 1001
+ origlast 501
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read13
+ selected true
+ xpos 3590
+ ypos -430
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/14. Smoke/Smoke_03.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 500
+ frame_mode "start at"
+ frame 1001
+ origlast 500
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read14
+ selected true
+ xpos 3150
+ ypos -310
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/14. Smoke/Wisp_01.mov"
+ format "1280 640 0 0 1280 640 1 "
+ last 100
+ frame_mode "start at"
+ frame 1001
+ origlast 100
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read15
+ selected true
+ xpos 3260
+ ypos -310
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/14. Smoke/Wisp_02.mov"
+ format "1280 640 0 0 1280 640 1 "
+ last 105
+ frame_mode "start at"
+ frame 1001
+ origlast 105
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read16
+ selected true
+ xpos 3370
+ ypos -310
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/14. Smoke/Wisp_03.mov"
+ format "1280 640 0 0 1280 640 1 "
+ last 118
+ frame_mode "start at"
+ frame 1001
+ origlast 118
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read17
+ selected true
+ xpos 3480
+ ypos -310
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/14. Smoke/Wisp_04.mov"
+ format "1280 640 0 0 1280 640 1 "
+ last 138
+ frame_mode "start at"
+ frame 1001
+ origlast 138
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read19
+ selected true
+ xpos 3590
+ ypos -310
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/14. Smoke/Wisp_05.mov"
+ format "1280 640 0 0 1280 640 1 "
+ last 176
+ frame_mode "start at"
+ frame 1001
+ origlast 176
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read20
+ selected true
+ xpos 3150
+ ypos -190
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/14. Smoke/Wisp_06.mov"
+ format "1280 640 0 0 1280 640 1 "
+ last 142
+ frame_mode "start at"
+ frame 1001
+ origlast 142
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read21
+ selected true
+ xpos 3260
+ ypos -190
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/14. Smoke/Wisp_07.mov"
+ format "1280 640 0 0 1280 640 1 "
+ last 280
+ frame_mode "start at"
+ frame 1001
+ origlast 280
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read22
+ selected true
+ xpos 3370
+ ypos -190
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/14. Smoke/Wisp_08.mov"
+ format "1280 640 0 0 1280 640 1 "
+ last 204
+ frame_mode "start at"
+ frame 1001
+ origlast 204
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read23
+ selected true
+ xpos 3480
+ ypos -190
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/14. Smoke/Wisp_09.mov"
+ format "1280 640 0 0 1280 640 1 "
+ last 215
+ frame_mode "start at"
+ frame 1001
+ origlast 215
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read24
+ selected true
+ xpos 3590
+ ypos -190
+}

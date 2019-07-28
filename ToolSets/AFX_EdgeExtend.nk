@@ -1,0 +1,303 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+push $cut_paste_input
+Group {
+name AFX_EdgeExtend
+tile_color 0xff5f00ff
+selected true
+xpos 1642
+ypos 1309
+addUserKnob {20 AFXEdgeExtend}
+addUserKnob {41 erode l Erode T Ctrls.erode}
+addUserKnob {41 distance l Distance T Ctrls.distance}
+addUserKnob {41 vector_blur l "Vector Blur" T Ctrls.vector_blur}
+}
+Input {
+inputs 0
+name Input
+xpos -812
+ypos -452
+}
+Dot {
+name Dot2
+xpos -779
+ypos -337
+}
+set N55adfc00 [stack 0]
+NoOp {
+name Ctrls
+xpos -945
+ypos -341
+addUserKnob {20 AFXEdgeExtend}
+addUserKnob {7 erode l Erode R 0 10}
+erode 3
+addUserKnob {7 distance l Distance R 0 20}
+distance 10
+addUserKnob {7 vector_blur l "Vector Blur" R 0 20}
+vector_blur {{"distance / 2"}}
+}
+Input {
+inputs 0
+name matte
+xpos -587
+ypos -457
+number 1
+}
+Dot {
+name Dot3
+xpos -554
+ypos -346
+}
+push $N55adfc00
+Switch {
+inputs 2
+which {{"\[exists input1.parent.input]"}}
+name alpha_switch
+xpos -705
+ypos -294
+}
+Dot {
+name Dot34
+xpos -554
+ypos -202
+}
+FilterErode {
+size {{Ctrls.erode}}
+filter gaussian
+name FilterErode3
+xpos -587
+ypos -114
+}
+Dot {
+name Dot32
+xpos -554
+ypos -28
+}
+set N55ade400 [stack 0]
+Dot {
+name Dot33
+xpos -357
+ypos -28
+}
+set N55ade000 [stack 0]
+Dot {
+name Dot35
+xpos -170
+ypos -28
+}
+Dot {
+name Dot5
+xpos -170
+ypos 240
+}
+set N55aff800 [stack 0]
+Dot {
+name Dot46
+xpos -170
+ypos 422
+}
+set N55aff400 [stack 0]
+Dot {
+name Dot40
+xpos -170
+ypos 509
+}
+FilterErode {
+size {{Ctrls.vector_blur}}
+filter gaussian
+name FilterErode1
+xpos -329
+ypos 499
+}
+set N55afec00 [stack 0]
+Input {
+inputs 0
+name mask
+xpos -931
+ypos 341
+number 2
+}
+Dot {
+name Dot1
+xpos -898
+ypos 511
+}
+push $N55aff400
+push $N55aff800
+Invert {
+name Invert1
+xpos -340
+ypos 230
+}
+push $N55ade000
+Position {
+translate {0 1}
+name shift_up
+xpos -265
+ypos 42
+}
+push $N55ade000
+Merge2 {
+inputs 2
+operation minus
+bbox B
+Achannels {-rgba.red -rgba.green -rgba.blue rgba.alpha}
+Bchannels {-rgba.red -rgba.green -rgba.blue rgba.alpha}
+output {-rgba.red -rgba.green -rgba.blue rgba.alpha}
+name b_vec
+xpos -390
+ypos 36
+}
+Shuffle {
+in alpha
+red black
+green red
+out forward
+name Shuffle2
+xpos -390
+ypos 101
+}
+push $N55ade400
+Position {
+translate {1 0}
+name shift_right
+xpos -492
+ypos 43
+}
+push $N55ade400
+Merge2 {
+inputs 2
+operation minus
+bbox B
+Achannels {-rgba.red -rgba.green -rgba.blue rgba.alpha}
+Bchannels {-rgba.red -rgba.green -rgba.blue rgba.alpha}
+output {-rgba.red -rgba.green -rgba.blue rgba.alpha}
+name u_vec
+xpos -587
+ypos 37
+}
+Shuffle {
+in alpha
+green black
+out forward
+out2 alpha
+name Shuffle3
+xpos -587
+ypos 108
+}
+Copy {
+inputs 2
+from0 rgba.alpha
+to0 forward.v
+name Copy2
+xpos -587
+ypos 165
+}
+Blur {
+inputs 1+1
+channels forward
+size {{Ctrls.vector_blur}}
+quality 5
+name blur_vectors
+xpos -587
+ypos 230
+}
+Expression {
+temp_name2 scale
+temp_expr2 "max(sqrt((u*u)+(v*v)), 0.0008)"
+channel0 {forward.u -forward.v}
+expr0 "u / scale"
+channel1 {-forward.u forward.v}
+expr1 "v / scale"
+channel2 none
+channel3 none
+name normalize_vectors
+xpos -587
+ypos 292
+}
+push $N55adfc00
+Dot {
+name Dot38
+xpos -779
+ypos 353
+}
+Copy {
+inputs 2
+channels motion
+bbox B
+name Copy5
+xpos -587
+ypos 337
+}
+Copy {
+inputs 2
+from0 rgba.alpha
+to0 rgba.alpha
+bbox B
+name Copy6
+xpos -587
+ypos 412
+disable {{"\[python -execlocal disable\\ =\\ True\\n\\nif\\ \\\"rgba.alpha\\\"\\ in\\ nuke.toNode(\\\"alpha_switch\\\").channels():\\n\\ \\ \\ \\ disable\\ =\\ False\\n\\nret\\ =\\ disable]"}}
+}
+set N5556ec00 [stack 0]
+VectorBlur2 {
+inputs 1+1
+channels rgba
+uv forward
+blur_uv linear
+scale {{Ctrls.distance}}
+motion_falloff 1
+offset -1
+soft_lines true
+name VectorBlur2_2
+xpos -729
+ypos 501
+}
+set N5556e800 [stack 0]
+Merge2 {
+inputs 2
+operation from
+name Merge2
+xpos -329
+ypos 592
+}
+Grade {
+channels alpha
+white 3
+white_clamp true
+name Grade1
+xpos -329
+ypos 642
+}
+push $N55afec00
+Invert {
+name Invert2
+xpos -451
+ypos 499
+}
+push $N5556e800
+push $N5556ec00
+Keymix {
+inputs 3
+bbox A
+name Keymix1
+xpos -587
+ypos 599
+disable {{"\[python -execlocal disable\\ =\\ True\\n\\nif\\ \\\"rgba.alpha\\\"\\ in\\ nuke.toNode(\\\"alpha_switch\\\").channels():\\n\\ \\ \\ \\ disable\\ =\\ False\\n\\nret\\ =\\ disable]" x2 1}}
+}
+Copy {
+inputs 2
+from0 rgba.alpha
+to0 rgba.alpha
+bbox B
+name Copy1
+xpos -587
+ypos 696
+disable {{"\[python -execlocal disable\\ =\\ True\\n\\nif\\ \\\"rgba.alpha\\\"\\ in\\ nuke.toNode(\\\"alpha_switch\\\").channels():\\n\\ \\ \\ \\ disable\\ =\\ False\\n\\nret\\ =\\ disable]" x2 1}}
+}
+Output {
+name Output1
+xpos -587
+ypos 793
+}
+end_group

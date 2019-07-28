@@ -1,0 +1,401 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+push $cut_paste_input
+Group {
+ name CowSaber
+ tile_color 0x9fffff
+ selected true
+ xpos 916
+ ypos 151
+ addUserKnob {20 User l CowSaber}
+ addUserKnob {26 ""}
+ addUserKnob {41 blur_amount l Size T CowSaber.blur_amount}
+ addUserKnob {41 brightness l Brightness T CowSaber.brightness}
+ addUserKnob {41 core l Softness T CowSaber.core}
+ addUserKnob {26 ""}
+ addUserKnob {41 color_preset l "Color Presets" T CowSaber.color_preset}
+ addUserKnob {41 saturation l Saturation T CowSaber.saturation}
+ addUserKnob {41 color l "Custom Color" T CowSaber.color}
+}
+ StickyNote {
+  inputs 0
+  name StickyNote1
+  label "Custom\nRed\nGreen\nBlue\nCyan\nOrange\nYellow\nPink\nPurple\nNateCow\n"
+  xpos -484
+  ypos -284
+ }
+ Input {
+  inputs 0
+  name Input1
+  xpos -907
+  ypos -402
+ }
+ NoOp {
+  name CowSaber
+  xpos -907
+  ypos -325
+  addUserKnob {20 CowSaber}
+  addUserKnob {26 ""}
+  addUserKnob {7 blur_amount l Size R 0 10}
+  blur_amount 1.8
+  addUserKnob {7 brightness l Brightness R 0 5}
+  brightness 0.76
+  addUserKnob {7 core l Softness R 0 10}
+  core 1.65
+  addUserKnob {26 ""}
+  addUserKnob {4 color_preset l "Color Presets" M {Custom Red Green Blue Cyan Orange Yellow Pink Purple NateCow "" ""}}
+  color_preset NateCow
+  addUserKnob {7 saturation l Saturation t "Leave at 1 for presets or adjust to your liking." R 0 4}
+  saturation 1
+  addUserKnob {19 color l "Custom Color" R 0 4}
+  color {0 0 0 0}
+  addUserKnob {6 color_panelDropped l "panel dropped state" -STARTLINE +HIDDEN}
+  addUserKnob {6 Color_panelDropped l "panel dropped state" -STARTLINE +HIDDEN}
+ }
+ Blur {
+  size {{CowSaber.core*3}}
+  name Core_Softness
+  xpos -907
+  ypos -87
+ }
+set N5cc78800 [stack 0]
+ Dot {
+  name Dot1
+  xpos -624
+  ypos -77
+ }
+set N93766000 [stack 0]
+ Dot {
+  name Dot2
+  xpos -514
+  ypos -77
+ }
+set N6d8a8c00 [stack 0]
+ Dot {
+  name Dot3
+  xpos -418
+  ypos -77
+ }
+set N6d57e400 [stack 0]
+ Dot {
+  name Dot5
+  xpos -308
+  ypos -77
+ }
+set N64a49400 [stack 0]
+ Dot {
+  name Dot6
+  xpos -177
+  ypos -78
+ }
+set N5cc78c00 [stack 0]
+ Dot {
+  name Dot4
+  xpos -41
+  ypos -78
+ }
+set Nb6ef7400 [stack 0]
+ Dot {
+  name Dot7
+  xpos 87
+  ypos -78
+ }
+set N5e1aa000 [stack 0]
+ Dot {
+  name Dot8
+  xpos 207
+  ypos -78
+ }
+ Blur {
+  size {{Blur5.size*5}}
+  name Blur9
+  xpos 191
+  ypos 419
+ }
+push $N5e1aa000
+ Blur {
+  size {{Blur5.size*5}}
+  name Blur7
+  xpos 53
+  ypos 369
+ }
+push $Nb6ef7400
+ Blur {
+  size {{Blur5.size*2}}
+  name Blur6
+  xpos -75
+  ypos 305
+ }
+push $N5cc78c00
+ Blur {
+  size {{Blur4.size*2}}
+  name Blur5
+  xpos -211
+  ypos 244
+ }
+push $N64a49400
+ Blur {
+  size {{Blur3.size*2}}
+  name Blur4
+  xpos -341
+  ypos 198
+ }
+push $N6d57e400
+ Blur {
+  size {{Blur2.size*2}}
+  name Blur3
+  xpos -452
+  ypos 103
+ }
+push $N6d8a8c00
+ Blur {
+  size {{Blur1.size*10}}
+  name Blur2
+  xpos -548
+  ypos 46
+ }
+push $N93766000
+ Blur {
+  size {{CowSaber.blur_amount x1 0}}
+  name Blur1
+  xpos -658
+  ypos -19
+ }
+push $N5cc78800
+ Merge2 {
+  inputs 2
+  operation screen
+  mix {{CowSaber.brightness*0.8}}
+  name Merge1
+  xpos -907
+  ypos -19
+ }
+ Merge2 {
+  inputs 2
+  operation screen
+  mix {{CowSaber.brightness*0.4}}
+  name Merge2
+  xpos -907
+  ypos 52
+ }
+ Merge2 {
+  inputs 2
+  operation screen
+  mix {{CowSaber.brightness*0.25}}
+  name Merge3
+  xpos -907
+  ypos 109
+ }
+ Merge2 {
+  inputs 2
+  operation screen
+  mix {{CowSaber.brightness*0.235}}
+  name Merge4
+  xpos -907
+  ypos 204
+ }
+ Merge2 {
+  inputs 2
+  operation screen
+  mix {{CowSaber.brightness*0.13}}
+  name Merge5
+  xpos -907
+  ypos 250
+ }
+ Merge2 {
+  inputs 2
+  operation screen
+  mix {{CowSaber.brightness*0.125}}
+  name Merge6
+  xpos -907
+  ypos 311
+ }
+ Merge2 {
+  inputs 2
+  operation screen
+  mix {{CowSaber.brightness*0.07}}
+  name Merge7
+  xpos -907
+  ypos 375
+ }
+ Merge2 {
+  inputs 2
+  operation screen
+  mix {{CowSaber.brightness*0.03}}
+  name Merge8
+  xpos -907
+  ypos 425
+ }
+set Nb1f56800 [stack 0]
+ Grade {
+  white {1 1.3 4 1}
+  white_panelDropped true
+  name NateCow
+  xpos -285
+  ypos 741
+ }
+ Saturation {
+  saturation 1.42
+  name Saturation8
+  xpos -285
+  ypos 767
+ }
+push $Nb1f56800
+ Grade {
+  white {2 1 4 1}
+  white_panelDropped true
+  white_clamp true
+  name Purple
+  xpos -394
+  ypos 742
+ }
+ Saturation {
+  saturation 1.62
+  name Saturation7
+  xpos -394
+  ypos 768
+ }
+push $Nb1f56800
+ Grade {
+  white {4 1 2 1}
+  white_panelDropped true
+  white_clamp true
+  name Pink
+  xpos -510
+  ypos 742
+ }
+ Saturation {
+  saturation 1.3
+  name Saturation6
+  xpos -510
+  ypos 768
+ }
+push $Nb1f56800
+ Grade {
+  white {2 2 1 1}
+  white_panelDropped true
+  white_clamp true
+  name Yellow
+  xpos -611
+  ypos 743
+ }
+ Saturation {
+  saturation 1.8
+  name Yellow_Sat
+  xpos -611
+  ypos 769
+ }
+push $Nb1f56800
+ Grade {
+  white {4 2 1 1}
+  white_panelDropped true
+  white_clamp true
+  name Orange
+  xpos -742
+  ypos 745
+ }
+ Saturation {
+  saturation 1.48
+  name Orange_Sat
+  xpos -742
+  ypos 771
+ }
+push $Nb1f56800
+ Grade {
+  white {1 2 4 1}
+  white_panelDropped true
+  white_clamp true
+  name Cyan
+  xpos -867
+  ypos 745
+ }
+ Saturation {
+  saturation 1.64
+  name Saturation2
+  xpos -867
+  ypos 771
+ }
+push $Nb1f56800
+ Grade {
+  white {1 1 4 1}
+  white_panelDropped true
+  white_clamp true
+  name Blue
+  xpos -975
+  ypos 745
+ }
+ Saturation {
+  saturation 1.96
+  name Saturation3
+  xpos -975
+  ypos 771
+ }
+push $Nb1f56800
+ Grade {
+  white {1 2.36 1 1}
+  white_panelDropped true
+  white_clamp true
+  name Green
+  xpos -1080
+  ypos 747
+ }
+ Saturation {
+  saturation 1.5
+  name Saturation4
+  xpos -1080
+  ypos 773
+ }
+push $Nb1f56800
+ Grade {
+  white {4 1 1 1}
+  white_panelDropped true
+  white_clamp true
+  name Red
+  xpos -1183
+  ypos 738
+ }
+ Saturation {
+  saturation 1.68
+  name Saturation5
+  xpos -1183
+  ypos 764
+ }
+push $Nb1f56800
+ Grade {
+  white {{CowSaber.color} {CowSaber.color} {CowSaber.color} {CowSaber.color}}
+  white_panelDropped true
+  white_clamp true
+  name Custom
+  xpos -1288
+  ypos 742
+ }
+ Switch {
+  inputs 10
+  which {{CowSaber.color_preset}}
+  name Switch1
+  xpos -1017
+  ypos 841
+ }
+ Saturation {
+  saturation {{CowSaber.saturation}}
+  name Custom_Sat
+  xpos -1017
+  ypos 883
+ }
+ Keyer {
+  operation "luminance key"
+  name Keyer2
+  xpos -1017
+  ypos 909
+ }
+ Output {
+  name Output1
+  xpos -1017
+  ypos 979
+ }
+ Output {
+  name Output2
+  xpos -1017
+  ypos 1079
+ }
+end_group

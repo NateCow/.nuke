@@ -1,0 +1,654 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+push $cut_paste_input
+Group {
+ name EL_ChromaShift2
+ tile_color 0xff7800ff
+ selected true
+ xpos 3677
+ ypos 152
+ addUserKnob {20 User}
+ addUserKnob {4 ELCS_ORDER l "Abberation Order" M {RGB RBG GRB GBR BRG BGR ""}}
+ addUserKnob {12 ELCS_TRANS l Transform}
+ addUserKnob {7 ELCS_WEIGHT l Weight R 0 10}
+ addUserKnob {7 ELCS_Exponent l Exponent}
+ addUserKnob {7 ELCS_MIX l Mix}
+ addUserKnob {6 ELCS_SIMPLE l "Use Simple Abberation Instead of Exponent" +STARTLINE}
+}
+ StickyNote {
+  inputs 0
+  name StickyNote1
+  label "RGB\nRBG\nGRB\nGBR\nBRG\nBGR"
+  xpos 1561
+  ypos -678
+ }
+ Input {
+  inputs 0
+  name Input1
+  xpos 2406
+  ypos -937
+ }
+ Dot {
+  name Dot1
+  xpos 2440
+  ypos -825
+ }
+set Ne6df7400 [stack 0]
+ Shuffle {
+  green black
+  blue black
+  name Shuffle1
+  tile_color 0xff0000ff
+  xpos 2322
+  ypos -735
+ }
+set Ne6df7000 [stack 0]
+ Dot {
+  name Dot15
+  xpos 2713
+  ypos -600
+ }
+push $Ne6df7400
+ Shuffle {
+  red black
+  blue black
+  name Shuffle2
+  tile_color 0xff00ff
+  xpos 2406
+  ypos -734
+ }
+set Ne6df6800 [stack 0]
+ Dot {
+  name Dot16
+  xpos 2673
+  ypos -600
+ }
+push $Ne6df7000
+ Dot {
+  name Dot17
+  xpos 2641
+  ypos -599
+ }
+push $Ne6df7400
+ Shuffle {
+  red black
+  green black
+  name Shuffle3
+  tile_color 0xffff
+  xpos 2493
+  ypos -734
+ }
+set N323e5c00 [stack 0]
+ Dot {
+  name Dot18
+  xpos 2612
+  ypos -597
+ }
+push $Ne6df6800
+ Dot {
+  name Dot19
+  xpos 2578
+  ypos -593
+ }
+push $N323e5c00
+ Dot {
+  name Dot20
+  xpos 2549
+  ypos -588
+ }
+ Switch {
+  inputs 6
+  which {{parent.Switch1.which}}
+  name Switch3
+  xpos 2595
+  ypos -537
+ }
+set Na2dc4880 [stack 0]
+ Dot {
+  name Dot2
+  xpos 996
+  ypos -212
+ }
+push 0
+push $N323e5c00
+ Dot {
+  name Dot8
+  xpos 2317
+  ypos -585
+ }
+push $N323e5c00
+ Dot {
+  name Dot7
+  xpos 2290
+  ypos -583
+ }
+push $Ne6df6800
+ Dot {
+  name Dot6
+  xpos 2258
+  ypos -582
+ }
+push $Ne6df6800
+ Dot {
+  name Dot5
+  xpos 2229
+  ypos -580
+ }
+push $Ne6df7000
+ Dot {
+  name Dot4
+  xpos 2195
+  ypos -576
+ }
+push $Ne6df7000
+ Dot {
+  name Dot3
+  xpos 2166
+  ypos -571
+ }
+ Switch {
+  inputs 6
+  which {{parent.ELCS_ORDER}}
+  name Switch1
+  xpos 2211
+  ypos -519
+ }
+set Na2dc4d00 [stack 0]
+ Transform {
+  translate {{parent.ELCS_TRANS} {parent.ELCS_TRANS}}
+  center {{width*.5} {height*.5}}
+  name Transform1
+  xpos 589
+  ypos -209
+ }
+push $Ne6df6800
+ Dot {
+  name Dot9
+  xpos 2509
+  ypos -594
+ }
+push $Ne6df7000
+ Dot {
+  name Dot10
+  xpos 2482
+  ypos -592
+ }
+push $N323e5c00
+ Dot {
+  name Dot11
+  xpos 2450
+  ypos -591
+ }
+push $Ne6df7000
+ Dot {
+  name Dot12
+  xpos 2421
+  ypos -589
+ }
+push $N323e5c00
+ Dot {
+  name Dot13
+  xpos 2387
+  ypos -585
+ }
+push $Ne6df6800
+ Dot {
+  name Dot14
+  xpos 2358
+  ypos -580
+ }
+ Switch {
+  inputs 6
+  which {{parent.Switch1.which}}
+  name Switch2
+  xpos 2406
+  ypos -529
+ }
+set Na2dc5a80 [stack 0]
+ Transform {
+  translate {{parent.Transform1.translate*.5} {parent.Transform1.translate*.5}}
+  center {{width*.5} {height*.5}}
+  name Transform2
+  xpos 773
+  ypos -216
+ }
+ Merge2 {
+  inputs 3+1
+  operation plus
+  name Merge1
+  xpos 773
+  ypos -116
+ }
+ Multiply {
+  channels alpha
+  value 0.3333333333
+  name Multiply1
+  xpos 773
+  ypos -90
+ }
+ Dot {
+  name Dot31
+  xpos 807
+  ypos 7
+ }
+set Na2930800 [stack 0]
+ Viewer {
+  frame_range 1001-1062
+  name Viewer1
+  xpos 244
+  ypos 1119
+ }
+push $Na2930800
+ Dot {
+  name Dot32
+  xpos 593
+  ypos 7
+ }
+ Dot {
+  name Dot30
+  xpos 593
+  ypos 418
+ }
+push $Na2930800
+push $Na2dc4880
+ Dot {
+  name Dot21
+  xpos 1491
+  ypos -213
+ }
+push 0
+push $Na2dc4d00
+ Transform {
+  translate {{parent.Transform1.translate.x*EL_ChromaShift2.ELCS_Exponent} {parent.Transform1.translate.y*EL_ChromaShift2.ELCS_Exponent}}
+  center {{width*.5} {height*.5}}
+  name Transform3
+  xpos 1076
+  ypos -213
+ }
+push $Na2dc5a80
+ Transform {
+  translate {{parent.Transform2.translate.x*EL_ChromaShift2.ELCS_Exponent} {parent.Transform2.translate.y*EL_ChromaShift2.ELCS_Exponent}}
+  center {{width*.5} {height*.5}}
+  name Transform17
+  xpos 1268
+  ypos -210
+ }
+ Merge2 {
+  inputs 3+1
+  operation plus
+  name Merge2
+  xpos 1268
+  ypos -117
+ }
+ Multiply {
+  channels alpha
+  value 0.3333333333
+  name Multiply2
+  xpos 1268
+  ypos -91
+ }
+ Merge2 {
+  inputs 2
+  operation plus
+  name Merge9
+  xpos 1268
+  ypos 3
+ }
+set Nf3450800 [stack 0]
+push $Na2dc4880
+ Dot {
+  name Dot22
+  xpos 1942
+  ypos -218
+ }
+push 0
+push $Na2dc4d00
+ Transform {
+  translate {{parent.Transform3.translate.x*EL_ChromaShift2.ELCS_Exponent} {parent.Transform3.translate.y*EL_ChromaShift2.ELCS_Exponent}}
+  center {{width*.5} {height*.5}}
+  name Transform4
+  xpos 1562
+  ypos -194
+ }
+push $Na2dc5a80
+ Transform {
+  translate {{parent.Transform17.translate.x*EL_ChromaShift2.ELCS_Exponent} {parent.Transform17.translate.y*EL_ChromaShift2.ELCS_Exponent}}
+  center {{width*.5} {height*.5}}
+  name Transform18
+  xpos 1719
+  ypos -196
+ }
+ Merge2 {
+  inputs 3+1
+  operation plus
+  name Merge3
+  xpos 1719
+  ypos -122
+ }
+ Multiply {
+  channels alpha
+  value 0.3333333333
+  name Multiply3
+  xpos 1719
+  ypos -96
+ }
+ Merge2 {
+  inputs 2
+  operation plus
+  name Merge10
+  xpos 1719
+  ypos 3
+ }
+set Ncf51d000 [stack 0]
+push $Na2dc4880
+ Dot {
+  name Dot23
+  xpos 2405
+  ypos -219
+ }
+push 0
+push $Na2dc4d00
+ Transform {
+  translate {{parent.Transform4.translate.x*EL_ChromaShift2.ELCS_Exponent} {parent.Transform4.translate.y*EL_ChromaShift2.ELCS_Exponent}}
+  center {{width*.5} {height*.5}}
+  name Transform5
+  xpos 1987
+  ypos -194
+ }
+push $Na2dc5a80
+ Transform {
+  translate {{parent.Transform18.translate.x*EL_ChromaShift2.ELCS_Exponent} {parent.Transform18.translate.y*EL_ChromaShift2.ELCS_Exponent}}
+  center {{width*.5} {height*.5}}
+  name Transform6
+  xpos 2182
+  ypos -197
+ }
+ Merge2 {
+  inputs 3+1
+  operation plus
+  name Merge4
+  xpos 2182
+  ypos -123
+ }
+ Multiply {
+  channels alpha
+  value 0.3333333333
+  name Multiply4
+  xpos 2182
+  ypos -97
+ }
+ Merge2 {
+  inputs 2
+  operation plus
+  name Merge11
+  xpos 2181
+  ypos 3
+ }
+set N69d07800 [stack 0]
+push $Na2dc4880
+ Dot {
+  name Dot24
+  xpos 2883
+  ypos -217
+ }
+push 0
+push $Na2dc4d00
+ Transform {
+  translate {{parent.Transform5.translate.x*EL_ChromaShift2.ELCS_Exponent} {parent.Transform5.translate.y*EL_ChromaShift2.ELCS_Exponent}}
+  center {{width*.5} {height*.5}}
+  name Transform7
+  xpos 2465
+  ypos -192
+ }
+push $Na2dc5a80
+ Transform {
+  translate {{parent.Transform6.translate.x*EL_ChromaShift2.ELCS_Exponent} {parent.Transform6.translate.y*EL_ChromaShift2.ELCS_Exponent}}
+  center {{width*.5} {height*.5}}
+  name Transform8
+  xpos 2660
+  ypos -195
+ }
+ Merge2 {
+  inputs 3+1
+  operation plus
+  name Merge5
+  xpos 2660
+  ypos -121
+ }
+ Multiply {
+  channels alpha
+  value 0.3333333333
+  name Multiply5
+  xpos 2660
+  ypos -95
+ }
+ Merge2 {
+  inputs 2
+  operation plus
+  name Merge12
+  xpos 2660
+  ypos 13
+ }
+set N69d06000 [stack 0]
+push $Na2dc4880
+ Dot {
+  name Dot25
+  xpos 3363
+  ypos -210
+ }
+push 0
+push $Na2dc4d00
+ Transform {
+  translate {{parent.Transform7.translate.x*EL_ChromaShift2.ELCS_Exponent} {parent.Transform7.translate.y*EL_ChromaShift2.ELCS_Exponent}}
+  center {{width*.5} {height*.5}}
+  name Transform9
+  xpos 2945
+  ypos -185
+ }
+push $Na2dc5a80
+ Transform {
+  translate {{parent.Transform8.translate.x*EL_ChromaShift2.ELCS_Exponent} {parent.Transform8.translate.y*EL_ChromaShift2.ELCS_Exponent}}
+  center {{width*.5} {height*.5}}
+  name Transform10
+  xpos 3140
+  ypos -188
+ }
+ Merge2 {
+  inputs 3+1
+  operation plus
+  name Merge6
+  xpos 3140
+  ypos -114
+ }
+ Multiply {
+  channels alpha
+  value 0.3333333333
+  name Multiply6
+  xpos 3140
+  ypos -88
+ }
+ Merge2 {
+  inputs 2
+  operation plus
+  name Merge13
+  xpos 3140
+  ypos 22
+ }
+set Ne6f68800 [stack 0]
+push $Na2dc4880
+ Dot {
+  name Dot26
+  xpos 3849
+  ypos -207
+ }
+push 0
+push $Na2dc4d00
+ Transform {
+  translate {{parent.Transform9.translate.x*EL_ChromaShift2.ELCS_Exponent} {parent.Transform9.translate.y*EL_ChromaShift2.ELCS_Exponent}}
+  center {{width*.5} {height*.5}}
+  name Transform11
+  xpos 3431
+  ypos -182
+ }
+push $Na2dc5a80
+ Transform {
+  translate {{parent.Transform10.translate.x*EL_ChromaShift2.ELCS_Exponent} {parent.Transform10.translate.y*EL_ChromaShift2.ELCS_Exponent}}
+  center {{width*.5} {height*.5}}
+  name Transform12
+  xpos 3626
+  ypos -185
+ }
+ Merge2 {
+  inputs 3+1
+  operation plus
+  name Merge7
+  xpos 3626
+  ypos -111
+ }
+ Multiply {
+  channels alpha
+  value 0.3333333333
+  name Multiply7
+  xpos 3626
+  ypos -85
+ }
+ Merge2 {
+  inputs 2
+  operation plus
+  name Merge14
+  xpos 3626
+  ypos 22
+ }
+set Naddb1000 [stack 0]
+push $Na2dc4880
+ Dot {
+  name Dot27
+  xpos 4367
+  ypos -211
+ }
+push 0
+push $Na2dc4d00
+ Transform {
+  translate {{parent.Transform11.translate.x*EL_ChromaShift2.ELCS_Exponent} {parent.Transform11.translate.y*EL_ChromaShift2.ELCS_Exponent}}
+  center {{width*.5} {height*.5}}
+  name Transform13
+  xpos 3949
+  ypos -186
+ }
+push $Na2dc5a80
+ Transform {
+  translate {{parent.Transform12.translate.x*EL_ChromaShift2.ELCS_Exponent} {parent.Transform12.translate.y*EL_ChromaShift2.ELCS_Exponent}}
+  center {{width*.5} {height*.5}}
+  name Transform14
+  xpos 4144
+  ypos -189
+ }
+ Merge2 {
+  inputs 3+1
+  operation plus
+  name Merge8
+  xpos 4144
+  ypos -115
+ }
+ Multiply {
+  channels alpha
+  value 0.3333333333
+  name Multiply8
+  xpos 4144
+  ypos -89
+ }
+ Merge2 {
+  inputs 2
+  operation plus
+  name Merge15
+  xpos 4144
+  ypos 22
+ }
+ Multiply {
+  value 0.125
+  name Multiply15
+  xpos 4144
+  ypos 48
+ }
+push $Naddb1000
+ Multiply {
+  value 0.1428571429
+  name Multiply14
+  xpos 3626
+  ypos 48
+ }
+push $Ne6f68800
+ Multiply {
+  value 0.1666666667
+  name Multiply13
+  xpos 3140
+  ypos 48
+ }
+push $N69d06000
+ Multiply {
+  value 0.2
+  name Multiply12
+  xpos 2660
+  ypos 39
+ }
+push $N69d07800
+ Multiply {
+  value 0.25
+  name Multiply11
+  xpos 2181
+  ypos 29
+ }
+push $Ncf51d000
+ Multiply {
+  value 0.3333333333
+  name Multiply10
+  xpos 1719
+  ypos 29
+ }
+push 0
+push $Nf3450800
+ Multiply {
+  value 0.5
+  name Multiply9
+  xpos 1268
+  ypos 29
+ }
+push $Na2930800
+ Dissolve {
+  inputs 8+1
+  which {{parent.ELCS_WEIGHT}}
+  name Dissolve1
+  xpos 773
+  ypos 304
+ }
+ Switch {
+  inputs 2
+  which {{parent.ELCS_SIMPLE}}
+  name Switch4
+  xpos 773
+  ypos 414
+ }
+push $Ne6df7400
+ Dot {
+  name Dot29
+  xpos 267
+  ypos -825
+ }
+ Dot {
+  name Dot28
+  xpos 267
+  ypos 529
+ }
+ Dissolve {
+  inputs 2
+  which {{parent.ELCS_MIX}}
+  name Dissolve2
+  xpos 773
+  ypos 519
+ }
+ Output {
+  name Output8
+  xpos 773
+  ypos 596
+ }
+end_group

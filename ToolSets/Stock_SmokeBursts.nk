@@ -1,0 +1,65 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+BackdropNode {
+inputs 0
+name BackdropNode2
+tile_color 0x212121ff
+label "Smoke Bursts"
+note_font_size 42
+selected true
+xpos -1129
+ypos 3208
+bdwidth 320
+bdheight 182
+}
+Read {
+inputs 0
+file "S:/Assets/Stock Footage/gunshots/Gunshot_Front_3.mov"
+format "1920 1080 0 0 1920 1080 1 HD_1080"
+last 101
+frame_mode "start at"
+frame 1001
+origlast 101
+origset true
+colorspace sRGB
+mov32_codec {{0} "Apple PNG (appl - png )"}
+mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+name Read7
+selected true
+xpos -1119
+ypos 3288
+}
+Read {
+inputs 0
+file "S:/Assets/Stock Footage/gunshots/Gunshot_Side_1.mov"
+format "1920 1080 0 0 1920 1080 1 HD_1080"
+last 101
+frame_mode "start at"
+frame 1001
+origlast 101
+origset true
+colorspace sRGB
+mov32_codec {{0} "Apple PNG (appl - png )"}
+mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+name Read8
+selected true
+xpos -1009
+ypos 3288
+}
+Read {
+inputs 0
+file "S:/Assets/Stock Footage/gunshots/Gunshot_Side_2.mov"
+format "1920 1080 0 0 1920 1080 1 HD_1080"
+last 101
+frame_mode "start at"
+frame 1001
+origlast 101
+origset true
+colorspace sRGB
+mov32_codec {{0} "Apple PNG (appl - png )"}
+mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+name Read18
+selected true
+xpos -899
+ypos 3288
+}

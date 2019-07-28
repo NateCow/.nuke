@@ -1,0 +1,405 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+BackdropNode {
+ inputs 0
+ name BackdropNode1
+ tile_color 0x212121ff
+ label "Dirt Charges\n"
+ note_font_size 42
+ selected true
+ xpos 2243
+ ypos -176
+ bdwidth 686
+ bdheight 623
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/06. Dirt_Charges/Dirt_Charge_01.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 92
+ frame_mode "start at"
+ frame 1001
+ origlast 92
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read9
+ selected true
+ xpos 2270
+ ypos -88
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/06. Dirt_Charges/Dirt_Charge_02.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 79
+ frame_mode "start at"
+ frame 1001
+ origlast 79
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read10
+ selected true
+ xpos 2380
+ ypos -88
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/06. Dirt_Charges/Dirt_Charge_03.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 100
+ frame_mode "start at"
+ frame 1001
+ origlast 100
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read11
+ selected true
+ xpos 2490
+ ypos -88
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/06. Dirt_Charges/Dirt_Charge_04.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 75
+ frame_mode "start at"
+ frame 1001
+ origlast 75
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read12
+ selected true
+ xpos 2600
+ ypos -88
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/06. Dirt_Charges/Dirt_Charge_05.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 84
+ frame_mode "start at"
+ frame 1001
+ origlast 84
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read13
+ selected true
+ xpos 2710
+ ypos -88
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/06. Dirt_Charges/Dirt_Charge_06.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 70
+ frame_mode "start at"
+ frame 1001
+ origlast 70
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read14
+ selected true
+ xpos 2820
+ ypos -88
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/06. Dirt_Charges/Dirt_Charge_07.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 73
+ frame_mode "start at"
+ frame 1001
+ origlast 73
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read15
+ selected true
+ xpos 2271
+ ypos 42
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/06. Dirt_Charges/Dirt_Charge_08.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 93
+ frame_mode "start at"
+ frame 1001
+ origlast 93
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read16
+ selected true
+ xpos 2381
+ ypos 42
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/06. Dirt_Charges/Dirt_Charge_09.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 117
+ frame_mode "start at"
+ frame 1001
+ origlast 117
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read17
+ selected true
+ xpos 2491
+ ypos 42
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/06. Dirt_Charges/Dirt_Charge_10.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 61
+ frame_mode "start at"
+ frame 1001
+ origlast 61
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read18
+ selected true
+ xpos 2601
+ ypos 42
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/06. Dirt_Charges/Dirt_Charge_11.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 40
+ frame_mode "start at"
+ frame 1001
+ origlast 40
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read19
+ selected true
+ xpos 2711
+ ypos 42
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/06. Dirt_Charges/Dirt_Charge_12.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 124
+ frame_mode "start at"
+ frame 1001
+ origlast 124
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read20
+ selected true
+ xpos 2821
+ ypos 42
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/06. Dirt_Charges/Dirt_Charge_13.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 138
+ frame_mode "start at"
+ frame 1001
+ origlast 138
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read21
+ selected true
+ xpos 2265
+ ypos 180
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/06. Dirt_Charges/Dirt_Charge_14.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 140
+ frame_mode "start at"
+ frame 1001
+ origlast 140
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read22
+ selected true
+ xpos 2375
+ ypos 180
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/06. Dirt_Charges/Dirt_Charge_15.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 207
+ frame_mode "start at"
+ frame 1001
+ origlast 207
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read23
+ selected true
+ xpos 2485
+ ypos 180
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/06. Dirt_Charges/Dirt_Charge_16.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 283
+ frame_mode "start at"
+ frame 1001
+ origlast 283
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read24
+ selected true
+ xpos 2595
+ ypos 180
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/06. Dirt_Charges/Dirt_Charge_17.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 110
+ frame_mode "start at"
+ frame 1001
+ origlast 110
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read25
+ selected true
+ xpos 2705
+ ypos 180
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/06. Dirt_Charges/Dirt_Charge_18.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 126
+ frame_mode "start at"
+ frame 1001
+ origlast 126
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read26
+ selected true
+ xpos 2815
+ ypos 180
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/06. Dirt_Charges/Dirt_Charge_19.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 130
+ frame_mode "start at"
+ frame 1001
+ origlast 130
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read27
+ selected true
+ xpos 2270
+ ypos 315
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/06. Dirt_Charges/Dirt_Charge_20.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 236
+ frame_mode "start at"
+ frame 1001
+ origlast 236
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read28
+ selected true
+ xpos 2380
+ ypos 315
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/06. Dirt_Charges/Dirt_Charge_21.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 255
+ frame_mode "start at"
+ frame 1001
+ origlast 255
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read29
+ selected true
+ xpos 2490
+ ypos 315
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/06. Dirt_Charges/Dirt_Charge_22.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 205
+ frame_mode "start at"
+ frame 1001
+ origlast 205
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read30
+ selected true
+ xpos 2600
+ ypos 315
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/06. Dirt_Charges/Dirt_Charge_23.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 150
+ frame_mode "start at"
+ frame 1001
+ origlast 150
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read31
+ selected true
+ xpos 2710
+ ypos 315
+}

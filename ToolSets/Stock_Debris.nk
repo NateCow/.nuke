@@ -1,0 +1,558 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+BackdropNode {
+ inputs 0
+ name BackdropNode1
+ tile_color 0x212121ff
+ label <center>Debris
+ note_font_size 42
+ selected true
+ xpos 3910
+ ypos -774
+ bdwidth 650
+ bdheight 854
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/05. Debris/Bouncing_Debris_06.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 92
+ frame_mode "start at"
+ frame 1001
+ origlast 92
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read14
+ selected true
+ xpos 4470
+ ypos -694
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/05. Debris/Cement_Collapse_02.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 136
+ frame_mode "start at"
+ frame 1001
+ origlast 136
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read16
+ selected true
+ xpos 4030
+ ypos -550
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/05. Debris/Cement_Collapse_03.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 136
+ frame_mode "start at"
+ frame 1001
+ origlast 136
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read17
+ selected true
+ xpos 4140
+ ypos -550
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/05. Debris/Cement_Collapse_04.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 107
+ frame_mode "start at"
+ frame 1001
+ origlast 107
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read19
+ selected true
+ xpos 4250
+ ypos -550
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/05. Debris/Debris_Fall_01.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 225
+ frame_mode "start at"
+ frame 1001
+ origlast 225
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read20
+ selected true
+ xpos 4360
+ ypos -550
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/05. Debris/Debris_Fall_03.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 177
+ frame_mode "start at"
+ frame 1001
+ origlast 177
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read22
+ selected true
+ xpos 3920
+ ypos -406
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/05. Debris/Debris_Fall_04.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 41
+ frame_mode "start at"
+ frame 1001
+ origlast 41
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read23
+ selected true
+ xpos 4030
+ ypos -406
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/05. Debris/Debris_Fall_05.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 125
+ frame_mode "start at"
+ frame 1001
+ origlast 125
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read24
+ selected true
+ xpos 4140
+ ypos -406
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/05. Debris/Debris_Fall_06.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 224
+ frame_mode "start at"
+ frame 1001
+ origlast 224
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read25
+ selected true
+ xpos 4250
+ ypos -406
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/05. Debris/Debris_Fall_07.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 350
+ frame_mode "start at"
+ frame 1001
+ origlast 350
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read26
+ selected true
+ xpos 4360
+ ypos -406
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/05. Debris/Debris_Fllying_01.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 90
+ frame_mode "start at"
+ frame 1001
+ origlast 90
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read27
+ selected true
+ xpos 4470
+ ypos -406
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/05. Debris/Debris_Flying_02.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 106
+ frame_mode "start at"
+ frame 1001
+ origlast 106
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read28
+ selected true
+ xpos 3920
+ ypos -286
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/05. Debris/Debris_Flying_03.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 136
+ frame_mode "start at"
+ frame 1001
+ origlast 136
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read29
+ selected true
+ xpos 4030
+ ypos -286
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/05. Debris/Debris_Flying_04.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 109
+ frame_mode "start at"
+ frame 1001
+ origlast 109
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read30
+ selected true
+ xpos 4140
+ ypos -286
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/05. Debris/Debris_Flying_05.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 126
+ frame_mode "start at"
+ frame 1001
+ origlast 126
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read31
+ selected true
+ xpos 4250
+ ypos -286
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/05. Debris/Lightbulb_Shatter_01.mov"
+ format "1280 637 0 0 1280 637 0.999216 "
+ last 191
+ frame_mode "start at"
+ frame 1001
+ origlast 191
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read32
+ selected true
+ xpos 4360
+ ypos -286
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/05. Debris/Lightbulb_Shatter_02.mov"
+ format "1280 637 0 0 1280 637 0.999216 "
+ last 116
+ frame_mode "start at"
+ frame 1001
+ origlast 116
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read33
+ selected true
+ xpos 4470
+ ypos -286
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/05. Debris/Lightbulb_Shatter_03.mov"
+ format "1280 637 0 0 1280 637 0.999216 "
+ last 51
+ frame_mode "start at"
+ frame 1001
+ origlast 51
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read34
+ selected true
+ xpos 3920
+ ypos -142
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/05. Debris/Lightbulb_Shatter_04.mov"
+ format "1280 637 0 0 1280 637 0.999216 "
+ last 74
+ frame_mode "start at"
+ frame 1001
+ origlast 74
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read35
+ selected true
+ xpos 4030
+ ypos -142
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/05. Debris/Rock_Debris_01.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 35
+ frame_mode "start at"
+ frame 1001
+ origlast 35
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read36
+ selected true
+ xpos 4140
+ ypos -142
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/05. Debris/Rock_Debris_02.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 38
+ frame_mode "start at"
+ frame 1001
+ origlast 38
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read37
+ selected true
+ xpos 4250
+ ypos -142
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/05. Debris/Rock_Debris_03.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 210
+ frame_mode "start at"
+ frame 1001
+ origlast 210
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read38
+ selected true
+ xpos 4360
+ ypos -142
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/05. Debris/Rock_Debris_04.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 212
+ frame_mode "start at"
+ frame 1001
+ origlast 212
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read39
+ selected true
+ xpos 4470
+ ypos -142
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/05. Debris/Wood_Debris_01.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 37
+ frame_mode "start at"
+ frame 1001
+ origlast 37
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read40
+ selected true
+ xpos 4140
+ ypos -22
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/05. Debris/Wood_Debris_02.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 31
+ frame_mode "start at"
+ frame 1001
+ origlast 31
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read42
+ selected true
+ xpos 4250
+ ypos -22
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/05. Debris/Debris_Fall_02.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 195
+ frame_mode "start at"
+ frame 1001
+ origlast 195
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read21
+ selected true
+ xpos 4470
+ ypos -550
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/05. Debris/Bouncing_Debris_01.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 82
+ frame_mode "start at"
+ frame 1001
+ origlast 82
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read9
+ selected true
+ xpos 3920
+ ypos -694
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/05. Debris/Bouncing_Debris_02.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 80
+ frame_mode "start at"
+ frame 1001
+ origlast 80
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read10
+ selected true
+ xpos 4030
+ ypos -694
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/05. Debris/Bouncing_Debris_03.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 82
+ frame_mode "start at"
+ frame 1001
+ origlast 82
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read11
+ selected true
+ xpos 4140
+ ypos -694
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/05. Debris/Bouncing_Debris_04.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 78
+ frame_mode "start at"
+ frame 1001
+ origlast 78
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read12
+ selected true
+ xpos 4250
+ ypos -694
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/05. Debris/Bouncing_Debris_05.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 92
+ frame_mode "start at"
+ frame 1001
+ origlast 92
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read13
+ selected true
+ xpos 4360
+ ypos -694
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/05. Debris/Cement_Collapse_01.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 136
+ frame_mode "start at"
+ frame 1001
+ origlast 136
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read15
+ selected true
+ xpos 3920
+ ypos -550
+}

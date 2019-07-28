@@ -1,0 +1,85 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+push $cut_paste_input
+Group {
+ name Edgescatter
+ tile_color 0xffff
+ selected true
+ xpos 2192
+ ypos 302
+ addUserKnob {20 User}
+ addUserKnob {7 Scatter R 0 100}
+ Scatter 11
+}
+ Input {
+  inputs 0
+  name Input1
+  xpos 661
+  ypos 404
+ }
+ Dot {
+  name Dot1
+  xpos 695
+  ypos 478
+ }
+set N4ce48800 [stack 0]
+ Dot {
+  name Dot4
+  xpos 622
+  ypos 564
+ }
+set N4ce48400 [stack 0]
+ Dot {
+  name Dot3
+  xpos 622
+  ypos 772
+ }
+push $N4ce48800
+ Dot {
+  name Dot2
+  xpos 695
+  ypos 585
+ }
+push $N4ce48800
+ Blur {
+  size {{parent.Scatter}}
+  name ES_Blur_A
+  xpos 739
+  ypos 530
+ }
+push $N4ce48800
+ Merge2 {
+  inputs 2
+  operation minus
+  name Merge3
+  xpos 739
+  ypos 607
+ }
+push $N4ce48400
+ Merge2 {
+  inputs 2+1
+  name Merge4
+  xpos 661
+  ypos 681
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy1
+  xpos 661
+  ypos 762
+ }
+ Output {
+  name Output1
+  xpos 661
+  ypos 846
+ }
+push $N4ce48400
+ Viewer {
+  frame_range 1-100
+  name Viewer1
+  xpos 408
+  ypos 637
+ }
+end_group

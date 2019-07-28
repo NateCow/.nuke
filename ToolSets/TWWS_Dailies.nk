@@ -1,0 +1,162 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+BackdropNode {
+ inputs 0
+ name BackdropNode17
+ tile_color 0x8e388e00
+ label Dailies
+ note_font_size 42
+ selected true
+ xpos -117
+ ypos 3148
+ bdwidth 503
+ bdheight 506
+}
+Text2 {
+ inputs 0
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[frame]"
+ old_message {{49 48 48 49}
+   }
+ old_expression_markers {{0 3}
+   }
+ box {35 30 220 112}
+ transforms {{0 2}
+   }
+ cursor_position 7
+ font {{ Ubuntu : Regular : Ubuntu-R.ttf : 0 }}
+ global_font_scale 0.8
+ scale {1 1}
+ center {1920 1080}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{37.5 112.5}
+   }
+ group_animations {{0} imported: 0 selected: 0 items: "root transform/"}
+ animation_layers {{1 11 1920 1080 0 0 1 1 0 0 0 0}
+   }
+ name Text2
+ selected true
+ xpos -60
+ ypos 3356
+}
+push 0
+Text2 {
+ inputs 0
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message TWWS_102_37_003_v01
+ old_message {{84 87 87 83 95 49 48 50 95 51 55 95 48 48 51 95 118 48 49}
+   }
+ box {2932 37.5 3812 112}
+ transforms {{0 2}
+   }
+ font_size_values {{0 100 1 100 2 100 3 100 4 100 5 100 6 100 7 100 8 100 9 100 10 100 11 100 12 100 13 100 14 100 15 100 16 100 17 100 18 100 0 97 1 97 2 97 3 97 4 97 5 97 6 97 7 97 8 97 9 97 10 97 11 97 12 97 13 97 14 97 15 97 16 97 17 97 18 97}
+   }
+ cursor_position 9
+ font {{ Ubuntu : Light : Ubuntu-L.ttf : 0 }}
+ global_font_scale 0.8
+ scale {1 1}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{2932 118.5}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1920 1080 0 0 1 1 0 0 0 0}
+   }
+ name Text1
+ selected true
+ xpos 286
+ ypos 3359
+}
+push $cut_paste_input
+Dot {
+ name Dot31
+ label "TIFF Render"
+ note_font_size 22
+ selected true
+ xpos 114
+ ypos 3295
+}
+Merge2 {
+ inputs 3+1
+ name Merge26
+ selected true
+ xpos 80
+ ypos 3359
+}
+Read {
+ inputs 0
+ file F:/Freelance/TWWS/102/037/TWWS_102_37_003/slate_v01.jpg
+ format "3840 2160 0 0 3840 2160 1 UHD_4K"
+ origset true
+ name Read5
+ selected true
+ xpos -107
+ ypos 3428
+}
+Switch {
+ inputs 2
+ which {{curve x1000 0 1}}
+ name Switch1
+ selected true
+ xpos 80
+ ypos 3458
+}
+Reformat {
+ format "1920 1080 0 0 1920 1080 1 HD_1080"
+ name Reformat2
+ selected true
+ xpos 80
+ ypos 3499
+}
+Write {
+ file F:/Freelance/TWWS/102/037/TWWS_102_37_003/comp/TWWS_102_37_003_v01.mov
+ colorspace sRGB
+ file_type mov
+ meta_codec AVdn
+ mov32_codec AVdn
+ mov32_fps 23.98
+ mov32_pixel_format {{0} "default (YCbCr  8-bit 422 (2vuy))" "RGBA  8-bit" "RGBA  16-bit (b64a)" "YCbCrA 8-bit 444 Biased (r408)" "YCbCr  8-bit 422 (2vuy)"}
+ mov64_codec AVdn
+ mov64_dnxhd_codec_profile "DNxHD 422 8-bit 36Mbit"
+ mov64_fps 23.98
+ mov64_advanced 1
+ mov64_bitrate 20000
+ mov64_bitrate_tolerance 40000000
+ mov64_quality_min 2
+ mov64_quality_max 31
+ mov64_gop_size 12
+ mov64_b_frames 0
+ checkHashOnRead false
+ version 1
+ in_colorspace linear
+ out_colorspace linear
+ name Write5
+ selected true
+ xpos 80
+ ypos 3581
+}
+StickyNote {
+ inputs 0
+ name StickyNote3
+ tile_color 0xff0000ff
+ label "CHANGE ME!!!!"
+ note_font_size 32
+ selected true
+ xpos 329
+ ypos 3314
+}
+StickyNote {
+ inputs 0
+ name StickyNote4
+ tile_color 0xff0000ff
+ label "CHANGE ME!!!!"
+ note_font_size 32
+ selected true
+ xpos -342
+ ypos 3445
+}

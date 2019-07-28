@@ -1,0 +1,269 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+BackdropNode {
+ inputs 0
+ name BackdropNode4
+ tile_color 0x212121ff
+ label "<center>Smoke 2k"
+ note_font_size 42
+ selected true
+ xpos -4778
+ ypos 45
+ bdwidth 540
+ bdheight 422
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Video.Copilot.Action.Essentials.2(smoke)2K/14. Smoke/Dark_Smoke.mov"
+ format "2048 1152 0 0 2048 1152 1 "
+ last 409
+ frame_mode "start at"
+ frame 1001
+ origlast 409
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read30
+ selected true
+ xpos -4770
+ ypos 127
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Video.Copilot.Action.Essentials.2(smoke)2K/14. Smoke/Puffy_Smoke_01.mov"
+ format "2048 1020 0 0 2048 1020 1 "
+ last 449
+ frame_mode "start at"
+ frame 1001
+ origlast 449
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read31
+ selected true
+ xpos -4660
+ ypos 127
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Video.Copilot.Action.Essentials.2(smoke)2K/14. Smoke/Puffy_Smoke_02.mov"
+ format "2048 1020 0 0 2048 1020 1 "
+ last 603
+ frame_mode "start at"
+ frame 1001
+ origlast 603
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read32
+ selected true
+ xpos -4550
+ ypos 127
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Video.Copilot.Action.Essentials.2(smoke)2K/14. Smoke/Smoke_01.mov"
+ format "2048 1152 0 0 2048 1152 1 "
+ last 501
+ frame_mode "start at"
+ frame 1001
+ origlast 501
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read33
+ selected true
+ xpos -4440
+ ypos 127
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Video.Copilot.Action.Essentials.2(smoke)2K/14. Smoke/Smoke_02.mov"
+ format "2048 1152 0 0 2048 1152 1 "
+ last 501
+ frame_mode "start at"
+ frame 1001
+ origlast 501
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read34
+ selected true
+ xpos -4330
+ ypos 127
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Video.Copilot.Action.Essentials.2(smoke)2K/14. Smoke/Wisp_01.mov"
+ format "2048 1024 0 0 2048 1024 1 "
+ last 100
+ frame_mode "start at"
+ frame 1001
+ origlast 100
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read36
+ selected true
+ xpos -4660
+ ypos 247
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Video.Copilot.Action.Essentials.2(smoke)2K/14. Smoke/Wisp_02.mov"
+ format "2048 1024 0 0 2048 1024 1 "
+ last 105
+ frame_mode "start at"
+ frame 1001
+ origlast 105
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read37
+ selected true
+ xpos -4550
+ ypos 247
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Video.Copilot.Action.Essentials.2(smoke)2K/14. Smoke/Wisp_03.mov"
+ format "2048 1024 0 0 2048 1024 1 "
+ last 118
+ frame_mode "start at"
+ frame 1001
+ origlast 118
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read38
+ selected true
+ xpos -4440
+ ypos 247
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Video.Copilot.Action.Essentials.2(smoke)2K/14. Smoke/Wisp_04.mov"
+ format "2048 1024 0 0 2048 1024 1 "
+ last 138
+ frame_mode "start at"
+ frame 1001
+ origlast 138
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read39
+ selected true
+ xpos -4330
+ ypos 247
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Video.Copilot.Action.Essentials.2(smoke)2K/14. Smoke/Wisp_08.mov"
+ format "2048 1024 0 0 2048 1024 1 "
+ last 204
+ frame_mode "start at"
+ frame 1001
+ origlast 204
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read43
+ selected true
+ xpos -4440
+ ypos 343
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Video.Copilot.Action.Essentials.2(smoke)2K/14. Smoke/Wisp_09.mov"
+ format "2048 1024 0 0 2048 1024 1 "
+ last 215
+ frame_mode "start at"
+ frame 1001
+ origlast 215
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read44
+ selected true
+ xpos -4330
+ ypos 343
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Video.Copilot.Action.Essentials.2(smoke)2K/14. Smoke/Smoke_03.mov"
+ format "2048 1152 0 0 2048 1152 1 "
+ last 500
+ frame_mode "start at"
+ frame 1001
+ origlast 500
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read35
+ selected true
+ xpos -4770
+ ypos 247
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Video.Copilot.Action.Essentials.2(smoke)2K/14. Smoke/Wisp_05.mov"
+ format "2048 1024 0 0 2048 1024 1 "
+ last 176
+ frame_mode "start at"
+ frame 1001
+ origlast 176
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read40
+ selected true
+ xpos -4770
+ ypos 343
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Video.Copilot.Action.Essentials.2(smoke)2K/14. Smoke/Wisp_06.mov"
+ format "2048 1024 0 0 2048 1024 1 "
+ last 142
+ frame_mode "start at"
+ frame 1001
+ origlast 142
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read41
+ selected true
+ xpos -4660
+ ypos 343
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Video.Copilot.Action.Essentials.2(smoke)2K/14. Smoke/Wisp_07.mov"
+ format "2048 1024 0 0 2048 1024 1 "
+ last 280
+ frame_mode "start at"
+ frame 1001
+ origlast 280
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read42
+ selected true
+ xpos -4550
+ ypos 343
+}

@@ -1,0 +1,981 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+push $cut_paste_input
+Group {
+ name EL_Chroma_Scale1
+ tile_color 0xff8c00ff
+ selected true
+ xpos 3835
+ ypos 152
+ addUserKnob {20 User}
+ addUserKnob {7 Abberation_Weight l Weight R 0 10}
+ addUserKnob {7 Abberation_Mix l Mix}
+ addUserKnob {7 Abberation_Amount l Amount R 0 10}
+ addUserKnob {7 Abberation_exponent l Exponent}
+ addUserKnob {4 CHROMA_TYPE l "Abberation Type" M {RGB RBG GRB GBR BRG BGR}}
+}
+ StickyNote {
+  inputs 0
+  name StickyNote1
+  label "RGB\nRBG\nGRB\nGBR\nBRG\nBGR"
+  xpos 653
+  ypos -686
+ }
+ Input {
+  inputs 0
+  name Input1
+  xpos 3747
+  ypos -759
+ }
+ Dot {
+  name Dot1
+  xpos 3781
+  ypos -719
+ }
+set N3223fc00 [stack 0]
+ Dot {
+  name Dot2
+  xpos 3781
+  ypos -645
+ }
+set N3223f800 [stack 0]
+ Shuffle {
+  red black
+  blue black
+  name Shuffle5
+  tile_color 0xff00ff
+  xpos 3747
+  ypos -590
+ }
+set N3223f400 [stack 0]
+ Dot {
+  name Dot10
+  xpos 3866
+  ypos -467
+ }
+push $N3223f800
+ Shuffle {
+  green black
+  blue black
+  name Shuffle4
+  tile_color 0xff0000ff
+  xpos 3453
+  ypos -581
+ }
+set N3223ec00 [stack 0]
+ Dot {
+  name Dot11
+  xpos 3829
+  ypos -469
+ }
+push $N3223f800
+ Shuffle {
+  red black
+  green black
+  name Shuffle6
+  tile_color 0xffff
+  xpos 3976
+  ypos -591
+ }
+set N3223e400 [stack 0]
+ Dot {
+  name Dot12
+  xpos 3796
+  ypos -469
+ }
+push $N3223ec00
+ Dot {
+  name Dot13
+  xpos 3764
+  ypos -470
+ }
+push $N3223e400
+ Dot {
+  name Dot14
+  xpos 3733
+  ypos -469
+ }
+push $N3223f400
+ Dot {
+  name Dot15
+  xpos 3694
+  ypos -470
+ }
+ Switch {
+  inputs 6
+  which {{parent.Switch1.which}}
+  name Switch2
+  xpos 3747
+  ypos -425
+ }
+ Dot {
+  name Dot23
+  tile_color 0xff00ff
+  xpos 3781
+  ypos -370
+ }
+set N76301000 [stack 0]
+ Dot {
+  name Dot26
+  tile_color 0xff00ff
+  xpos 1142
+  ypos -42
+ }
+ Transform {
+  scale {{(parent.Transform2.scale-1)*(.5)+1}}
+  center {{width*.5} {height*.5}}
+  name Transform1
+  tile_color 0xff00ff
+  xpos 1108
+  ypos -5
+ }
+push 0
+push $N3223ec00
+ Dot {
+  name Dot16
+  xpos 4128
+  ypos -469
+ }
+push $N3223f400
+ Dot {
+  name Dot17
+  xpos 4091
+  ypos -471
+ }
+push $N3223ec00
+ Dot {
+  name Dot18
+  xpos 4058
+  ypos -471
+ }
+push $N3223e400
+ Dot {
+  name Dot19
+  xpos 4026
+  ypos -472
+ }
+push $N3223f400
+ Dot {
+  name Dot20
+  xpos 3995
+  ypos -471
+ }
+push $N3223e400
+ Dot {
+  name Dot21
+  xpos 3956
+  ypos -472
+ }
+ Switch {
+  inputs 6
+  which {{parent.Switch1.which}}
+  name Switch3
+  xpos 4009
+  ypos -427
+ }
+ Dot {
+  name Dot24
+  tile_color 0xffff
+  xpos 4043
+  ypos -369
+ }
+set Nb3e76c00 [stack 0]
+ Dot {
+  name Dot27
+  tile_color 0xffff
+  xpos 1404
+  ypos -41
+ }
+ Dot {
+  name Dot36
+  tile_color 0xffff
+  xpos 1404
+  ypos -1
+ }
+push $N3223e400
+ Dot {
+  name Dot9
+  xpos 3572
+  ypos -464
+ }
+push $N3223e400
+ Dot {
+  name Dot8
+  xpos 3535
+  ypos -466
+ }
+push $N3223f400
+ Dot {
+  name Dot7
+  xpos 3502
+  ypos -466
+ }
+push $N3223f400
+ Dot {
+  name Dot6
+  xpos 3470
+  ypos -467
+ }
+push $N3223ec00
+ Dot {
+  name Dot5
+  xpos 3439
+  ypos -466
+ }
+push $N3223ec00
+ Dot {
+  name Dot4
+  xpos 3400
+  ypos -467
+ }
+ Switch {
+  inputs 6
+  which {{parent.CHROMA_TYPE}}
+  name Switch1
+  xpos 3453
+  ypos -422
+ }
+ Dot {
+  name Dot22
+  tile_color 0xff0000ff
+  xpos 3487
+  ypos -372
+ }
+set Ndde20800 [stack 0]
+ Dot {
+  name Dot25
+  tile_color 0xff0000ff
+  xpos 848
+  ypos -44
+ }
+ Transform {
+  scale {{(parent.Abberation_Amount*.001)+1}}
+  center {{width*.5} {height*.5}}
+  name Transform2
+  tile_color 0xff0000ff
+  xpos 814
+  ypos -7
+ }
+ Merge2 {
+  inputs 3+1
+  operation plus
+  name Merge3
+  xpos 1108
+  ypos 61
+ }
+ Multiply {
+  channels alpha
+  value 0.3333333333
+  name Multiply1
+  xpos 1108
+  ypos 87
+ }
+ Dot {
+  name Dot39
+  xpos 1142
+  ypos 218
+ }
+set Nd007f400 [stack 0]
+push $N76301000
+ Dot {
+  name Dot28
+  tile_color 0xff00ff
+  xpos 1808
+  ypos -21
+ }
+ Transform {
+  scale {{((parent.Transform1.scale-1)*EL_Chroma_Scale1.Abberation_exponent)+1}}
+  center {{width*.5} {height*.5}}
+  name Transform4
+  tile_color 0xff00ff
+  xpos 1774
+  ypos 23
+ }
+push 0
+push $Nb3e76c00
+ Dot {
+  name Dot29
+  tile_color 0xffff
+  xpos 2070
+  ypos -20
+ }
+ Dot {
+  name Dot3
+  tile_color 0xffff
+  xpos 2070
+  ypos 12
+ }
+push $Ndde20800
+ Dot {
+  name Dot31
+  tile_color 0xff0000ff
+  xpos 1514
+  ypos -23
+ }
+ Transform {
+  scale {{((parent.Transform2.scale-1)*EL_Chroma_Scale1.Abberation_exponent)+1}}
+  center {{width*.5} {height*.5}}
+  name Transform3
+  tile_color 0xff0000ff
+  xpos 1480
+  ypos 21
+ }
+ Merge2 {
+  inputs 3+1
+  operation plus
+  name Merge1
+  xpos 1774
+  ypos 82
+ }
+ Multiply {
+  channels alpha
+  value 0.3333333333
+  name Multiply2
+  xpos 1774
+  ypos 108
+ }
+ Merge2 {
+  inputs 2
+  operation plus
+  name Merge4
+  xpos 1774
+  ypos 214
+ }
+set N3f135000 [stack 0]
+push $N76301000
+ Dot {
+  name Dot32
+  tile_color 0xff00ff
+  xpos 2489
+  ypos -22
+ }
+ Transform {
+  scale {{((parent.Transform4.scale-1)*EL_Chroma_Scale1.Abberation_exponent)+1}}
+  center {{width*.5} {height*.5}}
+  name Transform6
+  tile_color 0xff00ff
+  xpos 2455
+  ypos 25
+ }
+push 0
+push $Nb3e76c00
+ Dot {
+  name Dot33
+  tile_color 0xffff
+  xpos 2751
+  ypos -20
+ }
+ Dot {
+  name Dot30
+  tile_color 0xffff
+  xpos 2751
+  ypos 8
+ }
+push $Ndde20800
+ Dot {
+  name Dot35
+  tile_color 0xff0000ff
+  xpos 2195
+  ypos -24
+ }
+ Transform {
+  scale {{((parent.Transform3.scale-1)*EL_Chroma_Scale1.Abberation_exponent)+1}}
+  center {{width*.5} {height*.5}}
+  name Transform5
+  tile_color 0xff0000ff
+  xpos 2161
+  ypos 26
+ }
+ Merge2 {
+  inputs 3+1
+  operation plus
+  name Merge2
+  xpos 2455
+  ypos 81
+ }
+ Multiply {
+  channels alpha
+  value 0.3333333333
+  name Multiply3
+  xpos 2455
+  ypos 107
+ }
+ Merge2 {
+  inputs 2
+  operation plus
+  name Merge5
+  xpos 2455
+  ypos 214
+ }
+set N860e8c00 [stack 0]
+push $N76301000
+ Dot {
+  name Dot40
+  tile_color 0xff00ff
+  xpos 3144
+  ypos -23
+ }
+ Transform {
+  scale {{((parent.Transform6.scale-1)*EL_Chroma_Scale1.Abberation_exponent)+1}}
+  center {{width*.5} {height*.5}}
+  name Transform7
+  tile_color 0xff00ff
+  xpos 3110
+  ypos 22
+ }
+push 0
+push $Nb3e76c00
+ Dot {
+  name Dot41
+  tile_color 0xffff
+  xpos 3406
+  ypos -21
+ }
+ Dot {
+  name Dot42
+  tile_color 0xffff
+  xpos 3406
+  ypos 7
+ }
+push $Ndde20800
+ Dot {
+  name Dot43
+  tile_color 0xff0000ff
+  xpos 2850
+  ypos -25
+ }
+ Transform {
+  scale {{((parent.Transform5.scale-1)*EL_Chroma_Scale1.Abberation_exponent)+1}}
+  center {{width*.5} {height*.5}}
+  name Transform8
+  tile_color 0xff0000ff
+  xpos 2816
+  ypos 22
+ }
+ Merge2 {
+  inputs 3+1
+  operation plus
+  name Merge6
+  xpos 3110
+  ypos 80
+ }
+ Multiply {
+  channels alpha
+  value 0.3333333333
+  name Multiply6
+  xpos 3110
+  ypos 106
+ }
+ Merge2 {
+  inputs 2
+  operation plus
+  name Merge7
+  xpos 3110
+  ypos 213
+ }
+set N4fd5a800 [stack 0]
+push $N76301000
+ Dot {
+  name Dot44
+  tile_color 0xff00ff
+  xpos 3781
+  ypos -24
+ }
+ Transform {
+  scale {{((parent.Transform7.scale-1)*EL_Chroma_Scale1.Abberation_exponent)+1}}
+  center {{width*.5} {height*.5}}
+  name Transform9
+  tile_color 0xff00ff
+  xpos 3747
+  ypos 18
+ }
+push 0
+push $Nb3e76c00
+ Dot {
+  name Dot45
+  tile_color 0xffff
+  xpos 4043
+  ypos -22
+ }
+ Dot {
+  name Dot46
+  tile_color 0xffff
+  xpos 4043
+  ypos 6
+ }
+push $Ndde20800
+ Dot {
+  name Dot47
+  tile_color 0xff0000ff
+  xpos 3487
+  ypos -26
+ }
+ Transform {
+  scale {{((parent.Transform8.scale-1)*EL_Chroma_Scale1.Abberation_exponent)+1}}
+  center {{width*.5} {height*.5}}
+  name Transform10
+  tile_color 0xff0000ff
+  xpos 3453
+  ypos 13
+ }
+ Merge2 {
+  inputs 3+1
+  operation plus
+  name Merge8
+  xpos 3747
+  ypos 79
+ }
+ Multiply {
+  channels alpha
+  value 0.3333333333
+  name Multiply8
+  xpos 3747
+  ypos 105
+ }
+ Merge2 {
+  inputs 2
+  operation plus
+  name Merge9
+  xpos 3747
+  ypos 212
+ }
+set Na34ba400 [stack 0]
+push $N76301000
+ Dot {
+  name Dot48
+  tile_color 0xff00ff
+  xpos 4438
+  ypos -13
+ }
+ Transform {
+  scale {{((parent.Transform9.scale-1)*EL_Chroma_Scale1.Abberation_exponent)+1}}
+  center {{width*.5} {height*.5}}
+  name Transform11
+  tile_color 0xff00ff
+  xpos 4404
+  ypos 27
+ }
+push 0
+push $Nb3e76c00
+ Dot {
+  name Dot49
+  tile_color 0xffff
+  xpos 4700
+  ypos -16
+ }
+ Dot {
+  name Dot50
+  tile_color 0xffff
+  xpos 4700
+  ypos 12
+ }
+push $Ndde20800
+ Dot {
+  name Dot51
+  tile_color 0xff0000ff
+  xpos 4144
+  ypos -20
+ }
+ Transform {
+  scale {{((parent.Transform10.scale-1)*EL_Chroma_Scale1.Abberation_exponent)+1}}
+  center {{width*.5} {height*.5}}
+  name Transform12
+  tile_color 0xff0000ff
+  xpos 4110
+  ypos 20
+ }
+ Merge2 {
+  inputs 3+1
+  operation plus
+  name Merge10
+  xpos 4404
+  ypos 85
+ }
+ Multiply {
+  channels alpha
+  value 0.3333333333
+  name Multiply10
+  xpos 4404
+  ypos 111
+ }
+ Merge2 {
+  inputs 2
+  operation plus
+  name Merge11
+  xpos 4404
+  ypos 218
+ }
+set N28b4000 [stack 0]
+push $N76301000
+ Dot {
+  name Dot52
+  tile_color 0xff00ff
+  xpos 5122
+  ypos -16
+ }
+ Transform {
+  scale {{((parent.Transform11.scale-1)*EL_Chroma_Scale1.Abberation_exponent)+1}}
+  center {{width*.5} {height*.5}}
+  name Transform13
+  tile_color 0xff00ff
+  xpos 5088
+  ypos 22
+ }
+push 0
+push $Nb3e76c00
+ Dot {
+  name Dot53
+  tile_color 0xffff
+  xpos 5384
+  ypos -14
+ }
+ Dot {
+  name Dot54
+  tile_color 0xffff
+  xpos 5384
+  ypos 14
+ }
+push $Ndde20800
+ Dot {
+  name Dot55
+  tile_color 0xff0000ff
+  xpos 4828
+  ypos -18
+ }
+ Transform {
+  scale {{((parent.Transform12.scale-1)*EL_Chroma_Scale1.Abberation_exponent)+1}}
+  center {{width*.5} {height*.5}}
+  name Transform14
+  tile_color 0xff0000ff
+  xpos 4794
+ }
+ Merge2 {
+  inputs 3+1
+  operation plus
+  name Merge12
+  xpos 5088
+  ypos 87
+ }
+ Multiply {
+  channels alpha
+  value 0.3333333333
+  name Multiply12
+  xpos 5088
+  ypos 113
+ }
+ Merge2 {
+  inputs 2
+  operation plus
+  name Merge13
+  xpos 5088
+  ypos 220
+ }
+set N52c23c00 [stack 0]
+push $N76301000
+ Dot {
+  name Dot56
+  tile_color 0xff00ff
+  xpos 5772
+  ypos -14
+ }
+ Transform {
+  scale {{((parent.Transform13.scale-1)*EL_Chroma_Scale1.Abberation_exponent)+1}}
+  center {{width*.5} {height*.5}}
+  name Transform15
+  tile_color 0xff00ff
+  xpos 5738
+  ypos 29
+ }
+push 0
+push $Nb3e76c00
+ Dot {
+  name Dot57
+  tile_color 0xffff
+  xpos 6034
+  ypos -12
+ }
+ Dot {
+  name Dot58
+  tile_color 0xffff
+  xpos 6034
+  ypos 16
+ }
+push $Ndde20800
+ Dot {
+  name Dot59
+  tile_color 0xff0000ff
+  xpos 5478
+  ypos -16
+ }
+ Transform {
+  scale {{((parent.Transform14.scale-1)*EL_Chroma_Scale1.Abberation_exponent)+1}}
+  center {{width*.5} {height*.5}}
+  name Transform16
+  tile_color 0xff0000ff
+  xpos 5444
+  ypos 2
+ }
+ Merge2 {
+  inputs 3+1
+  operation plus
+  name Merge14
+  xpos 5738
+  ypos 89
+ }
+ Multiply {
+  channels alpha
+  value 0.3333333333
+  name Multiply14
+  xpos 5738
+  ypos 115
+ }
+ Merge2 {
+  inputs 2
+  operation plus
+  name Merge15
+  xpos 5738
+  ypos 222
+ }
+set Nf6b5d800 [stack 0]
+push $N76301000
+ Dot {
+  name Dot60
+  tile_color 0xff00ff
+  xpos 6404
+  ypos -10
+ }
+ Transform {
+  scale {{((parent.Transform17.scale-1)*EL_Chroma_Scale1.Abberation_exponent)+1}}
+  center {{width*.5} {height*.5}}
+  name Transform17
+  tile_color 0xff00ff
+  xpos 6370
+  ypos 25
+ }
+push 0
+push $Nb3e76c00
+ Dot {
+  name Dot61
+  tile_color 0xffff
+  xpos 6666
+  ypos -8
+ }
+ Dot {
+  name Dot62
+  tile_color 0xffff
+  xpos 6666
+  ypos 20
+ }
+push $Ndde20800
+ Dot {
+  name Dot63
+  tile_color 0xff0000ff
+  xpos 6110
+  ypos -12
+ }
+ Transform {
+  scale {{((parent.Transform16.scale-1)*EL_Chroma_Scale1.Abberation_exponent)+1}}
+  center {{width*.5} {height*.5}}
+  name Transform18
+  tile_color 0xff0000ff
+  xpos 6076
+  ypos 6
+ }
+ Merge2 {
+  inputs 3+1
+  operation plus
+  name Merge16
+  xpos 6370
+  ypos 93
+ }
+ Multiply {
+  channels alpha
+  value 0.3333333333
+  name Multiply16
+  xpos 6370
+  ypos 119
+ }
+ Merge2 {
+  inputs 2
+  operation plus
+  name Merge17
+  xpos 6370
+  ypos 226
+ }
+set Na254d400 [stack 0]
+push $N76301000
+ Dot {
+  name Dot64
+  tile_color 0xff00ff
+  xpos 7091
+  ypos -16
+ }
+ Transform {
+  scale {{((parent.Transform19.scale-1)*EL_Chroma_Scale1.Abberation_exponent)+1}}
+  center {{width*.5} {height*.5}}
+  name Transform19
+  tile_color 0xff00ff
+  xpos 7057
+  ypos 23
+ }
+push 0
+push $Nb3e76c00
+ Dot {
+  name Dot65
+  tile_color 0xffff
+  xpos 7353
+  ypos -14
+ }
+ Dot {
+  name Dot66
+  tile_color 0xffff
+  xpos 7353
+  ypos 14
+ }
+push $Ndde20800
+ Dot {
+  name Dot67
+  tile_color 0xff0000ff
+  xpos 6797
+  ypos -18
+ }
+ Transform {
+  scale {{((parent.Transform18.scale-1)*EL_Chroma_Scale1.Abberation_exponent)+1}}
+  center {{width*.5} {height*.5}}
+  name Transform20
+  tile_color 0xff0000ff
+  xpos 6763
+ }
+ Merge2 {
+  inputs 3+1
+  operation plus
+  name Merge18
+  xpos 7057
+  ypos 87
+ }
+ Multiply {
+  channels alpha
+  value 0.3333333333
+  name Multiply18
+  xpos 7057
+  ypos 113
+ }
+ Merge2 {
+  inputs 2
+  operation plus
+  name Merge19
+  xpos 7057
+  ypos 220
+ }
+ Multiply {
+  value 0.1
+  name Multiply19
+  xpos 7057
+  ypos 246
+ }
+push $Na254d400
+ Multiply {
+  value 0.1111111111
+  name Multiply17
+  xpos 6370
+  ypos 252
+ }
+push $Nf6b5d800
+ Multiply {
+  value 0.125
+  name Multiply15
+  xpos 5738
+  ypos 248
+ }
+push $N52c23c00
+ Multiply {
+  value 0.1428571429
+  name Multiply13
+  xpos 5088
+  ypos 246
+ }
+push $N28b4000
+ Multiply {
+  value 0.1666666667
+  name Multiply11
+  xpos 4404
+  ypos 244
+ }
+push $Na34ba400
+ Multiply {
+  value 0.2
+  name Multiply9
+  xpos 3747
+  ypos 238
+ }
+push $N4fd5a800
+ Multiply {
+  value 0.25
+  name Multiply7
+  xpos 3110
+  ypos 239
+ }
+push $N860e8c00
+ Multiply {
+  value 0.3333333333
+  name Multiply5
+  xpos 2455
+  ypos 240
+ }
+set N945bd000 [stack 0]
+push 0
+push $N3f135000
+ Multiply {
+  value 0.5
+  name Multiply4
+  xpos 1774
+  ypos 240
+ }
+set N945bcc00 [stack 0]
+push $Nd007f400
+ Dot {
+  name Dot38
+  xpos 1142
+  ypos 245
+ }
+ Dissolve {
+  inputs 10+1
+  which {{parent.Abberation_Weight}}
+  name Dissolve1
+  xpos 4404
+  ypos 870
+ }
+push $N3223fc00
+ Dot {
+  name Dot37
+  xpos 7524
+  ypos -719
+ }
+ Dot {
+  name Dot34
+  xpos 7503
+  ypos 973
+ }
+ Dissolve {
+  inputs 2
+  which {{parent.Abberation_Mix}}
+  name Dissolve2
+  xpos 4404
+  ypos 963
+ }
+ Output {
+  name Output1
+  xpos 4404
+  ypos 1079
+ }
+push $N945bd000
+push $N945bcc00
+ Viewer {
+  inputs 2
+  frame_range 1-100
+  input_number 1
+  name Viewer1
+  xpos 3769
+  ypos 1404
+ }
+end_group

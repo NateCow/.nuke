@@ -1,0 +1,284 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+push $cut_paste_input
+Group {
+name Cow_EdgeScatter1
+tile_color 0xcc804eff
+selected true
+xpos 414
+ypos 1590
+addUserKnob {20 cow_es l EdgeScatter}
+addUserKnob {41 mode l Mode T Cow_EdgeScatter.mode}
+addUserKnob {41 blursize l Scatter T Cow_EdgeScatter.blursize}
+addUserKnob {41 intensity l Intensity T Cow_EdgeScatter.intensity}
+addUserKnob {41 sat l Saturation T Cow_EdgeScatter.sat}
+addUserKnob {41 edgeblur l "Edge Softness" T Cow_EdgeScatter.edgeblur}
+addUserKnob {26 ""}
+addUserKnob {41 opacity l Opacity T Cow_EdgeScatter.opacity}
+}
+Input {
+inputs 0
+name Input1
+xpos 500
+ypos 379
+}
+NoOp {
+name Cow_EdgeScatter
+selected true
+xpos 500
+ypos 424
+addUserKnob {20 cow_es l EdgeScatter}
+addUserKnob {4 mode l Mode M {Over Plus Screen Hypot}}
+addUserKnob {7 blursize l Scatter R 0 100}
+blursize 30
+addUserKnob {7 intensity l Intensity R 0 4}
+intensity 1
+addUserKnob {7 sat l Saturation R 0 4}
+sat 1
+addUserKnob {7 edgeblur l "Edge Softness" R 0 50}
+addUserKnob {26 ""}
+addUserKnob {7 opacity l Opacity}
+opacity 0.25
+addUserKnob {6 sat_panelDropped l "panel dropped state" -STARTLINE +HIDDEN}
+}
+Dot {
+name Dot7
+xpos 534
+ypos 484
+}
+set N42d87000 [stack 0]
+Dot {
+name Dot8
+xpos 644
+ypos 484
+}
+set Nb2c8a000 [stack 0]
+Invert {
+channels alpha
+name Invert2
+xpos 760
+ypos 474
+}
+Dot {
+name Dot9
+xpos 794
+ypos 715
+}
+set N1e2cf400 [stack 0]
+Group {
+name Edger2
+tile_color 0xffff
+xpos 760
+ypos 854
+addUserKnob {20 User}
+addUserKnob {7 Erode_Trace R 0 50}
+}
+Input {
+inputs 0
+name Input1
+xpos 695
+ypos -118
+}
+Blur {
+size 1.6
+name Blur2
+xpos 695
+ypos -4
+}
+set N8299c000 [stack 0]
+Invert {
+name Invert1
+xpos 592
+ypos 70
+}
+push $N8299c000
+Merge2 {
+inputs 2
+operation min
+name Merge1
+xpos 695
+ypos 126
+}
+Multiply {
+value 2
+name Multiply1
+xpos 695
+ypos 151
+}
+FilterErode {
+channels alpha
+size {{parent.Erode_Trace*-1}}
+filter gaussian
+name FilterErode1
+xpos 695
+ypos 183
+}
+Blur {
+size {{parent.Erode_Trace}}
+name Blur1
+xpos 695
+ypos 215
+}
+Shuffle {
+red alpha
+green alpha
+blue alpha
+name Shuffle1
+xpos 695
+ypos 284
+}
+Output {
+name Output1
+xpos 695
+ypos 349
+}
+end_group
+push $N42d87000
+push $N42d87000
+Dot {
+name Dot10
+xpos 414
+ypos 484
+}
+set N372d4400 [stack 0]
+push $N42d87000
+Merge2 {
+inputs 2
+operation stencil
+name Merge11
+xpos 380
+ypos 540
+}
+Blur {
+size {{parent.Cow_EdgeScatter.blursize}}
+name Blur4
+xpos 380
+ypos 574
+}
+set C403af000 [stack 0]
+Merge2 {
+inputs 2
+operation mask
+name Merge12
+xpos 500
+ypos 643
+}
+push $N1e2cf400
+push $Nb2c8a000
+push $N42d87000
+Merge2 {
+inputs 2
+operation mask
+name Merge13
+xpos 610
+ypos 540
+}
+clone $C403af000 {
+xpos 610
+ypos 595
+selected false
+}
+Merge2 {
+inputs 2
+operation mask
+name Merge14
+xpos 610
+ypos 711
+}
+Merge2 {
+inputs 2
+mix 0.405
+name Merge15
+xpos 501
+ypos 750
+}
+Grade {
+multiply {{parent.Cow_EdgeScatter.intensity}}
+name Grade4
+xpos 500
+ypos 776
+}
+Saturation {
+saturation {{parent.Cow_EdgeScatter.sat}}
+name Saturation1
+xpos 500
+ypos 802
+}
+Blur {
+inputs 1+1
+size {{parent.Cow_EdgeScatter.edgeblur}}
+name Blur5
+xpos 500
+ypos 848
+}
+set Nef15000 [stack 0]
+push $N372d4400
+Dot {
+name Dot11
+xpos 306
+ypos 484
+}
+set Nf41f400 [stack 0]
+Merge2 {
+inputs 2
+operation hypot
+mix {{parent.Cow_EdgeScatter.opacity}}
+name Merge3
+xpos 84
+ypos 941
+}
+push $Nef15000
+push $Nf41f400
+Merge2 {
+inputs 2
+operation screen
+mix {{parent.Cow_EdgeScatter.opacity}}
+name Merge2
+xpos 217
+ypos 947
+}
+push $Nef15000
+push $Nf41f400
+Merge2 {
+inputs 2
+operation plus
+mix {{parent.Cow_EdgeScatter.opacity}}
+name Merge1
+xpos 330
+ypos 954
+}
+push $Nef15000
+push $Nf41f400
+Merge2 {
+inputs 2
+mix {{parent.Cow_EdgeScatter.opacity}}
+name Merge16
+xpos 465
+ypos 950
+}
+Switch {
+inputs 4
+which {{parent.Cow_EdgeScatter.mode}}
+name Switch1
+xpos 500
+ypos 1100
+}
+set N92dc6900 [stack 0]
+Output {
+name Output1
+xpos 499
+ypos 1228
+}
+Output {
+name Output2
+xpos 499
+ypos 1328
+}
+push $N92dc6900
+Viewer {
+frame_range 1001-1037
+name Viewer1
+xpos 93
+ypos 606
+}
+end_group

@@ -1,0 +1,36 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+push $cut_paste_input
+Group {
+ name Laplacian5
+ label "level \[value level]"
+ selected true
+ xpos -765
+ ypos -371
+ addUserKnob {20 User}
+ addUserKnob {7 basesize l "base level size" t "level 1 base size" R 0 1000}
+ basesize 3.75
+ addUserKnob {7 level t "pyramid depth" R 0 100}
+ level 1
+ addUserKnob {7 multiplier t "depth multiplier" R 0 1000}
+ multiplier 2
+}
+ Input {
+  inputs 0
+  name Input1
+  xpos 349
+  ypos -156
+ }
+ Laplacian {
+  size {{parent.basesize*multiplier*level}}
+  name Laplacian5
+  selected true
+  xpos 349
+  ypos -88
+ }
+ Output {
+  name Output1
+  xpos 349
+  ypos -16
+ }
+end_group

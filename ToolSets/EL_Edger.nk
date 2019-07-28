@@ -1,0 +1,72 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+push $cut_paste_input
+Group {
+ name Edger
+ tile_color 0xffff
+ selected true
+ xpos 1989
+ ypos 296
+ addUserKnob {20 User}
+ addUserKnob {7 Erode_Trace R 0 50}
+}
+ Input {
+  inputs 0
+  name Input1
+  xpos 695
+  ypos -118
+ }
+ Blur {
+  size 1.6
+  name Blur2
+  xpos 695
+  ypos -4
+ }
+set N50a8fc00 [stack 0]
+ Invert {
+  name Invert1
+  xpos 592
+  ypos 70
+ }
+push $N50a8fc00
+ Merge2 {
+  inputs 2
+  operation min
+  name Merge1
+  xpos 695
+  ypos 126
+ }
+ Multiply {
+  value 2
+  name Multiply1
+  xpos 695
+  ypos 151
+ }
+ FilterErode {
+  channels alpha
+  size {{parent.Erode_Trace*-1}}
+  filter gaussian
+  name FilterErode1
+  xpos 695
+  ypos 183
+ }
+ Blur {
+  size {{parent.Erode_Trace}}
+  name Blur1
+  xpos 695
+  ypos 215
+ }
+ Shuffle {
+  red alpha
+  green alpha
+  blue alpha
+  name Shuffle1
+  xpos 695
+  ypos 284
+ }
+ Output {
+  name Output1
+  xpos 695
+  ypos 349
+ }
+end_group

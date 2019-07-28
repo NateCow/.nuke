@@ -1,0 +1,17 @@
+Preferences {
+inputs 0
+name Preferences
+DiskCachePath F:/Caches/Nuke/
+diskCacheGB 100
+PaintCacheGB 100
+selectedGPUDeviceName "GeForce GTX 960"
+platformPathRemaps ""
+ArrowColorLeft 0xffbf00ff
+ArrowColorRight 0x9fffff
+ArrowColorUp 0xff0000ff
+ArrowColorDown 0x1fff00ff
+expression_arrows false
+clone_arrows false
+defaultBufferDepth half-float
+defaultGPUForViewer true
+}

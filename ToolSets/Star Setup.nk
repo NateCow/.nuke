@@ -1,0 +1,283 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+Constant {
+ inputs 0
+ channels rgb
+ format "2048 2048 0 0 2048 2048 1 square_2K"
+ name Constant1
+ selected true
+ xpos 617
+ ypos 549
+}
+set N6e323c00 [stack 0]
+Dot {
+ name Dot34
+ selected true
+ xpos 946
+ ypos 578
+}
+Roto {
+ curves {{{v x3f99999a}
+  {f 0}
+  {n
+   {layer Root
+    {f 512}
+    {t x44700000 x44070000}
+    {a}
+    {curvegroup Rectangle1 512 bezier
+     {{cc
+       {f 8192}
+       {px x42700000
+        {x410784a1 xc2cf0e56}
+        {xc3958000 x44ed6b33}
+        {x44518000 x424445a2}
+        {xc44052b0 x42f9d26f}
+        {x45214666 x4447c22d}
+        {xc1b8f909 xc2cbd4fe}
+        {x41b8f803 x42f0ef9e}
+        {x451c023d xc28e56f0}
+        {xc44052b0 x4313a625}
+        {x44508000 x42300000}
+        {xc38a8000 x44969333}
+        {xc0cece07 x42f4fdf4}}}     idem}
+     {t x44544000 x43df0000}
+     {a spx x44700000 spy x44070000 sb 1 tt x40e00000}}}}}}
+ toolbox {selectAll {
+  { selectAll str 1 ssx 1 ssy 1 sf 1 }
+  { createBezier str 1 ssx 1 ssy 1 sf 1 sb 1 tt 4 }
+  { createBezierCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createBSpline str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createEllipse str 1 ssx 1 ssy 1 sf 1 sb 1 tt 6 }
+  { createRectangle str 1 ssx 1 ssy 1 sf 1 sb 1 tt 7 }
+  { createRectangleCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { brush str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { eraser src 2 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { clone src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { reveal src 3 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { dodge src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { burn src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { blur src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { sharpen src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { smear src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+} }
+ toolbar_brush_hardness 0.200000003
+ toolbar_source_transform_scale {1 1}
+ toolbar_source_transform_center {320 240}
+ colorOverlay 0
+ lifetime_type "all frames"
+ view {}
+ motionblur_on true
+ motionblur_shutter_offset_type centred
+ source_black_outside true
+ name Roto4
+ selected true
+ xpos 915
+ ypos 1019
+}
+Blur {
+ size 900
+ name Blur7
+ selected true
+ xpos 915
+ ypos 1080
+}
+Clamp {
+ name Clamp1
+ selected true
+ xpos 782
+ ypos 1089
+}
+set N6e320400 [stack 0]
+push $N6e320400
+push $N6e323c00
+Reformat {
+ format "2048 2048 0 0 2048 2048 1 square_2K"
+ name Reformat3
+ selected true
+ xpos 617
+ ypos 657
+}
+set N6e321c00 [stack 0]
+Dither {
+ amount 15
+ seed 10
+ static_seed true
+ name Dither2
+ selected true
+ xpos 755
+ ypos 898
+}
+push $N6e321c00
+Dot {
+ name Dot36
+ selected true
+ xpos 741
+ ypos 675
+}
+set N876e7c00 [stack 0]
+Dot {
+ name Dot37
+ selected true
+ xpos 830
+ ypos 675
+}
+set N71956800 [stack 0]
+Dot {
+ name Dot35
+ selected true
+ xpos 920
+ ypos 675
+}
+Noise {
+ replace true
+ type turbulence
+ size 2
+ zoffset 3.16
+ center {1008 567}
+ name Noise3
+ selected true
+ xpos 889
+ ypos 715
+}
+push $N876e7c00
+Noise {
+ replace true
+ size 1
+ center {1008 567}
+ name Noise4
+ selected true
+ xpos 710
+ ypos 695
+}
+push $N71956800
+Noise {
+ replace true
+ size 940
+ center {1008 567}
+ name Noise5
+ selected true
+ xpos 799
+ ypos 703
+}
+Merge2 {
+ inputs 2
+ operation out
+ name Merge4
+ selected true
+ xpos 787
+ ypos 742
+}
+Merge2 {
+ inputs 2
+ operation out
+ name Merge6
+ selected true
+ xpos 787
+ ypos 793
+}
+set N7195ac00 [stack 0]
+Grade {
+ channels rgba
+ blackpoint 0.165
+ name Grade6
+ selected true
+ xpos 859
+ ypos 932
+}
+Merge2 {
+ inputs 2
+ operation in
+ name In1
+ selected true
+ xpos 755
+ ypos 976
+}
+push $N7195ac00
+Grade {
+ channels rgba
+ blackpoint 0.34
+ name Grade3
+ selected true
+ xpos 787
+ ypos 845
+}
+push $N6e321c00
+Dither {
+ amount 15
+ static_seed true
+ name Dither1
+ selected true
+ xpos 617
+ ypos 731
+}
+Merge2 {
+ inputs 2
+ operation mask
+ name In
+ selected true
+ xpos 617
+ ypos 845
+}
+Grade {
+ white {3 0.25 1 1}
+ name Grade4
+ selected true
+ xpos 617
+ ypos 893
+}
+Grade {
+ gamma 1.42
+ name Grade5
+ selected true
+ xpos 617
+ ypos 958
+}
+Merge2 {
+ inputs 2+1
+ also_merge all
+ mix 0.105
+ name Merge7
+ selected true
+ xpos 617
+ ypos 1039
+}
+Grade {
+ inputs 1+1
+ multiply 0.65
+ gamma 1.62
+ name Grade8
+ selected true
+ xpos 617
+ ypos 1102
+}
+Grade {
+ blackpoint 0.17
+ white 0.74
+ name Grade7
+ label "OVERALL STAR REDUCTION"
+ selected true
+ xpos 617
+ ypos 1151
+ disable true
+}
+Saturation {
+ saturation 0.18
+ name Saturation1
+ selected true
+ xpos 617
+ ypos 1221
+}
+FrameHold {
+ first_frame 1
+ name FrameHold1
+ selected true
+ xpos 617
+ ypos 1279
+}
+Clamp {
+ maximum_enable false
+ name Clamp3
+ selected true
+ xpos 617
+ ypos 1377
+}

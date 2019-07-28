@@ -1,0 +1,558 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+BackdropNode {
+ inputs 0
+ name BackdropNode1
+ tile_color 0x212121ff
+ label "<center>Muzzle Flashes"
+ note_font_size 42
+ selected true
+ xpos 2802
+ ypos -264
+ bdwidth 878
+ bdheight 570
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/11. Muzzle_Flashes/Automatic_Fire_01.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 34
+ frame_mode "start at"
+ frame 1001
+ origlast 34
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read9
+ selected true
+ xpos 2820
+ ypos -184
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/11. Muzzle_Flashes/Automatic_Fire_04.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 41
+ frame_mode "start at"
+ frame 1001
+ origlast 41
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read12
+ selected true
+ xpos 3150
+ ypos -184
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/11. Muzzle_Flashes/Automatic_Fire_05.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 41
+ frame_mode "start at"
+ frame 1001
+ origlast 41
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read13
+ selected true
+ xpos 3260
+ ypos -184
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/11. Muzzle_Flashes/Muzzle_Flash_01.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 43
+ frame_mode "start at"
+ frame 1001
+ origlast 43
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read14
+ selected true
+ xpos 3370
+ ypos -184
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/11. Muzzle_Flashes/Muzzle_Flash_02.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 40
+ frame_mode "start at"
+ frame 1001
+ origlast 40
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read15
+ selected true
+ xpos 3480
+ ypos -184
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/11. Muzzle_Flashes/Muzzle_Flash_04.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 52
+ frame_mode "start at"
+ frame 1001
+ origlast 52
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read17
+ selected true
+ xpos 2818
+ ypos -57
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/11. Muzzle_Flashes/Muzzle_Flash_05.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 40
+ frame_mode "start at"
+ frame 1001
+ origlast 40
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read18
+ selected true
+ xpos 2928
+ ypos -57
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/11. Muzzle_Flashes/Muzzle_Flash_06.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 30
+ frame_mode "start at"
+ frame 1001
+ origlast 30
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read19
+ selected true
+ xpos 3038
+ ypos -57
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/11. Muzzle_Flashes/Muzzle_Flash_07.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 30
+ frame_mode "start at"
+ frame 1001
+ origlast 30
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read20
+ selected true
+ xpos 3148
+ ypos -57
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/11. Muzzle_Flashes/Muzzle_Flash_08.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 16
+ frame_mode "start at"
+ frame 1001
+ origlast 16
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read21
+ selected true
+ xpos 3258
+ ypos -57
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/11. Muzzle_Flashes/Muzzle_Flash_09.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 17
+ frame_mode "start at"
+ frame 1001
+ origlast 17
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read22
+ selected true
+ xpos 3368
+ ypos -57
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/11. Muzzle_Flashes/Muzzle_Flash_10.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 15
+ frame_mode "start at"
+ frame 1001
+ origlast 15
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read23
+ selected true
+ xpos 3478
+ ypos -57
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/11. Muzzle_Flashes/Muzzle_Flash_11.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 15
+ frame_mode "start at"
+ frame 1001
+ origlast 15
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read24
+ selected true
+ xpos 3588
+ ypos -57
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/11. Muzzle_Flashes/Muzzle_Flash_12.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 15
+ frame_mode "start at"
+ frame 1001
+ origlast 15
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read25
+ selected true
+ xpos 2816
+ ypos 76
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/11. Muzzle_Flashes/Muzzle_Flash_13.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 15
+ frame_mode "start at"
+ frame 1001
+ origlast 15
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read26
+ selected true
+ xpos 2926
+ ypos 76
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/11. Muzzle_Flashes/Muzzle_Flash_14.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 15
+ frame_mode "start at"
+ frame 1001
+ origlast 15
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read27
+ selected true
+ xpos 3036
+ ypos 76
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/11. Muzzle_Flashes/Muzzle_Flash_15.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 15
+ frame_mode "start at"
+ frame 1001
+ origlast 15
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read28
+ selected true
+ xpos 3146
+ ypos 76
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/11. Muzzle_Flashes/Muzzle_Flash_16.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 15
+ frame_mode "start at"
+ frame 1001
+ origlast 15
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read29
+ selected true
+ xpos 3256
+ ypos 76
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/11. Muzzle_Flashes/Muzzle_Flash_17.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 15
+ frame_mode "start at"
+ frame 1001
+ origlast 15
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read30
+ selected true
+ xpos 3366
+ ypos 76
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/11. Muzzle_Flashes/Muzzle_Flash_18.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 15
+ frame_mode "start at"
+ frame 1001
+ origlast 15
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read31
+ selected true
+ xpos 3476
+ ypos 76
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/11. Muzzle_Flashes/Muzzle_Flash_Straight_01.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 15
+ frame_mode "start at"
+ frame 1001
+ origlast 15
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read32
+ selected true
+ xpos 3586
+ ypos 76
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/11. Muzzle_Flashes/Muzzle_Flash_Straight_02.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 15
+ frame_mode "start at"
+ frame 1001
+ origlast 15
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read33
+ selected true
+ xpos 2812
+ ypos 204
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/11. Muzzle_Flashes/Muzzle_Flash_Straight_03.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 15
+ frame_mode "start at"
+ frame 1001
+ origlast 15
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read34
+ selected true
+ xpos 2922
+ ypos 204
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/11. Muzzle_Flashes/Muzzle_Flash_Straight_04.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 40
+ frame_mode "start at"
+ frame 1001
+ origlast 40
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read35
+ selected true
+ xpos 3032
+ ypos 204
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/11. Muzzle_Flashes/Muzzle_Flash_Straight_05.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 40
+ frame_mode "start at"
+ frame 1001
+ origlast 40
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read36
+ selected true
+ xpos 3142
+ ypos 204
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/11. Muzzle_Flashes/Muzzle_Flash_Straight_06.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 40
+ frame_mode "start at"
+ frame 1001
+ origlast 40
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read37
+ selected true
+ xpos 3252
+ ypos 204
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/11. Muzzle_Flashes/Muzzle_Flash_Straight_07.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 40
+ frame_mode "start at"
+ frame 1001
+ origlast 40
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read38
+ selected true
+ xpos 3362
+ ypos 204
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/11. Muzzle_Flashes/Muzzle_Flash_Straight_08.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 40
+ frame_mode "start at"
+ frame 1001
+ origlast 40
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read39
+ selected true
+ xpos 3472
+ ypos 204
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/11. Muzzle_Flashes/Muzzle_Flash_Straight_09.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 25
+ frame_mode "start at"
+ frame 1001
+ origlast 25
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read40
+ selected true
+ xpos 3582
+ ypos 204
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/11. Muzzle_Flashes/Automatic_Fire_02.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 46
+ frame_mode "start at"
+ frame 1001
+ origlast 46
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read10
+ selected true
+ xpos 2933
+ ypos -184
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/11. Muzzle_Flashes/Automatic_Fire_03.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 46
+ frame_mode "start at"
+ frame 1001
+ origlast 46
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read11
+ selected true
+ xpos 3044
+ ypos -184
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/11. Muzzle_Flashes/Muzzle_Flash_03.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 37
+ frame_mode "start at"
+ frame 1001
+ origlast 37
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read16
+ selected true
+ xpos 3590
+ ypos -184
+}

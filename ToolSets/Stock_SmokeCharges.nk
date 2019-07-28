@@ -1,0 +1,167 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+BackdropNode {
+ inputs 0
+ name BackdropNode1
+ tile_color 0x212121ff
+ label "<center>Smoke Charges"
+ note_font_size 42
+ selected true
+ xpos 3250
+ ypos -438
+ bdwidth 430
+ bdheight 414
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/15. Smoke_Charges/Smoke_Charge_01.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 199
+ frame_mode "start at"
+ frame 1001
+ origlast 199
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read9
+ selected true
+ xpos 3260
+ ypos -358
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/15. Smoke_Charges/Smoke_Charge_02.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 251
+ frame_mode "start at"
+ frame 1001
+ origlast 251
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read10
+ selected true
+ xpos 3370
+ ypos -358
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/15. Smoke_Charges/Smoke_Charge_03.mov"
+ format "1280 675 0 0 1280 675 1 "
+ last 226
+ frame_mode "start at"
+ frame 1001
+ origlast 226
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read11
+ selected true
+ xpos 3480
+ ypos -358
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/15. Smoke_Charges/Smoke_Charge_04.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 299
+ frame_mode "start at"
+ frame 1001
+ origlast 299
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read12
+ selected true
+ xpos 3590
+ ypos -358
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/15. Smoke_Charges/Smoke_Charge_05.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 208
+ frame_mode "start at"
+ frame 1001
+ origlast 208
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read13
+ selected true
+ xpos 3260
+ ypos -238
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/15. Smoke_Charges/Smoke_Charge_06.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 201
+ frame_mode "start at"
+ frame 1001
+ origlast 201
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read14
+ selected true
+ xpos 3370
+ ypos -238
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/15. Smoke_Charges/Smoke_Charge_07.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 216
+ frame_mode "start at"
+ frame 1001
+ origlast 216
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read15
+ selected true
+ xpos 3480
+ ypos -238
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/15. Smoke_Charges/Smoke_Charge_08.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 300
+ frame_mode "start at"
+ frame 1001
+ origlast 300
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read16
+ selected true
+ xpos 3590
+ ypos -238
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/15. Smoke_Charges/Smoke_Charge_09.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 352
+ frame_mode "start at"
+ frame 1001
+ origlast 352
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read17
+ selected true
+ xpos 3425
+ ypos -126
+}

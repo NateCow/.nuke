@@ -1,0 +1,18 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+push $cut_paste_input
+NoOp {
+ name Blur_Controller
+ tile_color 0x9fffff
+ selected true
+ xpos -479
+ ypos 5
+ addUserKnob {20 User}
+ addUserKnob {6 preview l "Preview Blurs" +STARTLINE}
+ addUserKnob {6 disable_blurs l INVISIBLE +INVISIBLE +STARTLINE}
+ disable_blurs {{"preview == 0 ? \$gui : 0"}}
+ addUserKnob {22 link l "Link Selected" t "Links blur controller node to any selected nodes." T "cowBlurControl = str(nuke.thisNode().knob('name').getValue())\n\nfor i in nuke.selectedNodes():\n    i.knob('disable').setExpression('parent.'+cowBlurControl+'.disable_blurs')" +STARTLINE}
+ addUserKnob {22 unlink l "Unlink Selected" t "Unlinks selected nodes from Blur Controller and sets to default (enabled)." T "for i in nuke.selectedNodes():\n    i.knob('disable').setExpression('')\n    i.knob('disable').setValue(i.knob('disable').defaultValue())\n    i.knob('disable').clearAnimated()" +STARTLINE}
+ addUserKnob {26 ""}
+ addUserKnob {26 Usage l "" t "Any node linked to this controller will recieve the \$gui expression in its disable knob. Simply select one or more nodes and click link or unlink respectively.\n\nThe preview checkbox will disable the \$gui expression, allowing you to see your comp in all its glory when necessary.\n\nNo matter what, the disable knob will always be \$gui or 0, so this will not have any adverse affects on background or farm rendering." -STARTLINE T "Select one or more nodes and click link or unlink respectively."}
+}

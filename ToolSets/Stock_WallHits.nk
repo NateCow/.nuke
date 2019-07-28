@@ -1,0 +1,116 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+BackdropNode {
+ inputs 0
+ name BackdropNode1
+ tile_color 0x212121ff
+ label "<center>Wall Hits"
+ note_font_size 42
+ selected true
+ xpos 3140
+ ypos -288
+ bdwidth 650
+ bdheight 182
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/17. Wall_Hits/Wall_Hit_Front.mov"
+ format "1280 640 0 0 1280 640 1 "
+ last 26
+ frame_mode "start at"
+ frame 1001
+ origlast 26
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read9
+ selected true
+ xpos 3150
+ ypos -208
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/17. Wall_Hits/Wall_Hit_Side_01.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 53
+ frame_mode "start at"
+ frame 1001
+ origlast 53
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read10
+ selected true
+ xpos 3260
+ ypos -208
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/17. Wall_Hits/Wall_Hit_Side_02.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 110
+ frame_mode "start at"
+ frame 1001
+ origlast 110
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read11
+ selected true
+ xpos 3370
+ ypos -208
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/17. Wall_Hits/Wall_Hit_Side_03.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 208
+ frame_mode "start at"
+ frame 1001
+ origlast 208
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read12
+ selected true
+ xpos 3480
+ ypos -208
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/17. Wall_Hits/Wall_Hit_Side_04.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 174
+ frame_mode "start at"
+ frame 1001
+ origlast 174
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read13
+ selected true
+ xpos 3590
+ ypos -208
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/17. Wall_Hits/Wall_Hit_Side_05.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 107
+ frame_mode "start at"
+ frame 1001
+ origlast 107
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read14
+ selected true
+ xpos 3700
+ ypos -208
+}

@@ -1,0 +1,25 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+push $cut_paste_input
+Write {
+ file C:/Users/Evan/Documents/Active_Projects/GLAM/SHOTS/RW/010/COMPS/RW_010_COMP_V001.mov
+ colorspace Gamma2.4
+ file_type mov
+ meta_codec ap4h
+ mov32_fps 23.976
+ mov32_pixel_format {{0} "default (YCbCrA 8-bit 444 Biased (r408))" "RGBA  8-bit" "YCbCrA 8-bit 444 Biased (r408)" "YCbCr  8-bit 422 (2vuy)"}
+ mov64_codec ap4h
+ mov64_fps 23.976
+ mov64_bitrate 20000
+ mov64_bitrate_tolerance 40000000
+ mov64_quality_min 2
+ mov64_quality_max 31
+ mov64_gop_size 12
+ mov64_b_frames 0
+ checkHashOnRead false
+ version 1
+ name Write1
+ selected true
+ xpos 200
+ ypos 101
+}

@@ -1,0 +1,558 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+BackdropNode {
+ inputs 0
+ name BackdropNode1
+ tile_color 0x212121ff
+ label <center>Explosions
+ note_font_size 42
+ selected true
+ xpos 2801
+ ypos -264
+ bdwidth 659
+ bdheight 748
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/08. Explosions/Car_Bomb.mov"
+ format "1280 640 0 0 1280 640 1 "
+ last 172
+ frame_mode "start at"
+ frame 1001
+ origlast 172
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read9
+ selected true
+ xpos 2820
+ ypos -184
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/08. Explosions/Explosion_02.mov"
+ format "720 1280 0 0 720 1280 1 "
+ last 265
+ frame_mode "start at"
+ frame 1001
+ origlast 265
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read11
+ selected true
+ xpos 3040
+ ypos -184
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/08. Explosions/Explosion_03.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 251
+ frame_mode "start at"
+ frame 1001
+ origlast 251
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read12
+ selected true
+ xpos 3150
+ ypos -184
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/08. Explosions/Explosion_04.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 103
+ frame_mode "start at"
+ frame 1001
+ origlast 103
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read13
+ selected true
+ xpos 3260
+ ypos -184
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/08. Explosions/Explosion_05.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 201
+ frame_mode "start at"
+ frame 1001
+ origlast 201
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read14
+ selected true
+ xpos 3370
+ ypos -184
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/08. Explosions/Explosion_06.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 233
+ frame_mode "start at"
+ frame 1001
+ origlast 233
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read15
+ selected true
+ xpos 2815
+ ypos 168
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/08. Explosions/Explosion_07.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 98
+ frame_mode "start at"
+ frame 1001
+ origlast 98
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read16
+ selected true
+ xpos 2925
+ ypos 168
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/08. Explosions/Explosion_09.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 176
+ frame_mode "start at"
+ frame 1001
+ origlast 176
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read18
+ selected true
+ xpos 3145
+ ypos 168
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/08. Explosions/Explosion_10.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 144
+ frame_mode "start at"
+ frame 1001
+ origlast 144
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read19
+ selected true
+ xpos 2820
+ ypos -76
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/08. Explosions/Fireball_AtCam_01.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 105
+ frame_mode "start at"
+ frame 1001
+ origlast 105
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read20
+ selected true
+ xpos 2930
+ ypos -76
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/08. Explosions/Fireball_AtCam_02.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 81
+ frame_mode "start at"
+ frame 1001
+ origlast 81
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read21
+ selected true
+ xpos 3040
+ ypos -76
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/08. Explosions/Fireball_AtCam_04.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 201
+ frame_mode "start at"
+ frame 1001
+ origlast 201
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read23
+ selected true
+ xpos 3260
+ ypos -76
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/08. Explosions/Fireball_Day_01.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 94
+ frame_mode "start at"
+ frame 1001
+ origlast 94
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read26
+ selected true
+ xpos 3361
+ ypos 171
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/08. Explosions/Fireball_Day_02.mov"
+ format "1280 637 0 0 1280 637 0.999216 "
+ last 111
+ frame_mode "start at"
+ frame 1001
+ origlast 111
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read27
+ selected true
+ xpos 2811
+ ypos 276
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/08. Explosions/Fireball_Day_03.mov"
+ format "1280 637 0 0 1280 637 0.999216 "
+ last 370
+ frame_mode "start at"
+ frame 1001
+ origlast 370
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read28
+ selected true
+ xpos 2921
+ ypos 276
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/08. Explosions/Fireball_Day_04.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 296
+ frame_mode "start at"
+ frame 1001
+ origlast 296
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read29
+ selected true
+ xpos 2820
+ ypos 47
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/08. Explosions/Fireball_Day_05.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 63
+ frame_mode "start at"
+ frame 1001
+ origlast 63
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read30
+ selected true
+ xpos 2930
+ ypos 47
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/08. Explosions/Fireball_Day_06.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 71
+ frame_mode "start at"
+ frame 1001
+ origlast 71
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read31
+ selected true
+ xpos 3040
+ ypos 47
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/08. Explosions/Fireball_Day_07.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 136
+ frame_mode "start at"
+ frame 1001
+ origlast 136
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read32
+ selected true
+ xpos 3150
+ ypos 47
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/08. Explosions/Fireball_Day_08.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 115
+ frame_mode "start at"
+ frame 1001
+ origlast 115
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read33
+ selected true
+ xpos 3260
+ ypos 47
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/08. Explosions/Fireball_Debris_01.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 181
+ frame_mode "start at"
+ frame 1001
+ origlast 181
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read34
+ selected true
+ xpos 3370
+ ypos 47
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/08. Explosions/Fireball_Debris_02.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 137
+ frame_mode "start at"
+ frame 1001
+ origlast 137
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read35
+ selected true
+ xpos 3035
+ ypos 278
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/08. Explosions/Fireball_Debris_03.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 206
+ frame_mode "start at"
+ frame 1001
+ origlast 206
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read36
+ selected true
+ xpos 3145
+ ypos 278
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/08. Explosions/Fireball_Debris_04.mov"
+ format "1280 637 0 0 1280 637 0.999216 "
+ last 345
+ frame_mode "start at"
+ frame 1001
+ origlast 345
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read37
+ selected true
+ xpos 3255
+ ypos 278
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/08. Explosions/Fireball_Debris_05.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 291
+ frame_mode "start at"
+ frame 1001
+ origlast 291
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read38
+ selected true
+ xpos 3365
+ ypos 278
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/08. Explosions/Fireball_Debris_06.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 219
+ frame_mode "start at"
+ frame 1001
+ origlast 219
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read39
+ selected true
+ xpos 3040
+ ypos 382
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/08. Explosions/Fireball_Side_01.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 76
+ frame_mode "start at"
+ frame 1001
+ origlast 76
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read40
+ selected true
+ xpos 3150
+ ypos 382
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/08. Explosions/Explosion_01.mov"
+ format "720 1280 0 0 720 1280 1 "
+ last 176
+ frame_mode "start at"
+ frame 1001
+ origlast 176
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read10
+ selected true
+ xpos 2930
+ ypos -184
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/08. Explosions/Fireball_AtCam_07.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 201
+ frame_mode "start at"
+ frame 1001
+ origlast 201
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read25
+ selected true
+ xpos 3251
+ ypos 171
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/08. Explosions/Explosion_08.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 186
+ frame_mode "start at"
+ frame 1001
+ origlast 186
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read17
+ selected true
+ xpos 3035
+ ypos 168
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/08. Explosions/Fireball_AtCam_03.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 157
+ frame_mode "start at"
+ frame 1001
+ origlast 157
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read22
+ selected true
+ xpos 3150
+ ypos -76
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/08. Explosions/Fireball_AtCam_06.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 40
+ frame_mode "start at"
+ frame 1001
+ origlast 40
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read24
+ selected true
+ xpos 3370
+ ypos -76
+}

@@ -1,0 +1,308 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+push $cut_paste_input
+Group {
+ name E_Blur
+ tile_color 0xff7000ff
+ selected true
+ xpos 2842
+ ypos 300
+ addUserKnob {20 User}
+ addUserKnob {14 Blur R 0 100}
+ Blur {100 100}
+ addUserKnob {7 Exponent}
+ Exponent 0.5
+ addUserKnob {7 Weight R 0 10}
+ Weight 10
+ addUserKnob {7 Mix}
+ Mix 0.685
+}
+ Input {
+  inputs 0
+  name mask
+  xpos 550
+  ypos 328
+  number 1
+ }
+ Invert {
+  name Invert1
+  selected true
+  xpos 550
+  ypos 352
+ }
+ Input {
+  inputs 0
+  name Input1
+  xpos 876
+  ypos -434
+ }
+ PostageStamp {
+  name PostageStamp1
+  xpos 876
+  ypos -357
+  postage_stamp true
+ }
+set Nd433f000 [stack 0]
+ Dot {
+  name Dot3
+  xpos 1685
+  ypos -330
+ }
+ Dot {
+  name Dot4
+  xpos 1685
+  ypos 388
+ }
+set Nd433e800 [stack 0]
+push $Nd433f000
+ Blur {
+  size {{parent.Blur.w} {parent.Blur.h}}
+  name Blur1
+  xpos 88
+  ypos -73
+ }
+set Nd433e400 [stack 0]
+push $Nd433f000
+ Blur {
+  size {{parent.Blur1.size.w*E_Blur.Exponent} {parent.Blur1.size.h*E_Blur.Exponent}}
+  name Blur2
+  xpos 216
+  ypos -73
+ }
+ Merge2 {
+  inputs 2
+  operation plus
+  name Merge1
+  xpos 216
+  ypos 7
+ }
+set Nd02abc00 [stack 0]
+push $Nd433f000
+ Blur {
+  size {{parent.Blur2.size.w*E_Blur.Exponent} {parent.Blur2.size.h*E_Blur.Exponent}}
+  name Blur3
+  xpos 346
+  ypos -79
+ }
+ Merge2 {
+  inputs 2
+  operation plus
+  name Merge2
+  xpos 346
+  ypos 7
+ }
+set Nd02ab400 [stack 0]
+push $Nd433f000
+ Blur {
+  size {{parent.Blur3.size.w*E_Blur.Exponent} {parent.Blur3.size.h*E_Blur.Exponent}}
+  name Blur4
+  xpos 484
+  ypos -68
+ }
+ Merge2 {
+  inputs 2
+  operation plus
+  name Merge3
+  xpos 484
+  ypos 7
+ }
+set Nd02aac00 [stack 0]
+push $Nd433f000
+ Blur {
+  size {{parent.Blur4.size.w*E_Blur.Exponent} {parent.Blur4.size.h*E_Blur.Exponent}}
+  name Blur5
+  xpos 621
+  ypos -69
+ }
+ Merge2 {
+  inputs 2
+  operation plus
+  name Merge4
+  xpos 621
+  ypos 7
+ }
+set Nd02aa400 [stack 0]
+push $Nd433f000
+ Blur {
+  size {{parent.Blur5.size.w*E_Blur.Exponent} {parent.Blur5.size.h*E_Blur.Exponent}}
+  name Blur6
+  xpos 772
+  ypos -76
+ }
+ Merge2 {
+  inputs 2
+  operation plus
+  name Merge5
+  xpos 772
+  ypos 7
+ }
+set Na2b93c00 [stack 0]
+push $Nd433f000
+ Blur {
+  size {{parent.Blur6.size.w*E_Blur.Exponent} {parent.Blur6.size.h*E_Blur.Exponent}}
+  name Blur7
+  xpos 910
+  ypos -82
+ }
+ Merge2 {
+  inputs 2
+  operation plus
+  name Merge6
+  xpos 910
+  ypos 7
+ }
+set Na2b93400 [stack 0]
+push $Nd433f000
+ Blur {
+  size {{parent.Blur7.size.w*E_Blur.Exponent} {parent.Blur7.size.h*E_Blur.Exponent}}
+  name Blur8
+  xpos 1073
+  ypos -90
+ }
+ Merge2 {
+  inputs 2
+  operation plus
+  name Merge7
+  xpos 1073
+  ypos 7
+ }
+set Na2b92c00 [stack 0]
+push $Nd433f000
+ Blur {
+  size {{parent.Blur8.size.w*E_Blur.Exponent} {parent.Blur8.size.h*E_Blur.Exponent}}
+  name Blur9
+  xpos 1261
+  ypos -93
+ }
+ Merge2 {
+  inputs 2
+  operation plus
+  name Merge8
+  xpos 1261
+  ypos 7
+ }
+set Na2b92400 [stack 0]
+push $Nd433f000
+ Blur {
+  size {{parent.Blur9.size.w*E_Blur.Exponent} {parent.Blur9.size.h*E_Blur.Exponent}}
+  name Blur10
+  xpos 1437
+  ypos -95
+ }
+ Merge2 {
+  inputs 2
+  operation plus
+  name Merge9
+  xpos 1437
+  ypos 7
+ }
+ Multiply {
+  value 0.1
+  name Multiply9
+  xpos 1437
+  ypos 66
+ }
+push $Na2b92400
+ Multiply {
+  value 0.1111111111
+  name Multiply8
+  xpos 1261
+  ypos 69
+ }
+push $Na2b92c00
+ Multiply {
+  value 0.125
+  name Multiply7
+  xpos 1073
+  ypos 64
+ }
+push $Na2b93400
+ Multiply {
+  value 0.14285714
+  name Multiply6
+  xpos 910
+  ypos 59
+ }
+push $Na2b93c00
+ Multiply {
+  value 0.16666667
+  name Multiply5
+  xpos 772
+  ypos 56
+ }
+push $Nd02aa400
+ Multiply {
+  value 0.2
+  name Multiply4
+  xpos 617
+  ypos 60
+ }
+push $Nd02aac00
+ Multiply {
+  value 0.25
+  name Multiply3
+  xpos 484
+  ypos 56
+ }
+push $Nd02ab400
+ Multiply {
+  value 0.3333333
+  name Multiply2
+  xpos 346
+  ypos 61
+ }
+push 0
+push $Nd02abc00
+ Multiply {
+  value 0.5
+  name Multiply1
+  xpos 216
+  ypos 56
+ }
+push $Nd433e400
+ Dot {
+  name Dot1
+  xpos 122
+  ypos 69
+ }
+ Dissolve {
+  inputs 10+1
+  which {{parent.Weight}}
+  name Dissolve1
+  xpos 723
+  ypos 265
+ }
+ Keymix {
+  inputs 3
+  name Keymix1
+  xpos 723
+  ypos 381
+ }
+push $Nd433e800
+ Dot {
+  name Dot2
+  xpos 1685
+  ypos 444
+ }
+ Dissolve {
+  inputs 2
+  which {{parent.Mix}}
+  name Dissolve2
+  xpos 723
+  ypos 437
+ }
+ Output {
+  name Output1
+  xpos 723
+  ypos 600
+ }
+push $Nd433f000
+ Viewer {
+  inputs 2
+  input_number 1
+  input_process false
+  name Viewer1
+  xpos -189
+  ypos 896
+ }
+end_group

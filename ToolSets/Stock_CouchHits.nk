@@ -1,0 +1,320 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+BackdropNode {
+ inputs 0
+ name BackdropNode1
+ tile_color 0x212121ff
+ label "<center>Couch Hits"
+ note_font_size 42
+ selected true
+ xpos 3467
+ ypos -672
+ bdwidth 653
+ bdheight 425
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/04. Couch_Hits/Couch_Hit_02.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 20
+ frame_mode "start at"
+ frame 1001
+ origlast 20
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read10
+ selected true
+ xpos 3590
+ ypos -592
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/04. Couch_Hits/Couch_Hit_03.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 46
+ frame_mode "start at"
+ frame 1001
+ origlast 46
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read11
+ selected true
+ xpos 3700
+ ypos -592
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/04. Couch_Hits/Couch_Hit_04.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 57
+ frame_mode "start at"
+ frame 1001
+ origlast 57
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read12
+ selected true
+ xpos 3810
+ ypos -592
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/04. Couch_Hits/Couch_Hit_05.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 52
+ frame_mode "start at"
+ frame 1001
+ origlast 52
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read13
+ selected true
+ xpos 3920
+ ypos -592
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/04. Couch_Hits/Couch_Hit_06.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 30
+ frame_mode "start at"
+ frame 1001
+ origlast 30
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read14
+ selected true
+ xpos 4030
+ ypos -592
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/04. Couch_Hits/Couch_Hit_07.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 39
+ frame_mode "start at"
+ frame 1001
+ origlast 39
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read15
+ selected true
+ xpos 3479
+ ypos -470
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/04. Couch_Hits/Couch_Hit_08.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 60
+ frame_mode "start at"
+ frame 1001
+ origlast 60
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read16
+ selected true
+ xpos 3589
+ ypos -470
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/04. Couch_Hits/Couch_Hit_09.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 90
+ frame_mode "start at"
+ frame 1001
+ origlast 90
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read17
+ selected true
+ xpos 3699
+ ypos -470
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/04. Couch_Hits/Couch_Hit_Close_01.mov"
+ format "1280 637 0 0 1280 637 0.999216 "
+ last 94
+ frame_mode "start at"
+ frame 1001
+ origlast 94
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read19
+ selected true
+ xpos 3809
+ ypos -470
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/04. Couch_Hits/Couch_Hit_Close_02.mov"
+ format "1280 637 0 0 1280 637 0.999216 "
+ last 47
+ frame_mode "start at"
+ frame 1001
+ origlast 47
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read20
+ selected true
+ xpos 3919
+ ypos -470
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/04. Couch_Hits/Couch_Hit_Close_03.mov"
+ format "1280 637 0 0 1280 637 0.999216 "
+ last 111
+ frame_mode "start at"
+ frame 1001
+ origlast 111
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read21
+ selected true
+ xpos 4029
+ ypos -470
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/04. Couch_Hits/Couch_Hit_Side_01.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 137
+ frame_mode "start at"
+ frame 1001
+ origlast 137
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read23
+ selected true
+ xpos 3587
+ ypos -349
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/04. Couch_Hits/Couch_Hit_Side_02.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 107
+ frame_mode "start at"
+ frame 1001
+ origlast 107
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read24
+ selected true
+ xpos 3697
+ ypos -349
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/04. Couch_Hits/Couch_Hit_Side_03.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 218
+ frame_mode "start at"
+ frame 1001
+ origlast 218
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read25
+ selected true
+ xpos 3807
+ ypos -349
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/04. Couch_Hits/Couch_Hit_Side_04.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 121
+ frame_mode "start at"
+ frame 1001
+ origlast 121
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read26
+ selected true
+ xpos 3917
+ ypos -349
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/04. Couch_Hits/Couch_Hit_Side_05.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 120
+ frame_mode "start at"
+ frame 1001
+ origlast 120
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read27
+ selected true
+ xpos 4027
+ ypos -349
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/04. Couch_Hits/Couch_Hit_Close_04.mov"
+ format "1280 637 0 0 1280 637 0.999216 "
+ last 90
+ frame_mode "start at"
+ frame 1001
+ origlast 90
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read22
+ selected true
+ xpos 3477
+ ypos -349
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/04. Couch_Hits/Couch_Hit_01.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 64
+ frame_mode "start at"
+ frame 1001
+ origlast 64
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read9
+ selected true
+ xpos 3480
+ ypos -592
+}

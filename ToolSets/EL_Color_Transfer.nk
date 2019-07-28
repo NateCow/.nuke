@@ -1,0 +1,179 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+push $cut_paste_input
+Group {
+name EL_Colour_Transfer_v3_2
+tile_color 0xffff
+selected true
+xpos -597
+ypos 2375
+addUserKnob {20 User}
+addUserKnob {4 Method t "Note: HSV may change the luminance of the input. Multiply will not work properly is there are any places in the plate where the value is zero. " M {HSV Multiply}}
+addUserKnob {7 BlurColor l "Blur Color Amount" R 0 100}
+BlurColor 60
+addUserKnob {7 Mix}
+Mix 1
+}
+Input {
+inputs 0
+name Luminance
+xpos -26
+ypos -49
+}
+Dot {
+name Dot1
+xpos 8
+ypos -9
+}
+set Naeb48800 [stack 0]
+Dot {
+name Dot2
+xpos 8
+ypos 113
+}
+set Naeb48400 [stack 0]
+Saturation {
+saturation 0
+name Saturation2
+xpos -355
+ypos 110
+}
+Input {
+inputs 0
+name Color
+xpos -274
+ypos -56
+number 1
+}
+Blur {
+size {{parent.BlurColor}}
+name Blur1
+xpos -274
+ypos -32
+}
+Dot {
+name Dot7
+xpos -240
+ypos 20
+}
+set Naf0db400 [stack 0]
+push $Naf0db400
+Saturation {
+saturation 0
+name Saturation1
+xpos -453
+ypos 17
+}
+Merge2 {
+inputs 2
+operation divide
+name Merge1
+xpos -453
+ypos 113
+}
+Merge2 {
+inputs 2
+operation multiply
+name Merge2
+xpos -355
+ypos 167
+}
+Dot {
+name Dot8
+xpos -321
+ypos 457
+}
+push $Naf0db400
+Colorspace {
+colorspace_out HSV
+name Colorspace1
+xpos -274
+ypos 257
+}
+push $Naeb48400
+Colorspace {
+colorspace_out HSV
+name Colorspace3
+xpos -26
+ypos 255
+}
+set N1301fc00 [stack 0]
+ShuffleCopy {
+inputs 2
+red red
+green green
+name ShuffleCopy1
+xpos -146
+ypos 320
+}
+Colorspace {
+colorspace_in HSV
+name Colorspace2
+xpos -146
+ypos 382
+}
+Switch {
+inputs 2
+which {{parent.Method}}
+name Switch1
+xpos -146
+ypos 454
+}
+push $Naeb48400
+Dot {
+name Dot6
+xpos 103
+ypos 113
+}
+Dot {
+name Dot5
+xpos 103
+ypos 511
+}
+Dissolve {
+inputs 2
+which {{parent.Mix}}
+name Dissolve1
+xpos -146
+ypos 502
+}
+push $Naeb48800
+Dot {
+name Dot3
+xpos 160
+ypos -9
+}
+Dot {
+name Dot4
+xpos 160
+ypos 588
+}
+Copy {
+inputs 2
+from0 rgba.red
+to0 rgba.red
+from1 rgba.green
+to1 rgba.green
+from2 rgba.blue
+to2 rgba.blue
+name Copy1
+selected true
+xpos -146
+ypos 567
+}
+set Nb55a1c00 [stack 0]
+Output {
+name Output1
+xpos -146
+ypos 663
+}
+push $N1301fc00
+push $Nb55a1c00
+Viewer {
+inputs 2
+frame_range 1001-1040
+name Viewer1
+xpos -182
+ypos 67
+}
+end_group

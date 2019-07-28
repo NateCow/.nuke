@@ -1,0 +1,558 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+BackdropNode {
+ inputs 0
+ name BackdropNode1
+ tile_color 0x212121ff
+ label <center>Charges
+ note_font_size 42
+ selected true
+ xpos 3318
+ ypos -696
+ bdwidth 883
+ bdheight 611
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/03. Charges/Charge_06.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 90
+ frame_mode "start at"
+ frame 1001
+ origlast 90
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read9
+ selected true
+ xpos 3328
+ ypos -616
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/03. Charges/Charge_07.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 138
+ frame_mode "start at"
+ frame 1001
+ origlast 138
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read10
+ selected true
+ xpos 3438
+ ypos -616
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/03. Charges/Charge_08.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 34
+ frame_mode "start at"
+ frame 1001
+ origlast 34
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read11
+ selected true
+ xpos 3548
+ ypos -616
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/03. Charges/Charge_09.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 89
+ frame_mode "start at"
+ frame 1001
+ origlast 89
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read12
+ selected true
+ xpos 3658
+ ypos -616
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/03. Charges/Charge_10.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 75
+ frame_mode "start at"
+ frame 1001
+ origlast 75
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read13
+ selected true
+ xpos 3768
+ ypos -616
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/03. Charges/Charge_11.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 121
+ frame_mode "start at"
+ frame 1001
+ origlast 121
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read14
+ selected true
+ xpos 3878
+ ypos -616
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/03. Charges/Charge_12.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 149
+ frame_mode "start at"
+ frame 1001
+ origlast 149
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read15
+ selected true
+ xpos 3988
+ ypos -616
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/03. Charges/Charge_13.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 146
+ frame_mode "start at"
+ frame 1001
+ origlast 146
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read16
+ selected true
+ xpos 4098
+ ypos -616
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/03. Charges/Charge_14.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 112
+ frame_mode "start at"
+ frame 1001
+ origlast 112
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read17
+ selected true
+ xpos 3328
+ ypos -476
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/03. Charges/Charge_15.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 121
+ frame_mode "start at"
+ frame 1001
+ origlast 121
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read19
+ selected true
+ xpos 3438
+ ypos -476
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/03. Charges/Charge_16.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 138
+ frame_mode "start at"
+ frame 1001
+ origlast 138
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read20
+ selected true
+ xpos 3548
+ ypos -476
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/03. Charges/Charge_17.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 40
+ frame_mode "start at"
+ frame 1001
+ origlast 40
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read21
+ selected true
+ xpos 3658
+ ypos -476
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/03. Charges/Charge_18.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 122
+ frame_mode "start at"
+ frame 1001
+ origlast 122
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read22
+ selected true
+ xpos 3768
+ ypos -476
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/03. Charges/Charge_19.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 50
+ frame_mode "start at"
+ frame 1001
+ origlast 50
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read23
+ selected true
+ xpos 3878
+ ypos -476
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/03. Charges/Charge_20.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 41
+ frame_mode "start at"
+ frame 1001
+ origlast 41
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read24
+ selected true
+ xpos 3988
+ ypos -476
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/03. Charges/Charge_22.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 16
+ frame_mode "start at"
+ frame 1001
+ origlast 16
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read26
+ selected true
+ xpos 3332
+ ypos -340
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/03. Charges/Charge_23.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 41
+ frame_mode "start at"
+ frame 1001
+ origlast 41
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read27
+ selected true
+ xpos 3442
+ ypos -340
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/03. Charges/Charge_24.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 72
+ frame_mode "start at"
+ frame 1001
+ origlast 72
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read28
+ selected true
+ xpos 3552
+ ypos -340
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/03. Charges/Charge_25.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 30
+ frame_mode "start at"
+ frame 1001
+ origlast 30
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read29
+ selected true
+ xpos 3662
+ ypos -340
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/03. Charges/Charge_26.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 42
+ frame_mode "start at"
+ frame 1001
+ origlast 42
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read30
+ selected true
+ xpos 3772
+ ypos -340
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/03. Charges/Charge_27.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 37
+ frame_mode "start at"
+ frame 1001
+ origlast 37
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read31
+ selected true
+ xpos 3882
+ ypos -340
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/03. Charges/Charge_28.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 21
+ frame_mode "start at"
+ frame 1001
+ origlast 21
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read32
+ selected true
+ xpos 3992
+ ypos -340
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/03. Charges/Charge_29.mov"
+ format "1280 637 0 0 1280 637 0.999216 "
+ last 41
+ frame_mode "start at"
+ frame 1001
+ origlast 41
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read33
+ selected true
+ xpos 4102
+ ypos -340
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/03. Charges/Charge_30.mov"
+ format "1280 637 0 0 1280 637 0.999216 "
+ last 36
+ frame_mode "start at"
+ frame 1001
+ origlast 36
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read34
+ selected true
+ xpos 3336
+ ypos -204
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/03. Charges/Charge_31.mov"
+ format "1280 600 0 0 1280 600 1 "
+ last 65
+ frame_mode "start at"
+ frame 1001
+ origlast 65
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read35
+ selected true
+ xpos 3446
+ ypos -204
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/03. Charges/Charge_32.mov"
+ format "1280 637 0 0 1280 637 0.999216 "
+ last 30
+ frame_mode "start at"
+ frame 1001
+ origlast 30
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read36
+ selected true
+ xpos 3556
+ ypos -204
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/03. Charges/Charge_33.mov"
+ format "1280 637 0 0 1280 637 0.999216 "
+ last 31
+ frame_mode "start at"
+ frame 1001
+ origlast 31
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read37
+ selected true
+ xpos 3666
+ ypos -204
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/03. Charges/Charge_01.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 73
+ frame_mode "start at"
+ frame 1001
+ origlast 73
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read38
+ selected true
+ xpos 3776
+ ypos -204
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/03. Charges/Charge_02.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 129
+ frame_mode "start at"
+ frame 1001
+ origlast 129
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read39
+ selected true
+ xpos 3886
+ ypos -204
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/03. Charges/Charge_03.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 141
+ frame_mode "start at"
+ frame 1001
+ origlast 141
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read40
+ selected true
+ xpos 3996
+ ypos -204
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/03. Charges/Charge_04.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 61
+ frame_mode "start at"
+ frame 1001
+ origlast 61
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read42
+ selected true
+ xpos 4106
+ ypos -204
+}
+Read {
+ inputs 0
+ file "S:/Assets/Stock Footage/Action Essentials 2 720p/03. Charges/Charge_21.mov"
+ format "1280 720 0 0 1280 720 1 HD_720"
+ last 28
+ frame_mode "start at"
+ frame 1001
+ origlast 28
+ origset true
+ colorspace sRGB
+ mov32_codec {{0} "Apple PNG (appl - png )"}
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ name Read25
+ selected true
+ xpos 4098
+ ypos -476
+}

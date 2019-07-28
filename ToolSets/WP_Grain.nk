@@ -1,0 +1,18 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+push $cut_paste_input
+Grain2 {
+ name Grain2_2
+ label "Kodak 5248"
+ selected true
+ xpos -480
+ ypos 2459
+ red_size 3.8
+ green_size 3.8
+ blue_size 3.6
+ red_m 0.12
+ green_m 0.125
+ blue_m 0.275
+ black {0.004 0.004 0.004}
+ minimum {0 0 0}
+}

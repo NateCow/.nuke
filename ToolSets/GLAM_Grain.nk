@@ -1,0 +1,111 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+push $cut_paste_input
+Shuffle {
+alpha white
+name Shuffle2
+selected true
+xpos 292
+ypos 188
+}
+Grade {
+white 2
+name Grade5
+selected true
+xpos 292
+ypos 214
+}
+Dot {
+name Dot3
+selected true
+xpos 326
+ypos 262
+}
+set N649c7800 [stack 0]
+Keyer {
+operation "luminance key"
+range {0.01515744552 0.3516072826 1 1}
+name Keyer2
+selected true
+xpos 561
+ypos 353
+}
+push $N649c7800
+push $N649c7800
+Grain2 {
+name Grain2_2
+label "Kodak 5248"
+selected true
+xpos 292
+ypos 328
+red_size 1.9
+green_size 1.9
+blue_size 2.2
+blue_m 1.15
+black {0 0 0}
+minimum {0 0 0}
+}
+set N7276300 [stack 0]
+Dissolve {
+inputs 2
+which 0.7
+name Dissolve1
+selected true
+xpos 156
+ypos 428
+}
+push $N649c7800
+Keyer {
+operation "luminance key"
+range {0.007733390571 0.03182369132 1 1}
+name Keyer3
+selected true
+xpos 444
+ypos 362
+}
+push $N7276300
+push $N649c7800
+Grain2 {
+name Grain2_1
+label "Kodak 5248"
+selected true
+xpos 193
+ypos 336
+red_size 1.9
+green_size 1.9
+blue_size 2.2
+red_m 0.955
+green_m 0.89
+blue_m 2.65
+black {0 0 0}
+minimum {0 0 0}
+}
+Keymix {
+inputs 3
+name Keymix1
+selected true
+xpos 292
+ypos 456
+}
+Keymix {
+inputs 3
+name Keymix2
+selected true
+xpos 292
+ypos 531
+}
+Crop {
+box {0 0 2048 1152}
+name Crop2
+selected true
+xpos 292
+ypos 569
+}
+Grade {
+white {{parent.Grade5.white}}
+reverse true
+name Grade6
+selected true
+xpos 292
+ypos 595
+}

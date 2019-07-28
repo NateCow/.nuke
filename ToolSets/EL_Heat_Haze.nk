@@ -1,0 +1,56 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+push $cut_paste_input
+Group {
+ name Heat_Haze
+ tile_color 0xff8000ff
+ selected true
+ xpos 2622
+ ypos 294
+ addUserKnob {20 User}
+ addUserKnob {7 Heat_Wave_Size l "Heat Wave Size" R 0.1 35}
+ Heat_Wave_Size 0.44
+ addUserKnob {7 Speed l "Heat Wave Speed" R 1 30}
+ Speed 3
+ addUserKnob {7 Distort l "Distortion Severity" R 0 35}
+ Distort 6.5
+}
+ Noise {
+  inputs 0
+  size {{parent.Heat_Wave_Size*10}}
+  zoffset {{frame/Heat_Haze.Speed}}
+  center {960 540}
+  name Noise1
+  xpos 609
+  ypos -226
+ }
+ Input {
+  inputs 0
+  name Input1
+  xpos 777
+  ypos -379
+ }
+add_layer {haze_distortion haze_distortion.u haze_distortion.v}
+ ShuffleCopy {
+  inputs 2
+  alpha alpha2
+  black red
+  white green
+  out2 haze_distortion
+  name ShuffleCopy1
+  xpos 777
+  ypos -171
+ }
+ IDistort {
+  uv haze_distortion
+  uv_scale {{parent.Distort}}
+  name IDistort1
+  xpos 777
+  ypos -132
+ }
+ Output {
+  name Output1
+  xpos 777
+  ypos -69
+ }
+end_group
