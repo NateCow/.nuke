@@ -1,4 +1,29 @@
+#===============================================================================
+# menu.py
+# Version: 1.0.0
+# Last Updated: July 27th, 2019
+# Author: Nathaniel Caauwe
+# www.NateCow.com
+#===============================================================================
+
+import nuke
+import platform
 import errorReport
+
+Win_Dir = 'C:\Users\NateCow\.nuke'
+MacOSX_Dir = ''
+Linux_Dir = '/home/natecow/.nuke'
+
+# Set global directory
+if platform.system() == "Windows":
+    dir = Win_Dir
+elif platform.system() == "Darwin":
+    dir = MacOSX_Dir
+elif platform.system() == "Linux":
+    dir = Linux_Dir
+else:
+    dir = None
+
 
 nuke.menu("Nuke").addCommand('Scripts/errorReport', 'errorReport.runErrorReport()', 'alt+d')
 
