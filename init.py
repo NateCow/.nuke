@@ -1,6 +1,6 @@
 #===============================================================================
 # init.py
-# Version: 1.0.0
+# Version: 1.0.1
 # Last Updated: July 27th, 2019
 # Author: Nathaniel Caauwe
 # www.NateCow.com
@@ -34,12 +34,6 @@ nuke.addFormat("3200 1800 1 Yosemite Full")
 nuke.addFormat("1600 900 1 Yosemite Half")
 nuke.addFormat("3841 1600 1 SC19 4k Wide")
 nuke.addFormat("1920 1607 2 Minecraft Anamorphic")
-
-nuke.pluginAddPath('./X_Tools')
-nuke.pluginAddPath('./X_Tools/Icons')
-nuke.pluginAddPath('./X_Tools/Gizmos')
-
-nuke.pluginAddPath('./afx-nuke-plugins-master')
 
 nuke.pluginAddPath('f:/nuke_plugins')
 nuke.pluginAddPath('f:/nuke_plugins/errorReport')
