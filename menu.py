@@ -32,15 +32,7 @@ else:
 #===============================================================================
 
 # ----- MOTION BLUR SHUTTER CENTERED ---------------------------
-nuke.knobDefault('Tracker4.shutteroffset', "centered")
-nuke.knobDefault('TimeBlur.shutteroffset', "centered")
-nuke.knobDefault('Transform.shutteroffset', "centered")
-nuke.knobDefault('TransformMasked.shutteroffset', "centered")
-nuke.knobDefault('CornerPin2D.shutteroffset', "centered")
-nuke.knobDefault('MotionBlur2D.shutteroffset', "centered")
-nuke.knobDefault('MotionBlur3D.shutteroffset', "centered")
-nuke.knobDefault('ScanlineRender.shutteroffset', "centered")
-nuke.knobDefault('Card3D.shutteroffset', "centered")
+nuke.knobDefault('shutteroffset', "centered")
 
 
 nuke.addOnUserCreate(lambda:nuke.thisNode()['first_frame'].setValue(nuke.frame()), nodeClass='FrameHold')
