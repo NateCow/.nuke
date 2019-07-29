@@ -1,0 +1,88 @@
+#! /data/studio/upipe/apps/nuke/11.1v1/bin/linux/centos7/libnuke-11.1.1.so -nx
+version 11.1 v1
+Group {
+name bm_GrainTransfer
+inputs 3
+help "Isolates plate grain by finding the difference between a plate & denoised plate.\n\nUseful for paint work, although sometimes erraneous applying to CG as there are differing levels of noise in any plate, based off bright and dark values."
+tile_color 0x222222ff
+addUserKnob {20 Options}
+addUserKnob {6 viewGrainCheckbox l "View Grain  " -STARTLINE}
+addUserKnob {6 invertCheckbox l "Invert Grain" -STARTLINE}
+addUserKnob {41 value l "Grain Strength" T Multiply1.value}
+addUserKnob {20 infoTab l Info}
+addUserKnob {26 ""}
+addUserKnob {26 versionText l "" +STARTLINE T "\nCreated by Ben McEwan\nwww.benmcewan.com\n\nVersion 1.1\nLast Updated: January 23rd, 2018\n"}
+addUserKnob {26 ""}
+}
+Input {
+inputs 0
+name plate
+xpos -1029
+ypos -117
+number 2
+}
+set Nab98b560 [stack 0]
+Input {
+inputs 0
+name denoise
+xpos -1218
+ypos -123
+number 1
+}
+set Na49e4580 [stack 0]
+Merge2 {
+inputs 2
+operation from
+name Merge3
+xpos -1218
+ypos -32
+}
+push $Na49e4580
+push $Nab98b560
+Merge2 {
+inputs 2
+operation from
+name Merge2
+xpos -1029
+ypos -33
+}
+Switch {
+inputs 2
+which {{invertCheckbox}}
+name Switch1
+xpos -1029
+ypos 50
+}
+Multiply {
+name Multiply1
+xpos -1029
+ypos 104
+}
+set N51eaa950 [stack 0]
+push $N51eaa950
+Input {
+inputs 0
+name B
+xpos -849
+ypos -115
+}
+Merge2 {
+inputs 2
+operation plus
+name Merge1
+xpos -849
+ypos 110
+}
+Switch {
+inputs 2
+which {{viewGrainCheckbox}}
+name Switch2
+xpos -849
+ypos 200
+}
+Output {
+name Output1
+xpos -849
+ypos 270
+}
+end_group

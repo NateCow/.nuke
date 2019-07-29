@@ -1,7 +1,7 @@
 #===============================================================================
 # menu.py
-# Version: 1.1.0
-# Last Updated: July 27th, 2019
+# Version: 1.1.2
+# Last Updated: July 28th, 2019
 # Author: Nathaniel Caauwe
 # www.NateCow.com
 #===============================================================================
@@ -9,10 +9,13 @@
 import nuke
 import platform
 import errorReport
+import nukescripts
 
 Win_Dir = 'C:\Users\NateCow\.nuke'
 MacOSX_Dir = ''
 Linux_Dir = '/home/natecow/.nuke'
+
+nuke.pluginAddPath('./icons')
 
 # Set global directory
 if platform.system() == "Windows":
@@ -23,6 +26,48 @@ elif platform.system() == "Linux":
     dir = Linux_Dir
 else:
     dir = None
+
+#===============================================================================
+# Knob Defaults
+#===============================================================================
+
+# ----- MOTION BLUR SHUTTER CENTERED ---------------------------
+nuke.knobDefault('Tracker4.shutteroffset', "centered")
+nuke.knobDefault('TimeBlur.shutteroffset', "centered")
+nuke.knobDefault('Transform.shutteroffset', "centered")
+nuke.knobDefault('TransformMasked.shutteroffset', "centered")
+nuke.knobDefault('CornerPin2D.shutteroffset', "centered")
+nuke.knobDefault('MotionBlur2D.shutteroffset', "centered")
+nuke.knobDefault('MotionBlur3D.shutteroffset', "centered")
+nuke.knobDefault('ScanlineRender.shutteroffset', "centered")
+nuke.knobDefault('Card3D.shutteroffset', "centered")
+
+
+nuke.addOnUserCreate(lambda:nuke.thisNode()['first_frame'].setValue(nuke.frame()), nodeClass='FrameHold')
+
+
+#===============================================================================
+# Custom Menus
+#===============================================================================
+
+utilitiesMenu = nuke.menu('Nuke').addMenu('Utilities')
+
+utilitiesMenu.addCommand('Autocrop', 'nukescripts.autocrop()')
+
+
+myGizmosMenu = nuke.menu('Nodes').addMenu('myGizmos', icon=dir+"myGizmoes_icon.png")
+
+myGizmosMenu.addCommand('Autocrop', 'nukescripts.autocrop()')
+myGizmosMenu.addCommand('bm_GrainTransfer', 'nuke.createNode("bm_GrainTransfer")', icon="Grain.png")
+
+
+#===============================================================================
+# Keyboard Shortcuts
+#===============================================================================
+
+nuke.menu('Nodes').addCommand("Channel/Shuffle", "nuke.createNode('Shuffle')", "v", icon="Shuffle.png", shortcutContext=2)
+
+
 
 
 #===============================================================================
