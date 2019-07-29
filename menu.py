@@ -1,6 +1,6 @@
 #===============================================================================
 # menu.py
-# Version: 1.1.2
+# Version: 1.1.3
 # Last Updated: July 28th, 2019
 # Author: Nathaniel Caauwe
 # www.NateCow.com
@@ -31,21 +31,53 @@ else:
 # Knob Defaults
 #===============================================================================
 
-# ----- MOTION BLUR SHUTTER CENTERED ---------------------------
+# -- Motion blur shutter. Perfectly balanced, as all things should be. ---------
 nuke.knobDefault('shutteroffset', "centered")
 
 
 nuke.addOnUserCreate(lambda:nuke.thisNode()['first_frame'].setValue(nuke.frame()), nodeClass='FrameHold')
 
 
+
+#===============================================================================
+# Cow Functions
+#===============================================================================
+
+def setStartFrame():
+
+    nodes = nuke.selectedNodes()
+    for n in nodes:
+        n.knob('frame_mode').setValue("start at") # Sets mode to "start at"
+        n.knob('frame').setValue('1001')
+
+def setsRGB():
+
+    nodes = nuke.selectedNodes()
+    for n in nodes:
+        n.knob('colorspace').setValue("sRGB")
+
+def setProject():
+
+    node = nuke.selectedNode()
+    frameStart = int(node.knob('first').getValue())
+    frameEnd = int(node.knob('last').getValue())
+    nodeFormat = node.format()
+
+    nuke.root()['first_frame'].setValue(1001)
+    nuke.root()['last_frame'].setValue(frameEnd - frameStart + 1001)
+    nuke.root()['format'].setValue(nodeFormat.name())
+
 #===============================================================================
 # Custom Menus
 #===============================================================================
 
-utilitiesMenu = nuke.menu('Nuke').addMenu('Utilities')
+cowMenu = nuke.menu('Nuke').addMenu('Cow')
 
-utilitiesMenu.addCommand('Autocrop', 'nukescripts.autocrop()')
-
+cowMenu.addCommand('Autocrop', 'nukescripts.autocrop()')
+cowMenu.addCommand("Read This", lambda: readFromWrite(), 'alt+r', shortcutContext=2)
+cowMenu.addCommand("Start Frame 1001", lambda: setStartFrame())
+cowMenu.addCommand("Set sRGB", lambda: setsRGB(), 'F9', shortcutContext=2)
+cowMenu.addCommand("Set Project Settings", lambda: setProject())
 
 myGizmosMenu = nuke.menu('Nodes').addMenu('myGizmos', icon=dir+"myGizmoes_icon.png")
 
@@ -126,44 +158,8 @@ def readFromWrite():
   
             print('No Writes Found in Node Selection')
 
-nuke.menu("Nuke").addCommand("Cow/Read This", lambda: readFromWrite(), 'alt+r')
 
-def setStartFrame():
 
-    nodes = nuke.selectedNodes('Read')
-    for n in nodes:
-        n.knob('frame_mode').setValue(1) # Sets mode to "start at"
-        n.knob('frame').setValue('1001')
-
-nuke.menu("Nuke").addCommand("Cow/Start Frame 1001", lambda: setStartFrame())
-
-def setsRGB():
-
-    nodes = nuke.selectedNodes('Read')
-    for n in nodes:
-        n.knob('colorspace').setValue(2)
-
-nuke.menu("Nuke").addCommand("Cow/Set sRGB", lambda: setsRGB(), 'F9')
-
-def setProject():
-
-    node = nuke.selectedNode()
-    frameStart = int(node.knob('first').getValue())
-    frameEnd = int(node.knob('last').getValue())
-    nodeName = str(node.name()) # Will link Project Format to this read node's format knob (such as Read1.format)
-
-    nuke.root()['first_frame'].setValue(1001)
-    nuke.root()['last_frame'].setValue(frameEnd - frameStart + 1001)
-    nuke.root()['format'].setExpression(nodeName+'.format')
-
-nuke.menu("Nuke").addCommand("Cow/Set Project Settings", lambda: setProject())
-
-def doTheThings():
-
-	setStartFrame()
-	setProject()
-
-nuke.menu("Nuke").addCommand("Cow/Do The Things", lambda: doTheThings(), 'F8')
 
 #===============================================================================
 # Other Stuffs
