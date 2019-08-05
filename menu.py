@@ -1,7 +1,7 @@
 #===============================================================================
 # menu.py
 # Version: 1.1.3
-# Last Updated: July 28th, 2019
+# Last Updated: August 4th, 2019
 # Author: Nathaniel Caauwe
 # www.NateCow.com
 #===============================================================================
@@ -47,7 +47,7 @@ def setStartFrame():
 
     nodes = nuke.selectedNodes()
     for n in nodes:
-        n.knob('frame_mode').setValue("start at") # Sets mode to "start at"
+        n.knob('frame_mode').setValue("start at")
         n.knob('frame').setValue('1001')
 
 def setsRGB():
@@ -91,6 +91,14 @@ myGizmosMenu.addCommand('bm_GrainTransfer', 'nuke.createNode("bm_GrainTransfer")
 
 nuke.menu('Nodes').addCommand("Channel/Shuffle", "nuke.createNode('Shuffle')", "v", icon="Shuffle.png", shortcutContext=2)
 
+
+# -------- Merge Node Shortcuts-------------------------------------------------
+mergeMenu = nuke.menu('Nodes').findItem("Merge/Merges")
+
+mergeMenu.addCommand('Stencil', 'nuke.createNode("Merge2", "operation stencil bbox B")', "alt+o", icon="MergeOut.png", shortcutContext=2)
+mergeMenu.addCommand('Mask', 'nuke.createNode("Merge2", "operation mask bbox A")', "alt+i", icon="MergeIn.png", shortcutContext=2)
+mergeMenu.addCommand('Plus', 'nuke.createNode("Merge2", "operation plus")', "alt+]", icon="MergePlus.png", shortcutContext=2)
+mergeMenu.addCommand('From', 'nuke.createNode("Merge2", "operation from")', "alt+[", icon="MergeDifference.png", shortcutContext=2)
 
 
 

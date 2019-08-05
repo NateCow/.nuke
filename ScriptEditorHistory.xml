@@ -1,21 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?><script>nuke.root()['format'].setExpression(&quot;&quot;)</script><script>nuke.root()['format'].getValue()</script><script>nuke.root().format()</script><script>nuke.formats()</script><script>scriptFormats = nuke.formats()</script><script>for f in scriptFormats:
-        print f.name()
-        print f.width()
-        print f.height()
-        print f.pixelAspect()
-        print 10*'-'</script><script>for f in scriptFormats:
-        print f.name()</script><script>nuke.root()['format'].setValue('HD_1080')</script><script>nuke.selectedNode()['format'].getValue()</script><script>str(nuke.selectedNode()['format'].getValue())</script><script>node = nuke.selectedNode()
-nodeFormat = node.format()
-print nodeFormat.name()</script><script>node = nuke.selectedNode()
-nodeFormat = node.format()
-print nodeFormat.name()
-nuke.root()['format'].setValue(nodeFormat)</script><script>node = nuke.selectedNode()
-nodeFormat = str(node.format())
-print nodeFormat
-#nuke.root()['format'].setValue(nodeFormat)</script><script>node = nuke.selectedNode()
-nodeFormat = node.format()
-print nodeFormat
-#nuke.root()['format'].setValue(nodeFormat)</script><script>node = nuke.selectedNode()
-nodeFormat = node.format()
-print nodeFormat.name()
-nuke.root()['format'].setValue(nodeFormat.name())</script><script></script>
+<?xml version="1.0" encoding="UTF-8"?><script>nuke.createNode('Blocky')</script><script>x = 10
+y = 10
+
+sum = x + y
+
+if sum == 20:
+    print &quot;Yes, &quot;+str(x)+&quot; + &quot;+str(y)+&quot; = &quot;+str(sum)
+else:
+    print &quot;No, &quot;+str(x)+&quot; + &quot;+str(y)+&quot; = &quot;+str(sum)</script><script>x = 10
+y = 14
+
+sum = x + y
+
+if sum == 20:
+    print &quot;Yes, &quot;+str(x)+&quot; + &quot;+str(y)+&quot; = &quot;+str(sum)
+else:
+    print &quot;No, &quot;+str(x)+&quot; + &quot;+str(y)+&quot; = &quot;+str(sum)</script><script></script>

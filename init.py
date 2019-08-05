@@ -1,7 +1,7 @@
 #===============================================================================
 # init.py
-# Version: 1.0.1
-# Last Updated: July 27th, 2019
+# Version: 1.0.3
+# Last Updated: August 4th, 2019
 # Author: Nathaniel Caauwe
 # www.NateCow.com
 #===============================================================================
@@ -10,6 +10,7 @@
 
 nuke.pluginAddPath('./gizmos')
 nuke.pluginAddPath('./python')
+nuke.pluginAddPath('./icons')
 
 
 
