@@ -1,6 +1,6 @@
 #===============================================================================
 # init.py
-# Version: 1.0.3
+# Version: 1.0.4
 # Last Updated: August 4th, 2019
 # Author: Nathaniel Caauwe
 # www.NateCow.com
@@ -10,8 +10,9 @@
 
 nuke.pluginAddPath('./gizmos')
 nuke.pluginAddPath('./python')
-nuke.pluginAddPath('./icons')
+nuke.pluginAddPath('./python/shuffleShortcuts')
 
+nuke.pluginAddPath('./icons')
 
 
 # Project Settings > Default format: TWWS

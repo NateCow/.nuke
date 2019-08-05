@@ -1,6 +1,6 @@
 #===============================================================================
 # menu.py
-# Version: 1.1.3
+# Version: 1.1.4
 # Last Updated: August 4th, 2019
 # Author: Nathaniel Caauwe
 # www.NateCow.com
@@ -14,8 +14,6 @@ import nukescripts
 Win_Dir = 'C:\Users\NateCow\.nuke'
 MacOSX_Dir = ''
 Linux_Dir = '/home/natecow/.nuke'
-
-nuke.pluginAddPath('./icons')
 
 # Set global directory
 if platform.system() == "Windows":
@@ -99,6 +97,14 @@ mergeMenu.addCommand('Stencil', 'nuke.createNode("Merge2", "operation stencil bb
 mergeMenu.addCommand('Mask', 'nuke.createNode("Merge2", "operation mask bbox A")', "alt+i", icon="MergeIn.png", shortcutContext=2)
 mergeMenu.addCommand('Plus', 'nuke.createNode("Merge2", "operation plus")', "alt+]", icon="MergePlus.png", shortcutContext=2)
 mergeMenu.addCommand('From', 'nuke.createNode("Merge2", "operation from")', "alt+[", icon="MergeDifference.png", shortcutContext=2)
+
+
+# --------------------------------------------------------------
+#  PYTHON SCRIPTS ::::::::::::::::::::::::::::::::::::::::::::::
+# --------------------------------------------------------------
+
+
+import shuffleShortcuts
 
 
 

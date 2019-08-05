@@ -1,17 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?><script>nuke.createNode('Blocky')</script><script>x = 10
-y = 10
-
-sum = x + y
-
-if sum == 20:
-    print &quot;Yes, &quot;+str(x)+&quot; + &quot;+str(y)+&quot; = &quot;+str(sum)
-else:
-    print &quot;No, &quot;+str(x)+&quot; + &quot;+str(y)+&quot; = &quot;+str(sum)</script><script>x = 10
-y = 14
-
-sum = x + y
-
-if sum == 20:
-    print &quot;Yes, &quot;+str(x)+&quot; + &quot;+str(y)+&quot; = &quot;+str(sum)
-else:
-    print &quot;No, &quot;+str(x)+&quot; + &quot;+str(y)+&quot; = &quot;+str(sum)</script><script></script>
+<?xml version="1.0" encoding="UTF-8"?><script>shuffleShortcuts.createCustomShuffle('rgba', 'rgba', 'red', 1, 0, 0)
+</script><script>nuke.menu('Nodes').addCommand(&quot;Channel/Shuffle (Red to All)&quot;, &quot;shuffleShortcuts.createCustomShuffle('rgba', 'rgba', 'red', 1, 0, 0)&quot;, &quot;ctrl+shift+r&quot;, icon=&quot;redShuffle.png&quot;, shortcutContext=2)
+</script><script></script>
