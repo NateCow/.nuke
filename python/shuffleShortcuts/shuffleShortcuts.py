@@ -1,6 +1,6 @@
 #===============================================================================
 # shuffleShortcuts.py
-# Version: 0.2.1
+# Version: 0.2.2
 # Last Updated: August 4th, 2019
 # Author: Nathaniel Caauwe
 # www.NateCow.com
@@ -55,6 +55,15 @@ def shuffleRGBchannels():
     blueShuffle.setInput(0, selectedNode)
     blueShuffle['xpos'].setValue(selectedNode_xPos+150)
     blueShuffle['ypos'].setValue(selectedNode_yPos+150)
+
+    nuke.createNode('Merge2')
+    mergeNode = nuke.selectedNode()
+    mergeNode.setInput(0, redShuffle)
+    mergeNode.setInput(1, greenShuffle)
+    mergeNode.setInput(3, blueShuffle)
+    mergeNode['operation'].setValue('max')
+    mergeNode['xpos'].setValue(selectedNode_xPos)
+    mergeNode['ypos'].setValue(selectedNode_yPos+250)
 
 
 # Add menu

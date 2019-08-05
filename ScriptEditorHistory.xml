@@ -1,3 +1,24 @@
-<?xml version="1.0" encoding="UTF-8"?><script>shuffleShortcuts.createCustomShuffle('rgba', 'rgba', 'red', 1, 0, 0)
-</script><script>nuke.menu('Nodes').addCommand(&quot;Channel/Shuffle (Red to All)&quot;, &quot;shuffleShortcuts.createCustomShuffle('rgba', 'rgba', 'red', 1, 0, 0)&quot;, &quot;ctrl+shift+r&quot;, icon=&quot;redShuffle.png&quot;, shortcutContext=2)
-</script><script></script>
+<?xml version="1.0" encoding="UTF-8"?><script>llama = nuke.selectedNode()
+red = nuke.toNode('Shuffle1')
+
+llama.setInput(0, red)</script><script>llama = nuke.selectedNode()
+red = nuke.toNode('Shuffle1')
+green = nuke.toNode('Shuffle2')
+blue = nuke.toNode('Shuffle3')
+
+llama.setInput(0, red)
+llama.setInput(1, green)</script><script>llama = nuke.selectedNode()
+red = nuke.toNode('Shuffle1')
+green = nuke.toNode('Shuffle2')
+blue = nuke.toNode('Shuffle3')
+
+llama.setInput(0, red)
+llama.setInput(1, green)
+llama.setInput(2, blue)</script><script>llama = nuke.selectedNode()
+red = nuke.toNode('Shuffle1')
+green = nuke.toNode('Shuffle2')
+blue = nuke.toNode('Shuffle3')
+
+llama.setInput(0, red)
+llama.setInput(1, green)
+llama.setInput(3, blue)</script><script></script>
