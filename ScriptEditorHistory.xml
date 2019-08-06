@@ -1,7 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?><script>llama = nuke.selectedNode()
-red = nuke.toNode('Shuffle1')
-
-llama.setInput(0, red)</script><script>llama = nuke.selectedNode()
-red = nuke.toNode('Shuffle1')
-
-llama.setInput(1, red)</script><script></script>
+<?xml version="1.0" encoding="UTF-8"?><script>filepathLister.file_lister()</script><script></script>

@@ -23,4 +23,12 @@ def listNavigator():
 	for i in nuke.selectedNodes():
 		node_list.append(i.name())
 
-	print node_list
+	node_list.sort()
+
+	# Print all nodes in list
+	print "NODES IN LIST:\n"
+
+	for i in node_list:
+		print "- "+i
+
+	nuke.message("There are "+str(len(node_list))+" nodes in the list.")

@@ -106,6 +106,7 @@ mergeMenu.addCommand('From', 'nuke.createNode("Merge2", "operation from")', "alt
 
 import shuffleShortcuts
 import listNavigator
+import filepathLister
 
 
 #===============================================================================
