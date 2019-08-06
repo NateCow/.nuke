@@ -1,7 +1,7 @@
 #===============================================================================
 # menu.py
-# Version: 1.1.4
-# Last Updated: August 4th, 2019
+# Version: 1.1.5
+# Last Updated: August 5th, 2019
 # Author: Nathaniel Caauwe
 # www.NateCow.com
 #===============================================================================
@@ -105,7 +105,7 @@ mergeMenu.addCommand('From', 'nuke.createNode("Merge2", "operation from")', "alt
 
 
 import shuffleShortcuts
-
+import listNavigator
 
 
 #===============================================================================
