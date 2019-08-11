@@ -20,5 +20,7 @@ add_favorite_dir -image -script -project -misc -sequence UMJP UMJP "" J:/Project
 add_favorite_dir -image -script -project -sequence Yosemite Yosemite "" J:/Projects/Yosemite/
 add_favorite_dir -image -script -project -misc -sequence RvN_Teaser RvN_Teaser "" "S:/Projects/Ryan vs Nate/Teaser/"
 add_favorite_dir -image -script -project -sequence SC19_PRM SC19_PRM "" J:/Projects/SC19/PRM/
+add_favorite_dir -image -project -sequence ARK ARK "" J:/Projects/ARK/VFX/
+add_favorite_dir -script ARK ARK "" J:/Projects/ARK/VFX/
 
 # End of generated file.

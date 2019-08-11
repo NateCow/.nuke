@@ -16,8 +16,9 @@ nuke.pluginAddPath('./icons')
 
 
 # Project Settings > Default format: TWWS
-nuke.knobDefault("Root.format", "GSP")
-nuke.knobDefault("fps", "24")
+nuke.knobDefault("Root.format", "ARK Full")
+nuke.knobDefault("fps", "23.976")
+
 
 nuke.addFormat("4096 1728 1 Memoir_4k")
 nuke.addFormat("2048 864 1 Memoir_2k")
@@ -32,8 +33,8 @@ nuke.addFormat("1920 800 1 Candyland 1080")
 nuke.addFormat("2880 1620 1 TCW")
 nuke.addFormat("1920 960 1 HOHH 2k")
 nuke.addFormat("4096 1716 1 GSP")
-nuke.addFormat("3200 1800 1 Yosemite Full")
-nuke.addFormat("1600 900 1 Yosemite Half")
+nuke.addFormat("3200 1800 1 ARK Full")
+nuke.addFormat("1600 900 1 ARK Half")
 nuke.addFormat("3841 1600 1 SC19 4k Wide")
 nuke.addFormat("1920 1607 2 Minecraft Anamorphic")
 
