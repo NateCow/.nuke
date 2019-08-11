@@ -70,8 +70,10 @@ def setProject():
 #===============================================================================
 
 cowMenu = nuke.menu('Nuke').addMenu('Cow')
+utilitiesMenu = nuke.menu('Nuke').addMenu('Utilities')
 
-cowMenu.addCommand('Autocrop', 'nukescripts.autocrop()')
+utilitiesMenu.addCommand('Autocrop', 'nukescripts.autocrop()')
+
 cowMenu.addCommand("Read This", lambda: readFromWrite(), 'alt+r', shortcutContext=2)
 cowMenu.addCommand("Start Frame 1001", lambda: setStartFrame())
 cowMenu.addCommand("Set sRGB", lambda: setsRGB(), 'F9', shortcutContext=2)
@@ -107,6 +109,9 @@ mergeMenu.addCommand('From', 'nuke.createNode("Merge2", "operation from")', "alt
 import shuffleShortcuts
 import listNavigator
 import filepathLister
+import paste_selected
+
+
 
 
 #===============================================================================
