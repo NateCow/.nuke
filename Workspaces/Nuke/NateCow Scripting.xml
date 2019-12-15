@@ -9,7 +9,7 @@
             <split size="1257" stretch="1"/>
             <splitter orientation="2">
                 <split size="1124"/>
-                <dock id="" activePageId="uk.co.thefoundry.scripteditor.1" focus="true">
+                <dock id="" activePageId="uk.co.thefoundry.scripteditor.1">
                     <page id="uk.co.thefoundry.scripteditor.1"/>
                     <page id="Curve Editor.1"/>
                     <page id="DopeSheet.1"/>
@@ -22,10 +22,18 @@
                     <page id="Properties.1"/>
                 </dock>
                 <split size="560"/>
-                <dock id="" activePageId="DAG.1">
+                <dock id="" activePageId="DAG.1" focus="true">
                     <page id="DAG.1"/>
                 </dock>
             </splitter>
+        </splitter>
+    </window>
+    <window x="1920" y="0" w="1920" h="1200" fullscreen="1" screen="0">
+        <splitter orientation="2">
+            <split size="1200"/>
+            <dock id="" activePageId="Viewer.1">
+                <page id="Viewer.1"/>
+            </dock>
         </splitter>
     </window>
 </layout>

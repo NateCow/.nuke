@@ -1,1 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?><script>import os</script><script>os.path.basename(nuke.root()['name'].value())</script><script></script>
+<?xml version="1.0" encoding="UTF-8"?><script>nuke.channels()</script><script>print nuke.channels(rgba)</script>

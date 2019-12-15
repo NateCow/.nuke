@@ -22,4 +22,4 @@ def paste_selected():
 
 
 editMenu = nuke.menu('Nuke').findItem("Edit")
-editMenu.addCommand('Paste', 'paste_selected.paste_selected()', "ctrl+v", shortcutContext=2)
+editMenu.addCommand('Pasted Selected', 'paste_selected.paste_selected()', "ctrl+shift+v", shortcutContext=2)
