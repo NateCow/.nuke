@@ -1,7 +1,7 @@
 #===============================================================================
 # init.py
-# Version: 1.0.4
-# Last Updated: August 4th, 2019
+# Version: 1.0.5
+# Last Updated: May 2, 2020
 # Author: Nathaniel Caauwe
 # www.NateCow.com
 #===============================================================================
@@ -41,8 +41,8 @@ nuke.addFormat("2048 1152 1.33 Moment Anamorphic 2k")
 nuke.addFormat("3264 1836 1.33 Moment Anamorphic 3k")
 nuke.addFormat("3840 2160 1.33 Moment Anamorphic 4k")
 
-nuke.pluginAddPath('f:/nuke_plugins')
-nuke.pluginAddPath('f:/nuke_plugins/errorReport')
+nuke.pluginAddPath('j:/nuke_plugins')
+nuke.pluginAddPath('j:/nuke_plugins/errorReport')
 
 #custom input/output LUTs
 nuke.root().knob('luts').addCurve("AlexaV3LogC", "{ t > 0.1496582 ? (pow(10.0, (t - 0.385537) / 0.2471896) - 0.052272) / 5.555556 : (t - 0.092809) / 5.367655 }")

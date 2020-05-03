@@ -6,12 +6,14 @@ Preferences {
  PaintCacheGB 100
  selectedGPUDeviceName "GeForce GTX 960"
  platformPathRemaps ""
- ArrowColorLeft 0xffbf00ff
- ArrowColorRight 0x9fffff
  ArrowColorUp 0xff0000ff
- ArrowColorDown 0x1fff00ff
  expression_arrows false
  clone_arrows false
+ InputArrowSize 32
+ LeftInputArrowSize 5.6
+ OutputArrowSize 10
+ ArrowheadLength 10
+ ArrowheadWidth 10
  defaultBufferDepth half-float
  defaultGPUForViewer true
  echoAllCommands true

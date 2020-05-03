@@ -84,7 +84,6 @@ myGizmosMenu = nuke.menu('Nodes').addMenu('myGizmos', icon=dir+"myGizmoes_icon.p
 myGizmosMenu.addCommand('Autocrop', 'nukescripts.autocrop()')
 myGizmosMenu.addCommand('bm_GrainTransfer', 'nuke.createNode("bm_GrainTransfer")', icon="Grain.png")
 
-
 #===============================================================================
 # Keyboard Shortcuts
 #===============================================================================
