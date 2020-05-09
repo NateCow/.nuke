@@ -23,5 +23,6 @@ add_favorite_dir -image -script -project -sequence SC19_PRM SC19_PRM "" J:/Proje
 add_favorite_dir -image -project -sequence ARK ARK "" J:/Projects/ARK/VFX/
 add_favorite_dir -script ARK ARK "" J:/Projects/ARK/VFX/
 add_favorite_dir -image -script -project -python -font -geo -misc -sequence D2 D2 "" J:/Projects/DD2/VFX/
+add_favorite_dir -image -script -project -python -geo -sequence BQ BQ "" S:/Projects/Brothers_Quarrel/VFX/
 
 # End of generated file.

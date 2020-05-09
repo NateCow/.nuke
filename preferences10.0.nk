@@ -1,7 +1,7 @@
 Preferences {
  inputs 0
  name Preferences
- DiskCachePath F:/Caches/Nuke/
+ DiskCachePath J:/Caches/Nuke/
  diskCacheGB 100
  PaintCacheGB 100
  selectedGPUDeviceName "GeForce GTX 960"
