@@ -1,7 +1,7 @@
 #===============================================================================
 # filepathLister.py
-# Version: 1.0.1
-# Last Updated: August 6th, 2019
+# Version: 1.0.2
+# Last Updated: May 16, 2020
 # Author: Nathaniel Caauwe
 # www.NateCow.com
 #===============================================================================
@@ -41,7 +41,7 @@ def file_lister():
 
         # Separate the file name and version number
 		filename_no_version = filename[0:filename.find('_v')]
-		version_number = filename[filename.find('_v')+1:filename.find('_v')+6]
+		version_number = filename[filename.find('_v')+1:filename.find('_v')+5]
 
 		# Print the file name and version number of every node in the list.
 		print ("You are using "+version_number+" of "+filename_no_version)
@@ -73,7 +73,7 @@ def file_lister_to_file():
 		filename = os.path.basename(filepath)
 
 		filename_no_version = filename[0:filename.find('_v')]
-		version_number = filename[filename.find('_v')+1:filename.find('_v')+6]
+		version_number = filename[filename.find('_v')+1:filename.find('_v')+5]
 		report = open(fullName , "w")
 		report.write("You are using "+version_number+" of "+filename_no_version)
 		report.close()

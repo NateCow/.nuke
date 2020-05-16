@@ -32,8 +32,29 @@ else:
 # -- Motion blur shutter. Perfectly balanced, as all things should be. ---------
 nuke.knobDefault('shutteroffset', "centered")
 
-
+# ----- FRAMEHOLD DEFAULT --------------------------------------
 nuke.addOnUserCreate(lambda:nuke.thisNode()['first_frame'].setValue(nuke.frame()), nodeClass='FrameHold')
+
+
+
+#===============================================================================
+# Custom Menus
+#===============================================================================
+
+cowMenu = nuke.menu('Nuke').addMenu('Cow')
+utilitiesMenu = nuke.menu('Nuke').addMenu('Utilities')
+
+utilitiesMenu.addCommand('Autocrop', 'nukescripts.autocrop()')
+
+cowMenu.addCommand("Read This", lambda: readFromWrite(), 'alt+r', shortcutContext=2)
+cowMenu.addCommand("Start Frame 1001", lambda: setStartFrame())
+cowMenu.addCommand("Set sRGB", lambda: setsRGB(), 'F9', shortcutContext=2)
+cowMenu.addCommand("Set Project Settings", lambda: setProject())
+
+myGizmosMenu = nuke.menu('Nodes').addMenu('myGizmos', icon=dir+"myGizmoes_icon.png")
+
+myGizmosMenu.addCommand('Autocrop', 'nukescripts.autocrop()')
+myGizmosMenu.addCommand('bm_GrainTransfer', 'nuke.createNode("bm_GrainTransfer")', icon="Grain.png")
 
 
 
@@ -65,24 +86,7 @@ def setProject():
     nuke.root()['last_frame'].setValue(frameEnd - frameStart + 1001)
     nuke.root()['format'].setValue(nodeFormat.name())
 
-#===============================================================================
-# Custom Menus
-#===============================================================================
 
-cowMenu = nuke.menu('Nuke').addMenu('Cow')
-utilitiesMenu = nuke.menu('Nuke').addMenu('Utilities')
-
-utilitiesMenu.addCommand('Autocrop', 'nukescripts.autocrop()')
-
-cowMenu.addCommand("Read This", lambda: readFromWrite(), 'alt+r', shortcutContext=2)
-cowMenu.addCommand("Start Frame 1001", lambda: setStartFrame())
-cowMenu.addCommand("Set sRGB", lambda: setsRGB(), 'F9', shortcutContext=2)
-cowMenu.addCommand("Set Project Settings", lambda: setProject())
-
-myGizmosMenu = nuke.menu('Nodes').addMenu('myGizmos', icon=dir+"myGizmoes_icon.png")
-
-myGizmosMenu.addCommand('Autocrop', 'nukescripts.autocrop()')
-myGizmosMenu.addCommand('bm_GrainTransfer', 'nuke.createNode("bm_GrainTransfer")', icon="Grain.png")
 
 #===============================================================================
 # Keyboard Shortcuts
@@ -109,6 +113,8 @@ import shuffleShortcuts
 import listNavigator
 import filepathLister
 import paste_selected
+
+
 
 
 
