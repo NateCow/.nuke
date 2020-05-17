@@ -116,6 +116,7 @@ import paste_selected
 # import shortcut_NodeComment
 import shortcut_NodeCustomizer
 import shortcut_operationSwitcher
+import moblur_controller
 
 
 
