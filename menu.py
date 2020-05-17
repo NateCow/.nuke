@@ -1,7 +1,7 @@
 #===============================================================================
 # menu.py
-# Version: 1.1.5
-# Last Updated: August 5th, 2019
+# Version: 1.1.7
+# Last Updated: May 16, 2020
 # Author: Nathaniel Caauwe
 # www.NateCow.com
 #===============================================================================
@@ -113,7 +113,8 @@ import shuffleShortcuts
 import listNavigator
 import filepathLister
 import paste_selected
-
+# import shortcut_NodeComment
+import shortcut_NodeCustomizer
 
 
 
