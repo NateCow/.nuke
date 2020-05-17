@@ -15,7 +15,7 @@
 #===============================================================================
 
 import nuke
-
+ 
 def shortcut_NodeComment():
 
 	selectedNode = nuke.selectedNode()

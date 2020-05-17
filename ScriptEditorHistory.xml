@@ -1,1 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><script>shortcut_NodeCustomizer.shortcut_NodeCustomizer()</script><script></script>
+<?xml version="1.0" encoding="UTF-8"?><script>merge_nodes = []
+dictionary = {}
+
+for node in nuke.allNodes('Merge2'):
+    merge_nodes.append(node)
+
+for i in merge_nodes:
+    dictionary[i.name()] = i.knob('operation').value()
+
+print dictionary.items()</script><script></script>
