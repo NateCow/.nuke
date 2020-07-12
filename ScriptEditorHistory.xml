@@ -1,2 +1,2 @@
-<?xml version="1.0" encoding="UTF-8"?><script>node = nuke.selectedNode()
-node.knob('label').setValue('[expr[value mix]*100]%')</script><script></script>
+<?xml version="1.0" encoding="UTF-8"?><script>for i in nuke.selectedNodes():
+    i.knob('class').getValue()</script>
