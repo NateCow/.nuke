@@ -1,0 +1,30 @@
+#! C:/Program Files/Nuke10.0v4/nuke-10.0.4.dll -nx
+version 10.0 v4
+Gizmo {
+}
+ Input {
+  inputs 0
+  name Input1
+  xpos -159
+  ypos 325
+ }
+ OCIOFileTransform {
+  file J:/nuke_plugins/luts/ALEXA_Default_LogC2Rec709.cube
+  working_space AlexaV3LogC
+  name OCIOFileTransform1
+  xpos -159
+  ypos 365
+ }
+ OCIOColorSpace {
+  in_colorspace linear
+  out_colorspace AlexaV3LogC
+  name OCIOColorSpace1
+  xpos -159
+  ypos 391
+ }
+ Output {
+  name Output1
+  xpos -159
+  ypos 491
+ }
+end_group

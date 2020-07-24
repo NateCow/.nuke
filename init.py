@@ -40,6 +40,7 @@ nuke.addFormat("1920 1607 2 Minecraft Anamorphic")
 nuke.addFormat("2048 1152 1.33 Moment Anamorphic 2k")
 nuke.addFormat("3264 1836 1.33 Moment Anamorphic 3k")
 nuke.addFormat("3840 2160 1.33 Moment Anamorphic 4k")
+nuke.addFormat("3840 1444 1 BELL Desqueezed")
 
 nuke.pluginAddPath('j:/nuke_plugins')
 nuke.pluginAddPath('j:/nuke_plugins/errorReport')
@@ -48,7 +49,8 @@ nuke.pluginAddPath('j:/nuke_plugins/errorReport')
 nuke.root().knob('luts').addCurve("AlexaV3LogC", "{ t > 0.1496582 ? (pow(10.0, (t - 0.385537) / 0.2471896) - 0.052272) / 5.555556 : (t - 0.092809) / 5.367655 }")
 # ViewerProcess LUTs
 nuke.ViewerProcess.register("AlexaV3Rec709", nuke.createNode,
-("Vectorfield", "vfield_file F:/nuke_plugins/luts/AlexaV3_K1S1_LogC2Video_Rec709_EE_nuke3d.cube colorspaceIn AlexaV3LogC"))
+("Vectorfield", "vfield_file j:/nuke_plugins/luts/AlexaV3_K1S1_LogC2Video_Rec709_EE_nuke3d.cube colorspaceIn AlexaV3LogC"))
+nuke.ViewerProcess.register("Alexa", nuke.Node, ("Alexa_LUT", ""))
 
 
 import cryptomatte_utilities
