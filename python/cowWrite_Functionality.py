@@ -3,12 +3,12 @@ renderFormatSelection = int(nuke.thisNode().knob('renderFormat').getValue())
 framePaddingSelection = int(nuke.thisNode().knob('framePadding').getValue())
 
 renderTypeDict = {
-	0: "comp",
-	1: "precomp",
-	2: "DN",
+	0: "comp_main",
+	1: "prc",
+	2: "plt_DN",
 	3: "test",
 	4: "slap",
-	5: "matte"
+	5: "matte",
 }
 
 renderTypeStr = renderTypeDict.get(renderTypeSelection)
@@ -52,16 +52,21 @@ else:
 
 if len(nuke.thisNode().knob('customLabel').getValue()) > 0: #no custom label
 	if nuke.thisNode().knob('renderFormat').getValue() == 3: #QT movie
+		nuke.thisNode().knob('file_type').setValue(renderFormatExt)
 		nuke.thisNode().knob('file').setValue(shotBaseDir + subFolder + dirShot + "_" + renderTypeStr + dirLabel + "_v" + versionStr + "." + renderFormatExt)
 	else:
+		nuke.thisNode().knob('file_type').setValue(renderFormatExt)
 		nuke.thisNode().knob('file').setValue(shotBaseDir + subFolder + dirShot + "_" + renderTypeStr + dirLabel + "_v" + versionStr + "/" + renderFormatExt + "/" + dirShot + "_" + renderTypeStr + dirLabel + "_v" + versionStr + ".%0" + framePaddingStr + "d." + renderFormatExt)
 else:
 	if nuke.thisNode().knob('renderFormat').getValue() == 3: #QT movie
+		nuke.thisNode().knob('file_type').setValue(renderFormatExt)
 		nuke.thisNode().knob('file').setValue(shotBaseDir + subFolder + dirShot + "_" + renderTypeStr + "_v" + versionStr + "." + renderFormatExt)
 	else:
+		nuke.thisNode().knob('file_type').setValue(renderFormatExt)
 		nuke.thisNode().knob('file').setValue(shotBaseDir + subFolder + dirShot + "_" + renderTypeStr + "_v" + versionStr + "/" + renderFormatExt + "/" + dirShot + "_" + renderTypeStr + "_v" + versionStr + ".%0" + framePaddingStr + "d." + renderFormatExt)
 
 if nuke.thisNode().knob('renderFormat').getValue() == 2: #jpeg sequence
+	nuke.thisNode().knob('file_type').setValue('jpeg')
 	nuke.thisNode().knob('_jpeg_quality').setValue('1')
 
 # Llamas. That is all.

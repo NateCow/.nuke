@@ -1,2 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?><script>for i in nuke.selectedNodes():
-    i.knob('class').getValue()</script>
+<?xml version="1.0" encoding="UTF-8"?><script>nuke.root.name</script>
