@@ -1,0 +1,18 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+push $cut_paste_input
+Kronos {
+input.first {{first_frame}}
+input.last {{last_frame}}
+retimedChannels all
+timingOutputSpeed 1
+showLegacyMode false
+motionEstimation Regularized
+shutterSamples 8
+shutterTime 0.5
+legacyModeNuke9 false
+name Kronos3
+selected true
+xpos -131
+ypos 684
+}

@@ -2,6 +2,9 @@ Preferences {
  inputs 0
  name Preferences
  localCachePath J:/Caches/Nuke/localized/
+ LocalizationSizeLimit 400
+ LocalizationUpdateNever true
+ LocalizationPauseOnProjectLoad true
  DiskCachePath J:/Caches/Nuke/
  diskCacheGB 100
  PaintCacheGB 100

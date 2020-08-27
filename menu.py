@@ -48,14 +48,16 @@ utilitiesMenu.addCommand('Autocrop', 'nukescripts.autocrop()')
 
 cowMenu.addCommand("Read This", lambda: readFromWrite(), 'alt+r', shortcutContext=2)
 cowMenu.addCommand("Start Frame 1001", lambda: setStartFrame())
-cowMenu.addCommand("Set sRGB", lambda: setsRGB(), 'F9', shortcutContext=2)
+cowMenu.addCommand("Set sRGB", lambda: setsRGB())
 cowMenu.addCommand("Set Project Settings", lambda: setProject())
+
 
 myGizmosMenu = nuke.menu('Nodes').addMenu('myGizmos', icon=dir+"myGizmoes_icon.png")
 
 myGizmosMenu.addCommand('Autocrop', 'nukescripts.autocrop()')
 myGizmosMenu.addCommand('bm_GrainTransfer', 'nuke.createNode("bm_GrainTransfer")', icon="Grain.png")
 myGizmosMenu.addCommand('AdvancedGrain', 'nuke.createNode("AdvancedGrain")', icon="Grain.png")
+myGizmosMenu.addCommand('EdgeExtend', 'nuke.createNode("EdgeExtend2")')
 
 
 
@@ -119,6 +121,7 @@ import shortcut_NodeCustomizer
 import shortcut_operationSwitcher
 import moblur_controller
 import mixPercent
+import batchCommand
 
 
 
@@ -197,3 +200,15 @@ def readFromWrite():
 
 import cryptomatte_utilities
 cryptomatte_utilities.setup_cryptomatte_ui()
+#>>>PrismStart
+import nuke
+if not nuke.env["studio"]:
+	import sys, os
+
+	Dir = os.path.join("C:/Prism", "Scripts")
+	if Dir not in sys.path:
+		sys.path.append(Dir)
+
+	import PrismCore
+	pcore = PrismCore.PrismCore(app="Nuke")
+#<<<PrismEnd

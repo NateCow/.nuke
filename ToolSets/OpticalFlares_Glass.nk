@@ -1,272 +1,272 @@
 set cut_paste_input [stack 0]
 version 10.0 v4
 Read {
-inputs 0
-file "F:/Optical Flares Textures/Glass/Scattered.png"
-format "1920 1080 0 0 1920 1080 1 HD_1080"
-origset true
-name Read2
-selected true
-xpos 1188
-ypos 2096
+ inputs 0
+ file "J:/Optical Flares Textures/Glass/Uniform.png"
+ format "1920 1080 0 0 1920 1080 1 HD_1080"
+ origset true
+ name Read2
+ selected true
+ xpos 1060
+ ypos -88
 }
 Read {
-inputs 0
-file "F:/Optical Flares Textures/Glass/Small_Grime.png"
-format "1920 1080 0 0 1920 1080 1 HD_1080"
-origset true
-name Read3
-selected true
-xpos 1298
-ypos 2096
+ inputs 0
+ file "J:/Optical Flares Textures/Glass/Spots.png"
+ format "1920 1080 0 0 1920 1080 1 HD_1080"
+ origset true
+ name Read3
+ selected true
+ xpos 1170
+ ypos -88
 }
 Read {
-inputs 0
-file "F:/Optical Flares Textures/Glass/Smudgy.png"
-format "1920 1080 0 0 1920 1080 1 HD_1080"
-origset true
-name Read4
-selected true
-xpos 1408
-ypos 2096
+ inputs 0
+ file "J:/Optical Flares Textures/Glass/Specks.png"
+ format "1920 1080 0 0 1920 1080 1 HD_1080"
+ origset true
+ name Read4
+ selected true
+ xpos 1280
+ ypos -88
 }
 Read {
-inputs 0
-file "F:/Optical Flares Textures/Glass/Spaztic.png"
-format "1920 1080 0 0 1920 1080 1 HD_1080"
-origset true
-name Read5
-selected true
-xpos 1518
-ypos 2096
+ inputs 0
+ file "J:/Optical Flares Textures/Glass/Spaztic.png"
+ format "1920 1080 0 0 1920 1080 1 HD_1080"
+ origset true
+ name Read5
+ selected true
+ xpos 1390
+ ypos -88
 }
 Read {
-inputs 0
-file "F:/Optical Flares Textures/Glass/Specks.png"
-format "1920 1080 0 0 1920 1080 1 HD_1080"
-origset true
-name Read7
-selected true
-xpos 1628
-ypos 2096
+ inputs 0
+ file "J:/Optical Flares Textures/Glass/Smudgy.png"
+ format "1920 1080 0 0 1920 1080 1 HD_1080"
+ origset true
+ name Read6
+ selected true
+ xpos 1500
+ ypos -88
 }
 Read {
-inputs 0
-file "F:/Optical Flares Textures/Glass/Spots.png"
-format "1920 1080 0 0 1920 1080 1 HD_1080"
-origset true
-name Read9
-selected true
-xpos 1738
-ypos 2096
+ inputs 0
+ file "J:/Optical Flares Textures/Glass/Small_Grime.png"
+ format "1920 1080 0 0 1920 1080 1 HD_1080"
+ origset true
+ name Read7
+ selected true
+ xpos 1610
+ ypos -88
 }
 Read {
-inputs 0
-file "F:/Optical Flares Textures/Glass/Uniform.png"
-format "1920 1080 0 0 1920 1080 1 HD_1080"
-origset true
-name Read11
-selected true
-xpos 1848
-ypos 2096
+ inputs 0
+ file "J:/Optical Flares Textures/Glass/Scattered.png"
+ format "1920 1080 0 0 1920 1080 1 HD_1080"
+ origset true
+ name Read8
+ selected true
+ xpos 1720
+ ypos -88
 }
 Read {
-inputs 0
-file "F:/Optical Flares Textures/Glass/Aura.png"
-format "1920 1080 0 0 1920 1080 1 HD_1080"
-origset true
-name Read12
-selected true
-xpos 1958
-ypos 2096
+ inputs 0
+ file "J:/Optical Flares Textures/Glass/Sandy.png"
+ format "1920 1080 0 0 1920 1080 1 HD_1080"
+ origset true
+ name Read9
+ selected true
+ xpos 1830
+ ypos -88
 }
 Read {
-inputs 0
-file "F:/Optical Flares Textures/Glass/Bubbly.png"
-format "1920 1080 0 0 1920 1080 1 HD_1080"
-origset true
-name Read13
-selected true
-xpos 2068
-ypos 2096
+ inputs 0
+ file "J:/Optical Flares Textures/Glass/Random_Grime.png"
+ format "1920 1080 0 0 1920 1080 1 HD_1080"
+ origset true
+ name Read10
+ selected true
+ xpos 1940
+ ypos -88
 }
 Read {
-inputs 0
-file "F:/Optical Flares Textures/Glass/Champagne.png"
-format "1920 1080 0 0 1920 1080 1 HD_1080"
-origset true
-name Read14
-selected true
-xpos 2178
-ypos 2096
+ inputs 0
+ file "J:/Optical Flares Textures/Glass/Prints.png"
+ format "1920 1080 0 0 1920 1080 1 HD_1080"
+ origset true
+ name Read11
+ selected true
+ xpos 2050
+ ypos -88
 }
 Read {
-inputs 0
-file "F:/Optical Flares Textures/Glass/Coarse.png"
-format "1920 1080 0 0 1920 1080 1 HD_1080"
-origset true
-name Read15
-selected true
-xpos 2288
-ypos 2096
+ inputs 0
+ file "J:/Optical Flares Textures/Glass/Messy.png"
+ format "1920 1080 0 0 1920 1080 1 HD_1080"
+ origset true
+ name Read12
+ selected true
+ xpos 2160
+ ypos -88
 }
 Read {
-inputs 0
-file "F:/Optical Flares Textures/Glass/Dag.png"
-format "1920 1080 0 0 1920 1080 1 HD_1080"
-origset true
-name Read16
-selected true
-xpos 2398
-ypos 2096
+ inputs 0
+ file "J:/Optical Flares Textures/Glass/Illusion.png"
+ format "1920 1080 0 0 1920 1080 1 HD_1080"
+ origset true
+ name Read13
+ selected true
+ xpos 2270
+ ypos -88
 }
 Read {
-inputs 0
-file "F:/Optical Flares Textures/Glass/Defocus.png"
-format "1920 1080 0 0 1920 1080 1 HD_1080"
-origset true
-name Read17
-selected true
-xpos 2508
-ypos 2096
+ inputs 0
+ file "J:/Optical Flares Textures/Glass/Grime.png"
+ format "1920 1080 0 0 1920 1080 1 HD_1080"
+ origset true
+ name Read14
+ selected true
+ xpos 2380
+ ypos -88
 }
 Read {
-inputs 0
-file "F:/Optical Flares Textures/Glass/Dirty.png"
-format "1920 1080 0 0 1920 1080 1 HD_1080"
-origset true
-name Read18
-selected true
-xpos 2618
-ypos 2096
+ inputs 0
+ file "J:/Optical Flares Textures/Glass/Grim.png"
+ format "1920 1080 0 0 1920 1080 1 HD_1080"
+ origset true
+ name Read15
+ selected true
+ xpos 2490
+ ypos -88
 }
 Read {
-inputs 0
-file "F:/Optical Flares Textures/Glass/Dodgy.png"
-format "1920 1080 0 0 1920 1080 1 HD_1080"
-origset true
-name Read19
-selected true
-xpos 2728
-ypos 2096
+ inputs 0
+ file "J:/Optical Flares Textures/Glass/Grainy.png"
+ format "1920 1080 0 0 1920 1080 1 HD_1080"
+ origset true
+ name Read16
+ selected true
+ xpos 2600
+ ypos -88
 }
 Read {
-inputs 0
-file "F:/Optical Flares Textures/Glass/Drip.png"
-format "1920 1080 0 0 1920 1080 1 HD_1080"
-origset true
-name Read20
-selected true
-xpos 2838
-ypos 2096
+ inputs 0
+ file "J:/Optical Flares Textures/Glass/Glow.png"
+ format "1920 1080 0 0 1920 1080 1 HD_1080"
+ origset true
+ name Read17
+ selected true
+ xpos 2710
+ ypos -88
 }
 Read {
-inputs 0
-file "F:/Optical Flares Textures/Glass/Drops.png"
-format "1920 1080 0 0 1920 1080 1 HD_1080"
-origset true
-name Read21
-selected true
-xpos 2948
-ypos 2096
+ inputs 0
+ file "J:/Optical Flares Textures/Glass/Fibers.png"
+ format "1920 1080 0 0 1920 1080 1 HD_1080"
+ origset true
+ name Read18
+ selected true
+ xpos 2820
+ ypos -88
 }
 Read {
-inputs 0
-file "F:/Optical Flares Textures/Glass/Fibers.png"
-format "1920 1080 0 0 1920 1080 1 HD_1080"
-origset true
-name Read22
-selected true
-xpos 3058
-ypos 2096
+ inputs 0
+ file "J:/Optical Flares Textures/Glass/Drops.png"
+ format "1920 1080 0 0 1920 1080 1 HD_1080"
+ origset true
+ name Read19
+ selected true
+ xpos 2930
+ ypos -88
 }
 Read {
-inputs 0
-file "F:/Optical Flares Textures/Glass/Glow.png"
-format "1920 1080 0 0 1920 1080 1 HD_1080"
-origset true
-name Read23
-selected true
-xpos 3168
-ypos 2096
+ inputs 0
+ file "J:/Optical Flares Textures/Glass/Drip.png"
+ format "1920 1080 0 0 1920 1080 1 HD_1080"
+ origset true
+ name Read20
+ selected true
+ xpos 3040
+ ypos -88
 }
 Read {
-inputs 0
-file "F:/Optical Flares Textures/Glass/Grainy.png"
-format "1920 1080 0 0 1920 1080 1 HD_1080"
-origset true
-name Read24
-selected true
-xpos 3278
-ypos 2096
+ inputs 0
+ file "J:/Optical Flares Textures/Glass/Dodgy.png"
+ format "1920 1080 0 0 1920 1080 1 HD_1080"
+ origset true
+ name Read21
+ selected true
+ xpos 3150
+ ypos -88
 }
 Read {
-inputs 0
-file "F:/Optical Flares Textures/Glass/Grim.png"
-format "1920 1080 0 0 1920 1080 1 HD_1080"
-origset true
-name Read25
-selected true
-xpos 3388
-ypos 2096
+ inputs 0
+ file "J:/Optical Flares Textures/Glass/Dirty.png"
+ format "1920 1080 0 0 1920 1080 1 HD_1080"
+ origset true
+ name Read22
+ selected true
+ xpos 3260
+ ypos -88
 }
 Read {
-inputs 0
-file "F:/Optical Flares Textures/Glass/Grime.png"
-format "1920 1080 0 0 1920 1080 1 HD_1080"
-origset true
-name Read26
-selected true
-xpos 3498
-ypos 2096
+ inputs 0
+ file "J:/Optical Flares Textures/Glass/Defocus.png"
+ format "1920 1080 0 0 1920 1080 1 HD_1080"
+ origset true
+ name Read23
+ selected true
+ xpos 3370
+ ypos -88
 }
 Read {
-inputs 0
-file "F:/Optical Flares Textures/Glass/Illusion.png"
-format "1920 1080 0 0 1920 1080 1 HD_1080"
-origset true
-name Read27
-selected true
-xpos 3608
-ypos 2096
+ inputs 0
+ file "J:/Optical Flares Textures/Glass/Dag.png"
+ format "1920 1080 0 0 1920 1080 1 HD_1080"
+ origset true
+ name Read24
+ selected true
+ xpos 3480
+ ypos -88
 }
 Read {
-inputs 0
-file "F:/Optical Flares Textures/Glass/Messy.png"
-format "1920 1080 0 0 1920 1080 1 HD_1080"
-origset true
-name Read28
-selected true
-xpos 3718
-ypos 2096
+ inputs 0
+ file "J:/Optical Flares Textures/Glass/Coarse.png"
+ format "1920 1080 0 0 1920 1080 1 HD_1080"
+ origset true
+ name Read25
+ selected true
+ xpos 3590
+ ypos -88
 }
 Read {
-inputs 0
-file "F:/Optical Flares Textures/Glass/Prints.png"
-format "1920 1080 0 0 1920 1080 1 HD_1080"
-origset true
-name Read29
-selected true
-xpos 3828
-ypos 2096
+ inputs 0
+ file "J:/Optical Flares Textures/Glass/Champagne.png"
+ format "1920 1080 0 0 1920 1080 1 HD_1080"
+ origset true
+ name Read26
+ selected true
+ xpos 3700
+ ypos -88
 }
 Read {
-inputs 0
-file "F:/Optical Flares Textures/Glass/Random_Grime.png"
-format "1920 1080 0 0 1920 1080 1 HD_1080"
-origset true
-name Read30
-selected true
-xpos 3938
-ypos 2096
+ inputs 0
+ file "J:/Optical Flares Textures/Glass/Bubbly.png"
+ format "1920 1080 0 0 1920 1080 1 HD_1080"
+ origset true
+ name Read27
+ selected true
+ xpos 3810
+ ypos -88
 }
 Read {
-inputs 0
-file "F:/Optical Flares Textures/Glass/Sandy.png"
-format "1920 1080 0 0 1920 1080 1 HD_1080"
-origset true
-name Read31
-selected true
-xpos 4048
-ypos 2096
+ inputs 0
+ file "J:/Optical Flares Textures/Glass/Aura.png"
+ format "1920 1080 0 0 1920 1080 1 HD_1080"
+ origset true
+ name Read28
+ selected true
+ xpos 3920
+ ypos -88
 }

@@ -25,5 +25,8 @@ add_favorite_dir -script ARK ARK "" J:/Projects/ARK/VFX/
 add_favorite_dir -image -script -project -python -font -geo -misc -sequence D2 D2 "" J:/Projects/DD2/VFX/
 add_favorite_dir -image -script -project -python -geo -sequence BQ BQ "" S:/Projects/Brothers_Quarrel/VFX/
 add_favorite_dir -image -script -project -geo -sequence BELL BELL "" S:/Projects/bell/vfx/
+add_favorite_dir -image -script -project -sequence Oyster30 Oyster30 "" S:/Projects/Kaiser/Oyster30/
+add_favorite_dir -image -script -sequence Hemlock30 Hemlock30 "" S:/Projects/Kaiser/Hemlock30/
+add_favorite_dir -image -script -project -python -sequence Kaiser Kaiser "" S:/Projects/Kaiser/
 
 # End of generated file.
