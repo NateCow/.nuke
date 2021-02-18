@@ -1,1 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?><script>import pyperclip</script><script></script>
+<?xml version="1.0" encoding="UTF-8"?><script>nuke.selectedNode().knob('proj_root').getValue()</script><script>nuke.selectedNode().knob('seq').getValue()</script><script>nuke.selectedNode().knob('shot').getValue()</script><script>nuke.selectedNode().knob('shot').getValue()</script><script>versionStr = str(nuke.selectedNode().knob('vers').getValue())
+dirRoot = str(nuke.selectedNode().knob('proj_root').getValue())
+dirSeq = str(nuke.selectedNode().knob('seq').getValue())
+dirShot = str(nuke.selectedNode().knob('shot').getValue())
+dirScript = str(nuke.selectedNode().knob('script').getValue())
+
+print('/'+dirSeq+'/'+dirShot+'/')</script><script>print(dirRoot+'/'+dirSeq+'/'+dirShot+'/')
+</script><script>print(dirScript)</script><script>print(('_').join(dirScript.split('_')[0:3]))</script><script>shotNames = {
+    'ltm_pnt_010': 'Lie_To_Me_VFX_Clip_01',
+    'ltm_hr_010': 'Lie_To_Me_VFX_Clip_02',
+    'ltm_pnt_020': 'Lie_To_Me_VFX_Clip_03',
+    'ltm_hr_020': 'Lie_To_Me_VFX_Clip_04',
+    'ltm_hr_030': 'Lie_To_Me_VFX_Clip_05',
+    'ltm_pnt_060': 'Lie_To_Me_VFX_Clip_06',
+    'ltm_hr_040': 'Lie_To_Me_VFX_Clip_07',
+    'ltm_pnt_030': 'Lie_To_Me_VFX_Clip_17',
+    'ltm_hr_050': 'Lie_To_Me_VFX_Clip_18',
+    'ltm_pnt_040': 'Lie_To_Me_VFX_Clip_19',
+    'ltm_pnt_050': 'Lie_To_Me_VFX_Clip_20'
+}</script><script>print(dirRoot+'/'+dirSeq+'/'+dirShot+'/'+ shotNames[('_').join(dirScript.split('_')[0:3])] + '_comp_' + versionStr + '.mov')</script><script>print(dirRoot+'/'+dirSeq+'/'+dirShot+'/COMPS/'+ shotNames[('_').join(dirScript.split('_')[0:3])] + '_comp_' + versionStr + '.mov')</script><script></script>

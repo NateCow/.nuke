@@ -1,0 +1,12 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+push $cut_paste_input
+Vectorfield {
+vfield_file "S:/Projects/Lie_To_Me/Ocio/ARRI LCC LUT.cube"
+version 2
+file_type cube
+name Vectorfield1
+selected true
+xpos 198
+ypos 101
+}

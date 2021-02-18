@@ -1,0 +1,43 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+push $cut_paste_input
+Write {
+ colorspace AlexaV3LogC
+ file_type mov
+ meta_codec ap4h
+ mov32_codec AV1x
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ mov64_codec ap4h
+ mov64_bitrate 20000
+ mov64_bitrate_tolerance 40000000
+ mov64_quality_min 2
+ mov64_quality_max 31
+ mov64_gop_size 12
+ mov64_b_frames 0
+ checkHashOnRead false
+ version 3
+ in_colorspace linear
+ out_colorspace linear
+ beforeRender "\n2\n3\nimport os\nif not os.path.isdir(os.path.dirname(nuke.thisNode()\['file'].evaluate())):\n  os.makedirs(os.path.dirname(nuke.thisNode()\['file'].evaluate()))"
+ name RoomWrite
+ label "\nProject Root: \[value proj_root]\nSequence: \[value seq]\nShot Name: \[value shot]\nScript Name: \[value script]"
+ selected true
+ xpos -279
+ ypos -375
+ addUserKnob {20 User}
+ addUserKnob {1 vers l Version}
+ vers 001
+ addUserKnob {22 setPath l "Set Output Path" T "shotNames = \{\n    'bell_001_001': 'MOLTO_BELLA_REEL_001_shot_1',\n    'bell_001_020': 'VFX_Reel_1_phone',\n    'bell_003_020': 'VFX_Reel_3_phone',\n    'bell_005_020': 'VFX_Reel_5_Bathroom',\n    'bell_005_000': 'VFX_Reel_5_BG_Plate',\n    'bell_005_001': 'VFX_Reel_5_sunrise_1',\n    'bell_005_010': 'VFX_Reel_5_sunrise_10',\n    'bell_005_011': 'VFX_Reel_5_sunrise_11',\n    'bell_005_012': 'VFX_Reel_5_sunrise_12',\n    'bell_005_013': 'VFX_Reel_5_sunrise_13',\n    'bell_005_002': 'VFX_Reel_5_sunrise_2',\n    'bell_005_003': 'VFX_Reel_5_sunrise_3',\n    'bell_005_004': 'VFX_Reel_5_sunrise_4',\n    'bell_005_005': 'VFX_Reel_5_sunrise_5',\n    'bell_005_006': 'VFX_Reel_5_sunrise_6',\n    'bell_005_007': 'VFX_Reel_5_sunrise_7',\n    'bell_005_008': 'VFX_Reel_5_sunrise_8',\n    'bell_005_009': 'VFX_Reel_5_sunrise_9'\n\}\n\ndeliveryFolder = 'S:/Projects/room/vfx/_Delivery/'\n\n\nversionStr = str(nuke.thisNode().knob('vers').getValue())\ndirRoot = str(nuke.thisNode().knob('proj_root').getValue())\ndirSeq = str(nuke.thisNode().knob('seq').getValue())\ndirShot = str(nuke.thisNode().knob('shot').getValue())\ndirScript = str(nuke.thisNode().knob('script').getValue())\n\n\nnuke.thisNode().knob('file').setValue(deliveryFolder + shotNames\[dirShot] + '_comp_v' + versionStr + '.mov')\nnuke.thisNode().knob('file_type').setValue('mov')\nnuke.thisNode().knob('colorspace').setValue('AlexaV3LogC')\nnuke.thisNode().knob('meta_codec').setValue(6)\n\n\n# Llamas. That is all." +STARTLINE}
+ addUserKnob {26 ""}
+ addUserKnob {26 note l Note: T "Adjust path fragments so that your project root matches your heirarchy.\nCurrently, the node assumes\nD:/Shows/Project/Sequence/Shot/scripts\nas the current project's location."}
+ addUserKnob {20 pathFragments l "Path Fragments" n 1}
+ addUserKnob {1 proj_root l "Project Root"}
+ proj_root "\[join \[lrange \[split \[value root.name] / ] 0 2 ] / ]"
+ addUserKnob {1 seq l Sequence}
+ seq "\[lrange \[split \[value root.name] / ] 3 3 ]"
+ addUserKnob {1 shot l "Shot Name"}
+ shot "\[lrange \[split \[value root.name] / ] 4 4 ]"
+ addUserKnob {1 script l "Script Name"}
+ script "\[file rootname \[file tail \[value root.name] ] ]"
+ addUserKnob {20 endGroup n -1}
+}

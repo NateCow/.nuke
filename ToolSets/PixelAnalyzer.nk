@@ -1,0 +1,142 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+push $cut_paste_input
+Group {
+name JFX_PixelsAnalyzer_v4
+help "<b>PixelAnalyzer</b> \nWritten by Justin Gros-Desir \n17/02/2014 \n\n\n\nThis Gizmo aims to return de rgba values for the given pixel or pixels area.\nFor area, the process return the average (arithmetic mean) of the pixels within this area.\n\nPixelAnalyser allows to calculate the average (arithmetic mean) value of given pixels within a range of frames.\n\n"
+onCreate "\nnuke.thisNode()\['averagePixelValue'].setFlag(nuke.READ_ONLY)\nnuke.thisNode()\['pixelValue'].setFlag(nuke.READ_ONLY)\nnuke.thisNode()\['center'].setFlag(0x000008000) # hidden handles in viewer\nnuke.thisNode()\['translate'].setFlag(0x000008000)\nnuke.thisNode()\['center'].setVisible(False)\nnuke.thisNode()\['translate'].setVisible(False)\nnuke.thisNode()\['offsetx'].setVisible(False)\nnuke.thisNode()\['offsety'].setVisible(False)\nnuke.thisNode()\['pixelPos'].setVisible(False)\nrec = nuke.toNode('Rectangle1')\nnuke.show(rec) \nrec.hideControlPanel()\n"
+knobChanged "\nif nuke.thisKnob().name()=='readOnly':\n\tif nuke.thisKnob().value():\n\t\tnuke.thisNode()\['averagePixelValue'].setFlag(nuke.READ_ONLY)\n\t\tnuke.thisNode()\['pixelValue'].setFlag(nuke.READ_ONLY)\n\telse:\n\t\tnuke.thisNode()\['averagePixelValue'].clearFlag(nuke.READ_ONLY)\n\t\tnuke.thisNode()\['pixelValue'].clearFlag(nuke.READ_ONLY)\n\nelif nuke.thisKnob().name()=='track':\n\tif nuke.thisKnob().value():\n\t\tnuke.thisNode()\['offsetx'].setVisible(True)\n\t\tnuke.thisNode()\['offsety'].setVisible(True)\n\t\tnuke.thisNode()\['center'].setVisible(True)\n\t\tnuke.thisNode()\['translate'].setVisible(True)\n\t\t\n\t\tnuke.thisNode()\['area'].setExpression('pixelPos.x-offsetx.w',0)\t\n\t\tnuke.thisNode()\['area'].setExpression('pixelPos.y-offsety.w',1)\n\t\tnuke.thisNode()\['area'].setExpression('pixelPos.x+offsetx.h',2)\n\t\tnuke.thisNode()\['area'].setExpression('pixelPos.y+offsety.h',3)\n\t\tnuke.thisNode()\['area'].setVisible(False)\n\telse:\n\t\tnuke.thisNode()\['offsetx'].setVisible(False)\n\t\tnuke.thisNode()\['offsety'].setVisible(False)\n\t\tnuke.thisNode()\['center'].setVisible(False)\n\t\tnuke.thisNode()\['translate'].setVisible(False)\n\t\tnuke.thisNode()\['area'].setVisible(True)\n\t\tnuke.thisNode()\['area'].clearAnimated()\n"
+selected true
+xpos 327
+ypos -126
+addUserKnob {20 User}
+addUserKnob {52 embedded_callbacks l INVISIBLE +INVISIBLE T "#This hidden knob is only here to keep the indented callback parts#\n#Though these lines are converted in a single one and inserted in the gizmo script#\n\n#onCreate#\n'''\n\nnuke.thisNode()\['averagePixelValue'].setFlag(nuke.READ_ONLY)\nnuke.thisNode()\['center'].setFlag(0x000008000) # hidden handles in viewer\nnuke.thisNode()\['translate'].setFlag(0x000008000)\nnuke.thisNode()\['center'].setVisible(False)\nnuke.thisNode()\['translate'].setVisible(False)\nnuke.thisNode()\['offsetx'].setVisible(False)\nnuke.thisNode()\['offsety'].setVisible(False)\nnuke.thisNode()\['pixelPos'].setVisible(False)\nrec = nuke.toNode('Rectangle1')\nnuke.show(rec) \nrec.hideControlPanel() \n'''\n\n\n#onKnobChanged#\n'''\nif nuke.thisKnob().name()=='readOnly':\n\tif nuke.thisKnob().value():\n\t\tnuke.thisNode()\['averagePixelValue'].setFlag(nuke.READ_ONLY)\n\telse:\n\t\tnuke.thisNode()\['averagePixelValue'].clearFlag(nuke.READ_ONLY)\n\nelif nuke.thisKnob().name()=='track':\n\tif nuke.thisKnob().value():\n\t\tnuke.thisNode()\['offsetx'].setVisible(True)\n\t\tnuke.thisNode()\['offsety'].setVisible(True)\n\t\tnuke.thisNode()\['center'].setVisible(True)\n\t\tnuke.thisNode()\['translate'].setVisible(True)\n\t\t\n\t\tnuke.thisNode()\['area'].setExpression('pixelPos.x-offsetx.w',0)\t\n\t\tnuke.thisNode()\['area'].setExpression('pixelPos.y-offsety.w',1)\n\t\tnuke.thisNode()\['area'].setExpression('pixelPos.x+offsetx.h',2)\n\t\tnuke.thisNode()\['area'].setExpression('pixelPos.y+offsety.h',3)\n\t\tnuke.thisNode()\['area'].setVisible(False)\n\telse:\n\t\tnuke.thisNode()\['offsetx'].setVisible(False)\n\t\tnuke.thisNode()\['offsety'].setVisible(False)\n\t\tnuke.thisNode()\['center'].setVisible(False)\n\t\tnuke.thisNode()\['translate'].setVisible(False)\n\t\tnuke.thisNode()\['area'].setVisible(True)\n\t\tnuke.thisNode()\['area'].clearAnimated()\n'''\n\n" +STARTLINE}
+addUserKnob {6 track l "From a tracked point" +STARTLINE}
+addUserKnob {12 pixelPos l INVISIBLE +HIDDEN +INVISIBLE}
+pixelPos {{"center + translate"} {"center + translate"}}
+addUserKnob {12 translate +HIDDEN}
+addUserKnob {12 center +HIDDEN}
+addUserKnob {14 offsetx +HIDDEN R 0 100}
+offsetx 20
+addUserKnob {14 offsety +HIDDEN R 0 100}
+offsety 20
+addUserKnob {15 area t "Define the pixel's area to process. If you want to analyze a pixel only, you might want to check the \"from a tracked point\" knob and set the offset sliders to 1."}
+area {-20 -20 20 20}
+addUserKnob {20 boxStroke l "Box Stroke" n 1}
+boxStroke 0
+addUserKnob {41 color T Rectangle1.color}
+addUserKnob {7 size R 0 100}
+size 2
+addUserKnob {20 endGroup n -1}
+addUserKnob {26 ""}
+addUserKnob {3 first l "Input range" t "Input frame range.\nIf you want t analyze through several frames, just enter the range you want (first and last frames will be processed as well).\n\nIf you want to analyse on only one frame, enter that frame number in both first and last knob (ie:\nframe 15 -> 15-15) "}
+first 1
+addUserKnob {3 last l "" t "Input frame range.\nIf you want t analyze through several frames, just enter the range you want (first and last frames will be processed as well).\n\nIf you want to analyse on only one frame, enter that frame number in both first and last knob (ie:\nframe 15 -> 15-15) " -STARTLINE}
+last 1
+addUserKnob {22 pixelAnalyzer l "Analyze pixel" t "Launch the analyzing process." T "def process():\n\n\tthisNode \t= nuke.thisNode()\n\tredList \t= \[]\n\tgreenList\t= \[]\n\tblueList\t= \[]\n\talphaList\t= \[]\n\tcurrentRedList \t\t= \[]\n\tcurrentGreenList\t= \[]\n\tcurrentBlueList\t\t= \[]\n\tcurrentAlphaList\t= \[]\n\tfirst\t\t= thisNode\['first'].value()\n\tlast\t\t= thisNode\['last'].value()\n\txPos\t\t= thisNode\['area'].value(0)\t\n\tyPos\t\t= thisNode\['area'].value(1)\n\trPos\t\t= thisNode\['area'].value(2)\t\n\ttPos\t\t= thisNode\['area'].value(3)\n\ttotal \t\t= int(last) - int(first)+1\n\tprogress \t= 0\n\tprogressBar \t= nuke.ProgressTask(\"Analyzing...\")\n\tthisNode\['pixelValue'].setAnimated()\n\t\n\tdef colorAverage(redList, greenList, blueList, alphaList):\n\n\t\n\t\tredSum = 0.0\n\t\tfor num in redList:\n\t\t  redSum += float(num)\n\t\tredAverage = redSum / len(redList)\n\n\t\tgreenSum = 0.0\n\t\tfor num in greenList:\n\t\t  greenSum += float(num)\n\t\tgreenAverage = greenSum / len(greenList)\n\t\n\t\tblueSum = 0.0\n\t\tfor num in blueList:\n\t\t  blueSum += float(num)\n\t\tblueAverage = blueSum / len(blueList)\n\n\t\talphaSum = 0.0\n\t\tfor num in alphaList:\n\t\t  alphaSum += float(num)\n\t\talphaAverage = alphaSum / len(alphaList)\n\t\n\t\treturn \[redAverage, greenAverage, blueAverage, alphaAverage]\n\n\n\tframe = int(first)\n\twhile (frame<=int(last)):\n\n\t\t# Pythonic alternative, doesn't seem to produce the right values..\n\t\t#redList.append(thisNode.input(0).sample('red', thisNode\['pixelCoordinate'].value(0), thisNode\['pixelCoordinate'].value(1),i))\n\n\t\t# Executing a CurveTool node is just to force the viewer to update so we can analyse on a range of frames.\n\t\tnuke.execute(nuke.toNode('CurveTool1').name(),start=frame,end=frame)\n\n\t\t# Loop throught the area defined by the user.\n\t\ti = int(round(xPos))\n\t\twhile (i<int(round(rPos))):\n\t\t\tj = int(round(yPos))\n\t\t\twhile (j<int(round(tPos))):\n\t\t\t  #Actual pixel sampling\n\t\t\t  redPixVal   = (nuke.tcl('sample this.input red '+ str(i) +' '+str(j)))\n\t\t\t  greenPixVal = (nuke.tcl('sample this.input green '+ str(i) +' '+str(j)))\n\t\t\t  bluePixVal  = (nuke.tcl('sample this.input blue '+ str(i) +' '+str(j)))\n\t\t\t  alphaPixVal = (nuke.tcl('sample this.input alpha '+ str(i) +' '+str(j)))\n\t\n\t\t\t  currentRedList.append(redPixVal)\n\t\t\t  currentGreenList.append(greenPixVal)\t\n\t\t\t  currentBlueList.append(bluePixVal)\t\n\t\t\t  currentAlphaList.append(alphaPixVal)\t\n\n\t\t\t  redList.append(redPixVal)\n\t\t\t  greenList.append(greenPixVal)\n\t\t\t  blueList.append(bluePixVal)\n\t\t\t  alphaList.append(alphaPixVal)\n\n\t\t\t  j+=1\n\t\t\ti+=1\n\t\t\n\n\t\tcurrentRedAverage, currentGreenAverage, currentBlueAverage, currentAlphaAverage = colorAverage(currentRedList, currentGreenList, currentBlueList, currentAlphaList)\n\t\tthisNode\['pixelValue'].setValue((currentRedAverage, currentGreenAverage, currentBlueAverage,currentAlphaAverage))\n\t\tdel currentRedList\[:]\n\t\tdel currentGreenList\[:]\n\t\tdel currentBlueList\[:]\n\t\tdel currentAlphaList\[:]\n\n\t\t# ProgressBar\n\t\tif progressBar.isCancelled():\n\t\t\tdel progressBar\n\t\t\treturn\n\t\t  \n\t\tprogress += 1\n\t\tprogressBar.setProgress(int((float(progress) / float(total)) *100))\n\t\tif (progress) == total:\n\t\t\tdel progressBar\n\t\tframe +=1\n\n\tredAverage, greenAverage, blueAverage, alphaAverage = colorAverage(redList, greenList, blueList, alphaList)\n\tthisNode\['averagePixelValue'].setValue((redAverage, greenAverage, blueAverage,alphaAverage))\n\n\nprocess()" +STARTLINE}
+addUserKnob {26 ""}
+addUserKnob {6 readOnly l "Read Only" +STARTLINE}
+readOnly true
+addUserKnob {19 averagePixelValue l "Average Pixel(s) Value" t "Handle the analyzed values for red green blue and alpha pixel's channels. "}
+averagePixelValue {0 0 0 0}
+addUserKnob {6 averagePixelValue_panelDropped l "panel dropped state" -STARTLINE +HIDDEN}
+addUserKnob {19 pixelValue l "Pixel(s) Value"}
+pixelValue {0 0 0 0}
+addUserKnob {6 pixelValue_panelDropped l "panel dropped state" -STARTLINE +HIDDEN}
+}
+Input {
+inputs 0
+name Input1
+xpos 0
+ypos -191
+}
+Dot {
+name Dot3
+xpos 34
+ypos -98
+}
+set N16042000 [stack 0]
+Dot {
+name Dot1
+xpos 218
+ypos -98
+}
+Remove {
+channels alpha
+name Remove1
+xpos 184
+ypos -44
+}
+Crop {
+box {{parent.area} {parent.area} {parent.area} {parent.area}}
+name Crop1
+xpos 184
+ypos 23
+}
+CurveTool {
+ROI {480 270 1440 810}
+autocropdata {480 270 1440 810}
+intensitydata {{curve x1 0.131146289} {curve x1 0.9198347107} {curve x1 0.163877049} 0}
+name CurveTool1
+xpos 184
+ypos 66
+}
+Rectangle {
+area {{rint(parent.area)} {rint(parent.area)} {rint(parent.area)} {rint(parent.area)}}
+color {1 0 0 1}
+name Rectangle1
+xpos 184
+ypos 105
+}
+Dot {
+name Dot2
+xpos 218
+ypos 159
+}
+set N4b43a000 [stack 0]
+Dilate {
+channels rgba
+size {{parent.size}}
+name Dilate1
+xpos 334
+ypos 270
+}
+set N4d07c00 [stack 0]
+push $N4b43a000
+ChannelMerge {
+inputs 2
+operation out
+name ChannelMerge1
+xpos 184
+ypos 258
+}
+push $N4d07c00
+Copy {
+inputs 2
+from0 rgba.alpha
+to0 rgba.alpha
+name Copy1
+xpos 334
+ypos 380
+}
+Premult {
+name Premult1
+selected true
+xpos 334
+ypos 504
+}
+push $N16042000
+Merge2 {
+inputs 2
+output rgb
+name Merge1
+label "\[ expr \{ \[value mix] * 100 \} ]%"
+xpos 0
+ypos 504
+}
+Output {
+name Output1
+xpos 0
+ypos 640
+}
+end_group
