@@ -1,0 +1,42 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+push $cut_paste_input
+Group {
+ name Alexa_LUT
+ selected true
+ xpos -421
+ ypos 259
+}
+ Input {
+  inputs 0
+  name Input1
+  xpos -159
+  ypos 325
+ }
+ OCIOColorSpace {
+  in_colorspace AlexaV3LogC
+  out_colorspace linear
+  name OCIOColorSpace2
+  xpos -159
+  ypos 351
+ }
+ OCIOFileTransform {
+  file J:/nuke_plugins/luts/ALEXA_Default_LogC2Rec709.cube
+  working_space AlexaV3LogC
+  name OCIOFileTransform2
+  xpos -159
+  ypos 424
+ }
+ OCIOColorSpace {
+  in_colorspace linear
+  out_colorspace AlexaV3LogC
+  name OCIOColorSpace1
+  xpos -159
+  ypos 450
+ }
+ Output {
+  name Output1
+  xpos -159
+  ypos 491
+ }
+end_group

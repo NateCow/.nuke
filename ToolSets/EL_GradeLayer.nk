@@ -1,0 +1,189 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+push $cut_paste_input
+add_layer {specular_direct specular_direct.red specular_direct.green specular_direct.blue}
+Group {
+ name GradeLayer_1
+ tile_color 0x4283ffff
+ selected true
+ xpos 11920
+ ypos 2482
+ addUserKnob {20 User}
+ addUserKnob {41 in l Channel T Shuffle1.in}
+ addUserKnob {7 Mix}
+ Mix 1
+ addUserKnob {20 ColorCorrect}
+ addUserKnob {41 channels T GradeLayerCC.channels}
+ addUserKnob {20 master l "@b;master" n 1}
+ addUserKnob {41 saturation T GradeLayerCC.saturation}
+ addUserKnob {41 saturation_panelDropped l "panel dropped state" T GradeLayerCC.saturation_panelDropped}
+ addUserKnob {41 contrast T GradeLayerCC.contrast}
+ addUserKnob {41 contrast_panelDropped l "panel dropped state" T GradeLayerCC.contrast_panelDropped}
+ addUserKnob {41 gamma T GradeLayerCC.gamma}
+ addUserKnob {41 gamma_panelDropped l "panel dropped state" T GradeLayerCC.gamma_panelDropped}
+ addUserKnob {41 gain T GradeLayerCC.gain}
+ addUserKnob {41 gain_panelDropped l "panel dropped state" T GradeLayerCC.gain_panelDropped}
+ addUserKnob {41 offset T GradeLayerCC.offset}
+ addUserKnob {41 offset_panelDropped l "panel dropped state" T GradeLayerCC.offset_panelDropped}
+ addUserKnob {20 "" n -1}
+ addUserKnob {20 shadows l "@b;shadows" n 1}
+ addUserKnob {41 shadows.saturation l saturation T GradeLayerCC.shadows.saturation}
+ addUserKnob {41 shadows.saturation_panelDropped l "panel dropped state" T GradeLayerCC.shadows.saturation_panelDropped}
+ addUserKnob {41 shadows.contrast l contrast T GradeLayerCC.shadows.contrast}
+ addUserKnob {41 shadows.contrast_panelDropped l "panel dropped state" T GradeLayerCC.shadows.contrast_panelDropped}
+ addUserKnob {41 shadows.gamma l gamma T GradeLayerCC.shadows.gamma}
+ addUserKnob {41 shadows.gamma_panelDropped l "panel dropped state" T GradeLayerCC.shadows.gamma_panelDropped}
+ addUserKnob {41 shadows.gain l gain T GradeLayerCC.shadows.gain}
+ addUserKnob {41 shadows.gain_panelDropped l "panel dropped state" T GradeLayerCC.shadows.gain_panelDropped}
+ addUserKnob {41 shadows.offset l offset T GradeLayerCC.shadows.offset}
+ addUserKnob {41 shadows.offset_panelDropped l "panel dropped state" T GradeLayerCC.shadows.offset_panelDropped}
+ addUserKnob {20 "" n -1}
+ addUserKnob {20 midtones l "@b;midtones" n 1}
+ addUserKnob {41 midtones.saturation l saturation T GradeLayerCC.midtones.saturation}
+ addUserKnob {41 midtones.saturation_panelDropped l "panel dropped state" T GradeLayerCC.midtones.saturation_panelDropped}
+ addUserKnob {41 midtones.contrast l contrast T GradeLayerCC.midtones.contrast}
+ addUserKnob {41 midtones.contrast_panelDropped l "panel dropped state" T GradeLayerCC.midtones.contrast_panelDropped}
+ addUserKnob {41 midtones.gamma l gamma T GradeLayerCC.midtones.gamma}
+ addUserKnob {41 midtones.gamma_panelDropped l "panel dropped state" T GradeLayerCC.midtones.gamma_panelDropped}
+ addUserKnob {41 midtones.gain l gain T GradeLayerCC.midtones.gain}
+ addUserKnob {41 midtones.gain_panelDropped l "panel dropped state" T GradeLayerCC.midtones.gain_panelDropped}
+ addUserKnob {41 midtones.offset l offset T GradeLayerCC.midtones.offset}
+ addUserKnob {41 midtones.offset_panelDropped l "panel dropped state" T GradeLayerCC.midtones.offset_panelDropped}
+ addUserKnob {20 "" n -1}
+ addUserKnob {20 highlights l "@b;highlights" n 1}
+ addUserKnob {41 highlights.saturation l saturation T GradeLayerCC.highlights.saturation}
+ addUserKnob {41 highlights.saturation_panelDropped l "panel dropped state" T GradeLayerCC.highlights.saturation_panelDropped}
+ addUserKnob {41 highlights.contrast l contrast T GradeLayerCC.highlights.contrast}
+ addUserKnob {41 highlights.contrast_panelDropped l "panel dropped state" T GradeLayerCC.highlights.contrast_panelDropped}
+ addUserKnob {41 highlights.gamma l gamma T GradeLayerCC.highlights.gamma}
+ addUserKnob {41 highlights.gamma_panelDropped l "panel dropped state" T GradeLayerCC.highlights.gamma_panelDropped}
+ addUserKnob {41 highlights.gain l gain T GradeLayerCC.highlights.gain}
+ addUserKnob {41 highlights.gain_panelDropped l "panel dropped state" T GradeLayerCC.highlights.gain_panelDropped}
+ addUserKnob {41 highlights.offset l offset T GradeLayerCC.highlights.offset}
+ addUserKnob {41 highlights.offset_panelDropped l "panel dropped state" T GradeLayerCC.highlights.offset_panelDropped}
+ addUserKnob {20 "" n -1}
+ addUserKnob {20 Grade}
+ addUserKnob {41 blackpoint T Grade_Layer_Grade.blackpoint}
+ addUserKnob {41 whitepoint T Grade_Layer_Grade.whitepoint}
+ addUserKnob {41 black l lift T Grade_Layer_Grade.black}
+ addUserKnob {41 white l gain T Grade_Layer_Grade.white}
+ addUserKnob {41 multiply T Grade_Layer_Grade.multiply}
+ addUserKnob {41 add l offset T Grade_Layer_Grade.add}
+ addUserKnob {41 gamma_1 l gamma T Grade_Layer_Grade.gamma}
+}
+ Input {
+  inputs 0
+  name Mask
+  label Mask
+  xpos 528
+  ypos -539
+  number 1
+ }
+ Invert {
+  name Invert1
+  xpos 528
+  ypos -501
+ }
+ Dot {
+  name Dot5
+  xpos 562
+  ypos -100
+ }
+ Input {
+  inputs 0
+  name Input1
+  label Input
+  xpos 59
+  ypos -562
+ }
+ Dot {
+  name Dot1
+  xpos 93
+  ypos -407
+ }
+set N99cc4400 [stack 0]
+ Dot {
+  name Dot4
+  xpos -68
+  ypos -407
+ }
+ Dot {
+  name Dot3
+  xpos -68
+  ypos -100
+ }
+set Nc18bfc00 [stack 0]
+push $N99cc4400
+ Shuffle {
+  in specular_direct
+  name Shuffle1
+  xpos 254
+  ypos -378
+ }
+set Nc18bf800 [stack 0]
+ ColorCorrect {
+  name GradeLayerCC
+  label "\[ expr \{ \[value mix] * 100 \} ]%"
+  xpos 254
+  ypos -332
+ }
+ Grade {
+  black_clamp false
+  name Grade_Layer_Grade
+  label "\[ expr \{ \[value mix] * 100 \} ]%"
+  xpos 254
+  ypos -298
+ }
+ Dot {
+  name Dot2
+  xpos 288
+  ypos -262
+ }
+push $Nc18bf800
+push $N99cc4400
+ Merge2 {
+  inputs 2
+  operation from
+  name Merge1
+  label "\[ expr \{ \[value mix] * 100 \} ]%"
+  xpos 59
+  ypos -333
+ }
+ Merge2 {
+  inputs 2
+  operation plus
+  name Merge2
+  label "\[ expr \{ \[value mix] * 100 \} ]%"
+  xpos 59
+  ypos -237
+ }
+ Keymix {
+  inputs 3
+  name Keymix1
+  xpos 59
+  ypos -110
+ }
+set Nc18be000 [stack 0]
+push $Nc18bfc00
+ Dissolve {
+  inputs 2
+  which {{parent.Mix}}
+  name Dissolve1
+  xpos 59
+  ypos 74
+ }
+ Output {
+  name Output1
+  xpos 59
+  ypos 216
+ }
+push $Nc18be000
+ Viewer {
+  frame_range 101-200
+  rgb_only true
+  center_fstop 0
+  name Viewer1
+  xpos 290
+  ypos 41
+ }
+end_group

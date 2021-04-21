@@ -1,0 +1,48 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+push $cut_paste_input
+Group {
+ name EL_Diffuse_Blacks
+ tile_color 0xff00ff
+ note_font "Bitstream Vera Sans Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold"
+ selected true
+ xpos 11542
+ ypos 2451
+ addUserKnob {20 User}
+ addUserKnob {7 Amount R 500 3000}
+ Amount 500
+ addUserKnob {7 Mix R 0 0.1}
+ Mix 0.025
+}
+ Input {
+  inputs 0
+  name Input1
+  xpos 510
+  ypos 353
+ }
+ Dot {
+  name Dot18
+  xpos 544
+  ypos 486
+ }
+set Nc08cac00 [stack 0]
+ Blur {
+  size {{parent.Amount}}
+  name Blur1
+  xpos 620
+  ypos 476
+ }
+push $Nc08cac00
+ Dissolve {
+  inputs 2
+  which {{parent.Mix}}
+  name Dissolve1
+  xpos 620
+  ypos 538
+ }
+ Output {
+  name Output1
+  xpos 620
+  ypos 704
+ }
+end_group

@@ -1,0 +1,1213 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+push $cut_paste_input
+Group {
+ name swiss_army_edge1
+ tile_color 0xff55d4ff
+ note_font "DejaVu Sans Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic Bold Italic"
+ note_font_size 12
+ note_font_color 0xffffffff
+ selected true
+ xpos 5634
+ ypos 2627
+ addUserKnob {20 User}
+ addUserKnob {20 desatGroup l "Desaturate Edge" n 1}
+ desatGroup 0
+ addUserKnob {6 desatRed l Red +STARTLINE}
+ addUserKnob {6 desatGreen l Green +STARTLINE}
+ addUserKnob {6 desatBlue l Blue +STARTLINE}
+ addUserKnob {6 desatCyan l Cyan +STARTLINE}
+ addUserKnob {6 desatMagenta l Magenta +STARTLINE}
+ addUserKnob {41 desatDilateSize l Grow/Shrink T desatDilate.size}
+ addUserKnob {20 endGroup n -1}
+ addUserKnob {26 ""}
+ addUserKnob {6 viewMatte l "View Edge" +STARTLINE}
+ viewMatte true
+ addUserKnob {41 erodesize l "Erode Matte" t "erode until you get rid of the fringe colour" T Erode.size}
+ addUserKnob {4 erodeType l "Erode Type" t "Blur is the new default as it produces less sizzling and softer contours.\n\nFast is what it used to be" M {Blur Fast ""}}
+ addUserKnob {41 blursize l Blur t "higher value = further reach but less detail.\nlower value = ah come on!" T Blur.size}
+ addUserKnob {41 alphablursize l Falloff t "blurs the newly created, eroded edge" T BlurAlpha.size}
+ addUserKnob {41 blurDivide l "Keep Detail" t "This will try and restore some of the original detail. Thie higher you go, the more of the original you get. WHich also means you'll get the original edges again...\nThis might work well, set to about 5, if the layering mode is set to 'Over'." T Blur2.size}
+ addUserKnob {41 layeringoperation l "Layer with Image" t "your ad here" T Layering.operation}
+ addUserKnob {41 dissolvewhich l "Mix with Original" t "what it says on the box" T Dissolve1.which}
+ addUserKnob {6 matteOverlay l "Matte Overlay" +STARTLINE}
+ addUserKnob {6 includeMatte l "Output Edge Matte" t "This will output a matte for the pixels that Swiss Army Edge is altering. The matte is output as \"SwissArmyEdge.matte\"" +STARTLINE}
+ addUserKnob {26 ""}
+ addUserKnob {20 addHighlights l Highlights n 1}
+ addHighlights 0
+ addUserKnob {41 mix l Add T Keymix3.mix}
+ addUserKnob {41 size l Softness T highlightBlur.size}
+ addUserKnob {20 endGroup_2 l endGroup n -1}
+ addUserKnob {20 Grain}
+ addUserKnob {4 whichGrain l "Grain Type" M {"no Grain" RealGrain EpicNoise ArriNoise "" ""}}
+ addUserKnob {20 realGrain n 1}
+ realGrain 0
+ addUserKnob {41 stock_1 l stock T RealGrain2_1.stock}
+ addUserKnob {41 granularity_2 l granularity T RealGrain2_1.granularity}
+ addUserKnob {20 endGroup_3 l endGroup n -1}
+ addUserKnob {20 EpicNoise n 1}
+ EpicNoise 0
+ addUserKnob {41 film l project T epicNoise.film}
+ addUserKnob {26 ""}
+ addUserKnob {41 granularity l noiseularity T epicNoise.granularity}
+ addUserKnob {41 cb l "crunchy blue channel (THB)" T epicNoise.cb}
+ addUserKnob {26 nr l "sensor response"}
+ addUserKnob {41 filmresp l "use sensor response" T epicNoise.filmresp}
+ addUserKnob {41 lomult l shadows T epicNoise.lomult}
+ addUserKnob {41 himult l hilites T epicNoise.himult}
+ addUserKnob {26 ""}
+ addUserKnob {41 bbox_1 l "Set BBox to " T epicNoise.bbox_1}
+ addUserKnob {41 premult l "(un)premult input" T epicNoise.premult}
+ addUserKnob {41 maskChannelInput l mask T epicNoise.maskChannelInput}
+ addUserKnob {41 invert_mask l invert T epicNoise.invert_mask}
+ addUserKnob {41 fringe T epicNoise.fringe}
+ addUserKnob {41 mix_1 l mix T epicNoise.mix}
+ addUserKnob {20 endGroup_1 l endGroup n -1}
+ addUserKnob {20 ArriNoise n 1}
+ ArriNoise 0
+ addUserKnob {41 granularity_1 l gain T SensorNoiseApes2.granularity}
+ addUserKnob {26 ""}
+ addUserKnob {41 lomult_1 l "shadow gain" T SensorNoiseApes2.lomult}
+ addUserKnob {41 himult_1 l "highlight gain" T SensorNoiseApes2.himult}
+ addUserKnob {26 ""}
+ addUserKnob {41 premult_1 l "(un)premult input" T SensorNoiseApes2.premult}
+ addUserKnob {41 maskChannelInput_1 l mask T SensorNoiseApes2.}
+ addUserKnob {41 invert_mask_1 l invert T SensorNoiseApes2.invert_mask_1}
+ addUserKnob {41 fringe_1 l fringe T SensorNoiseApes2.fringe_1}
+ addUserKnob {41 mix_1_1 l mix T SensorNoiseApes2.mix_1}
+ addUserKnob {20 endGroup_4 l endGroup n -1}
+}
+ Input {
+  inputs 0
+  name Image
+  xpos 3
+  ypos -246
+ }
+ Dot {
+  name Dot17
+  xpos 37
+  ypos -112
+ }
+set N93759000 [stack 0]
+ Input {
+  inputs 0
+  name Matte
+  xpos 1167
+  ypos -314
+  number 1
+ }
+ Dot {
+  name Dot6
+  xpos 1201
+  ypos -224
+ }
+set N93758800 [stack 0]
+ Grade {
+  channels rgba
+  blackpoint 0.3
+  whitepoint 0.4
+  gamma 0.3
+  white_clamp true
+  unpremult -rgba.alpha
+  name Grade4
+  label "\[ expr \{ \[value mix] * 100 \} ]%"
+  xpos 1064
+  ypos -231
+ }
+set N93758400 [stack 0]
+ Dilate {
+  size -1
+  name Erode
+  xpos 927
+  ypos -238
+ }
+push $N93758400
+ Erode {
+  size {{parent.Erode.size*-1}}
+  name Erode1
+  xpos 1064
+  ypos -205
+ }
+ Switch {
+  inputs 2
+  which {{parent.erodeType}}
+  name Switch11
+  xpos 1064
+  ypos -141
+ }
+set Nc075da80 [stack 0]
+ Dot {
+  name Dot12
+  xpos 952
+  ypos -134
+ }
+set N81763800 [stack 0]
+push $N93759000
+ Dot {
+  name Dot5
+  xpos 400
+  ypos -134
+ }
+set N81763400 [stack 0]
+ Dot {
+  name Dot7
+  xpos 550
+  ypos -134
+ }
+ Group {
+  inputs 2
+  name Group4
+  note_font "Bitstream Vera Sans"
+  xpos 714
+  ypos -137
+  mapsize {0.15 0.15}
+  addUserKnob {20 "" l User}
+  addUserKnob {41 from0 l "alpha is" T Copy1.from0}
+  addUserKnob {6 premult t "Premultiplies the RGB of input B by the specified channel from input A." -STARTLINE}
+  premult true
+  addUserKnob {41 bbox l "Set BBox to " T Copy1.bbox}
+ }
+  Input {
+   inputs 0
+   name A
+   xpos 217
+   ypos 4
+   number 1
+  }
+  AddChannels {
+   channels rgba
+   name AddChannels1
+   xpos 217
+   ypos 74
+  }
+  Dot {
+   name Dot1
+   xpos 248
+   ypos 135
+  }
+  Input {
+   inputs 0
+   name B
+   xpos 0
+  }
+  Copy {
+   inputs 2
+   from0 rgba.alpha
+   to0 rgba.alpha
+   name Copy1
+   xpos 0
+   ypos 125
+  }
+  Premult {
+   name Premult1
+   xpos 0
+   ypos 181
+   disable {{parent.premult!=1}}
+  }
+  Output {
+   name Output1
+   xpos 0
+   ypos 301
+  }
+ end_group
+set Nc075d600 [stack 0]
+ Blur {
+  channels rgba
+  size 4
+  name Blur
+  label "Size \[value size]"
+  xpos 814
+  ypos -82
+ }
+ Unpremult {
+  name Unpremult1
+  xpos 814
+  ypos -24
+ }
+ Grade {
+  channels alpha
+  whitepoint 0
+  white_clamp true
+  unpremult -rgba.alpha
+  name Grade5
+  label "\[ expr \{ \[value mix] * 100 \} ]%"
+  xpos 813
+  ypos 15
+ }
+ Premult {
+  name Premult1
+  xpos 813
+  ypos 72
+ }
+push $N81763800
+ Dilate {
+  size {{alphablursize*-1}}
+  name Dilate2
+  xpos 915
+  ypos 17
+ }
+ Merge2 {
+  inputs 2
+  operation out
+  name Merge9
+  label "\[ expr \{ \[value mix] * 100 \} ]%"
+  xpos 914
+  ypos 85
+ }
+ Blur {
+  channels rgba
+  size 1
+  name BlurAlpha
+  label "Size \[value size]"
+  xpos 914
+  ypos 113
+ }
+set Nefc2d800 [stack 0]
+ Dot {
+  name Dot16
+  xpos 952
+  ypos 856
+ }
+set Nefc2d400 [stack 0]
+push $Nefc2d400
+push $Nc075da80
+ EdgeDetectWrapper {
+  channels alpha
+  name EdgeDetectWrapper1
+  xpos 1064
+  ypos -102
+ }
+ Dilate {
+  name desatDilate
+  xpos 1064
+  ypos -62
+ }
+ Blur {
+  channels rgba
+  size {{5+desatDilate.size}}
+  name Blur1
+  label "Size \[value size]"
+  xpos 1064
+  ypos -4
+ }
+ Grade {
+  channels rgba
+  gamma 2.5
+  white_clamp true
+  unpremult -rgba.alpha
+  name Grade6
+  label "\[ expr \{ \[value mix] * 100 \} ]%"
+  xpos 1064
+  ypos 52
+ }
+push $Nefc2d800
+push $Nc075d600
+ Merge2 {
+  inputs 2
+  operation disjoint-over
+  name Merge4
+  label "\[ expr \{ \[value mix] * 100 \} ]%"
+  xpos 718
+  ypos 119
+ }
+ Dot {
+  name Dot1
+  xpos 752
+  ypos 224
+ }
+set Nc581fc00 [stack 0]
+ Dot {
+  name Dot2
+  xpos 1369
+  ypos 221
+ }
+set Nc581f800 [stack 0]
+ Dot {
+  name Dot3
+  xpos 1469
+  ypos 221
+ }
+set Nc581f400 [stack 0]
+push $Nc581f400
+ HueCorrect {
+  hue {sat {curve L 1 1 1 1 1 1 1}
+    lum {}
+    red {}
+    green {}
+    blue {}
+    r_sup {}
+    g_sup {curve 1 1 1 0 1 1 1}
+    b_sup {}
+    sat_thrsh {}}
+  unpremult -rgba.alpha
+  name HueCorrect2
+  xpos 1482
+  ypos 252
+ }
+ Switch {
+  inputs 2
+  which {{1-desatGreen i}}
+  name Switch3
+  xpos 1432
+  ypos 286
+ }
+push $Nc581f800
+push $Nc581f800
+ HueCorrect {
+  hue {sat {curve L 1 1 1 1 1 1 1}
+    lum {}
+    red {}
+    green {}
+    blue {}
+    r_sup {curve 1 0 1 1 1 1 1}
+    g_sup {}
+    b_sup {}
+    sat_thrsh {}}
+  unpremult -rgba.alpha
+  name HueCorrect1
+  xpos 1382
+  ypos 252
+ }
+ Switch {
+  inputs 2
+  which {{1-desatRed i}}
+  name Switch2
+  xpos 1332
+  ypos 284
+ }
+ Merge2 {
+  inputs 2
+  operation min
+  name Merge1
+  label "\[ expr \{ \[value mix] * 100 \} ]%"
+  xpos 1332
+  ypos 324
+ }
+push $Nc581f400
+ Dot {
+  name Dot4
+  xpos 1569
+  ypos 221
+ }
+set Nc581e400 [stack 0]
+push $Nc581e400
+ HueCorrect {
+  hue {sat {curve L 1 1 1 1 1 1 1}
+    lum {}
+    red {}
+    green {}
+    blue {}
+    r_sup {}
+    g_sup {}
+    b_sup {curve 1 1 1 1 1 0 1}
+    sat_thrsh {}}
+  unpremult -rgba.alpha
+  name HueCorrect3
+  xpos 1582
+  ypos 252
+ }
+ Switch {
+  inputs 2
+  which {{1-desatBlue i}}
+  name Switch4
+  xpos 1532
+  ypos 286
+ }
+ Merge2 {
+  inputs 2
+  operation min
+  name Merge2
+  label "\[ expr \{ \[value mix] * 100 \} ]%"
+  xpos 1332
+  ypos 372
+ }
+push $Nc581e400
+ Dot {
+  name Dot9
+  xpos 1670
+  ypos 221
+ }
+set N975e3800 [stack 0]
+push $N975e3800
+ HueCorrect {
+  hue {sat {curve L 1 1 1 1 1 1 1}
+    lum {}
+    red {}
+    green {}
+    blue {}
+    r_sup {}
+    g_sup {curve 1 1 1 1 0 1 1}
+    b_sup {curve 1 1 1 1 0 1 1}
+    sat_thrsh {}}
+  unpremult -rgba.alpha
+  name HueCorrect4
+  xpos 1682
+  ypos 252
+ }
+ Switch {
+  inputs 2
+  which {{1-desatCyan i}}
+  name Switch5
+  xpos 1632
+  ypos 286
+ }
+ Merge2 {
+  inputs 2
+  operation min
+  name Merge3
+  label "\[ expr \{ \[value mix] * 100 \} ]%"
+  xpos 1332
+  ypos 420
+ }
+push $N975e3800
+ Dot {
+  name Dot10
+  xpos 1770
+  ypos 221
+ }
+set N975e2c00 [stack 0]
+push $N975e2c00
+ HueCorrect {
+  hue {sat {curve L 1 1 1 1 1 1 1}
+    lum {}
+    red {}
+    green {}
+    blue {}
+    r_sup {curve 0 1 1 1 1 1 1}
+    g_sup {}
+    b_sup {curve 0 1 1 1 1 1 0}
+    sat_thrsh {}}
+  unpremult -rgba.alpha
+  name HueCorrect5
+  xpos 1782
+  ypos 252
+ }
+ Switch {
+  inputs 2
+  which {{1-desatMagenta i}}
+  name Switch6
+  xpos 1732
+  ypos 286
+ }
+ Merge2 {
+  inputs 2
+  operation min
+  name Merge7
+  label "\[ expr \{ \[value mix] * 100 \} ]%"
+  xpos 1332
+  ypos 468
+ }
+push $Nc581fc00
+ Keymix {
+  inputs 3
+  name Keymix1
+  xpos 715
+  ypos 473
+ }
+set N975e2000 [stack 0]
+push $N81763400
+ Dot {
+  name Dot15
+  xpos 402
+  ypos 558
+ }
+set Nfcfa3c00 [stack 0]
+ Dot {
+  name Dot8
+  xpos 550
+  ypos 558
+ }
+set Nfcfa3800 [stack 0]
+ Merge2 {
+  inputs 2
+  name Merge10
+  label "\[ expr \{ \[value mix] * 100 \} ]%"
+  xpos 715
+  ypos 552
+ }
+push $Nfcfa3800
+ Merge2 {
+  inputs 2
+  operation divide
+  name Merge5
+  label "\[ expr \{ \[value mix] * 100 \} ]%"
+  xpos 715
+  ypos 643
+ }
+ Log2Lin {
+  operation lin2log
+  name Log2Lin4
+  xpos 715
+  ypos 692
+ }
+ Clamp {
+  channels rgba
+  name Clamp2
+  xpos 715
+  ypos 728
+ }
+ Blur {
+  channels rgba
+  name Blur2
+  label "Size \[value size]"
+  xpos 715
+  ypos 769
+ }
+ Log2Lin {
+  name Log2Lin3
+  xpos 715
+  ypos 824
+ }
+push $Nfcfa3800
+ Merge2 {
+  inputs 2
+  operation multiply
+  name Merge6
+  label "\[ expr \{ \[value mix] * 100 \} ]%"
+  xpos 615
+  ypos 872
+ }
+ Dot {
+  name Dot14
+  selected true
+  xpos 652
+  ypos 928
+ }
+set Ncb30f800 [stack 0]
+push $Ncb30f800
+push $Ncb30f800
+push $Ncb30f800
+ Switch {
+  inputs 4
+  which {{parent.whichGrain i}}
+  name Switch8
+  xpos 439
+  ypos 1016
+ }
+push $Ncb30f800
+ Keymix {
+  inputs 3
+  name Keymix2
+  xpos 615
+  ypos 1057
+ }
+set Ncb30f400 [stack 0]
+ Group {
+  inputs 2
+  name Group1
+  note_font "Bitstream Vera Sans"
+  xpos 918
+  ypos 1045
+  mapsize {0.15 0.15}
+  addUserKnob {20 "" l User}
+  addUserKnob {41 from0 l "alpha is" T Copy1.from0}
+  addUserKnob {6 premult t "Premultiplies the RGB of input B by the specified channel from input A." -STARTLINE}
+  premult true
+  addUserKnob {41 bbox l "Set BBox to " T Copy1.bbox}
+ }
+  Input {
+   inputs 0
+   name A
+   xpos 217
+   ypos 4
+   number 1
+  }
+  AddChannels {
+   channels rgba
+   name AddChannels1
+   xpos 217
+   ypos 74
+  }
+  Dot {
+   name Dot1
+   xpos 248
+   ypos 135
+  }
+  Input {
+   inputs 0
+   name B
+   xpos 0
+  }
+  Copy {
+   inputs 2
+   from0 rgba.alpha
+   to0 rgba.alpha
+   name Copy1
+   xpos 0
+   ypos 125
+  }
+  Premult {
+   name Premult1
+   xpos 0
+   ypos 181
+   disable {{parent.premult!=1}}
+  }
+  Output {
+   name Output1
+   xpos 0
+   ypos 301
+  }
+ end_group
+push $N93758800
+ Grade {
+  channels rgba
+  blackpoint 0.01
+  whitepoint 0.01
+  white_clamp true
+  unpremult -rgba.alpha
+  name Grade1
+  label "\[ expr \{ \[value mix] * 100 \} ]%"
+  xpos 1165
+  ypos 678
+ }
+ Dilate {
+  size -1
+  name Dilate1
+  xpos 1165
+  ypos 718
+ }
+ Dilate {
+  size 1
+  name Dilate3
+  xpos 1165
+  ypos 764
+ }
+ Blur {
+  channels rgba
+  size 3
+  name Blur3
+  label "Size \[value size]"
+  xpos 1165
+  ypos 810
+ }
+set Ndb5b4800 [stack 0]
+push $Ndb5b4800
+push $Ndb5b4800
+ Dilate {
+  inputs 1+1
+  size -1
+  name Dilate4
+  xpos 1308
+  ypos 810
+ }
+ Merge2 {
+  inputs 2
+  operation minus
+  name Merge8
+  label "\[ expr \{ \[value mix] * 100 \} ]%"
+  xpos 1165
+  ypos 882
+ }
+ Grade {
+  channels rgba
+  blackpoint 0.09
+  whitepoint 0.48
+  unpremult -rgba.alpha
+  name Grade8
+  label "\[ expr \{ \[value mix] * 100 \} ]%"
+  xpos 1165
+  ypos 912
+ }
+push $N975e2000
+ Dot {
+  name Dot13
+  xpos 880
+  ypos 760
+ }
+ Dot {
+  name Dot11
+  xpos 880
+  ypos 1144
+ }
+push $Nfcfa3c00
+push $Nfcfa3c00
+ Group {
+  name Group2
+  help "Spill Replace Gizmo. This is conversion of Shake Macro from Chris Wieser, recreated by Frantisek Hradecky"
+  note_font "Lucida Grande"
+  xpos 280
+  ypos 977
+  mapsize {0.15 0.15}
+  addUserKnob {20 "" l User}
+  addUserKnob {4 color l "Despill Color" t "screen color to de-spill." M {Blue Green Red}}
+  color Green
+  addUserKnob {6 bg l "Use BG" -STARTLINE}
+  addUserKnob {7 despillbalance l DespillBalance}
+  despillbalance 0.5
+  addUserKnob {7 despillsaturation l Saturation R -1 1}
+  addUserKnob {7 huerotation l Rotation R -180 180}
+  addUserKnob {7 despillrelight l Relight}
+ }
+  Input {
+   inputs 0
+   name FG
+   xpos -73
+   ypos 113
+  }
+set N68553000 [stack 0]
+  Shuffle {
+   in rgb
+   green red
+   blue red
+   alpha red
+   out rgb
+   name Shuffle2
+   label red
+   xpos 48
+   ypos 184
+  }
+set N68552c00 [stack 0]
+push $N68553000
+  Shuffle {
+   in rgb
+   red blue
+   green blue
+   alpha blue
+   out rgb
+   name Shuffle3
+   label blue
+   xpos 315
+   ypos 184
+  }
+set N68552800 [stack 0]
+push $N68553000
+  Shuffle {
+   in rgb
+   red green
+   blue green
+   alpha green
+   out rgb
+   name Shuffle1
+   label green
+   xpos 171
+   ypos 183
+  }
+set N68552400 [stack 0]
+  Dissolve {
+   inputs 2
+   channels rgb
+   which {{parent.despillbalance i}}
+   name Dissolve3
+   label "mix GB"
+   xpos 371
+   ypos 277
+  }
+  Merge2 {
+   inputs 2
+   operation min
+   Achannels rgb
+   Bchannels rgb
+   output rgb
+   name Merge4
+   label "\[ expr \{ \[value mix] * 100 \} ]%"
+   xpos 256
+   ypos 367
+  }
+push $N68553000
+  Dot {
+   name Dot1
+   xpos -39
+   ypos 373
+  }
+set N1c267800 [stack 0]
+  ShuffleCopy {
+   inputs 2
+   in rgb
+   in2 rgb
+   red red
+   out rgb
+   name ShuffleCopy3
+   label "copy R"
+   xpos 169
+   ypos 438
+  }
+push $N68552400
+push $N68552800
+push $N68552c00
+  Dissolve {
+   inputs 2
+   channels rgb
+   which {{parent.despillbalance i}}
+   name Dissolve2
+   label "mix RB"
+   xpos 250
+   ypos 278
+  }
+  Merge2 {
+   inputs 2
+   operation min
+   Achannels rgb
+   Bchannels rgb
+   output rgb
+   name Merge3
+   label "\[ expr \{ \[value mix] * 100 \} ]%"
+   xpos 148
+   ypos 367
+  }
+push $N1c267800
+  ShuffleCopy {
+   inputs 2
+   in rgb
+   in2 rgb
+   green green
+   out rgb
+   name ShuffleCopy2
+   label "copy G"
+   xpos 43
+   ypos 440
+  }
+push $N68552800
+push $N68552400
+push $N68552c00
+  Dissolve {
+   inputs 2
+   channels rgb
+   which {{parent.despillbalance i}}
+   name Dissolve1
+   label "mix RG"
+   xpos 48
+   ypos 277
+  }
+  Merge2 {
+   inputs 2
+   operation min
+   Achannels rgb
+   Bchannels rgb
+   output rgb
+   name Merge2
+   label "\[ expr \{ \[value mix] * 100 \} ]%"
+   xpos 48
+   ypos 365
+  }
+push $N1c267800
+  ShuffleCopy {
+   inputs 2
+   in rgb
+   in2 rgb
+   blue blue
+   out rgb
+   name ShuffleCopy1
+   label "copy B"
+   xpos -73
+   ypos 438
+  }
+  Switch {
+   inputs 3
+   which {{parent.color i}}
+   name Switch1
+   xpos 43
+   ypos 518
+  }
+set Nc075ad80 [stack 0]
+push $N1c267800
+  Dot {
+   name Dot2
+   xpos -131
+   ypos 444
+  }
+  Merge2 {
+   inputs 2
+   operation difference
+   Achannels rgb
+   Bchannels rgb
+   output rgb
+   name Merge1
+   label "\[ expr \{ \[value mix] * 100 \} ]%"
+   xpos -165
+   ypos 539
+  }
+set N95a29400 [stack 0]
+  Shuffle {
+   in rgb
+   red black
+   green red
+   blue red
+   out rgb
+   name Shuffle6
+   label 0rr
+   xpos 379
+   ypos 691
+  }
+push $N95a29400
+  Shuffle {
+   in rgb
+   red green
+   green black
+   blue green
+   out rgb
+   name Shuffle5
+   label g0g
+   xpos 258
+   ypos 693
+  }
+push $N95a29400
+  Shuffle {
+   in rgb
+   red blue
+   green blue
+   blue black
+   out rgb
+   name Shuffle4
+   label bb0
+   xpos 142
+   ypos 692
+  }
+  Switch {
+   inputs 3
+   which {{parent.color i}}
+   name Switch2
+   xpos 258
+   ypos 776
+  }
+  HSVTool {
+   huerotation {{parent.huerotation i}}
+   saturation {{parent.despillsaturation i}}
+   output -rgba.alpha
+   name HSVTool1
+   tile_color 0x7aa9ff00
+   xpos 258
+   ypos 843
+  }
+set N95a28400 [stack 0]
+  Input {
+   inputs 0
+   name BG
+   xpos 506
+   ypos 110
+   number 1
+  }
+  Merge2 {
+   inputs 2
+   operation multiply
+   Achannels rgb
+   Bchannels rgb
+   output rgb
+   name Merge5
+   label "\[ expr \{ \[value mix] * 100 \} ]%"
+   xpos 506
+   ypos 913
+  }
+push $N95a28400
+  Switch {
+   inputs 2
+   which {{parent.bg i}}
+   name Switch3
+   xpos 258
+   ypos 964
+  }
+push $Nc075ad80
+  Merge2 {
+   inputs 2
+   operation plus
+   Achannels rgb
+   Bchannels rgb
+   output rgb
+   mix {{parent.despillrelight i}}
+   name Merge6
+   label "\[ expr \{ \[value mix] * 100 \} ]%"
+   xpos 43
+   ypos 1033
+  }
+  Output {
+   name Output1
+   xpos 43
+   ypos 1095
+  }
+ end_group
+set Nc075b200 [stack 0]
+ Group {
+  name Group3
+  help "This is a simple collection of Saturation, Grade & Lookup nodes that will dump the results into the alpha channel of the incoming image.  Nothing fancy, but offers numerical control over the black & white point as well as the ability to set white points above 1, which the built-in Keyer node sadly lacks.\n\nIn the Lookup knob, the master or alpha curves can be used individually or in concert to sculpt the output of the key. (not sure why you'd want to use both at the same time, though.)  The red, green & blue curves has NO EFFECT on the result."
+  label "\[knob this.to0]"
+  xpos 280
+  ypos 1039
+  addUserKnob {20 "" l User}
+  addUserKnob {41 mode l "luminance math" T Saturation6.mode}
+  addUserKnob {41 blackpoint T Grade12.blackpoint}
+  addUserKnob {41 whitepoint T Grade12.whitepoint}
+  addUserKnob {26 ""}
+  addUserKnob {41 lut T ColorLookup3.lut}
+  addUserKnob {26 "" l "Output channel"}
+  addUserKnob {41 to0 l "" -STARTLINE T CopyKey.to0}
+ }
+  Input {
+   inputs 0
+   name Input1
+   xpos -313
+   ypos -261
+  }
+set N99537000 [stack 0]
+  Grade {
+   black_clamp false
+   maskChannelInput -rgba.alpha
+   unpremult -rgba.alpha
+   name Grade12
+   label "\[ expr \{ \[value mix] * 100 \} ]%"
+   xpos -210
+   ypos -192
+  }
+  Saturation {
+   saturation 0
+   maskChannelInput -rgba.alpha
+   unpremult -rgba.alpha
+   name Saturation6
+   xpos -210
+   ypos -166
+  }
+  Shuffle {
+   green red
+   blue red
+   alpha red
+   name Shuffle6
+   xpos -210
+   ypos -140
+  }
+  ColorLookup {
+   lut {master {curve C k 0 1}
+     red {curve C k 0 1}
+     green {curve C k 0 1}
+     blue {curve C k 0 1}
+     alpha {curve C k 0 1}}
+   name ColorLookup3
+   xpos -210
+   ypos -114
+  }
+push $N99537000
+  Copy {
+   inputs 2
+   from0 rgba.alpha
+   to0 rgba.alpha
+   name CopyKey
+   xpos -313
+   ypos -39
+  }
+  Output {
+   name Output1
+   xpos -313
+   ypos 74
+  }
+ end_group
+ Grade {
+  channels rgba
+  blackpoint 0.01
+  gamma 0.44
+  white_clamp true
+  unpremult -rgba.alpha
+  name Grade3
+  label "\[ expr \{ \[value mix] * 100 \} ]%"
+  xpos 280
+  ypos 1110
+ }
+ Blur {
+  channels rgba
+  name highlightBlur
+  label "Size \[value size]"
+  xpos 280
+  ypos 1140
+ }
+ Grade {
+  channels rgba
+  gamma {{1+(highlightBlur.size/2) i}}
+  unpremult -rgba.alpha
+  name Grade7
+  label "\[ expr \{ \[value mix] * 100 \} ]%"
+  xpos 280
+  ypos 1186
+ }
+ Clamp {
+  channels rgba
+  name Clamp1
+  xpos 280
+  ypos 1278
+ }
+push $Nc075b200
+push $Ncb30f400
+ Switch {
+  which {{layeringoperation==22}}
+  name Switch9
+  xpos 615
+  ypos 1136
+ }
+push $Nfcfa3800
+ Merge2 {
+  inputs 2
+  name Layering
+  label "\[ expr \{ \[value mix] * 100 \} ]%"
+  xpos 514
+  ypos 1208
+ }
+ Keymix {
+  inputs 3
+  mix 0
+  name Keymix3
+  xpos 515
+  ypos 1270
+ }
+ Dissolve {
+  inputs 2
+  name Dissolve1
+  xpos 366
+  ypos 1366
+ }
+ Switch {
+  inputs 2
+  which {{viewMatte i}}
+  name Switch1
+  xpos 365
+  ypos 1496
+ }
+set N94c1b600 [stack 0]
+ Grade {
+  inputs 1+1
+  add {1 1 0 0}
+  unpremult -rgba.alpha
+  mix 0.5
+  name Grade2
+  label "\[ expr \{ \[value mix] * 100 \} ]%"
+  xpos 457
+  ypos 1535
+ }
+push $N94c1b600
+ Switch {
+  inputs 2
+  which {{matteOverlay i}}
+  name Switch7
+  xpos 365
+  ypos 1600
+ }
+set N94c1b180 [stack 0]
+add_layer {swissArmyEdge swissArmyEdge.matte}
+ Remove {
+  channels swissArmyEdge
+  name Remove1
+  xpos 665
+  ypos 1593
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 swissArmyEdge.matte
+  name Copy1
+  xpos 915
+  ypos 1593
+ }
+push $N94c1b180
+ Switch {
+  inputs 2
+  which {{parent.includeMatte}}
+  name Switch10
+  xpos 365
+  ypos 1712
+ }
+ CopyBBox {
+  inputs 2
+  name CopyBBox1
+  xpos 15
+  ypos 1760
+ }
+ Output {
+  name Output1
+  xpos -11
+  ypos 1973
+ }
+end_group

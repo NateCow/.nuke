@@ -1,0 +1,52 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+StickyNote {
+ inputs 0
+ name StickyNote1
+ label "Set Name"
+ selected true
+ xpos 884
+ ypos 1845
+}
+push $cut_paste_input
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "SCENE 76_IZZY EYE CHANGE 2_comp_proxy_v001"
+ old_message {{83 67 69 78 69 32 55 54 95 73 90 90 89 32 69 89 69 32 67 72 65 78 71 69 32 50 95 99 111 109 112 95 112 114 111 120 121 95 118 48 48 49}
+   }
+ box {19.5 13.5 1028.5 54.5}
+ transforms {{0 2}
+   }
+ font {{ Courier Prime : Regular : Courier Prime.ttf : 0 }}
+ global_font_scale 0.4
+ scale {1 1}
+ cursor_initialised true
+ initial_cursor_position {{19.5 54.5}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1920 1080 0 0 1 1 0 0 0 0}
+   }
+ name Text2
+ label "Project Root: \[value proj_root]\nSequence: \[value seq]\nShot Name: \[value shot]\nScript Name: \[value script]"
+ selected true
+ xpos 884
+ ypos 1759
+ addUserKnob {20 User}
+ addUserKnob {22 setName l "Set Name" T "shotNames = \{\n    'room_002_001': 'SCENE 02_NECK SLICE_SHOT 1',\n    'room_002_002': 'SCENE 02_NECK SLICE_SHOT 2',\n    'room_002_003': 'SCENE 02_NECK SLICE_SHOT 3',\n    'room_002_004': 'SCENE 02_NECK SLICE_SHOT 4',\n    'room_002_005': 'SCENE 02_NECK SLICE_SHOT 5',\n    'room_002_006': 'SCENE 02_NECK SLICE_SHOT 6',\n    'room_002_007': 'SCENE 02_NECK SLICE_SHOT 7',\n    'room_047_001': 'SCENE 47_IZZY EYE CHANGE 0',\n    'room_048_001': 'SCENE 48_ELEVATOR DIAL',\n    'room_058_001': 'SCENE 58_IZZY EYE CHANGE 1',\n    'room_059_001': 'SCENE 59_CROW ON BED_SHOT 1',\n    'room_059_002': 'SCENE 59_CROW ON BED_SHOT 2',\n    'room_059_003': 'SCENE 59_CROW ON BED_SHOT 3',\n    'room_059_004': 'SCENE 59_CROW ON BED_SHOT 4',\n    'room_059_005': 'SCENE 59_CROW ON BED_SHOT 5',\n    'room_059_006': 'SCENE 59_CROW ON BED_SHOT 6',\n    'room_076_001': 'SCENE 76_IZZY EYE CHANGE 2',\n    'room_077_001': 'SCENE 77_RONAN EYE STAB_SHOT 1',\n    'room_077_002': 'SCENE 77_RONAN EYE STAB_SHOT 2',\n    'room_085_001': 'SCENE 85_RONAN SUICIDE_SHOT 1',\n    'room_085_002': 'SCENE 85_RONAN SUICIDE_SHOT 2',\n    'room_085_003': 'SCENE 85_RONAN SUICIDE_SHOT 3',\n    'room_085_004': 'SCENE 85_RONAN SUICIDE_SHOT 4',\n    'room_085_005': 'SCENE 85_RONAN SUICIDE_SHOT 5',\n    'room_088_001': 'SCENE 88_CROWS SMACK WINDOW_SHOT 1',\n    'room_088_002': 'SCENE 88_CROWS SMACK WINDOW_SHOT 2',\n    'room_088_003': 'SCENE 88_CROWS SMACK WINDOW_SHOT 3',\n    'room_088_004': 'SCENE 88_CROWS SMACK WINDOW_SHOT 4',\n    'room_088_005': 'SCENE 88_CROWS SMACK WINDOW_SHOT 5',\n    'room_088_006': 'SCENE 88_CROWS SMACK WINDOW_SHOT 6',\n    'room_088_007': 'SCENE 88_CROWS SMACK WINDOW_SHOT 7',\n    'room_088_008': 'SCENE 88_CROWS SMACK WINDOW_SHOT 8',\n    'room_088_009': 'SCENE 88_CROWS SMACK WINDOW_SHOT 9',\n    'room_088_010': 'SCENE 88_CROWS SMACK WINDOW_SHOT 10',\n    'room_088_011': 'SCENE 88_CROWS SMACK WINDOW_SHOT 11',\n    'room_088_012': 'SCENE 88_CROWS SMACK WINDOW_SHOT 12',\n    'room_088_013': 'SCENE 88_CROWS SMACK WINDOW_SHOT 13',\n    'room_088_014': 'SCENE 88_CROWS SMACK WINDOW_SHOT 14',\n    'room_088_015': 'SCENE 88_CROWS SMACK WINDOW_SHOT 15',\n    'room_088_016': 'SCENE 88_CROWS SMACK WINDOW_SHOT 16',\n    'room_088_017': 'SCENE 88_CROWS SMACK WINDOW_SHOT 17',\n    'room_088_018': 'SCENE 88_CROWS SMACK WINDOW_SHOT 18',\n    'room_090_001': 'SCENE 90_FINAL SHOT_STITCH'\n\}\n\ndeliveryFolder = 'S:/Projects/room/vfx/_Delivery/'\n\n\nversionStr = str(nuke.thisNode().knob('vers').getValue())\ndirRoot = str(nuke.thisNode().knob('proj_root').getValue())\ndirSeq = str(nuke.thisNode().knob('seq').getValue())\ndirShot = str(nuke.thisNode().knob('shot').getValue())\ndirScript = str(nuke.thisNode().knob('script').getValue())\n\n\nnuke.thisNode().knob('message').setValue(str(shotNames\[dirShot] + '_comp_proxy_v' + versionStr))\n\n\n# Llamas. That is all." +STARTLINE}
+ addUserKnob {1 vers l Version}
+ vers 001
+ addUserKnob {26 ""}
+ addUserKnob {26 note l Note: T "Adjust path fragments so that your project root matches your heirarchy.\nCurrently, the node assumes\nD:/Shows/Project/Sequence/Shot/scripts\nas the current project's location."}
+ addUserKnob {20 pathFragments l "Path Fragments" n 1}
+ addUserKnob {1 proj_root l "Project Root"}
+ proj_root "\[join \[lrange \[split \[value root.name] / ] 0 2 ] / ]"
+ addUserKnob {1 seq l Sequence}
+ seq "\[lrange \[split \[value root.name] / ] 3 3 ]"
+ addUserKnob {1 shot l "Shot Name"}
+ shot "\[lrange \[split \[value root.name] / ] 4 4 ]"
+ addUserKnob {1 script l "Script Name"}
+ script "\[file rootname \[file tail \[value root.name] ] ]"
+ addUserKnob {20 endGroup n -1}
+}

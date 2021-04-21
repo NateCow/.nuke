@@ -1,0 +1,72 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+Read {
+inputs 0
+file S:/Projects/room/vfx/_Assets/crows/lighting/crow_front_2/crow_front_2.####.exr
+format "1920 1080 0 0 1920 1080 1 HD_1080"
+last 60
+frame_mode "start at"
+frame 1001
+origlast 60
+origset true
+name Read12
+selected true
+xpos 1940
+ypos -304
+}
+Read {
+inputs 0
+file S:/Projects/room/vfx/_Assets/crows/lighting/crow_front_3/crow_front_3.####.exr
+format "1920 1080 0 0 1920 1080 1 HD_1080"
+last 60
+frame_mode "start at"
+frame 1001
+origlast 60
+origset true
+name Read13
+selected true
+xpos 2050
+ypos -304
+}
+Read {
+inputs 0
+file S:/Projects/room/vfx/_Assets/crows/lighting/crow_front_4/crow_front_4.####.exr
+format "1920 1080 0 0 1920 1080 1 HD_1080"
+last 60
+frame_mode "start at"
+frame 1001
+origlast 60
+origset true
+name Read14
+selected true
+xpos 2160
+ypos -304
+}
+Read {
+inputs 0
+file S:/Projects/room/vfx/_Assets/crows/lighting/crow_front_1/crow_front_1.####.exr
+format "1920 1080 0 0 1920 1080 1 HD_1080"
+last 60
+frame_mode "start at"
+frame 1001
+origlast 60
+origset true
+name Read11
+selected true
+xpos 1830
+ypos -304
+}
+Read {
+inputs 0
+file S:/Projects/room/vfx/_Assets/crows/lighting/crow_front_5/crow_front_5.####.exr
+format "1920 1080 0 0 1920 1080 1 HD_1080"
+last 60
+frame_mode "start at"
+frame 1001
+origlast 60
+origset true
+name Read10
+selected true
+xpos 1720
+ypos -304
+}

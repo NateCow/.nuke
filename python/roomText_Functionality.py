@@ -54,10 +54,7 @@ dirShot = str(nuke.thisNode().knob('shot').getValue())
 dirScript = str(nuke.thisNode().knob('script').getValue())
 
 
-nuke.thisNode().knob('file').setValue(deliveryFolder + shotNames[dirShot] + '_comp_v' + versionStr + '.mov')
-nuke.thisNode().knob('file_type').setValue('mov')
-nuke.thisNode().knob('raw').setValue(1)
-nuke.thisNode().knob('meta_codec').setValue(6)
+nuke.thisNode().knob('message').setValue(str(shotNames[dirShot] + '_comp_v' + versionStr))
 
 
 # Llamas. That is all.

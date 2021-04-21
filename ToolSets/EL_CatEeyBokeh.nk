@@ -1,0 +1,349 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+push $cut_paste_input
+Group {
+ name Cat_Eye_Out_1
+ tile_color 0xff6600ff
+ selected true
+ xpos 9751
+ ypos 2664
+}
+ Input {
+  inputs 0
+  name Input1
+  xpos 711
+  ypos -645
+ }
+ Reformat {
+  type scale
+  scale 1.94
+  resize none
+  pbb true
+  name Reformat3
+  xpos 927
+  ypos -526
+ }
+ Crop {
+  box {0 0 {width} {height}}
+  name AutoCrop_1
+  tile_color 0xff00ffff
+  xpos 927
+  ypos -502
+ }
+set N81420c00 [stack 0]
+ LensDistortion {
+  serializeKnob ""
+  serialiseKnob "22 serialization::archive 9 0 0 0 0 0 0 0 0 0 0 0 0"
+  distortion1 {{parent.parent.Cat_Eye_In_1.LensDistortion1.distortion1}}
+  distortion2 {{parent.parent.Cat_Eye_In_1.LensDistortion1.distortion2}}
+  invertDistortion true
+  cardScale {0.7870135307 0.7870135307 1}
+  a 0.1312413961
+  b 0.0387140438
+  c 0.09565187246
+  name LensDistortion2
+  xpos 927
+  ypos -468
+ }
+ Crop {
+  box {0 0 {width} {height}}
+  name AutoCrop_2
+  tile_color 0xff00ffff
+  xpos 927
+  ypos -444
+ }
+set N81420400 [stack 0]
+ LensDistortion {
+  serializeKnob ""
+  serialiseKnob "22 serialization::archive 9 0 0 0 0 0 0 0 0 0 0 0 0"
+  distortion1 {{parent.parent.Cat_Eye_In_1.LensDistortion1.distortion1}}
+  distortion2 {{parent.parent.Cat_Eye_In_1.LensDistortion1.distortion2}}
+  invertDistortion true
+  cardScale {0.7789620757 0.7789620757 1}
+  a 0.1786632687
+  b 0.03970300406
+  c 0.0159700457
+  name LensDistortion1
+  xpos 927
+  ypos -420
+ }
+ Crop {
+  box {0 0 {width} {height}}
+  name AutoCrop_3
+  tile_color 0xff00ffff
+  xpos 927
+  ypos -396
+ }
+set Ne7933c00 [stack 0]
+ LensDistortion {
+  serializeKnob ""
+  serialiseKnob "22 serialization::archive 9 0 0 0 0 0 0 0 0 0 0 0 0"
+  distortion1 {{parent.parent.Cat_Eye_In_1.LensDistortion1.distortion1}}
+  distortion2 {{parent.parent.Cat_Eye_In_1.LensDistortion1.distortion2}}
+  invertDistortion true
+  cardScale {0.7789620757 0.7789620757 1}
+  a 0.1786632687
+  b 0.03970300406
+  c 0.0159700457
+  name LensDistortion3
+  xpos 927
+  ypos -365
+ }
+ Crop {
+  box {0 0 {width} {height}}
+  name AutoCrop_4
+  tile_color 0xff00ffff
+  xpos 927
+  ypos -341
+ }
+set Ne7933400 [stack 0]
+ LensDistortion {
+  serializeKnob ""
+  serialiseKnob "22 serialization::archive 9 0 0 0 0 0 0 0 0 0 0 0 0"
+  distortion1 {{parent.parent.Cat_Eye_In_1.LensDistortion1.distortion1}}
+  distortion2 {{parent.parent.Cat_Eye_In_1.LensDistortion1.distortion2}}
+  invertDistortion true
+  cardScale {0.7789620757 0.7789620757 1}
+  a 0.1786632687
+  b 0.03970300406
+  c 0.0159700457
+  name LensDistortion4
+  xpos 927
+  ypos -319
+ }
+ Crop {
+  box {0 0 {width} {height}}
+  name AutoCrop_5
+  tile_color 0xff00ffff
+  xpos 927
+  ypos -295
+ }
+set Ne7932c00 [stack 0]
+ LensDistortion {
+  serializeKnob ""
+  serialiseKnob "22 serialization::archive 9 0 0 0 0 0 0 0 0 0 0 0 0"
+  distortion1 {{parent.parent.Cat_Eye_In_1.LensDistortion1.distortion1}}
+  distortion2 {{parent.parent.Cat_Eye_In_1.LensDistortion1.distortion2}}
+  invertDistortion true
+  cardScale {0.7789620757 0.7789620757 1}
+  a 0.1786632687
+  b 0.03970300406
+  c 0.0159700457
+  name LensDistortion5
+  xpos 927
+  ypos -264
+ }
+push $Ne7932c00
+push $Ne7933400
+push $Ne7933c00
+push $N81420400
+push $N81420c00
+ Switch {
+  inputs 6
+  which {{parent.parent.Cat_Eye_In_1.Amount}}
+  name Switch2
+  xpos 1085
+  ypos -279
+ }
+ Reformat {
+  type scale
+  scale {{1/parent.Reformat3.scale}}
+  resize none
+  pbb true
+  name Reformat4
+  xpos 1085
+  ypos -202
+ }
+ Output {
+  name Output1
+  xpos 841
+  ypos -60
+ }
+push $Ne7933400
+ Viewer {
+  frame_range 1001-1044
+  center_fstop 0
+  name Viewer1
+  xpos 1037
+  ypos -502
+ }
+end_group
+push $cut_paste_input
+Group {
+ name Cat_Eye_In_1
+ tile_color 0xff6600ff
+ selected true
+ xpos 9751
+ ypos 2550
+ addUserKnob {20 User}
+ addUserKnob {7 Amount l "Number of Processes" R 0 5}
+ Amount 3
+ addUserKnob {7 BaseDistortion1 l "Base Distortion 1" R 0 0.1}
+ BaseDistortion1 0.08
+ addUserKnob {7 BaseDist2 l "Base Distortion 2" R 0 0.1}
+ BaseDist2 0.09
+}
+ Input {
+  inputs 0
+  name Input1
+  xpos 700
+  ypos -650
+ }
+ Reformat {
+  type scale
+  scale 1.94
+  resize none
+  pbb true
+  name Reformat1
+  xpos 798
+  ypos -495
+ }
+ Crop {
+  box {0 0 {width} {height}}
+  name AutoCrop_1
+  tile_color 0xff00ffff
+  xpos 798
+  ypos -471
+ }
+set Neecd4c00 [stack 0]
+ LensDistortion {
+  serializeKnob ""
+  serialiseKnob "22 serialization::archive 9 0 0 0 0 0 0 0 0 0 0 0 0"
+  distortion1 {{parent.BaseDistortion1}}
+  distortion2 {{parent.BaseDist2}}
+  cardScale {2.191912413 2.191912413 1}
+  a -2.213382244
+  b -0.0686807856
+  c 1.737291455
+  name LensDistortion1
+  selected true
+  xpos 798
+  ypos -444
+ }
+set Neecd4800 [stack 0]
+ Crop {
+  box {0 0 {width} {height}}
+  name AutoCrop_2
+  tile_color 0xff00ffff
+  xpos 798
+  ypos -420
+ }
+set Neecd4400 [stack 0]
+ LensDistortion {
+  serializeKnob ""
+  serialiseKnob "22 serialization::archive 9 0 0 0 0 0 0 0 0 0 0 0 0"
+  distortion1 {{parent.LensDistortion1.distortion1}}
+  distortion2 {{parent.LensDistortion1.distortion2}}
+  cardScale {2.191912413 2.191912413 1}
+  a -2.213382244
+  b -0.0686807856
+  c 1.737291455
+  name LensDistortion2
+  xpos 798
+  ypos -393
+ }
+ Crop {
+  box {0 0 {width} {height}}
+  name AutoCrop_3
+  tile_color 0xff00ffff
+  xpos 798
+  ypos -369
+ }
+set Nc15dbc00 [stack 0]
+ LensDistortion {
+  serializeKnob ""
+  serialiseKnob "22 serialization::archive 9 0 0 0 0 0 0 0 0 0 0 0 0"
+  distortion1 {{parent.LensDistortion1.distortion1}}
+  distortion2 {{parent.LensDistortion1.distortion2}}
+  cardScale {2.191912413 2.191912413 1}
+  a -2.213382244
+  b -0.0686807856
+  c 1.737291455
+  name LensDistortion6
+  xpos 798
+  ypos -343
+ }
+ Crop {
+  box {0 0 {width} {height}}
+  name AutoCrop_4
+  tile_color 0xff00ffff
+  xpos 798
+  ypos -319
+ }
+set Nc15db400 [stack 0]
+ LensDistortion {
+  serializeKnob ""
+  serialiseKnob "22 serialization::archive 9 0 0 0 0 0 0 0 0 0 0 0 0"
+  distortion1 {{parent.LensDistortion1.distortion1}}
+  distortion2 {{parent.LensDistortion1.distortion2}}
+  cardScale {2.191912413 2.191912413 1}
+  a -2.213382244
+  b -0.0686807856
+  c 1.737291455
+  name LensDistortion3
+  xpos 798
+  ypos -291
+ }
+ Crop {
+  box {0 0 {width} {height}}
+  name AutoCrop_5
+  tile_color 0xff00ffff
+  xpos 798
+  ypos -267
+ }
+set Nc15dac00 [stack 0]
+ LensDistortion {
+  serializeKnob ""
+  serialiseKnob "22 serialization::archive 9 0 0 0 0 0 0 0 0 0 0 0 0"
+  distortion1 {{parent.LensDistortion1.distortion1}}
+  distortion2 {{parent.LensDistortion1.distortion2}}
+  cardScale {2.191912413 2.191912413 1}
+  a -2.213382244
+  b -0.0686807856
+  c 1.737291455
+  name LensDistortion4
+  xpos 798
+  ypos -243
+ }
+ Crop {
+  box {0 0 {width} {height}}
+  name AutoCrop_6
+  tile_color 0xff00ffff
+  xpos 798
+  ypos -219
+ }
+push $Nc15dac00
+push $Nc15db400
+push $Nc15dbc00
+push $Neecd4400
+push $Neecd4c00
+ Switch {
+  inputs 6
+  which {{parent.Amount}}
+  name Switch1
+  xpos 954
+  ypos -253
+ }
+ Reformat {
+  type scale
+  scale {{1/parent.Reformat1.scale}}
+  resize none
+  pbb true
+  name Reformat2
+  xpos 954
+  ypos -166
+ }
+ Output {
+  name Output1
+  xpos 954
+  ypos -112
+ }
+push $Neecd4800
+ Viewer {
+  frame_range 1001-1044
+  center_fstop 0
+  name Viewer1
+  xpos 454
+  ypos -431
+ }
+end_group

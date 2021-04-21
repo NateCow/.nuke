@@ -1,0 +1,59 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+push $cut_paste_input
+Group {
+ name Anamorphic_Distort_v1_1
+ selected true
+ xpos 10051
+ ypos 2618
+ addUserKnob {20 User}
+ addUserKnob {7 Amount}
+ Amount 0.2
+}
+ Input {
+  inputs 0
+  name Input1
+  xpos 510
+  ypos 471
+ }
+ Crop {
+  box {0 0 {width} {height}}
+  crop false
+  name AutoCrop_1
+  tile_color 0xff00ffff
+  xpos 510
+  ypos 495
+ }
+ LensDistortion {
+  serializeKnob ""
+  serialiseKnob "22 serialization::archive 9 0 0 0 0 0 0 0 0 0 0 0 0"
+  lensType Anamorphic
+  asymmetricDistortion {{parent.Amount*-1} {(parent.Amount*-1)*.185}}
+  "Card Parameters" 1
+  a 0.1236475557
+  b -0.08992369473
+  c -0.1007690281
+  name LensDistortion2
+  xpos 510
+  ypos 519
+ }
+ Transform {
+  scale {{(parent.Amount*.18)+1}}
+  center {1269 540}
+  name Transform2
+  xpos 510
+  ypos 543
+ }
+ Output {
+  name Output1
+  xpos 510
+  ypos 567
+ }
+ StickyNote {
+  inputs 0
+  name StickyNote1
+  label 1.03
+  xpos 636
+  ypos 432
+ }
+end_group

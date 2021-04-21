@@ -1,0 +1,31 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+push $cut_paste_input
+Group {
+ name Crop_Oversize
+ tile_color 0xa774a7ff
+ selected true
+ xpos 14074
+ ypos 2447
+ addUserKnob {20 User}
+ addUserKnob {14 PercentOver l "Percent Overscan" R 0 100}
+ PercentOver 10
+}
+ Input {
+  inputs 0
+  name Input1
+  xpos 156
+  ypos 468
+ }
+ Crop {
+  box {{((((parent.PercentOver/200)+1)*width)-width)*-1} {((((parent.PercentOver/200)+1)*height)-height)*-1} {((parent.PercentOver/200)+1)*width} {((parent.PercentOver/200)+1)*height}}
+  name Crop2
+  xpos 156
+  ypos 508
+ }
+ Output {
+  name Output1
+  xpos 156
+  ypos 608
+ }
+end_group
