@@ -1,7 +1,7 @@
 #===============================================================================
 # menu.py
-# Version: 1.1.7
-# Last Updated: May 16, 2020
+# Version: 1.1.8
+# Last Updated: July 19, 2020
 # Author: Nathaniel Caauwe
 # www.NateCow.com
 #===============================================================================
@@ -32,7 +32,7 @@ else:
 # -- Motion blur shutter. Perfectly balanced, as all things should be. ---------
 nuke.knobDefault('shutteroffset', "centered")
 
-# ----- FRAMEHOLD DEFAULT --------------------------------------
+# -- FRAMEHOLD DEFAULT - Sets frameHold nodes to whatever frame you're on. -----
 nuke.addOnUserCreate(lambda:nuke.thisNode()['first_frame'].setValue(nuke.frame()), nodeClass='FrameHold')
 
 
@@ -66,6 +66,8 @@ myGizmosMenu.addCommand('EdgeExtend', 'nuke.createNode("EdgeExtend2")')
 # Cow Functions
 #===============================================================================
 
+# -- Sets read node to start at 1001. ------------------------------------------
+
 def setStartFrame():
 
     nodes = nuke.selectedNodes()
@@ -73,11 +75,20 @@ def setStartFrame():
         n.knob('frame_mode').setValue("start at")
         n.knob('frame').setValue('1001')
 
+
+
+# -- Sets colorspace of read node. Currently it just sets it to sRGB. Need to update.
+
 def setsRGB():
 
     nodes = nuke.selectedNodes()
     for n in nodes:
-        n.knob('colorspace').setValue("sRGB")
+        n.knob('colorspace').setValue("sRGB") #For now, you could change "sRGB" to whatever you need it to be.
+
+
+
+# -- Sets the frame range based on the currently selected read node.
+# -- This assumes a 1001-based timeline.
 
 def setProject():
 
@@ -92,73 +103,8 @@ def setProject():
 
 
 
-#===============================================================================
-# Keyboard Shortcuts
-#===============================================================================
-
-nuke.menu('Nodes').addCommand("Channel/Shuffle", "nuke.createNode('Shuffle')", "v", icon="Shuffle.png", shortcutContext=2)
-
-
-# -------- Merge Node Shortcuts-------------------------------------------------
-mergeMenu = nuke.menu('Nodes').findItem("Merge/Merges")
-
-mergeMenu.addCommand('Stencil', 'nuke.createNode("Merge2", "operation stencil bbox B")', "alt+o", icon="MergeOut.png", shortcutContext=2)
-mergeMenu.addCommand('Mask', 'nuke.createNode("Merge2", "operation mask bbox A")', "alt+i", icon="MergeIn.png", shortcutContext=2)
-mergeMenu.addCommand('Plus', 'nuke.createNode("Merge2", "operation plus")', "alt+]", icon="MergePlus.png", shortcutContext=2)
-mergeMenu.addCommand('From', 'nuke.createNode("Merge2", "operation from")', "alt+[", icon="MergeDifference.png", shortcutContext=2)
-
-
-# --------------------------------------------------------------
-#  PYTHON SCRIPTS ::::::::::::::::::::::::::::::::::::::::::::::
-# --------------------------------------------------------------
-
-
-import shuffleShortcuts
-import listNavigator
-import filepathLister
-import paste_selected
-# import shortcut_NodeComment
-import shortcut_NodeCustomizer
-import shortcut_operationSwitcher
-import moblur_controller
-import mixPercent
-import batchCommand
-
-
-
-
-
-#===============================================================================
-# Error Report Tool, for finding bad frames and such.
-#===============================================================================
-nuke.menu("Nuke").addCommand('Scripts/errorReport', 'errorReport.runErrorReport()', 'alt+d')
-
-
-#===============================================================================
-# Optical Flares
-#===============================================================================
-toolbar = nuke.toolbar("Nodes")
-toolbar.addMenu("VideoCopilot", icon="VideoCopilot.png")
-toolbar.addCommand( "VideoCopilot/OpticalFlares", "nuke.createNode('OpticalFlares')", icon="OpticalFlares.png")
-
-
-#===============================================================================
-# BVFX ToolBar Menu definitions
-#===============================================================================
-toolbar = nuke.menu("Nodes")
-bvfxt = toolbar.addMenu("BoundaryVFX Tools", "BoundaryVFX.png")
-bvfxt.addCommand('Rotopaint to SplineWarp Nukev7', 'Roto_to_WarpSpline_v2()', icon='bvfx_SplineW.png')
-
-toolbar = nuke.menu("Nodes")
-bvfxt = toolbar.addMenu("BoundaryVFX Tools", "BoundaryVFX.png")
-bvfxt.addCommand('FreezeWarp for Nukev7', 'freezeWarp_v2()','shift+F8', icon='bvfx_SplineF.png')
-
-
-#===============================================================================
-# Cow Functionality
-#===============================================================================
-
-# After feable attempts, readFromWrite found here: http://nullege.com/codes/show/src@v@f@vfxpipe-HEAD@nuke@fxpipenukescripts@readFromWrite.py/19/nuke.nodes.Read
+# -- After feable attempts, readFromWrite found here:
+# -- http://nullege.com/codes/show/src@v@f@vfxpipe-HEAD@nuke@fxpipenukescripts@readFromWrite.py/19/nuke.nodes.Read
 
 def readFromWrite():
   
@@ -196,6 +142,70 @@ def readFromWrite():
 
 
 #===============================================================================
+# Keyboard Shortcuts
+#===============================================================================
+
+nuke.menu('Nodes').addCommand("Channel/Shuffle", "nuke.createNode('Shuffle')", "v", icon="Shuffle.png", shortcutContext=2)
+
+
+# -------- Merge Node Shortcuts-------------------------------------------------
+mergeMenu = nuke.menu('Nodes').findItem("Merge/Merges")
+
+mergeMenu.addCommand('Stencil', 'nuke.createNode("Merge2", "operation stencil bbox B")', "alt+o", icon="MergeOut.png", shortcutContext=2)
+mergeMenu.addCommand('Mask', 'nuke.createNode("Merge2", "operation mask bbox A")', "alt+i", icon="MergeIn.png", shortcutContext=2)
+mergeMenu.addCommand('Plus', 'nuke.createNode("Merge2", "operation plus")', "alt+]", icon="MergePlus.png", shortcutContext=2)
+mergeMenu.addCommand('From', 'nuke.createNode("Merge2", "operation from")', "alt+[", icon="MergeDifference.png", shortcutContext=2)
+
+
+# --------------------------------------------------------------
+#  PYTHON SCRIPTS ::::::::::::::::::::::::::::::::::::::::::::::
+# --------------------------------------------------------------
+
+
+import shuffleShortcuts
+import listNavigator
+import filepathLister
+import paste_selected
+# import shortcut_NodeComment
+import shortcut_NodeCustomizer
+import shortcut_operationSwitcher
+import moblur_controller
+import mixPercent
+import batchCommand
+
+
+
+#===============================================================================
+# Error Report Tool, for finding bad frames and such.
+#===============================================================================
+
+nuke.menu("Nuke").addCommand('Scripts/errorReport', 'errorReport.runErrorReport()', 'alt+d')
+
+
+#===============================================================================
+# Optical Flares
+#===============================================================================
+
+toolbar = nuke.toolbar("Nodes")
+toolbar.addMenu("VideoCopilot", icon="VideoCopilot.png")
+toolbar.addCommand( "VideoCopilot/OpticalFlares", "nuke.createNode('OpticalFlares')", icon="OpticalFlares.png")
+
+
+#===============================================================================
+# BVFX ToolBar Menu definitions
+#===============================================================================
+
+toolbar = nuke.menu("Nodes")
+bvfxt = toolbar.addMenu("BoundaryVFX Tools", "BoundaryVFX.png")
+bvfxt.addCommand('Rotopaint to SplineWarp Nukev7', 'Roto_to_WarpSpline_v2()', icon='bvfx_SplineW.png')
+
+toolbar = nuke.menu("Nodes")
+bvfxt = toolbar.addMenu("BoundaryVFX Tools", "BoundaryVFX.png")
+bvfxt.addCommand('FreezeWarp for Nukev7', 'freezeWarp_v2()','shift+F8', icon='bvfx_SplineF.png')
+
+
+
+#===============================================================================
 # Other Stuffs
 #===============================================================================
 
@@ -212,4 +222,5 @@ if not nuke.env["studio"]:
 
 	import PrismCore
 	pcore = PrismCore.PrismCore(app="Nuke")
-#<<<PrismEnd
+
+
