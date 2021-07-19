@@ -1,29 +1,10 @@
 #===============================================================================
-# menu.py
-# Version: 1.1.8
-# Last Updated: July 19, 2020
-# Author: Nathaniel Caauwe
-# www.NateCow.com
+# Copy and paste this stuff into your menu.py file in your .nuke directory.
 #===============================================================================
 
+# -- This is probably already in your menu.py
 import nuke
-import platform
-import errorReport
-import nukescripts
 
-Win_Dir = 'C:\Users\NateCow\.nuke'
-MacOSX_Dir = ''
-Linux_Dir = '/home/natecow/.nuke'
-
-# Set global directory
-if platform.system() == "Windows":
-    dir = Win_Dir
-elif platform.system() == "Darwin":
-    dir = MacOSX_Dir
-elif platform.system() == "Linux":
-    dir = Linux_Dir
-else:
-    dir = None
 
 #===============================================================================
 # Knob Defaults
@@ -42,9 +23,6 @@ nuke.addOnUserCreate(lambda:nuke.thisNode()['first_frame'].setValue(nuke.frame()
 #===============================================================================
 
 cowMenu = nuke.menu('Nuke').addMenu('Cow')
-utilitiesMenu = nuke.menu('Nuke').addMenu('Utilities')
-
-utilitiesMenu.addCommand('Autocrop', 'nukescripts.autocrop()')
 
 cowMenu.addCommand("Read This", lambda: readFromWrite(), 'alt+r', shortcutContext=2)
 cowMenu.addCommand("Start Frame 1001", lambda: setStartFrame())
@@ -52,19 +30,13 @@ cowMenu.addCommand("Set sRGB", lambda: setsRGB())
 cowMenu.addCommand("Set Project Settings", lambda: setProject())
 
 
-myGizmosMenu = nuke.menu('Nodes').addMenu('myGizmos', icon=dir+"myGizmoes_icon.png")
-
-myGizmosMenu.addCommand('Autocrop', 'nukescripts.autocrop()')
-myGizmosMenu.addCommand('bm_GrainTransfer', 'nuke.createNode("bm_GrainTransfer")', icon="Grain.png")
-myGizmosMenu.addCommand('AdvancedGrain', 'nuke.createNode("AdvancedGrain")', icon="Grain.png")
-myGizmosMenu.addCommand('EdgeExtend', 'nuke.createNode("EdgeExtend2")')
-
-
 
 
 #===============================================================================
 # Cow Functions
 #===============================================================================
+
+
 
 # -- Sets read node to start at 1001. ------------------------------------------
 
@@ -88,7 +60,7 @@ def setsRGB():
 
 
 # -- Sets the frame range based on the currently selected read node.
-# -- This assumes a 1001-based timeline.
+# -- This assumes a 1001-based timeline. Could easily change the 1001 values below to however you want.
 
 def setProject():
 
@@ -103,8 +75,8 @@ def setProject():
 
 
 
-# -- After feable attempts, readFromWrite found here:
-# -- http://nullege.com/codes/show/src@v@f@vfxpipe-HEAD@nuke@fxpipenukescripts@readFromWrite.py/19/nuke.nodes.Read
+# -- After feable attempts, readFromWrite found here: http://nullege.com/codes/show/src@v@f@vfxpipe-HEAD@nuke@fxpipenukescripts@readFromWrite.py/19/nuke.nodes.Read
+# -- This allows you to select a write node and hit Alt + R to read it back in.
 
 def readFromWrite():
   
@@ -145,82 +117,9 @@ def readFromWrite():
 # Keyboard Shortcuts
 #===============================================================================
 
+# -- V key creates a Shuffle node, something I've grown used to at Zoic and DD.
 nuke.menu('Nodes').addCommand("Channel/Shuffle", "nuke.createNode('Shuffle')", "v", icon="Shuffle.png", shortcutContext=2)
 
 
-# -------- Merge Node Shortcuts-------------------------------------------------
-mergeMenu = nuke.menu('Nodes').findItem("Merge/Merges")
-
-mergeMenu.addCommand('Stencil', 'nuke.createNode("Merge2", "operation stencil bbox B")', "alt+o", icon="MergeOut.png", shortcutContext=2)
-mergeMenu.addCommand('Mask', 'nuke.createNode("Merge2", "operation mask bbox A")', "alt+i", icon="MergeIn.png", shortcutContext=2)
-mergeMenu.addCommand('Plus', 'nuke.createNode("Merge2", "operation plus")', "alt+]", icon="MergePlus.png", shortcutContext=2)
-mergeMenu.addCommand('From', 'nuke.createNode("Merge2", "operation from")', "alt+[", icon="MergeDifference.png", shortcutContext=2)
-
-
-# --------------------------------------------------------------
-#  PYTHON SCRIPTS ::::::::::::::::::::::::::::::::::::::::::::::
-# --------------------------------------------------------------
-
-
-import shuffleShortcuts
-import listNavigator
-import filepathLister
-import paste_selected
-# import shortcut_NodeComment
-import shortcut_NodeCustomizer
-import shortcut_operationSwitcher
-import moblur_controller
-import mixPercent
-import batchCommand
-
-
-
-#===============================================================================
-# Error Report Tool, for finding bad frames and such.
-#===============================================================================
-
-nuke.menu("Nuke").addCommand('Scripts/errorReport', 'errorReport.runErrorReport()', 'alt+d')
-
-
-#===============================================================================
-# Optical Flares
-#===============================================================================
-
-toolbar = nuke.toolbar("Nodes")
-toolbar.addMenu("VideoCopilot", icon="VideoCopilot.png")
-toolbar.addCommand( "VideoCopilot/OpticalFlares", "nuke.createNode('OpticalFlares')", icon="OpticalFlares.png")
-
-
-#===============================================================================
-# BVFX ToolBar Menu definitions
-#===============================================================================
-
-toolbar = nuke.menu("Nodes")
-bvfxt = toolbar.addMenu("BoundaryVFX Tools", "BoundaryVFX.png")
-bvfxt.addCommand('Rotopaint to SplineWarp Nukev7', 'Roto_to_WarpSpline_v2()', icon='bvfx_SplineW.png')
-
-toolbar = nuke.menu("Nodes")
-bvfxt = toolbar.addMenu("BoundaryVFX Tools", "BoundaryVFX.png")
-bvfxt.addCommand('FreezeWarp for Nukev7', 'freezeWarp_v2()','shift+F8', icon='bvfx_SplineF.png')
-
-
-
-#===============================================================================
-# Other Stuffs
-#===============================================================================
-
-import cryptomatte_utilities
-cryptomatte_utilities.setup_cryptomatte_ui()
-#>>>PrismStart
-import nuke
-if not nuke.env["studio"]:
-	import sys, os
-
-	Dir = os.path.join("C:/Prism", "Scripts")
-	if Dir not in sys.path:
-		sys.path.append(Dir)
-
-	import PrismCore
-	pcore = PrismCore.PrismCore(app="Nuke")
 
 
