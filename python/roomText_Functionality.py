@@ -54,7 +54,7 @@ dirShot = str(nuke.thisNode().knob('shot').getValue())
 dirScript = str(nuke.thisNode().knob('script').getValue())
 
 
-nuke.thisNode().knob('message').setValue(str(shotNames[dirShot] + '_comp_v' + versionStr))
+nuke.thisNode().knob('message').setValue(str(shotNames[dirShot] + '_comp_proxy_v' + versionStr))
 
 
 # Llamas. That is all.

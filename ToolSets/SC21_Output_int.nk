@@ -1,0 +1,266 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+BackdropNode {
+ inputs 0
+ name BackdropNode1
+ tile_color 0x212121ff
+ label "SaberComp\n2021 Promo\nOutput"
+ note_font_size 42
+ selected true
+ xpos -326
+ ypos 4442
+ bdwidth 806
+ bdheight 686
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode2
+ tile_color 0x434343ff
+ label Proxy
+ note_font_size 42
+ selected true
+ xpos -75
+ ypos 4836
+ bdwidth 170
+ bdheight 245
+ z_order 1
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode3
+ tile_color 0x434343ff
+ label Devliery
+ note_font_size 42
+ selected true
+ xpos 195
+ ypos 4835
+ bdwidth 194
+ bdheight 244
+ z_order 1
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode6
+ tile_color 0xff5f00ff
+ label EXR
+ note_font_size 42
+ selected true
+ xpos -38
+ ypos 4472
+ bdheight 170
+ z_order 1
+}
+StickyNote {
+ inputs 0
+ name StickyNote1
+ label "Set Name"
+ selected true
+ xpos -260
+ ypos 4850
+}
+StickyNote {
+ inputs 0
+ name StickyNote2
+ label "Set Output"
+ selected true
+ xpos -29
+ ypos 5053
+}
+StickyNote {
+ inputs 0
+ name StickyNote3
+ label "Set Output"
+ selected true
+ xpos 248
+ ypos 5048
+}
+Text2 {
+ inputs 0
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message V1-0037_scp_vfx_comp_v001
+ old_message {{86 49 45 48 48 51 55 95 115 99 112 95 118 102 120 95 99 111 109 112 95 118 48 48 49}
+   }
+ box {19.5 13.5 620.5 54.5}
+ transforms {{0 2}
+   }
+ cursor_position 4
+ font {{ Courier Prime : Regular : Courier Prime.ttf : 0 }}
+ global_font_scale 0.4
+ scale {1 1}
+ cursor_initialised true
+ initial_cursor_position {{19.5 54.5}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1920 1080 0 0 1 1 0 0 0 0}
+   }
+ name Text2
+ label "Project Root: \[value proj_root]\nSequence: \[value seq]\nShot Name: \[value shot]\nScript Name: \[value script]"
+ selected true
+ xpos -260
+ ypos 4764
+ addUserKnob {20 User}
+ addUserKnob {22 setName l "Set Name" T "shotNames = \{\n    'V1-0001-scp-vfx' : 'V1-0001_scp_vfx',\n    'V1-0002-scp-vfx' : 'V1-0002_scp_vfx',\n    'V1-0003-scp-vfx' : 'V1-0003_scp_vfx',\n    'V1-0004-scp-vfx' : 'V1-0004_scp_vfx',\n    'V1-0005-scp-vfx' : 'V1-0005_scp_vfx',\n    'V1-0006-scp-vfx' : 'V1-0006_scp_vfx',\n    'V1-0007-scp-vfx' : 'V1-0007_scp_vfx',\n    'V1-0008-scp-vfx' : 'V1-0008_scp_vfx',\n    'V1-0009-scp-vfx' : 'V1-0009_scp_vfx',\n    'V1-0010-scp-vfx' : 'V1-0010_scp_vfx',\n    'V1-0011-scp-vfx' : 'V1-0011_scp_vfx',\n    'V1-0012-scp-vfx' : 'V1-0012_scp_vfx',\n    'V1-0013-scp-vfx' : 'V1-0013_scp_vfx',\n    'V1-0014-scp-vfx' : 'V1-0014_scp_vfx',\n    'V1-0015-scp-vfx' : 'V1-0015_scp_vfx',\n    'V1-0016-scp-vfx' : 'V1-0016_scp_vfx',\n    'V1-0017-scp-vfx' : 'V1-0017_scp_vfx',\n    'V1-0018-scp-vfx' : 'V1-0018_scp_vfx',\n    'V1-0019-scp-vfx' : 'V1-0019_scp_vfx',\n    'V1-0020-scp-vfx' : 'V1-0020_scp_vfx',\n    'V1-0021-scp-vfx' : 'V1-0021_scp_vfx',\n    'V1-0022-scp-vfx' : 'V1-0022_scp_vfx',\n    'V1-0023-scp-vfx' : 'V1-0023_scp_vfx',\n    'V1-0024-scp-vfx' : 'V1-0024_scp_vfx',\n    'V1-0025-scp-vfx' : 'V1-0025_scp_vfx',\n    'V1-0026-scp-vfx' : 'V1-0026_scp_vfx',\n    'V1-0027-scp-vfx' : 'V1-0027_scp_vfx',\n    'V1-0028-scp-vfx' : 'V1-0028_scp_vfx',\n    'V1-0029-scp-vfx' : 'V1-0029_scp_vfx',\n    'V1-0030-scp-vfx' : 'V1-0030_scp_vfx',\n    'V1-0031-scp-vfx' : 'V1-0031_scp_vfx',\n    'V1-0032-scp-vfx' : 'V1-0032_scp_vfx',\n    'V1-0033-scp-vfx' : 'V1-0033_scp_vfx',\n    'V1-0034-scp-vfx' : 'V1-0034_scp_vfx',\n    'V1-0035-scp-vfx' : 'V1-0035_scp_vfx',\n    'V1-0036-scp-vfx' : 'V1-0036_scp_vfx',\n    'V1-0037-scp-vfx' : 'V1-0037_scp_vfx',\n    'V1-0038-scp-vfx' : 'V1-0038_scp_vfx',\n    'V1-0039-scp-vfx' : 'V1-0039_scp_vfx',\n    'V1-0040-scp-vfx' : 'V1-0040_scp_vfx',\n    'V1-0041-scp-vfx' : 'V1-0041_scp_vfx',\n\}\n\ndeliveryFolder = 'S:/Projects/SC21/vfx/_Delivery/'\n\n\nversionStr = str(nuke.thisNode().knob('vers').getValue())\ndirRoot = str(nuke.thisNode().knob('proj_root').getValue())\ndirSeq = str(nuke.thisNode().knob('seq').getValue())\ndirShot = str(nuke.thisNode().knob('shot').getValue())\ndirScript = str(nuke.thisNode().knob('script').getValue())\n\n\nnuke.thisNode().knob('message').setValue(str(shotNames\[dirShot] + '_comp_v' + versionStr))\n\n\n# Llamas. That is all." +STARTLINE}
+ addUserKnob {1 vers l Version}
+ vers 001
+ addUserKnob {26 ""}
+ addUserKnob {26 note l Note: T "Adjust path fragments so that your project root matches your heirarchy.\nCurrently, the node assumes\nD:/Shows/Project/Sequence/Shot/scripts\nas the current project's location."}
+ addUserKnob {20 pathFragments l "Path Fragments" n 1}
+ addUserKnob {1 proj_root l "Project Root"}
+ proj_root "\[join \[lrange \[split \[value root.name] / ] 0 2 ] / ]"
+ addUserKnob {1 seq l Sequence}
+ seq "\[lrange \[split \[value root.name] / ] 3 3 ]"
+ addUserKnob {1 shot l "Shot Name"}
+ shot "\[lrange \[split \[value root.name] / ] 4 4 ]"
+ addUserKnob {1 script l "Script Name"}
+ script "\[file rootname \[file tail \[value root.name] ] ]"
+ addUserKnob {20 endGroup n -1}
+}
+push 0
+Text2 {
+ inputs 0
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[frame]"
+ old_message {{49 48 51 49}
+   }
+ old_expression_markers {{0 3}
+   }
+ box {1805.5 13.5 1902.5 54.5}
+ transforms {{0 2}
+   }
+ font {{ Courier Prime : Regular : Courier Prime.ttf : 0 }}
+ global_font_scale 0.4
+ scale {1 1}
+ cursor_initialised true
+ initial_cursor_position {{1805.5 54.5}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1920 1080 0 0 1 1 0 0 0 0}
+   }
+ name Text1
+ selected true
+ xpos 140
+ ypos 4790
+}
+push $cut_paste_input
+PostageStamp {
+ name PostageStamp3
+ selected true
+ xpos -28
+ ypos 4559
+ postage_stamp true
+}
+set Nf76f3000 [stack 0]
+Reformat {
+ format "1920 1080 0 0 1920 1080 1 HD_1080"
+ black_outside true
+ name Reformat2
+ selected true
+ xpos -28
+ ypos 4676
+}
+OCIOFileTransform {
+ file S:/Projects/SC21/LUTs/int_grade.cube
+ working_space linear
+ name Shot_LUT
+ label "SC21 - Interior Grade"
+ selected true
+ xpos -28
+ ypos 4714
+}
+Merge2 {
+ inputs 3+1
+ name Merge7
+ label "\[ expr \{ \[value mix] * 100 \} ]%"
+ selected true
+ xpos -28
+ ypos 4784
+}
+Write {
+ file S:/Projects/SC21/vfx/_Delivery/V1-0037_scp_vfx_comp_proxy_v001.mov
+ raw true
+ file_type mov
+ meta_codec ap4h
+ mov32_codec AV1x
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ mov64_codec ap4h
+ mov64_bitrate 20000
+ mov64_bitrate_tolerance 40000000
+ mov64_quality_min 2
+ mov64_quality_max 31
+ mov64_gop_size 12
+ mov64_b_frames 0
+ checkHashOnRead false
+ version 3
+ beforeRender "\n2\n3\nimport os\nif not os.path.isdir(os.path.dirname(nuke.thisNode()\['file'].evaluate())):\n  os.makedirs(os.path.dirname(nuke.thisNode()\['file'].evaluate()))"
+ name SC21WriteProxy
+ label "\nProject Root: \[value proj_root]\nSequence: \[value seq]\nShot Name: \[value shot]\nScript Name: \[value script]"
+ selected true
+ xpos -28
+ ypos 4926
+ addUserKnob {20 User}
+ addUserKnob {1 vers l Version}
+ vers 001
+ addUserKnob {22 setPath l "Set Output Path" T "shotNames = \{\n    'V1-0001-scp-vfx' : 'V1-0001_scp_vfx',\n    'V1-0002-scp-vfx' : 'V1-0002_scp_vfx',\n    'V1-0003-scp-vfx' : 'V1-0003_scp_vfx',\n    'V1-0004-scp-vfx' : 'V1-0004_scp_vfx',\n    'V1-0005-scp-vfx' : 'V1-0005_scp_vfx',\n    'V1-0006-scp-vfx' : 'V1-0006_scp_vfx',\n    'V1-0007-scp-vfx' : 'V1-0007_scp_vfx',\n    'V1-0008-scp-vfx' : 'V1-0008_scp_vfx',\n    'V1-0009-scp-vfx' : 'V1-0009_scp_vfx',\n    'V1-0010-scp-vfx' : 'V1-0010_scp_vfx',\n    'V1-0011-scp-vfx' : 'V1-0011_scp_vfx',\n    'V1-0012-scp-vfx' : 'V1-0012_scp_vfx',\n    'V1-0013-scp-vfx' : 'V1-0013_scp_vfx',\n    'V1-0014-scp-vfx' : 'V1-0014_scp_vfx',\n    'V1-0015-scp-vfx' : 'V1-0015_scp_vfx',\n    'V1-0016-scp-vfx' : 'V1-0016_scp_vfx',\n    'V1-0017-scp-vfx' : 'V1-0017_scp_vfx',\n    'V1-0018-scp-vfx' : 'V1-0018_scp_vfx',\n    'V1-0019-scp-vfx' : 'V1-0019_scp_vfx',\n    'V1-0020-scp-vfx' : 'V1-0020_scp_vfx',\n    'V1-0021-scp-vfx' : 'V1-0021_scp_vfx',\n    'V1-0022-scp-vfx' : 'V1-0022_scp_vfx',\n    'V1-0023-scp-vfx' : 'V1-0023_scp_vfx',\n    'V1-0024-scp-vfx' : 'V1-0024_scp_vfx',\n    'V1-0025-scp-vfx' : 'V1-0025_scp_vfx',\n    'V1-0026-scp-vfx' : 'V1-0026_scp_vfx',\n    'V1-0027-scp-vfx' : 'V1-0027_scp_vfx',\n    'V1-0028-scp-vfx' : 'V1-0028_scp_vfx',\n    'V1-0029-scp-vfx' : 'V1-0029_scp_vfx',\n    'V1-0030-scp-vfx' : 'V1-0030_scp_vfx',\n    'V1-0031-scp-vfx' : 'V1-0031_scp_vfx',\n    'V1-0032-scp-vfx' : 'V1-0032_scp_vfx',\n    'V1-0033-scp-vfx' : 'V1-0033_scp_vfx',\n    'V1-0034-scp-vfx' : 'V1-0034_scp_vfx',\n    'V1-0035-scp-vfx' : 'V1-0035_scp_vfx',\n    'V1-0036-scp-vfx' : 'V1-0036_scp_vfx',\n    'V1-0037-scp-vfx' : 'V1-0037_scp_vfx',\n    'V1-0038-scp-vfx' : 'V1-0038_scp_vfx',\n    'V1-0039-scp-vfx' : 'V1-0039_scp_vfx',\n    'V1-0040-scp-vfx' : 'V1-0040_scp_vfx',\n    'V1-0041-scp-vfx' : 'V1-0041_scp_vfx',\n\}\n\ndeliveryFolder = 'S:/Projects/SC21/vfx/_Delivery/'\n\n\nversionStr = str(nuke.thisNode().knob('vers').getValue())\ndirRoot = str(nuke.thisNode().knob('proj_root').getValue())\ndirSeq = str(nuke.thisNode().knob('seq').getValue())\ndirShot = str(nuke.thisNode().knob('shot').getValue())\ndirScript = str(nuke.thisNode().knob('script').getValue())\n\n\nnuke.thisNode().knob('file').setValue(deliveryFolder + shotNames\[dirShot] + '_comp_proxy_v' + versionStr + '.mov')\nnuke.thisNode().knob('file_type').setValue('mov')\nnuke.thisNode().knob('raw').setValue(1)\nnuke.thisNode().knob('meta_codec').setValue(6)\n\n\n# Llamas. That is all." +STARTLINE}
+ addUserKnob {26 ""}
+ addUserKnob {26 note l Note: T "Adjust path fragments so that your project root matches your heirarchy.\nCurrently, the node assumes\nD:/Shows/Project/Sequence/Shot/scripts\nas the current project's location."}
+ addUserKnob {20 pathFragments l "Path Fragments" n 1}
+ addUserKnob {1 proj_root l "Project Root"}
+ proj_root "\[join \[lrange \[split \[value root.name] / ] 0 2 ] / ]"
+ addUserKnob {1 seq l Sequence}
+ seq "\[lrange \[split \[value root.name] / ] 3 3 ]"
+ addUserKnob {1 shot l "Shot Name"}
+ shot "\[lrange \[split \[value root.name] / ] 4 4 ]"
+ addUserKnob {1 script l "Script Name"}
+ script "\[file rootname \[file tail \[value root.name] ] ]"
+ addUserKnob {20 endGroup n -1}
+}
+push $Nf76f3000
+Dot {
+ name Dot10
+ selected true
+ xpos 283
+ ypos 4586
+}
+Write {
+ file S:/Projects/SC21/vfx/_Delivery/V1-0037_scp_vfx_comp_v001.mov
+ raw true
+ file_type mov
+ meta_codec ap4h
+ mov32_codec AV1x
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ mov64_codec ap4h
+ mov64_bitrate 20000
+ mov64_bitrate_tolerance 40000000
+ mov64_quality_min 2
+ mov64_quality_max 31
+ mov64_gop_size 12
+ mov64_b_frames 0
+ checkHashOnRead false
+ version 3
+ beforeRender "\n2\n3\nimport os\nif not os.path.isdir(os.path.dirname(nuke.thisNode()\['file'].evaluate())):\n  os.makedirs(os.path.dirname(nuke.thisNode()\['file'].evaluate()))"
+ name SC21Write
+ label "\nProject Root: \[value proj_root]\nSequence: \[value seq]\nShot Name: \[value shot]\nScript Name: \[value script]"
+ selected true
+ xpos 249
+ ypos 4910
+ addUserKnob {20 User}
+ addUserKnob {1 vers l Version}
+ vers 001
+ addUserKnob {22 setPath l "Set Output Path" T "shotNames = \{\n    'V1-0001-scp-vfx' : 'V1-0001_scp_vfx',\n    'V1-0002-scp-vfx' : 'V1-0002_scp_vfx',\n    'V1-0003-scp-vfx' : 'V1-0003_scp_vfx',\n    'V1-0004-scp-vfx' : 'V1-0004_scp_vfx',\n    'V1-0005-scp-vfx' : 'V1-0005_scp_vfx',\n    'V1-0006-scp-vfx' : 'V1-0006_scp_vfx',\n    'V1-0007-scp-vfx' : 'V1-0007_scp_vfx',\n    'V1-0008-scp-vfx' : 'V1-0008_scp_vfx',\n    'V1-0009-scp-vfx' : 'V1-0009_scp_vfx',\n    'V1-0010-scp-vfx' : 'V1-0010_scp_vfx',\n    'V1-0011-scp-vfx' : 'V1-0011_scp_vfx',\n    'V1-0012-scp-vfx' : 'V1-0012_scp_vfx',\n    'V1-0013-scp-vfx' : 'V1-0013_scp_vfx',\n    'V1-0014-scp-vfx' : 'V1-0014_scp_vfx',\n    'V1-0015-scp-vfx' : 'V1-0015_scp_vfx',\n    'V1-0016-scp-vfx' : 'V1-0016_scp_vfx',\n    'V1-0017-scp-vfx' : 'V1-0017_scp_vfx',\n    'V1-0018-scp-vfx' : 'V1-0018_scp_vfx',\n    'V1-0019-scp-vfx' : 'V1-0019_scp_vfx',\n    'V1-0020-scp-vfx' : 'V1-0020_scp_vfx',\n    'V1-0021-scp-vfx' : 'V1-0021_scp_vfx',\n    'V1-0022-scp-vfx' : 'V1-0022_scp_vfx',\n    'V1-0023-scp-vfx' : 'V1-0023_scp_vfx',\n    'V1-0024-scp-vfx' : 'V1-0024_scp_vfx',\n    'V1-0025-scp-vfx' : 'V1-0025_scp_vfx',\n    'V1-0026-scp-vfx' : 'V1-0026_scp_vfx',\n    'V1-0027-scp-vfx' : 'V1-0027_scp_vfx',\n    'V1-0028-scp-vfx' : 'V1-0028_scp_vfx',\n    'V1-0029-scp-vfx' : 'V1-0029_scp_vfx',\n    'V1-0030-scp-vfx' : 'V1-0030_scp_vfx',\n    'V1-0031-scp-vfx' : 'V1-0031_scp_vfx',\n    'V1-0032-scp-vfx' : 'V1-0032_scp_vfx',\n    'V1-0033-scp-vfx' : 'V1-0033_scp_vfx',\n    'V1-0034-scp-vfx' : 'V1-0034_scp_vfx',\n    'V1-0035-scp-vfx' : 'V1-0035_scp_vfx',\n    'V1-0036-scp-vfx' : 'V1-0036_scp_vfx',\n    'V1-0037-scp-vfx' : 'V1-0037_scp_vfx',\n    'V1-0038-scp-vfx' : 'V1-0038_scp_vfx',\n    'V1-0039-scp-vfx' : 'V1-0039_scp_vfx',\n    'V1-0040-scp-vfx' : 'V1-0040_scp_vfx',\n    'V1-0041-scp-vfx' : 'V1-0041_scp_vfx',\n\}\n\ndeliveryFolder = 'S:/Projects/SC21/vfx/_Delivery/'\n\n\nversionStr = str(nuke.thisNode().knob('vers').getValue())\ndirRoot = str(nuke.thisNode().knob('proj_root').getValue())\ndirSeq = str(nuke.thisNode().knob('seq').getValue())\ndirShot = str(nuke.thisNode().knob('shot').getValue())\ndirScript = str(nuke.thisNode().knob('script').getValue())\n\n\nnuke.thisNode().knob('file').setValue(deliveryFolder + shotNames\[dirShot] + '_comp_v' + versionStr + '.mov')\nnuke.thisNode().knob('file_type').setValue('mov')\nnuke.thisNode().knob('raw').setValue(1)\nnuke.thisNode().knob('meta_codec').setValue(6)\n\n\n# Llamas. That is all." +STARTLINE}
+ addUserKnob {26 ""}
+ addUserKnob {26 note l Note: T "Adjust path fragments so that your project root matches your heirarchy.\nCurrently, the node assumes\nD:/Shows/Project/Sequence/Shot/scripts\nas the current project's location."}
+ addUserKnob {20 pathFragments l "Path Fragments" n 1}
+ addUserKnob {1 proj_root l "Project Root"}
+ proj_root "\[join \[lrange \[split \[value root.name] / ] 0 2 ] / ]"
+ addUserKnob {1 seq l Sequence}
+ seq "\[lrange \[split \[value root.name] / ] 3 3 ]"
+ addUserKnob {1 shot l "Shot Name"}
+ shot "\[lrange \[split \[value root.name] / ] 4 4 ]"
+ addUserKnob {1 script l "Script Name"}
+ script "\[file rootname \[file tail \[value root.name] ] ]"
+ addUserKnob {20 endGroup n -1}
+}

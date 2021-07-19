@@ -1,0 +1,41 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+push $cut_paste_input
+Write {
+ raw true
+ file_type mov
+ meta_codec ap4h
+ mov32_codec AV1x
+ mov32_pixel_format {{0} "default (RGBA  8-bit)" "RGBA  8-bit"}
+ mov64_codec ap4h
+ mov64_bitrate 20000
+ mov64_bitrate_tolerance 40000000
+ mov64_quality_min 2
+ mov64_quality_max 31
+ mov64_gop_size 12
+ mov64_b_frames 0
+ checkHashOnRead false
+ version 3
+ beforeRender "\n2\n3\nimport os\nif not os.path.isdir(os.path.dirname(nuke.thisNode()\['file'].evaluate())):\n  os.makedirs(os.path.dirname(nuke.thisNode()\['file'].evaluate()))"
+ name SC21WriteProxy
+ label "\nProject Root: \[value proj_root]\nSequence: \[value seq]\nShot Name: \[value shot]\nScript Name: \[value script]"
+ selected true
+ xpos 135
+ ypos 67
+ addUserKnob {20 User}
+ addUserKnob {1 vers l Version}
+ vers 001
+ addUserKnob {22 setPath l "Set Output Path" T "shotNames = \{\n    'V1-0001-scp-vfx' : 'V1-0001_scp_vfx',\n    'V1-0002-scp-vfx' : 'V1-0002_scp_vfx',\n    'V1-0003-scp-vfx' : 'V1-0003_scp_vfx',\n    'V1-0004-scp-vfx' : 'V1-0003_scp_vfx',\n    'V1-0005-scp-vfx' : 'V1-0003_scp_vfx',\n    'V1-0006-scp-vfx' : 'V1-0003_scp_vfx',\n    'V1-0007-scp-vfx' : 'V1-0003_scp_vfx',\n    'V1-0008-scp-vfx' : 'V1-0003_scp_vfx',\n    'V1-0009-scp-vfx' : 'V1-0003_scp_vfx',\n    'V1-0010-scp-vfx' : 'V1-0003_scp_vfx',\n    'V1-0011-scp-vfx' : 'V1-0003_scp_vfx',\n    'V1-0012-scp-vfx' : 'V1-0003_scp_vfx',\n    'V1-0013-scp-vfx' : 'V1-0003_scp_vfx',\n    'V1-0014-scp-vfx' : 'V1-0003_scp_vfx',\n    'V1-0015-scp-vfx' : 'V1-0003_scp_vfx',\n    'V1-0016-scp-vfx' : 'V1-0016_scp_vfx',\n    'V1-0017-scp-vfx' : 'V1-0017_scp_vfx',\n    'V1-0018-scp-vfx' : 'V1-0018_scp_vfx',\n    'V1-0019-scp-vfx' : 'V1-0019_scp_vfx',\n    'V1-0020-scp-vfx' : 'V1-0020_scp_vfx',\n    'V1-0021-scp-vfx' : 'V1-0021_scp_vfx',\n    'V1-0022-scp-vfx' : 'V1-0022_scp_vfx',\n    'V1-0023-scp-vfx' : 'V1-0023_scp_vfx',\n    'V1-0024-scp-vfx' : 'V1-0024_scp_vfx',\n    'V1-0025-scp-vfx' : 'V1-0025_scp_vfx',\n    'V1-0026-scp-vfx' : 'V1-0026_scp_vfx',\n    'V1-0027-scp-vfx' : 'V1-0027_scp_vfx',\n    'V1-0028-scp-vfx' : 'V1-0028_scp_vfx',\n    'V1-0029-scp-vfx' : 'V1-0029_scp_vfx',\n    'V1-0030-scp-vfx' : 'V1-0030_scp_vfx',\n    'V1-0031-scp-vfx' : 'V1-0031_scp_vfx',\n    'V1-0032-scp-vfx' : 'V1-0032_scp_vfx',\n    'V1-0033-scp-vfx' : 'V1-0033_scp_vfx',\n    'V1-0034-scp-vfx' : 'V1-0034_scp_vfx',\n    'V1-0035-scp-vfx' : 'V1-0035_scp_vfx',\n    'V1-0036-scp-vfx' : 'V1-0036_scp_vfx',\n    'V1-0037-scp-vfx' : 'V1-0037_scp_vfx',\n    'V1-0038-scp-vfx' : 'V1-0038_scp_vfx',\n    'V1-0039-scp-vfx' : 'V1-0039_scp_vfx',\n    'V1-0040-scp-vfx' : 'V1-0040_scp_vfx',\n    'V1-0041-scp-vfx' : 'V1-0041_scp_vfx',\n\}\n\ndeliveryFolder = 'S:/Projects/SC21/vfx/_Delivery/'\n\n\nversionStr = str(nuke.thisNode().knob('vers').getValue())\ndirRoot = str(nuke.thisNode().knob('proj_root').getValue())\ndirSeq = str(nuke.thisNode().knob('seq').getValue())\ndirShot = str(nuke.thisNode().knob('shot').getValue())\ndirScript = str(nuke.thisNode().knob('script').getValue())\n\n\nnuke.thisNode().knob('file').setValue(deliveryFolder + shotNames\[dirShot] + '_comp_proxy_v' + versionStr + '.mov')\nnuke.thisNode().knob('file_type').setValue('mov')\nnuke.thisNode().knob('raw').setValue(1)\nnuke.thisNode().knob('meta_codec').setValue(6)\n\n\n# Llamas. That is all." +STARTLINE}
+ addUserKnob {26 ""}
+ addUserKnob {26 note l Note: T "Adjust path fragments so that your project root matches your heirarchy.\nCurrently, the node assumes\nD:/Shows/Project/Sequence/Shot/scripts\nas the current project's location."}
+ addUserKnob {20 pathFragments l "Path Fragments" n 1}
+ addUserKnob {1 proj_root l "Project Root"}
+ proj_root "\[join \[lrange \[split \[value root.name] / ] 0 2 ] / ]"
+ addUserKnob {1 seq l Sequence}
+ seq "\[lrange \[split \[value root.name] / ] 3 3 ]"
+ addUserKnob {1 shot l "Shot Name"}
+ shot "\[lrange \[split \[value root.name] / ] 4 4 ]"
+ addUserKnob {1 script l "Script Name"}
+ script "\[file rootname \[file tail \[value root.name] ] ]"
+ addUserKnob {20 endGroup n -1}
+}

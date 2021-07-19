@@ -1,0 +1,12 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+push $cut_paste_input
+OCIOFileTransform {
+ file S:/Projects/SC21/LUTs/int_grade.cube
+ working_space linear
+ name VIEWER_INPUT
+ label "SC21 - Interior Grade"
+ selected true
+ xpos 253
+ ypos -89
+}

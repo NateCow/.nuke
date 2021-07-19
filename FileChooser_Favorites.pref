@@ -26,5 +26,7 @@ add_favorite_dir -image -script -project -python -font -geo -misc -sequence D2 D
 add_favorite_dir -image -script -project -python -geo -sequence BQ BQ "" S:/Projects/Brothers_Quarrel/VFX/
 add_favorite_dir -image -script -project -python -geo -sequence HWL HWL "" "Hollywood Love" S:/Projects/Hollywood_Love/VFX_Nate/
 add_favorite_dir -image -script -project -geo -sequence ROOM ROOM "" S:/Projects/room/vfx/
+add_favorite_dir -image -script -project -python -sequence SC21_PRM SC21_PRM "" S:/Projects/SC21/vfx/
+add_favorite_dir -image "Stock Footage" "Stock Footage" "" "S:/Assets/Stock Footage/"
 
 # End of generated file.
