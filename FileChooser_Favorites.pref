@@ -28,5 +28,6 @@ add_favorite_dir -image -script -project -python -geo -sequence HWL HWL "" "Holl
 add_favorite_dir -image -script -project -geo -sequence ROOM ROOM "" S:/Projects/room/vfx/
 add_favorite_dir -image -script -project -python -sequence SC21_PRM SC21_PRM "" S:/Projects/SC21/vfx/
 add_favorite_dir -image "Stock Footage" "Stock Footage" "" "S:/Assets/Stock Footage/"
+add_favorite_dir -image -script -project -python -geo -sequence ERZ ERZ "" S:/Projects/ERZ/vfx/
 
 # End of generated file.
