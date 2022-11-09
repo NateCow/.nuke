@@ -1,0 +1,38 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+push $cut_paste_input
+Group {
+ name Zuko_Viewer_LUT
+ tile_color 0xff00bfff
+ label "Set Viewer Input Process to this.\nMake sure red \"IP\" is on in viewer."
+ selected true
+ xpos -1176
+ ypos -529
+ hide_input true
+}
+ Input {
+  inputs 0
+  name Input1
+  xpos -1178
+  ypos -321
+ }
+ OCIOColorSpace {
+  in_colorspace linear
+  out_colorspace AlexaV3LogC
+  name OCIOColorSpace1
+  xpos -1178
+  ypos -281
+ }
+ OCIOFileTransform {
+  file T:/Projects/Zuko/VFX/4-ASSETS/Color/Rec709_Kodak_2393_D65.cube
+  working_space linear
+  name OCIOFileTransform3
+  xpos -1178
+  ypos -250
+ }
+ Output {
+  name Output1
+  xpos -1178
+  ypos -150
+ }
+end_group

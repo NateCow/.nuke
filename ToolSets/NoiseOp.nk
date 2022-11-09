@@ -1,0 +1,38 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+push $cut_paste_input
+NoOp {
+name NoiseOP1
+selected true
+xpos 180
+ypos 1177
+addUserKnob {20 NoiseOp}
+addUserKnob {7 noiseOp R 0 0}
+noiseOp {{mn+smoothstep((bott-.5),(top+.5),(fBm(frame*(freq)+vX,vY,vZ,octaves,lucanarity*3,.5)))*(mx-mn)}}
+addUserKnob {26 ""}
+addUserKnob {26 ""}
+addUserKnob {7 mn l "min value" R -100 100}
+mn -45
+addUserKnob {7 mx l "max value" R -100 100}
+mx 45.5
+addUserKnob {7 freq l frequency}
+freq 0.235
+addUserKnob {26 ""}
+addUserKnob {7 vX R -10 10}
+vX -3.5
+addUserKnob {7 vY -STARTLINE R -10 10}
+vY -1.5
+addUserKnob {7 vZ -STARTLINE R -10 10}
+vZ -1.5
+addUserKnob {26 ""}
+addUserKnob {3 octaves}
+octaves 2
+addUserKnob {7 lucanarity l "   ---     lucanarity" -STARTLINE R 0 10}
+addUserKnob {26 ""}
+addUserKnob {7 top l "top slice" -STARTLINE R -1.5 0}
+addUserKnob {7 bott l "bottem slice" -STARTLINE R 0 1.5}
+addUserKnob {26 ""}
+addUserKnob {22 bake l "bake expression" T "x = nuke.thisNode()\nmn = x\['mn'].value()\nmx = x\['mx'].value() \nfreq = x\['freq'].value()\nvX = x\['vX'].value()\nvY = x\['vY'].value()\nvZ = x\['vZ'].value()\noctaves = x\['octaves'].value()\nlucanarity = x\['lucanarity'].value()\ntop = x\['top'].value()\nbott = x\['bott'].value()\n\ncurValue = '%s+smoothstep((%s-.5),(%s+.5),(fBm(frame*(%s)+%s,%s,%s,%s,%s*3,.5)))*(%s-%s)' % (mn, bott, top, freq, vX, vY, vZ, octaves, lucanarity, mx, mn)\n\nx\['baked'].setValue(curValue)" +STARTLINE}
+addUserKnob {1 baked l "   baked" -STARTLINE}
+baked -45.0+smoothstep((0.0-.5),(0.0+.5),(fBm(frame*(0.235)+-3.5,-1.5,-1.5,2.0,0.0*3,.5)))*(45.5--45.0)
+}

@@ -59,6 +59,10 @@ myGizmosMenu.addCommand('bm_GrainTransfer', 'nuke.createNode("bm_GrainTransfer")
 myGizmosMenu.addCommand('AdvancedGrain', 'nuke.createNode("AdvancedGrain")', icon="Grain.png")
 myGizmosMenu.addCommand('EdgeExtend', 'nuke.createNode("EdgeExtend2")')
 
+m = nuke.menu('Nodes')
+m.addCommand( '*HM* toolbox/Draw/GrainMaster' , "nuke.nodes.GrainMaster()" , 'shift+g' )
+m.addCommand( '*HM* toolbox/3D/Parent Constraint' , "nuke.nodes.ParentConstraint()")
+
 
 
 

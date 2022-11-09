@@ -1,0 +1,133 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+push $cut_paste_input
+Group {
+ name SaberLensReflection
+ tile_color 0xff5f00ff
+ selected true
+ xpos -5710
+ ypos 1503
+ addUserKnob {20 User}
+ addUserKnob {26 mainLayerText l "Main Layer"}
+ addUserKnob {14 blurMainDual l Blur R 0 100}
+ blurMainDual {80 50}
+ addUserKnob {7 mainMix l Mix}
+ mainMix 1
+ addUserKnob {26 extraLayer1 l "Extra Layer 1"}
+ addUserKnob {6 extraLayer1Toggle l Enable +STARTLINE}
+ extraLayer1Toggle true
+ addUserKnob {14 Layer1Blur l Blur R 0 100}
+ Layer1Blur 80
+ addUserKnob {7 layer1Mix l Mix}
+ layer1Mix 0.444
+ addUserKnob {26 extraLayer2Text l "Extra Layer 2"}
+ addUserKnob {6 extraLayer2Toggle l Enable +STARTLINE}
+ extraLayer2Toggle true
+ addUserKnob {41 size l Blur T Blur_Extra_2.size}
+ addUserKnob {41 mix l Mix T Merge45.mix}
+}
+ Input {
+  inputs 0
+  name Input1
+  xpos -1440
+  ypos 876
+ }
+ Mirror2 {
+  flip true
+  flop true
+  name Mirror2_4
+  xpos -1440
+  ypos 985
+ }
+set Nbc77f400 [stack 0]
+ Dot {
+  name Dot17
+  xpos -1311
+  ypos 989
+ }
+set Nbc77f000 [stack 0]
+ Dot {
+  name Dot16
+  xpos -1143
+  ypos 989
+ }
+ Transform {
+  scale 0.6
+  center {1920 1080}
+  black_outside false
+  shutteroffset centred
+  name Extra_2_Transform
+  xpos -1177
+  ypos 1060
+ }
+ Blur {
+  size 200
+  name Blur_Extra_2
+  xpos -1177
+  ypos 1086
+ }
+ Dot {
+  name Dot18
+  xpos -1143
+  ypos 1272
+ }
+push $Nbc77f000
+ Transform {
+  scale 0.8
+  center {1920 1080}
+  black_outside false
+  shutteroffset centred
+  name Extra_1_Transform
+  xpos -1345
+  ypos 1026
+ }
+ Blur {
+  size {{parent.Layer1Blur}}
+  name Blur_Extra_1
+  xpos -1345
+  ypos 1052
+ }
+ Dot {
+  name Dot19
+  xpos -1311
+  ypos 1190
+ }
+push $Nbc77f400
+ Blur {
+  size {{parent.blurMainDual.w} {parent.blurMainDual.h}}
+  name Blur_Main
+  xpos -1442
+  ypos 1016
+ }
+ Multiply {
+  value {{parent.mainMix}}
+  name Multiply1
+  xpos -1442
+  ypos 1082
+ }
+ Merge2 {
+  inputs 2
+  operation screen
+  mix {{parent.layer1Mix}}
+  name Merge46
+  label "\[ expr \{ \[value mix] * 100 \} ]%"
+  xpos -1442
+  ypos 1180
+  disable {{!parent.extraLayer1Toggle}}
+ }
+ Merge2 {
+  inputs 2
+  operation screen
+  mix 0.308
+  name Merge45
+  label "\[ expr \{ \[value mix] * 100 \} ]%"
+  xpos -1442
+  ypos 1262
+  disable {{!parent.extraLayer2Toggle}}
+ }
+ Output {
+  name Output1
+  xpos -1442
+  ypos 1362
+ }
+end_group

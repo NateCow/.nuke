@@ -8,8 +8,9 @@ Preferences {
  DiskCachePath J:/Caches/Nuke/
  diskCacheGB 100
  PaintCacheGB 100
- selectedGPUDeviceName "GeForce RTX 2060 SUPER"
+ selectedGPUDeviceName "NVIDIA GeForce RTX 2060 SUPER"
  platformPathRemaps ""
+ dag_snap_threshold 15
  ArrowColorUp 0xff0000ff
  expression_arrows false
  clone_arrows false
