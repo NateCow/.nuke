@@ -1,0 +1,207 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+StickyNote {
+inputs 0
+name StickyNote7
+label "Make sure to link your flicker to the Multiply slider here."
+selected true
+xpos -2595
+ypos 761
+}
+Roto {
+inputs 0
+output alpha
+curves {{{v x3f99999a}
+  {f 0}
+  {n
+   {layer Root
+    {f 2097664}
+    {t x44800000 x44100000}
+    {a pt1x 0 pt1y 0 pt2x 0 pt2y 0 pt3x 0 pt3y 0 pt4x 0 pt4y 0 ptex00 0 ptex01 0 ptex02 0 ptex03 0 ptex10 0 ptex11 0 ptex12 0 ptex13 0 ptex20 0 ptex21 0 ptex22 0 ptex23 0 ptex30 0 ptex31 0 ptex32 0 ptex33 0 ptof1x 0 ptof1y 0 ptof2x 0 ptof2y 0 ptof3x 0 ptof3y 0 ptof4x 0 ptof4y 0 pterr 0 ptrefset 0 ptmot x40800000 ptref 0}
+    {layer Layer1
+     {f 2097664}
+     {t
+   {=parent.Tracker1.center x44c80000}
+   {=parent.Tracker1.center x44610000}  0
+   {=parent.Tracker1.translate 0}
+   {=parent.Tracker1.translate 0}}
+     {a pt1x 0 pt1y 0 pt2x 0 pt2y 0 pt3x 0 pt3y 0 pt4x 0 pt4y 0 ptex00 0 ptex01 0 ptex02 0 ptex03 0 ptex10 0 ptex11 0 ptex12 0 ptex13 0 ptex20 0 ptex21 0 ptex22 0 ptex23 0 ptex30 0 ptex31 0 ptex32 0 ptex33 0 ptof1x 0 ptof1y 0 ptof2x 0 ptof2y 0 ptof3x 0 ptof3y 0 ptof4x 0 ptof4y 0 pterr 0 ptrefset 0 ptmot x40800000 ptref 0}
+     {curvegroup Bezier2 512 bezier
+      {{cc
+        {f 8192}
+        {px x4480a000
+	 {1 0}
+	 {x445e8000 x43b68000}
+	 {xbf800000 0}
+	 {x42700000 x42ae0000}
+	 {x44039999 x43c79998}
+	 {xc2700000 xc2ae0000}
+	 {xc0a00000 x427c0000}
+	 {x43d9199a xc1d66658}
+	 {x40a00000 xc27c0000}
+	 {xc24c0000 xc0c00000}
+	 {x44798000 xc3390000}
+	 {x424c0000 x40c00000}
+	 {x42700000 xc3280000}
+	 {x449ee000 xc2c20000}
+	 {xc2700000 x43280000}
+	 {x41400000 xc1100000}
+	 {x447ec000 x43ab0000}
+	 {xc1400000 x41100000}}}      idem}
+      {tx x4480a000 x4465a000 x43105555}
+      {a osw x41200000 osf 0 str 1 spx x44c80000 spy x44610000 sb 1 ltn x4480a000 ltm x4480a000 tt x40800000}}
+     {curvegroup Bezier1 512 bezier
+      {{cc
+        {f 8192}
+        {px
+	 {x447a8000 x447fc000 x4484e000}
+	 {{{x3f000000 -}}
+      {{0 -}}}
+	 {{{x44962fff 0 1 x3f962cc2 1}
+       {x44987001 x3e66619a 1 x3e66619a 1}
+       {x4498cfff xb14ccccd 1 0 1}}
+      {{x448ff24b 0 1 x3f338ec8 1}
+       {x4491724a x3e9f7971 1 x3e9f7971 1}
+       {x4492524a x3ddaa6b8 1 0 1}}}
+	 {{{xbf000000 -}}
+      {{0 -}}}
+	 {{{x41b80000 -}}
+      {{x42d20000 -}}}
+	 {{{x44819ffe 0 1 x3f962cc2 1}
+       {x4483e000 x3e66619a 1 x3e66619a 1}
+       {x44843ffe xb14ccccd 1 0 1}}
+      {{x4472e001 0 1 x3f338f09 1}
+       {x4475e000 x3e9f7993 1 x3e9f7993 1}
+       {x4477a000 x3ddaa674 1 0 1}}}
+	 {{{xc1b80040 0 1 x37124925 1}
+       {x 2
+        {xc1b80000 -}}}
+      {{xc2d20000 -}}}
+	 {{{x41200000 -}}
+      {{x41dc0000 -}}}
+	 {{{x44708921 0 1 x3f962cd3 1}
+       {x44750926 x3e6662cd 1 x3e6662cd 1}
+       {x4475c923 xb0cccccd 1 0 1}}
+      {{x4405c001 0 1 x3f338f09 1}
+       {x4408c000 x3e9f7993 1 x3e9f7993 1}
+       {x440a8000 x3ddaa674 1 0 1}}}
+	 {{{xc1200000 -}}
+      {{xc1dc0000 -}}}
+	 {{{x40600000 -}}
+      {{x41880000 -}}}
+	 {{{x44489ffb 0 1 x3f962cd3 1}
+       {x444d2000 x3e6662cd 1 x3e6662cd 1}
+       {x444ddffd xb0cccccd 1 0 1}}
+      {{x43a50002 0 1 x3f338f09 1}
+       {x43ab0000 x3e9f7993 1 x3e9f7993 1}
+       {x43ae8000 x3ddaa674 1 0 1}}}
+	 {{{xc0600000 -}}
+      {{xc1880000 -}}}
+	 {{{xc2500000 -}}
+      {{xc2040000 -}}}
+	 {{{x447e16d6 0 1 x3f962d0b 1}
+       {x44814b6e x3e66619a 1 x3e66619a 1}
+       {x4481ab6c xb14ccccd 1 0 1}}
+      {{x43966495 0 1 x3f338f09 1}
+       {x439c6493 x3e9f7993 1 x3e9f7993 1}
+       {x439fe493 x3ddaa674 1 0 1}}}
+	 {{{x42500020 0 1 xb7124925 1}
+       {x 2
+        {x42500000 -}}}
+      {{x42040000 -}}}
+	 {{{x41880000 -}}
+      {{xc2200000 -}}}
+	 {{{x44a50ffe 0 1 x3f962cc2 1}
+       {x44a75000 x3e66619a 1 x3e66619a 1}
+       {x44a7affe xb14ccccd 1 0 1}}
+      {{x44666001 0 1 x3f338f09 1}
+       {x44696000 x3e9f7993 1 x3e9f7993 1}
+       {x446b2000 x3ddaa674 1 0 1}}}
+	 {{{xc1880000 -}}
+      {{x42200000 -}}}}}      idem}
+      {tx x447fc000 x44863aab x442ec555}
+      {a osw x41200000 osf 0 str 1 spx x44800000 spy x44100000 sb 1 ltn x447fc000 ltm x447fc000 tt x40800000}}}}}}}
+toolbox {selectAll {
+  { selectAll str 1 ssx 1 ssy 1 sf 1 }
+  { createBezier str 1 ssx 1 ssy 1 sf 1 sb 1 tt 4 }
+  { createBezierCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createBSpline str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createEllipse str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createRectangle str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createRectangleCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { brush str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { eraser src 2 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { clone src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { reveal src 3 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { dodge src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { burn src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { blur src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { sharpen src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { smear src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+} }
+toolbar_brush_hardness 0.200000003
+toolbar_source_transform_scale {1 1}
+toolbar_source_transform_center {1600 900}
+colorOverlay {0 0 0 0}
+lifetime_type "all frames"
+lifetime_start 1023
+lifetime_end 1023
+motionblur_shutter_offset_type centred
+source_black_outside true
+name Roto1
+selected true
+xpos -1857
+ypos 603
+}
+Blur {
+size 100
+name Blur1
+selected true
+xpos -1857
+ypos 641
+}
+push $cut_paste_input
+Dot {
+name Dot3
+selected true
+xpos -2285
+ypos 620
+}
+set N49716800 [stack 0]
+Keyer {
+operation "blue keyer"
+range {0.03742961036 0.5309209364 1 1}
+name Keyer1
+selected true
+xpos -1987
+ypos 662
+}
+Merge2 {
+inputs 2
+operation mask
+name Merge2
+label "\[ expr \{ \[value mix] * 100 \} ]%"
+selected true
+xpos -1987
+ypos 710
+}
+Shuffle {
+red alpha
+green alpha
+blue alpha
+name Shuffle3
+selected true
+xpos -1991
+ypos 758
+}
+push $N49716800
+Grade {
+inputs 1+1
+whitepoint 0.24
+white {3.700001001 0.9250002503 3.700001001 2.75999999}
+name Grade4
+label "\[ expr \{ \[value mix] * 100 \} ]%"
+selected true
+xpos -2319
+ypos 752
+}

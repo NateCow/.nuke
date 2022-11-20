@@ -16,8 +16,8 @@ nuke.pluginAddPath('./icons')
 
 
 # Project Settings > Default format: TWWS
-nuke.knobDefault("Root.format", "ARK Full")
-nuke.knobDefault("fps", "23.976")
+nuke.knobDefault("Root.format", "Zuko 2k Full")
+nuke.knobDefault("fps", "24")
 
 
 nuke.addFormat("4096 1728 1 Memoir_4k")

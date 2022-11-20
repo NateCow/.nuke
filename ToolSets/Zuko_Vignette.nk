@@ -1,0 +1,128 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+BackdropNode {
+ inputs 0
+ name BackdropNode22
+ tile_color 0x222222ff
+ label <CENTER>VIGNETTE
+ note_font "Verdana Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold"
+ note_font_size 60
+ selected true
+ xpos 194
+ ypos -1352
+ bdwidth 676
+ bdheight 737
+}
+push $cut_paste_input
+Dot {
+ name Dot21
+ selected true
+ xpos 810
+ ypos -1210
+}
+set Nce1a1c00 [stack 0]
+Dot {
+ name Dot22
+ selected true
+ xpos 565
+ ypos -1210
+}
+set Nce1a1800 [stack 0]
+Noise {
+ replace true
+ size 1000
+ center {1024 778}
+ name Noise1
+ selected true
+ xpos 531
+ ypos -868
+}
+Dot {
+ name Dot23
+ selected true
+ xpos 565
+ ypos -771
+}
+push $Nce1a1800
+Dot {
+ name Dot11
+ selected true
+ xpos 330
+ ypos -1210
+}
+Radial {
+ cliptype none
+ replace true
+ area {{offset} {(-format.w+format.h)/2+offset} {format.w-offset} {(format.h+format.w)/2-offset}}
+ softness 0
+ name Radial3
+ selected true
+ xpos 296
+ ypos -1134
+ addUserKnob {20 User}
+ addUserKnob {7 offset R -500 500}
+ offset {{parent.vignette_offset}}
+}
+Blur {
+ size 200
+ crop false
+ name Blur4
+ selected true
+ xpos 296
+ ypos -1065
+}
+Invert {
+ channels rgba
+ name Invert1
+ selected true
+ xpos 296
+ ypos -996
+}
+ColorLookup {
+ lut {master {curve L 0 1}
+   red {}
+   green {}
+   blue {}
+   alpha {}}
+ name ColorLookup1
+ selected true
+ xpos 296
+ ypos -938
+}
+Clamp {
+ name Clamp4
+ selected true
+ xpos 296
+ ypos -867
+}
+Grade {
+ inputs 1+1
+ channels rgba
+ gamma 0.5
+ white_clamp true
+ name Grade4
+ label "\[ expr \{ \[value mix] * 100 \} ]%"
+ selected true
+ xpos 296
+ ypos -781
+}
+Transform {
+ scale {1 0.5}
+ center {{format.w/2} {format.h/2}}
+ black_outside false
+ name Transform4
+ label "pixel aspect"
+ selected true
+ xpos 296
+ ypos -684
+}
+push $Nce1a1c00
+Grade {
+ inputs 1+1
+ white 0.9
+ name Grade6
+ label "\[ expr \{ \[value mix] * 100 \} ]%"
+ selected true
+ xpos 776
+ ypos -684
+}
