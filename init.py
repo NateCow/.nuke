@@ -43,6 +43,8 @@ nuke.addFormat("3840 2160 1.33 Moment Anamorphic 4k")
 nuke.addFormat("3840 1444 1 BELL Desqueezed")
 nuke.addFormat("2048 1152 1 Zuko 2k Full")
 nuke.addFormat("2048 952 1 Zuko 2k Crop")
+nuke.addFormat("3840 1607 1 Hangman 4k")
+nuke.addFormat("4608 3164 1 The Shift 4k")
 
 nuke.pluginAddPath('j:/nuke_plugins')
 nuke.pluginAddPath('j:/nuke_plugins/errorReport')

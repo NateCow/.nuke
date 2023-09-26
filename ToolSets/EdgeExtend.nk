@@ -1,0 +1,514 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+push $cut_paste_input
+Group {
+name EdgeExtend
+help "EdgeExtend repeatedly blurs and unpremuliplies the image to extend edges outward while trying to preserve the original source colour"
+tile_color 0xff5f00ff
+selected true
+xpos 2755
+ypos -1565
+addUserKnob {20 "" l User}
+addUserKnob {4 premult l "input is" M {premultiplied unpremultiplied}}
+addUserKnob {3 slices t "How many times the edges are blurred and unpremuliplied.\nThis is the fine control for slightly better quality. The current maximum is 10."}
+slices 5
+addUserKnob {3 slice_width l "slice width" t "Blur amount that is applied before unpremultiplying the result per slice.\nThis is the brute force control and should be kept at 1 if possible.\nOnly increase this if the maximum amount of slices (10) doesn't cover the area you need."}
+slice_width 1
+addUserKnob {7 blurResult l "blur slices" R 0 10}
+}
+Input {
+inputs 0
+name img
+xpos -590
+ypos -509
+}
+set N5a94800 [stack 0]
+Dot {
+name Dot1
+xpos -556
+ypos 978
+}
+Input {
+inputs 0
+name matte
+xpos -358
+ypos -653
+number 1
+}
+push $N5a94800
+Unpremult {
+name Unpremult11
+xpos -468
+ypos -509
+disable {{parent.premult}}
+}
+Copy {
+inputs 2
+from0 -rgba.alpha
+to0 -rgba.alpha
+channels alpha
+name Copy2
+xpos -358
+ypos -516
+}
+Premult {
+name Premult1
+xpos -358
+ypos -450
+}
+Shuffle {
+black alpha
+out2 depth
+name Shuffle1
+label alpha>depth
+xpos -223
+ypos -413
+}
+Unpremult {
+channels {rgba.red rgba.green rgba.blue depth.Z}
+name Unpremult1
+xpos -223
+ypos -373
+}
+set N5a96c00 [stack 0]
+Dot {
+name Dot2
+xpos -189
+ypos -214
+}
+set N5a96800 [stack 0]
+push $N5a96c00
+Blur {
+channels {rgba.red rgba.green rgba.blue depth.Z}
+size {{parent.slice_width}}
+name Blur1
+xpos -25
+ypos -373
+}
+Shuffle {
+in2 depth
+alpha red2
+out2 depth
+name Shuffle3
+label depth>alpha
+xpos -25
+ypos -333
+}
+Unpremult {
+channels rgba
+alpha depth.Z
+name Unpremult3
+xpos -25
+ypos -293
+}
+Blur {
+channels rgba
+size {{parent.blurResult}}
+name Blur10
+xpos -25
+ypos -241
+}
+set Ceb1cd800 [stack 0]
+Merge2 {
+inputs 2
+Achannels {rgba.red rgba.green rgba.blue depth.Z}
+name Merge1
+label "\[ expr \{ \[value mix] * 100 \} ]%"
+xpos -25
+ypos -218
+}
+set Neb1cd400 [stack 0]
+Dot {
+name Dot3
+xpos 9
+ypos -73
+}
+set Neb1cd000 [stack 0]
+push $Neb1cd400
+Blur {
+channels rgba
+size {{parent.slice_width}}
+name Blur2
+xpos 159
+ypos -218
+}
+Shuffle {
+in2 depth
+black alpha
+out2 depth
+name Shuffle5
+label alpha>depth
+xpos 159
+ypos -180
+}
+Unpremult {
+channels {rgba.red rgba.green rgba.blue depth.Z}
+name Unpremult2
+xpos 159
+ypos -140
+}
+Blur {
+channels {rgba.red rgba.green rgba.blue depth.Z}
+size {{parent.blurResult}}
+name Blur3
+xpos 159
+ypos -101
+}
+set Ceb1cc000 [stack 0]
+Merge2 {
+inputs 2
+name Merge2
+label "\[ expr \{ \[value mix] * 100 \} ]%"
+xpos 159
+ypos -73
+}
+set Neb1cfc00 [stack 0]
+Dot {
+name Dot4
+xpos 193
+ypos 103
+}
+set Neb1cf800 [stack 0]
+push $Neb1cfc00
+Shuffle {
+in2 depth
+alpha red2
+out2 depth
+name Shuffle2
+label depth>alpha
+xpos 342
+ypos -24
+}
+Unpremult {
+channels rgba
+alpha depth.Z
+name Unpremult4
+xpos 342
+ypos 16
+}
+set Neb1cf000 [stack 0]
+clone $Ceb1cd800 {
+xpos 342
+ypos 68
+selected false
+}
+Merge2 {
+inputs 2
+Achannels {rgba.red rgba.green rgba.blue depth.Z}
+name Merge3
+label "\[ expr \{ \[value mix] * 100 \} ]%"
+xpos 342
+ypos 103
+}
+Dot {
+name Dot5
+xpos 373
+ypos 226
+}
+set Neb1ce400 [stack 0]
+push $Neb1cf000
+Blur {
+channels rgba
+size {{parent.slice_width}}
+name Blur4
+xpos 503
+ypos 23
+}
+Shuffle {
+in2 depth
+black alpha
+out2 depth
+name Shuffle4
+label alpha>depth
+xpos 503
+ypos 65
+}
+Unpremult {
+channels {rgba.red rgba.green rgba.blue depth.Z}
+name Unpremult5
+xpos 503
+ypos 105
+}
+set Nc2741800 [stack 0]
+clone $Ceb1cc000 {
+xpos 503
+ypos 174
+selected false
+}
+Merge2 {
+inputs 2
+name Merge4
+label "\[ expr \{ \[value mix] * 100 \} ]%"
+xpos 503
+ypos 226
+}
+Dot {
+name Dot6
+xpos 537
+ypos 321
+}
+set Nc2740c00 [stack 0]
+push $Nc2741800
+Blur {
+channels {rgba.red rgba.green rgba.blue depth.Z}
+size {{parent.slice_width}}
+name Blur5
+xpos 689
+ypos 105
+}
+Shuffle {
+in2 depth
+alpha red2
+out2 depth
+name Shuffle6
+label depth>alpha
+xpos 689
+ypos 145
+}
+Unpremult {
+channels rgba
+alpha depth.Z
+name Unpremult6
+xpos 689
+ypos 185
+}
+set Nc2740000 [stack 0]
+clone $Ceb1cd800 {
+xpos 684
+ypos 272
+selected false
+}
+Merge2 {
+inputs 2
+Achannels {rgba.red rgba.green rgba.blue depth.Z}
+name Merge5
+label "\[ expr \{ \[value mix] * 100 \} ]%"
+xpos 689
+ypos 321
+}
+Dot {
+name Dot7
+xpos 723
+ypos 448
+}
+set Nc2743400 [stack 0]
+push $Nc2740000
+Blur {
+channels rgba
+size {{parent.slice_width}}
+name Blur6
+xpos 856
+ypos 200
+}
+Shuffle {
+in2 depth
+black alpha
+out2 depth
+name Shuffle7
+label alpha>depth
+xpos 856
+ypos 280
+}
+Unpremult {
+channels {rgba.red rgba.green rgba.blue depth.Z}
+name Unpremult7
+xpos 856
+ypos 320
+}
+set Nc2742800 [stack 0]
+clone $Ceb1cc000 {
+xpos 852
+ypos 405
+selected false
+}
+Merge2 {
+inputs 2
+name Merge6
+label "\[ expr \{ \[value mix] * 100 \} ]%"
+xpos 856
+ypos 448
+}
+Dot {
+name Dot8
+xpos 890
+ypos 514
+}
+set N5ac5c00 [stack 0]
+push $Nc2742800
+Blur {
+channels {rgba.red rgba.green rgba.blue depth.Z}
+size {{parent.slice_width}}
+name Blur7
+xpos 1042
+ypos 320
+}
+Shuffle {
+in2 depth
+alpha red2
+out2 depth
+name Shuffle8
+label depth>alpha
+xpos 1042
+ypos 393
+}
+Unpremult {
+channels rgba
+alpha depth.Z
+name Unpremult8
+xpos 1042
+ypos 433
+}
+set N5ac5000 [stack 0]
+clone $Ceb1cd800 {
+xpos 1046
+ypos 484
+selected false
+}
+Merge2 {
+inputs 2
+Achannels {rgba.red rgba.green rgba.blue depth.Z}
+name Merge7
+label "\[ expr \{ \[value mix] * 100 \} ]%"
+xpos 1042
+ypos 514
+}
+Dot {
+name Dot9
+xpos 1076
+ypos 579
+}
+set N5ac4400 [stack 0]
+push $N5ac5000
+Blur {
+channels rgba
+size {{parent.slice_width}}
+name Blur8
+xpos 1205
+ypos 440
+}
+Shuffle {
+in2 depth
+black alpha
+out2 depth
+name Shuffle9
+label alpha>depth
+xpos 1205
+ypos 466
+}
+Unpremult {
+channels {rgba.red rgba.green rgba.blue depth.Z}
+name Unpremult9
+xpos 1205
+ypos 506
+}
+set N5ac7800 [stack 0]
+clone $Ceb1cc000 {
+xpos 1206
+ypos 551
+selected false
+}
+Merge2 {
+inputs 2
+name Merge8
+label "\[ expr \{ \[value mix] * 100 \} ]%"
+xpos 1205
+ypos 579
+}
+Dot {
+name Dot10
+xpos 1239
+ypos 664
+}
+set N5ac6c00 [stack 0]
+push $N5ac7800
+Blur {
+channels {rgba.red rgba.green rgba.blue depth.Z}
+size {{parent.slice_width}}
+name Blur9
+xpos 1421
+ypos 506
+}
+Shuffle {
+in2 depth
+alpha red2
+out2 depth
+name Shuffle11
+label depth>alpha
+xpos 1421
+ypos 546
+}
+Unpremult {
+channels rgba
+alpha depth.Z
+name Unpremult10
+xpos 1421
+ypos 586
+}
+clone $Ceb1cd800 {
+xpos 1421
+ypos 638
+selected true
+}
+Merge2 {
+inputs 2
+Achannels {rgba.red rgba.green rgba.blue depth.Z}
+name Merge9
+label "\[ expr \{ \[value mix] * 100 \} ]%"
+xpos 1421
+ypos 664
+}
+push $N5ac6c00
+push $N5ac4400
+push $N5ac5c00
+push $Nc2743400
+push $Nc2740c00
+push $Neb1ce400
+push $Neb1cf800
+push $Neb1cd000
+push $N5a96800
+push $N5a94800
+Switch {
+inputs 11
+which {{parent.slices}}
+name Switch1
+xpos 689
+ypos 827
+}
+Shuffle {
+in2 depth
+alpha red2
+out2 depth
+name Shuffle10
+label depth>alpha
+xpos 689
+ypos 865
+}
+Remove {
+channels depth
+name Remove1
+xpos 689
+ypos 905
+}
+Copy {
+inputs 2
+from0 -rgba.alpha
+to0 -rgba.alpha
+channels depth
+name Copy1
+xpos 689
+ypos 960
+}
+Output {
+name Output1
+xpos 689
+ypos 1290
+}
+Blur {
+inputs 0
+channels {rgba.red rgba.green rgba.blue depth.Z}
+size 8.5
+name Blur11
+xpos 299
+ypos -61
+}
+end_group

@@ -1,0 +1,35 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+push $cut_paste_input
+Write {
+file J:/Nuke_Renders/TheShift/shift_0110/Comp/_Renders/shift_0110_cmp_main_v001/exr/shift_0110_cmp_main_v001.%04d.exr
+file_type exr
+version 4
+beforeRender "\n2\n3\nimport os\nif not os.path.isdir(os.path.dirname(nuke.thisNode()\['file'].evaluate())):\n  os.makedirs(os.path.dirname(nuke.thisNode()\['file'].evaluate()))"
+name ShiftWrite_2
+tile_color 0x9fffff
+label "\nProject Root: \[value proj_root]\nScript Name: \[value script]\nShot Name: \[value shot]\nPipeline Step: \[value step]\n"
+selected true
+xpos -761
+ypos 2331
+addUserKnob {20 User}
+addUserKnob {4 renderType l "Render Type" M {Comp Precomp "Denoise Plate" Roto Paint Test "" ""}}
+addUserKnob {4 renderFormat l Format M {DPX EXR JPEG MOV}}
+renderFormat EXR
+addUserKnob {1 customLabel l "Custom Label"}
+addUserKnob {1 vers l Version}
+vers 001
+addUserKnob {22 setPath l "Set Output Path" T "#===============================================================================\n# shiftWrite_Functionality_v2.py\n# Version: 2.0.0\n# Last Updated: July 17, 2023\n# Author: Nathaniel Caauwe\n# www.NateCow.com\n#===============================================================================\n\n#===============================================================================\n# USAGE:\n#\n# - Execute write node parameters, updated for freelance work on TheShift and\n#   Hangman. More robust tooling to follow.\n#===============================================================================\n\n\n\nrenderTypeSelection = int(nuke.thisNode().knob('renderType').getValue())\nrenderFormatSelection = int(nuke.thisNode().knob('renderFormat').getValue())\n\nrenderTypeDict = \{\n    0: \"cmp\",\n    1: \"prc\",\n    2: \"plt_DN\",\n    3: \"rto\",\n    4: \"pnt\",\n    5: \"test\",\n\}\n\npipelineStepDict = \{\n    \"cmp\": \"Comp\",\n    \"prc\": \"Precomps\",\n    \"plt_DN\": \"_Plates\",\n    \"rto\": \"Roto\",\n    \"pnt\": \"Paint\",\n    \"test\": \"Precomps\"\n\}\n\nrenderTypeStr = renderTypeDict.get(renderTypeSelection)\n\nrenderFormatDict = \{\n    0: \"dpx\",\n    1: \"exr\",\n    2: \"jpg\",\n    3: \"mov\"\n\}\n\nrenderFormatExt = renderFormatDict.get(renderFormatSelection)\n\n\ncustomLabelStr = str(nuke.thisNode().knob('customLabel').getValue())\nversionStr = str(nuke.thisNode().knob('vers').getValue())\ndirRoot = str(nuke.thisNode().knob('proj_root').getValue())\nprojName = dirRoot.split('/')\[2]\nscriptStep = str(nuke.thisNode().knob('step').getValue())\ndirShot = str(nuke.thisNode().knob('shot').getValue())\ndirScript = str(nuke.thisNode().knob('script').getValue())\n\nif renderTypeSelection == 2:\n    dirLabel = \"\"\nelif len(nuke.thisNode().knob('customLabel').getValue()) > 0: #no custom label\n    dirLabel = \"_\" + str(nuke.thisNode().knob('customLabel').getValue())\nelse:\n    dirLabel = \"_main\"\n\nshotBaseDir = str(dirRoot+\"/\"+dirShot+\"/\") #do we need this?\nrenderFileName = dirShot + \"_\" + renderTypeStr + dirLabel + \"_v\" + versionStr\n\nif renderTypeSelection == 0:\n    subFolder = \"Comp/_Renders/\"\nelif renderTypeSelection == 2:\n    subFolder = \"_Plates/Denoised/\"\nelif renderTypeSelection == 3:\n    subFolder = \"Roto/_Renders/\"\nelif renderTypeSelection == 4:\n    subFolder = \"Paint/_Renders\"\nelse:\n    subFolder = \"Precomps/_Renders/\"\n\ntempDir = (\"J:/Nuke_Renders/TheShift/\" + dirShot + \"/\" + subFolder)\n    \nif nuke.thisNode().knob('renderFormat').getValue() == 3: #QT movie\n    nuke.thisNode().knob('file_type').setValue(renderFormatExt)\n    nuke.thisNode().knob('file').setValue(tempDir + renderFileName + \"/\" + renderFormatExt + \"/\" + renderFileName + \".\" + renderFormatExt)\nelse:\n    nuke.thisNode().knob('file_type').setValue(renderFormatExt)\n    nuke.thisNode().knob('file').setValue(tempDir + renderFileName + \"/\" + renderFormatExt + \"/\" + renderFileName + \".%0\" + \"4d.\" + renderFormatExt)\n\nif nuke.thisNode().knob('renderFormat').getValue() == 2: #jpeg sequence\n    nuke.thisNode().knob('file_type').setValue('jpeg')\n    nuke.thisNode().knob('_jpeg_quality').setValue('1')\n\n# Llamas. That is all." +STARTLINE}
+addUserKnob {26 ""}
+addUserKnob {26 note l Note: T "Adjust path fragments so that your project root matches your heirarchy.\nThis node (The Shift 2023) assumes:\nK:/NateCowVFX/TheShift/5-SHOTS/Shot/Comp/Nuke\nas the current project's location."}
+addUserKnob {20 pathFragments l "Path Fragments" n 1}
+addUserKnob {1 proj_root l "Project Root"}
+proj_root "\[join \[lrange \[split \[value root.name] / ] 0 6 ] / ]"
+addUserKnob {1 step l "Pipeline Step"}
+step "\[join \[lrange \[split \[value root.name] / ] 5 5 ] / ]"
+addUserKnob {1 shot l "Shot Name"}
+shot "\[lrange \[split \[value root.name] / ] 4 4 ]"
+addUserKnob {1 script l "Script Name"}
+script "\[file rootname \[file tail \[value root.name] ] ]"
+addUserKnob {20 endGroup n -1}
+}

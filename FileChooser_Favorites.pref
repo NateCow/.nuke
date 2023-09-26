@@ -15,5 +15,9 @@ add_favorite_dir -image -script -project -python -sequence SC21_PRM SC21_PRM "" 
 add_favorite_dir -image "Stock Footage" "Stock Footage" "" "S:/Assets/Stock Footage/"
 add_favorite_dir -image -script -project -sequence ADI ADI "" S:/Projects/adi/vfx/
 add_favorite_dir -image -script -project -geo -sequence Zuko Zuko "" T:/Projects/Zuko/VFX/5-SHOTS/
+add_favorite_dir -image Hangman_VFX Hangman_VFX "" S:/Projects/hang/5-SHOTS/
+add_favorite_dir -image -script -project -sequence Hangman Hangman "" S:/Projects/hang/5-SHOTS/
+add_favorite_dir -image -script -project -python -font -geo -misc -sequence TheShiftSSD TheShiftSSD "" K:/Freelance/TheShift/5-SHOTS/
+add_favorite_dir -image -script -project -python -font -geo -misc -sequence HangmanShotsSSD HangmanShotsSSD "" K:/Freelance/hang/5-SHOTS/
 
 # End of generated file.

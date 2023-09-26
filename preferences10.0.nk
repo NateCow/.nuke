@@ -1,25 +1,27 @@
 Preferences {
- inputs 0
- name Preferences
- localCachePath J:/Caches/Nuke/localized/
- LocalizationSizeLimit 400
- LocalizationUpdateNever true
- LocalizationPauseOnProjectLoad true
- DiskCachePath J:/Caches/Nuke/
- diskCacheGB 100
- PaintCacheGB 100
- selectedGPUDeviceName "NVIDIA GeForce RTX 2060 SUPER"
- platformPathRemaps ""
- dag_snap_threshold 15
- ArrowColorUp 0xff0000ff
- expression_arrows false
- clone_arrows false
- InputArrowSize 32
- LeftInputArrowSize 5.6
- OutputArrowSize 10
- ArrowheadLength 10
- ArrowheadWidth 10
- defaultBufferDepth half-float
- defaultGPUForViewer true
- echoAllCommands true
+inputs 0
+name Preferences
+localCachePath J:/Caches/Nuke/localized/
+LocalizationSizeLimit 400
+LocalizationUpdateNever true
+LocalizationPauseOnProjectLoad true
+CacheLimit 75
+DiskCachePath J:/Caches/Nuke/
+diskCacheGB 100
+PaintCacheGB 100
+PaintCacheLimit 90
+selectedGPUDeviceName "NVIDIA GeForce RTX 2060 SUPER"
+platformPathRemaps ""
+dag_snap_threshold 15
+ArrowColorUp 0xff0000ff
+expression_arrows false
+clone_arrows false
+InputArrowSize 32
+LeftInputArrowSize 5.6
+OutputArrowSize 10
+ArrowheadLength 10
+ArrowheadWidth 10
+defaultBufferDepth half-float
+defaultGPUForViewer true
+echoAllCommands true
 }

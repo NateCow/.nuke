@@ -1,0 +1,45 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+push $cut_paste_input
+Group {
+ name ShiftLUT
+ tile_color 0xff005fff
+ label "Set Viewer Input Process to this.\nMake sure red \"IP\" is on in viewer\n\"None\" Viewer Process"
+ selected true
+ xpos 5
+ ypos -232
+}
+ Input {
+  inputs 0
+  name Input1
+  xpos -633
+  ypos -210
+ }
+ OCIOColorSpace {
+  in_colorspace linear
+  out_colorspace AlexaV3LogC
+  name OCIOColorSpace1
+  xpos -633
+  ypos -170
+ }
+ Colorspace {
+  colorspace_in 1.80
+  name Colorspace1
+  xpos -633
+  ypos -144
+  disable true
+ }
+ OCIOFileTransform {
+  file T:/Freelance/TheShift/4-ASSETS/Color/ARRI_LogC4-to-Gamma26_P3-D65_v1-65.cube
+  version 2
+  working_space linear
+  name OCIOFileTransform2
+  xpos -633
+  ypos -118
+ }
+ Output {
+  name Output1
+  xpos -633
+  ypos -18
+ }
+end_group

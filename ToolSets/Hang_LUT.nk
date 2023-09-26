@@ -1,0 +1,36 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+push $cut_paste_input
+Group {
+ name Hang_LUT
+ tile_color 0xff005fff
+ selected true
+ xpos -620
+ ypos -362
+}
+ Input {
+  inputs 0
+  name Input1
+  xpos -604
+  ypos -382
+ }
+ OCIOColorSpace {
+  in_colorspace linear
+  out_colorspace AlexaV3LogC
+  name OCIOColorSpace1
+  xpos -604
+  ypos -343
+ }
+ OCIOFileTransform {
+  file S:/Projects/hang/4-ASSETS/Color/HANGMAN_LUT.cube
+  working_space linear
+  name OCIOFileTransform1
+  xpos -604
+  ypos -303
+ }
+ Output {
+  name Output1
+  xpos -604
+  ypos -242
+ }
+end_group

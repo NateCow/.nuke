@@ -1,0 +1,389 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+push 0
+FilterErode {
+size -10
+name FilterErode6
+selected true
+xpos 66
+ypos 2187
+}
+push $cut_paste_input
+Dot {
+name Dot8
+selected true
+xpos -351
+ypos 2049
+}
+Transform {
+translate {{"(!invert) ? Tracker1.translate.x : -Tracker1.translate.x"} {"(!invert) ? Tracker1.translate.y : -Tracker1.translate.y"}}
+rotate {{"(!invert) ? Tracker1.rotate : -Tracker1.rotate"}}
+scale {{"(!invert) ? Tracker1.scale.w : 1/Tracker1.scale.w"}}
+center {{"(!invert) ? Tracker1.center.x : Tracker1.center.x + Tracker1.translate.x"} {"(!invert) ? Tracker1.center.y : Tracker1.center.y + Tracker1.translate.y"}}
+filter {{Tracker1.filter}}
+name Transform_Stabilize1
+selected true
+xpos -385
+ypos 2130
+addUserKnob {20 User}
+addUserKnob {4 transform M {stabilize match-move}}
+addUserKnob {4 src_transform l "src transform" M {none stabilize "stabilize 1-pt" match-move "match-move 1-pt" "remove jitter"}}
+src_transform {{Tracker1.transform}}
+addUserKnob {6 invert -STARTLINE}
+invert {{"\[python -execlocal srcTransformKnob\\ =\\ nuke.thisNode()\\\['src\\_transform'\\]\\nsrcTransformName\\ =\\ srcTransformKnob.enumName(int(srcTransformKnob.getValue()))\\ndestTransform\\ =\\ nuke.thisNode()\\\['transform'\\].getValue()\\nsrcTransformIsStabilize\\ =\\ (srcTransformName.find('stabilize')==0\\ or\\ srcTransformName.find('remove\\ jitter')==0)\\ninvertDueToDestStabilize\\ =\\ (destTransform\\ ==\\ 0\\ and\\ not\\ srcTransformIsStabilize)\\ninvertDueToSrcStabilize\\ =\\ (destTransform\\ ==\\ 1\\ and\\ srcTransformIsStabilize)\\nret\\ =\\ (invertDueToDestStabilize\\ or\\ invertDueToSrcStabilize)]"}}
+}
+Transform {
+rotate -27.45588112
+center {668 522}
+shutteroffset centred
+name Transform1
+selected true
+xpos -385
+ypos 2156
+}
+set N5e22dc00 [stack 0]
+Dot {
+name Dot11
+selected true
+xpos -495
+ypos 2160
+}
+FilterErode {
+size -5
+name FilterErode3
+selected true
+xpos -529
+ypos 2202
+}
+push $N5e22dc00
+Group {
+inputs 2
+name iTransform
+tile_color 0x1f9900ff
+selected true
+xpos -385
+ypos 2208
+addUserKnob {20 "" l Transform}
+addUserKnob {41 from0 l "control channel" T Copy4.from0}
+addUserKnob {7 rootWarp l "root warp"}
+rootWarp 1
+addUserKnob {26 ""}
+addUserKnob {41 matrix T Transform1.matrix}
+addUserKnob {41 translate T Transform1.translate}
+addUserKnob {41 rotate T Transform1.rotate}
+addUserKnob {41 scale T Transform1.scale}
+addUserKnob {41 skew +INVISIBLE T Transform1.skew}
+addUserKnob {41 center T Transform1.center}
+addUserKnob {41 filter T Transform1.filter}
+addUserKnob {41 clamp T Transform1.clamp}
+addUserKnob {41 crop l "black outside" +INVISIBLE T Transform1.crop}
+addUserKnob {41 clip l "knob crop \$value" +INVISIBLE T Transform1.clip}
+addUserKnob {14 AdjBBox1_numpixels l INVISIBLE +INVISIBLE R 0 100}
+AdjBBox1_numpixels 1024
+}
+Input {
+inputs 0
+name img
+xpos -385
+ypos -226
+}
+set N5e22d000 [stack 0]
+Dot {
+name Dot6
+xpos -452
+ypos -222
+}
+set N5e22cc00 [stack 0]
+push $N5e22cc00
+Dot {
+name Dot5
+xpos -577
+ypos -222
+}
+Transform {
+scale {{parent.parent.NoiseOP1.noiseOp} 1}
+center {660 601}
+black_outside false
+name Transform1
+label "expresison link this\nto avoid st map overlay"
+xpos -611
+ypos 145
+}
+Dot {
+name Dot7
+xpos -577
+ypos 277
+}
+Merge2 {
+inputs 2
+name Merge3
+label "\[ expr \{ \[value mix] * 100 \} ]%"
+xpos -486
+ypos 273
+}
+Input {
+inputs 0
+name ctrlMask
+xpos -39
+ypos -247
+number 1
+}
+set N5e25d800 [stack 0]
+Dot {
+name Dot8
+xpos 108
+ypos -243
+}
+AddChannels {
+channels alpha
+name AddChannels1
+xpos 74
+ypos -192
+}
+Dot {
+name Dot9
+xpos 108
+ypos -136
+}
+push $N5e25d800
+Remove {
+channels alpha
+name Remove3
+xpos -39
+ypos -206
+}
+Copy {
+inputs 2
+from0 rgba.alpha
+to0 rgba.alpha
+name Copy4
+xpos -39
+ypos -146
+}
+Shuffle {
+red alpha
+green alpha
+blue alpha
+alpha black
+name Shuffle1
+xpos -39
+ypos -56
+}
+Multiply {
+value {{parent.rootWarp}}
+name Multiply1
+xpos -39
+ypos -30
+}
+push $N5e22d000
+Remove {
+name Remove1
+xpos -210
+ypos -232
+}
+AdjBBox {
+numpixels {{parent.AdjBBox1_numpixels.w} {parent.AdjBBox1_numpixels.h}}
+name AdjBBox1
+xpos -210
+ypos -194
+}
+Expression {
+expr0 x
+expr1 y
+name Expression1
+xpos -210
+ypos -140
+}
+set N5e28f000 [stack 0]
+Dot {
+name Dot2
+xpos -286
+ypos -136
+}
+Transform {
+translate {{parent.Transform1.translate} {parent.Transform1.translate}}
+rotate {{parent.Transform1.rotate}}
+scale {{parent.Transform1.scale} {parent.Transform1.scale}}
+skewX {{parent.Transform1.skewX}}
+skewY {{parent.Transform1.skewY}}
+center {{parent.Transform1.center} {parent.Transform1.center}}
+filter {{Transform1.filter}}
+clamp {{parent.Transform1.clamp}}
+black_outside {{parent.Transform1.black_outside}}
+motionblur {{parent.Transform1.motionblur}}
+shutter {{parent.Transform1.shutter}}
+shutteroffset {{Transform1.shutteroffset}}
+shuttercustomoffset {{parent.Transform1.shuttercustomoffset}}
+name Transform2
+xpos -320
+ypos -72
+}
+push $N5e28f000
+Merge2 {
+inputs 2
+operation minus
+name Merge1
+label "\[ expr \{ \[value mix] * 100 \} ]%"
+xpos -210
+ypos -72
+}
+Merge2 {
+inputs 2
+operation multiply
+name Merge2
+label "\[ expr \{ \[value mix] * 100 \} ]%"
+xpos -210
+ypos -24
+}
+set N5e2c7c00 [stack 0]
+Dot {
+name Dot1
+xpos -270
+ypos -21
+}
+Dot {
+name Dot3
+xpos -270
+ypos 162
+}
+push $N5e22d000
+Dot {
+name Dot4
+xpos -351
+ypos 48
+}
+set N5e2c7000 [stack 0]
+Copy {
+inputs 2
+from0 rgba.red
+to0 rgba.red
+from1 rgba.green
+to1 rgba.green
+name Copy2
+xpos -385
+ypos 144
+}
+IDistort {
+channels none
+name IDistort1
+xpos -385
+ypos 182
+}
+push $N5e2c7c00
+push $N5e2c7000
+Copy {
+inputs 2
+from0 rgba.red
+to0 forward.u
+from1 rgba.green
+to1 forward.v
+name Copy1
+xpos -210
+ypos 30
+}
+IDistort {
+uv forward
+name IDistort2
+xpos -210
+ypos 86
+}
+Remove {
+channels none
+name Remove2
+xpos -210
+ypos 124
+}
+Copy {
+inputs 2
+from0 -rgba.alpha
+to0 -rgba.alpha
+name Copy3
+xpos -210
+ypos 182
+}
+CopyBBox {
+inputs 2
+name CopyBBox1
+xpos -210
+ypos 273
+}
+Output {
+name Output1
+xpos -210
+ypos 325
+}
+end_group
+Transform {
+rotate -27.45588112
+center {668 522}
+invert_matrix true
+shutteroffset centred
+name Transform2
+selected true
+xpos -385
+ypos 2252
+}
+Transform {
+translate {{"(!invert) ? Tracker1.translate.x : -Tracker1.translate.x"} {"(!invert) ? Tracker1.translate.y : -Tracker1.translate.y"}}
+rotate {{"(!invert) ? Tracker1.rotate : -Tracker1.rotate"}}
+scale {{"(!invert) ? Tracker1.scale.w : 1/Tracker1.scale.w"}}
+center {{"(!invert) ? Tracker1.center.x : Tracker1.center.x + Tracker1.translate.x"} {"(!invert) ? Tracker1.center.y : Tracker1.center.y + Tracker1.translate.y"}}
+filter {{Tracker1.filter}}
+name Transform_MatchMove1
+selected true
+xpos -385
+ypos 2297
+addUserKnob {20 User}
+addUserKnob {4 transform M {stabilize match-move}}
+transform match-move
+addUserKnob {4 src_transform l "src transform" M {none stabilize "stabilize 1-pt" match-move "match-move 1-pt" "remove jitter"}}
+src_transform {{Tracker1.transform}}
+addUserKnob {6 invert -STARTLINE}
+invert {{"\[python -execlocal srcTransformKnob\\ =\\ nuke.thisNode()\\\['src\\_transform'\\]\\nsrcTransformName\\ =\\ srcTransformKnob.enumName(int(srcTransformKnob.getValue()))\\ndestTransform\\ =\\ nuke.thisNode()\\\['transform'\\].getValue()\\nsrcTransformIsStabilize\\ =\\ (srcTransformName.find('stabilize')==0\\ or\\ srcTransformName.find('remove\\ jitter')==0)\\ninvertDueToDestStabilize\\ =\\ (destTransform\\ ==\\ 0\\ and\\ not\\ srcTransformIsStabilize)\\ninvertDueToSrcStabilize\\ =\\ (destTransform\\ ==\\ 1\\ and\\ srcTransformIsStabilize)\\nret\\ =\\ (invertDueToDestStabilize\\ or\\ invertDueToSrcStabilize)]"}}
+}
+push 0
+Keymix {
+inputs 3
+mix {{curve x1192 0 1}}
+name Keymix2
+selected true
+xpos -76
+ypos 2291
+}
+push $cut_paste_input
+NoOp {
+name NoiseOP1
+selected true
+xpos -550
+ypos 2008
+addUserKnob {20 NoiseOp}
+addUserKnob {7 noiseOp R 0 0}
+noiseOp {{mn+smoothstep((bott-.5),(top+.5),(fBm(frame*(freq)+vX,vY,vZ,octaves,lucanarity*3,.5)))*(mx-mn)}}
+addUserKnob {26 ""}
+addUserKnob {26 ""}
+addUserKnob {7 mn l "min value" R -100 100}
+mn 0.9
+addUserKnob {7 mx l "max value" R -100 100}
+mx 1
+addUserKnob {7 freq l frequency}
+freq 1.6
+addUserKnob {26 ""}
+addUserKnob {7 vX R -10 10}
+vX -3.5
+addUserKnob {7 vY -STARTLINE R -10 10}
+vY -3.5
+addUserKnob {7 vZ -STARTLINE R -10 10}
+vZ -1.5
+addUserKnob {26 ""}
+addUserKnob {3 octaves}
+octaves 2
+addUserKnob {7 lucanarity l "   ---     lucanarity" -STARTLINE R 0 10}
+lucanarity 2.5
+addUserKnob {26 ""}
+addUserKnob {7 top l "top slice" -STARTLINE R -1.5 0}
+addUserKnob {7 bott l "bottem slice" -STARTLINE R 0 1.5}
+addUserKnob {26 ""}
+addUserKnob {22 bake l "bake expression" T "x = nuke.thisNode()\nmn = x\['mn'].value()\nmx = x\['mx'].value() \nfreq = x\['freq'].value()\nvX = x\['vX'].value()\nvY = x\['vY'].value()\nvZ = x\['vZ'].value()\noctaves = x\['octaves'].value()\nlucanarity = x\['lucanarity'].value()\ntop = x\['top'].value()\nbott = x\['bott'].value()\n\ncurValue = '%s+smoothstep((%s-.5),(%s+.5),(fBm(frame*(%s)+%s,%s,%s,%s,%s*3,.5)))*(%s-%s)' % (mn, bott, top, freq, vX, vY, vZ, octaves, lucanarity, mx, mn)\n\nx\['baked'].setValue(curValue)" +STARTLINE}
+addUserKnob {1 baked l "   baked" -STARTLINE}
+baked -45.0+smoothstep((0.0-.5),(0.0+.5),(fBm(frame*(0.235)+-3.5,-1.5,-1.5,2.0,0.0*3,.5)))*(45.5--45.0)
+}
