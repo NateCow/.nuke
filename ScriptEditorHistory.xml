@@ -1,1 +1,2 @@
-<?xml version="1.0" encoding="UTF-8"?><script>nuke.selectedNode()</script><script>nuke.selectedNode().knob('name').setValue(&quot;llamaGrade&quot;)</script><script>nuke.selectedNode().knob('name').setValue(testNode.label)</script>
+<?xml version="1.0" encoding="UTF-8"?><script>for i in nuke.selectedNodes():
+    i.knob('channels').setValue(&quot;rgb&quot;)</script><script></script>
