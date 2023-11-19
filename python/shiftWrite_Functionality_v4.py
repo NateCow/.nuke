@@ -52,6 +52,7 @@ renderFormatExt = renderFormatDict.get(renderFormatSelection)
 customLabelStr = str(nuke.thisNode().knob('customLabel').getValue())
 versionStr = str(nuke.thisNode().knob('vers').getValue())
 dirRoot = str(nuke.thisNode().knob('proj_root').getValue())
+shotRoot = str(nuke.thisNode().knob('shot_root').getValue())
 projName = dirRoot.split('/')[2]
 scriptStep = str(nuke.thisNode().knob('step').getValue())
 dirShot = str(nuke.thisNode().knob('shot').getValue())
@@ -64,7 +65,7 @@ elif len(nuke.thisNode().knob('customLabel').getValue()) > 0: #no custom label
 else:
     dirLabel = "_main"
 
-shotBaseDir = str(dirRoot+"/"+dirShot+"/") #do we need this?
+shotBaseDir = str(dirRoot+"/"+ dirShot +"/") #do we need this?
 renderFileName = dirShot + "_" + renderTypeStr + dirLabel + "_v" + versionStr
 
 if renderTypeSelection == 0:
@@ -78,14 +79,14 @@ elif renderTypeSelection == 4:
 else:
     subFolder = "Precomps/_Renders/"
 
-tempDir = (shotBaseDir + "/" + subFolder)
+renderDir = (shotRoot + "/" + subFolder)
     
 if nuke.thisNode().knob('renderFormat').getValue() == 3: #QT movie
     nuke.thisNode().knob('file_type').setValue(renderFormatExt)
-    nuke.thisNode().knob('file').setValue(tempDir + renderFileName + "/" + renderFormatExt + "/" + renderFileName + "." + renderFormatExt)
+    nuke.thisNode().knob('file').setValue(renderDir + renderFileName + "/" + renderFormatExt + "/" + renderFileName + "." + renderFormatExt)
 else:
     nuke.thisNode().knob('file_type').setValue(renderFormatExt)
-    nuke.thisNode().knob('file').setValue(tempDir + renderFileName + "/" + renderFormatExt + "/" + renderFileName + ".%0" + "4d." + renderFormatExt)
+    nuke.thisNode().knob('file').setValue(renderDir + renderFileName + "/" + renderFormatExt + "/" + renderFileName + ".%0" + "4d." + renderFormatExt)
 
 if nuke.thisNode().knob('renderFormat').getValue() == 2: #jpeg sequence
     nuke.thisNode().knob('file_type').setValue('jpeg')
