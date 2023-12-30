@@ -15,8 +15,20 @@
 # - Utilizing custom delivery names for DPX Comp renders only.
 #===============================================================================
 
+#===============================================================================
+# Example strings:
+# [project]_[sequence]_[shot number]_[pipeline step]_[descriptor]_[version].[frame].[extention]
+# bug_001_001_cmp_main_v001.1001.exr
+# Nuke filepath for script:
+# K
+#===============================================================================
 
 
+#===============================================================================
+#  Drop-down menus; merely getting index of selection.
+#  Probably a way to pull the actual string value,
+#  but I probably had trouble getting that to work
+#===============================================================================
 renderTypeSelection = int(nuke.thisNode().knob('renderType').getValue())
 renderFormatSelection = int(nuke.thisNode().knob('renderFormat').getValue())
 
@@ -49,8 +61,9 @@ renderFormatDict = {
 
 renderFormatExt = renderFormatDict.get(renderFormatSelection)
 
-
-customLabelStr = str(nuke.thisNode().knob('customLabel').getValue())
+# Several of these knobs are filters within the read node that breakdown the directory path and return sections of it.
+# 
+customLabelStr = str(nuke.thisNode().knob('customLabel').getValue()) # A text field for user to add custom labeling - bug_001_001_cmp_[customLabelStr]_v001
 versionStr = str(nuke.thisNode().knob('vers').getValue())
 dirRoot = str(nuke.thisNode().knob('proj_root').getValue())
 shotRoot = str(nuke.thisNode().knob('shot_root').getValue())
@@ -66,11 +79,16 @@ elif len(nuke.thisNode().knob('customLabel').getValue()) > 0: #no custom label
 else:
     dirLabel = "_main"
 
-shotBaseDir = str(dirRoot+"/"+ dirShot +"/") #do we need this?
+#===============================================================================
+# I know a .join('_') would go a long way for putting some elements together.
+# I just have to make sure everything is clean and doesn't already have an understore in it.
+#===============================================================================
+
+shotBaseDir = str(dirRoot+"/"+ dirShot +"/")    #do we need this?
 renderFileName = dirShot + "_" + renderTypeStr + dirLabel + "_v" + versionStr
 
-if renderTypeSelection == 0:
-    shotNumber = dirShot.split('_')[2]
+if renderTypeSelection == 0: #dpx
+    shotNumber = dirShot.split('_')[2]          #dirShot returns bug_001_001 so splits into list and grabs the last 3 digits
     subFolder = "Comp/_Renders/Event_Version 1_0001_0" + shotNumber + "_comp_v" + versionStr
     clientName = "A001C007_231213_R51W"
 elif renderTypeSelection == 2:
