@@ -1,0 +1,12 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+push $cut_paste_input
+Clamp {
+maximum_enable false
+MinClampTo {-0.00564956665 -0.00564956665 -0.00564956665 0}
+MinClampTo_enable true
+name Clamp1
+selected true
+xpos -296
+ypos 1398
+}

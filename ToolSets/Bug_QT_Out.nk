@@ -1,0 +1,32 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+push $cut_paste_input
+TimeOffset {
+ time_offset {{1001-(Read1.first)}}
+ time ""
+ name TimeOffset3
+ selected true
+ xpos -563
+ ypos 1708
+}
+Write {
+ file "K:/Freelance/Bug/5-SHOTS/001/Bug_001_004/Comp/_Renders/Event_Version 1_0001_0004_comp_v001.mov"
+ colorspace sRGB
+ file_type mov
+ meta_codec apch
+ mov32_pixel_format {{0} "default (YCbCrA 8-bit 444 Biased (r408))" "RGBA  8-bit" "YCbCrA 8-bit 444 Biased (r408)" "YCbCr  8-bit 422 (2vuy)"}
+ mov64_codec apch
+ mov64_bitrate 20000
+ mov64_bitrate_tolerance 40000000
+ mov64_quality_min 2
+ mov64_quality_max 31
+ mov64_gop_size 12
+ mov64_b_frames 0
+ checkHashOnRead false
+ in_colorspace linear
+ out_colorspace linear
+ name Write1
+ selected true
+ xpos -563
+ ypos 1734
+}

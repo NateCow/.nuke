@@ -1,0 +1,35 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+Constant {
+inputs 0
+channels rgb
+name Constant1
+selected true
+xpos -537
+ypos 1315
+}
+Shuffle {
+alpha white
+name Shuffle2
+selected true
+xpos -537
+ypos 1387
+}
+Crop {
+box {0 153 3840 2007}
+name Crop4
+label Letterbox
+selected true
+xpos -537
+ypos 1413
+}
+push $cut_paste_input
+push 0
+Keymix {
+inputs 3
+invertMask true
+name Keymix2
+selected true
+xpos -296
+ypos 1413
+}

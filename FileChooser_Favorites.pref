@@ -21,5 +21,7 @@ add_favorite_dir -image -script -project -python -font -geo -misc -sequence TheS
 add_favorite_dir -image -script -project -python -font -geo -misc -sequence HangmanShotsSSD HangmanShotsSSD "" K:/Freelance/hang/5-SHOTS/
 add_favorite_dir -image -script -project -sequence ZukoSSD ZukoSSD "" K:/Projects/Zuko/VFX/5-SHOTS/
 add_favorite_dir -image -script -project -python -font -geo -misc -sequence KAT KAT "" K:/Freelance/112234_Austedo/Shots/KAT/
+add_favorite_dir -image -script -project -python -font -geo -misc -sequence Bug1 Bug1 "" K:/Freelance/Bug/5-SHOTS/001/
+add_favorite_dir -image -script -project -python -font -geo -misc -sequence Bug2 Bug2 "" K:/Freelance/Bug/5-SHOTS/002/
 
 # End of generated file.
