@@ -1,7 +1,7 @@
 #===============================================================================
 # butWrite_Functionality_v2.py
-# Version: 2.0.1
-# Last Updated: January 29, 2024
+# Version: 2.0.2
+# Last Updated: February 6, 2024
 # Author: Nathaniel Caauwe
 # www.NateCow.com
 #===============================================================================
@@ -116,12 +116,18 @@ clientNameDict = {
     "Bug_002_002": "A005C005_231214_R51W", # TV Shot
     "Bug_002_003": "A005C006_231214_R51W", # TV Shot
     "Bug_003_001": "A004C050_231214_R51W",
-    "Bug_003_002": "A006C009_231214_R51W"
+    "Bug_003_002": "A006C009_231214_R51W",
+    "Bug_004_001": "A006C001_231214_R51W",
+    "Bug_004_002": "A006C009_231214_R51W",
+    "Bug_004_003": "A006C007_231214_R51W",
 }
 
 if renderTypeSelection == 0: # dpx
     shotNumber = dirShot.split('_')[2]          # '013' - dirShot returns 'Bug_001_013' so splits into list and grabs the last index item ([-1] would probably be better and allow for situations where I don't have sequence numbers)
-    subFolder = "Comp/_Renders/Event_Version 1_0001_0" + shotNumber + "_comp_v" + versionStr    # 'Comp/_Renders/Event_Version 1_0001_0013_comp_v001'
+    if dirShot.split('_')[1] == '004':
+        subFolder = "Comp/_Renders/Monster_Shot_0" + shotNumber + "_comp_v" + versionStr
+    else:
+        subFolder = "Comp/_Renders/Event_Version 1_0001_0" + shotNumber + "_comp_v" + versionStr    # 'Comp/_Renders/Event_Version 1_0001_0013_comp_v001'
     clientName = clientNameDict[dirShot]   # 'A007C012_231214_R51W'
     # The above only happens on the DPX selection because this project delivers DPX files as the original client name.
     # All other renders that I do internally to EXR, I leave with my internal naming.
