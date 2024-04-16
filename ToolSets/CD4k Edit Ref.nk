@@ -1,0 +1,57 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+Read {
+ inputs 0
+ file "T:/Projects/vapes_vs_nate_vs_boter_vs_tim/Core Differences.mp4"
+ format "1920 1080 0 0 1920 1080 1 HD_1080"
+ last 3068
+ frame_mode offset
+ frame -233.000000
+ origlast 3068
+ origset true
+ raw true
+ mov32_codec {{0} "H.264 Decoder (appl - avc1)"}
+ mov32_pixel_format {{0} "default (YCbCr  8-bit 422 (2vuy))" "RGBA  8-bit" "YCbCr  8-bit 422 (2vuy)"}
+ name Read6
+ selected true
+ xpos -1699
+ ypos 4369
+}
+TimeOffset {
+ time_offset -8
+ time ""
+ name TimeOffset4
+ selected true
+ xpos -1699
+ ypos 4467
+}
+Shuffle {
+ alpha white
+ name Shuffle8
+ selected true
+ xpos -1699
+ ypos 4522
+}
+Crop {
+ box {0 0 1920 1080}
+ name Crop3
+ selected true
+ xpos -1699
+ ypos 4548
+}
+Reformat {
+ name Reformat5
+ selected true
+ xpos -1699
+ ypos 4574
+}
+push $cut_paste_input
+Merge2 {
+ inputs 2
+ mix 0.495
+ name Merge15
+ label "\[ expr \{ \[value mix] * 100 \} ]%"
+ selected true
+ xpos -1461
+ ypos 4568
+}

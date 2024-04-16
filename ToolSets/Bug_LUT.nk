@@ -1,0 +1,36 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+push $cut_paste_input
+Group {
+name Bug_LUT
+tile_color 0xff00bfff
+label "Set Viewer To None"
+selected true
+xpos -260
+ypos 3531
+}
+Input {
+inputs 0
+name Input1
+xpos -230
+ypos 602
+}
+OCIOLogConvert {
+operation "lin to log"
+name OCIOLogConvert2
+xpos -230
+ypos 642
+}
+OCIOFileTransform {
+file K:/Freelance/Bug/5-SHOTS/004/ARRI_LogC2Video_709_adobe3d_33.cube
+working_space linear
+name OCIOFileTransform2
+xpos -230
+ypos 668
+}
+Output {
+name Output1
+xpos -230
+ypos 768
+}
+end_group

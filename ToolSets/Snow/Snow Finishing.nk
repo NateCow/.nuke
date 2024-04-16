@@ -1,0 +1,73 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+BackdropNode {
+ inputs 0
+ name BackdropNode1
+ tile_color 0x545454ff
+ label "Snow Sabers\nFinishing"
+ note_font_size 20
+ selected true
+ xpos -478
+ ypos -136
+ bdwidth 254
+ bdheight 418
+}
+push $cut_paste_input
+Dot {
+ name Dot3
+ selected true
+ xpos -434
+ ypos -56
+}
+set Nbb0a0000 [stack 0]
+Keyer {
+ invert true
+ operation "luminance key"
+ name Keyer2
+ selected true
+ xpos -314
+ ypos 5
+}
+push $Nbb0a0000
+Copy {
+ inputs 2
+ from0 rgba.alpha
+ to0 rgba.alpha
+ name Copy1
+ selected true
+ xpos -468
+ ypos 46
+}
+Grain2 {
+ name Grain2_1
+ label "Kodak 5248"
+ selected true
+ xpos -468
+ ypos 124
+ red_size 2.3
+ green_size 1.9
+ blue_size 1.5
+ red_m 0.42
+ black 0.009
+ minimum {0 0 0}
+}
+Crop {
+ box {0 12 1920 1069}
+ name Crop1
+ selected true
+ xpos -468
+ ypos 200
+}
+Crop {
+ box {0 0 1920 1080}
+ name Crop2
+ selected true
+ xpos -468
+ ypos 226
+}
+Reformat {
+ name Reformat5
+ selected true
+ xpos -468
+ ypos 252
+}

@@ -23,5 +23,7 @@ add_favorite_dir -image -script -project -sequence ZukoSSD ZukoSSD "" K:/Project
 add_favorite_dir -image -script -project -python -font -geo -misc -sequence KAT KAT "" K:/Freelance/112234_Austedo/Shots/KAT/
 add_favorite_dir -image -script -project -python -font -geo -misc -sequence Bug1 Bug1 "" K:/Freelance/Bug/5-SHOTS/001/
 add_favorite_dir -image -script -project -python -font -geo -misc -sequence Bug2 Bug2 "" K:/Freelance/Bug/5-SHOTS/002/
+add_favorite_dir -image -script -project -python -font -geo -misc -sequence cd4k cd4k "" "Core Differences Remaster" K:/Projects/cd4k_vfx/
+add_favorite_dir -image -script -project -python -font -geo -misc -sequence "Snow - VFX" "Snow - VFX" "" "K:/snow-vfx/5 - SHOTS/"
 
 # End of generated file.

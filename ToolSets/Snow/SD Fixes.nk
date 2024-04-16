@@ -1,0 +1,108 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+push $cut_paste_input
+Dot {
+ name Dot1
+ selected true
+ xpos -977
+ ypos -448
+}
+set N8fb11800 [stack 0]
+Reformat {
+ format "1920 1080 0 0 1920 1080 1 HD_1080"
+ black_outside true
+ name Reformat3
+ selected true
+ xpos -786
+ ypos -458
+}
+push $N8fb11800
+FieldSelect {
+ field Even
+ name FieldSelect3
+ selected true
+ xpos -1060
+ ypos -396
+}
+Reformat {
+ format "720 480 0 0 720 480 1.21212 "
+ resize distort
+ name Reformat1
+ selected true
+ xpos -1060
+ ypos -370
+}
+push $N8fb11800
+FieldSelect {
+ name FieldSelect2
+ selected true
+ xpos -940
+ ypos -400
+}
+Reformat {
+ format "720 480 0 0 720 480 1.21212 "
+ resize distort
+ name Reformat2
+ selected true
+ xpos -940
+ ypos -354
+}
+Dissolve {
+ inputs 2
+ which 0.5
+ name Dissolve1
+ selected true
+ xpos -1013
+ ypos -307
+}
+Transform {
+ translate {0 -1}
+ center {360 240}
+ shutteroffset centred
+ name Transform1
+ selected true
+ xpos -1013
+ ypos -269
+}
+Reformat {
+ format "1920 1080 0 0 1920 1080 1 HD_1080"
+ black_outside true
+ name Reformat4
+ selected true
+ xpos -1013
+ ypos -243
+}
+set N6db15c00 [stack 0]
+push $N6db15c00
+OFXcom.revisionfx.rsmb_regular_v3 {
+ menuTrackFrame "Previous Frame"
+ menuDisplay "Source Blurred"
+ UseGPU OFF
+ menuImagePrep "Gamma Enhance (Trk src is linear?)"
+ TrackRGBA false
+ Video360 false
+ MBAmount 0.5
+ MBSensitivity 70
+ CustomData_DoNotEdit aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+ name RSMB2
+ selected true
+ xpos -1092
+ ypos -179
+}
+Switch {
+ inputs 2
+ which {{curve x86 0 1}}
+ name Switch1
+ label "First/Last Frame fixes"
+ selected true
+ xpos -1013
+ ypos -122
+}
+Dot {
+ name Dot2
+ label "Keymix faces"
+ note_font "Verdana Bold"
+ selected true
+ xpos -979
+ ypos -54
+}

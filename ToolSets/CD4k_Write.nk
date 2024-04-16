@@ -1,0 +1,37 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+push $cut_paste_input
+Write {
+ file K:/Projects/cd4k_vfx/5-SHOTS/001/cd4k_001_016/Comp/Nuke/001/cd4k_001_016/Comp/_Renders/cd4k_001_016_cmp_main_v001/exr/cd4k_001_016_cmp_main_v001.%04d.exr
+ file_type exr
+ version 3
+ beforeRender "\n2\n3\nimport os\nif not os.path.isdir(os.path.dirname(nuke.thisNode()\['file'].evaluate())):\n  os.makedirs(os.path.dirname(nuke.thisNode()\['file'].evaluate()))"
+ name CD4k_Write
+ tile_color 0x83ff00ff
+ label "\nProject Root: \[value proj_root]\nSequence: \[value seq]\nShot Name: \[value shot]\nScript Name: \[value script]"
+ selected true
+ xpos -596
+ ypos 496
+ addUserKnob {20 User}
+ addUserKnob {4 renderType l "Render Type" M {Comp Precomp "Denoise Plate" Test Slap Matte ""}}
+ addUserKnob {4 renderFormat l Format M {DPX EXR JPEG MOV}}
+ renderFormat EXR
+ addUserKnob {1 customLabel l "Custom Label"}
+ addUserKnob {1 vers l Version}
+ vers 001
+ addUserKnob {4 framePadding l "Frame Padding" M {2 4 5 6}}
+ framePadding 4
+ addUserKnob {22 setPath l "Set Output Path" T "renderTypeSelection = int(nuke.thisNode().knob('renderType').getValue())\nrenderFormatSelection = int(nuke.thisNode().knob('renderFormat').getValue())\nframePaddingSelection = int(nuke.thisNode().knob('framePadding').getValue())\n\nrenderTypeDict = \{\n\t0: \"cmp_main\",\n\t1: \"prc\",\n\t2: \"DN\",\n\t3: \"test\",\n\t4: \"slp\",\n\t5: \"mat\",\n\}\n\nrenderTypeStr = renderTypeDict.get(renderTypeSelection)\n\nrenderFormatDict = \{\n\t0: \"dpx\",\n\t1: \"exr\",\n\t2: \"jpg\",\n\t3: \"mov\"\n\}\n\nrenderFormatExt = renderFormatDict.get(renderFormatSelection)\n\nframePaddingDict = \{\n\t0: \"2\",\n\t1: \"4\",\n\t2: \"5\",\n\t3: \"6\"\n\}\n\nframePaddingStr = framePaddingDict.get(framePaddingSelection)\n\ncustomLabelStr = str(nuke.thisNode().knob('customLabel').getValue())\nversionStr = str(nuke.thisNode().knob('vers').getValue())\ndirRoot = str(nuke.thisNode().knob('proj_root').getValue())\ndirSeq = str(nuke.thisNode().knob('seq').getValue())\ndirShot = str(nuke.thisNode().knob('shot').getValue())\ndirScript = str(nuke.thisNode().knob('script').getValue())\ndirLabel = \"_\" + str(nuke.thisNode().knob('customLabel').getValue())\n\nshotBaseDir = str(dirRoot+\"/\"+dirSeq+\"/\"+dirShot+\"/\")\n\nif renderTypeSelection == 0:\n\tsubFolder = \"Comp/_Renders/\"\nelif renderTypeSelection == 2:\n\tsubFolder = \"_Plates/Denoised/\"\nelif renderTypeSelection == 5:\n\tsubFolder = \"Roto/_Renders/\"\nelse:\n\tsubFolder = \"Precomps/_Renders/\"\n\nif len(nuke.thisNode().knob('customLabel').getValue()) > 0: #no custom label\n\tif nuke.thisNode().knob('renderFormat').getValue() == 3: #QT movie\n\t\tnuke.thisNode().knob('file_type').setValue(renderFormatExt)\n\t\tnuke.thisNode().knob('file').setValue(shotBaseDir + subFolder + dirShot + \"_\" + renderTypeStr + dirLabel + \"_v\" + versionStr + \".\" + renderFormatExt)\n\telse:\n\t\tnuke.thisNode().knob('file_type').setValue(renderFormatExt)\n\t\tnuke.thisNode().knob('file').setValue(shotBaseDir + subFolder + dirShot + \"_\" + renderTypeStr + dirLabel + \"_v\" + versionStr + \"/\" + renderFormatExt + \"/\" + dirShot + \"_\" + renderTypeStr + dirLabel + \"_v\" + versionStr + \".%0\" + framePaddingStr + \"d.\" + renderFormatExt)\nelse:\n\tif nuke.thisNode().knob('renderFormat').getValue() == 3: #QT movie\n\t\tnuke.thisNode().knob('file_type').setValue(renderFormatExt)\n\t\tnuke.thisNode().knob('file').setValue(shotBaseDir + subFolder + dirShot + \"_\" + renderTypeStr + \"_v\" + versionStr + \".\" + renderFormatExt)\n\telse:\n\t\tnuke.thisNode().knob('file_type').setValue(renderFormatExt)\n\t\tnuke.thisNode().knob('file').setValue(shotBaseDir + subFolder + dirShot + \"_\" + renderTypeStr + \"_v\" + versionStr + \"/\" + renderFormatExt + \"/\" + dirShot + \"_\" + renderTypeStr + \"_v\" + versionStr + \".%0\" + framePaddingStr + \"d.\" + renderFormatExt)\n\nif nuke.thisNode().knob('renderFormat').getValue() == 2: #jpeg sequence\n\tnuke.thisNode().knob('file_type').setValue('jpeg')\n\tnuke.thisNode().knob('_jpeg_quality').setValue('1')\n\n# Llamas. That is all." +STARTLINE}
+ addUserKnob {26 ""}
+ addUserKnob {26 note l Note: T "Adjust path fragments so that your project root matches your heirarchy.\nCurrently, the node assumes\nD:/Shows/Project/Sequence/Shot/scripts\nas the current project's location."}
+ addUserKnob {20 pathFragments l "Path Fragments" n 1}
+ addUserKnob {1 proj_root l "Project Root"}
+ proj_root "\[join \[lrange \[split \[value root.name] / ] 0 7 ] / ]"
+ addUserKnob {1 seq l Sequence}
+ seq "\[lrange \[split \[value root.name] / ] 4 4 ]"
+ addUserKnob {1 shot l "Shot Name"}
+ shot "\[lrange \[split \[value root.name] / ] 5 5 ]"
+ addUserKnob {1 script l "Script Name"}
+ script "\[file rootname \[file tail \[value root.name] ] ]"
+ addUserKnob {20 endGroup n -1}
+}
