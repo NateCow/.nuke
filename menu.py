@@ -176,6 +176,7 @@ import shortcut_operationSwitcher
 import moblur_controller
 import mixPercent
 import batchCommand
+import cowOnLoad
 
 
 
@@ -216,6 +217,7 @@ bvfxt.addCommand('FreezeWarp for Nukev7', 'freezeWarp_v2()','shift+F8', icon='bv
 import cryptomatte_utilities
 cryptomatte_utilities.setup_cryptomatte_ui()
 #>>>PrismStart
+'''
 import nuke
 if not nuke.env["studio"]:
 	import sys, os
@@ -226,5 +228,7 @@ if not nuke.env["studio"]:
 
 	import PrismCore
 	pcore = PrismCore.PrismCore(app="Nuke")
+'''
+
 
 

@@ -26,9 +26,11 @@
 #  Drop-down menus; returns index of selection
 #  and then matches that to dictionary keys in pipeCodeSelect and renderFormatSelect
 #  Probably a way to pull the actual string value,
-#  but I probably had trouble getting that to work
-#  I need a better way to name the dictionaries; I don't like 'dict' :P 
+#  but I probably had trouble getting that to work.
 #===============================================================================
+
+import nuke
+import cowOnLoad
 
 
 pipeCodeUserSelect = int(nuke.thisNode().knob('pipeSelect').getValue())
@@ -50,7 +52,7 @@ pipeCodeFolder = {
     "plt_DN": "_Plates/Denoised",
     "roto": "Roto/_Renders",
     "pnt": "Paint/_Renders",
-    "test": "Precomps/_Renders"
+    "test": "Precomps/_Renders",
     "plt": "_Plates"
 }
 
@@ -64,6 +66,17 @@ renderFormatSelect = {
 }
 
 renderFormatExt = renderFormatSelect.get(renderFormatUserSelect)
+
+#===============================================================================
+# Remapping variables from cowOnLoad.roundUpVariables()
+#===============================================================================
+
+currentDescriptor = cowOnLoad.currentDescriptor
+currentSceneDir = cowOnLoad.currentSceneDir
+currentPipeStep = cowOnLoad.currentPipeStep
+currentVersionStr = cowOnLoad.currentVersionStr
+currentSceneNameFull = cowOnLoad.currentSceneNameFull
+
 
 #===============================================================================
 # Example Nuke filepath for script (root.name within Nuke):
@@ -85,14 +98,14 @@ else: # Otherwise assume "main". Hard-coding the underscore is stupid.
 
 
 
-renderDir = currentSceneDir + '/' + currentPipeStep
+renderDir = currentSceneDir + '/' + pipeFolder[renderTypeStr]
 renderFilenameList = [currentSceneNameFull, renderTypeStr, renderLabel, "v" + currentVersionStr]
 renderFileName = "_".join(renderFilenameList)
 #renderFileName = currentSceneNameFull + "_" + renderTypeStr + renderLabel + "_v" + versionUserDefined   # Name for render without frame padding or file exension - Bug_001_013_cmp_main_v001.
                                                                                 # Note in the case of Bug, this doesn't get used for cmp_main renders. I write out to the client name below.
 
 pipeFolder = pipeCodeFolder[renderTypeStr]
-renderDir = (shotRoot + "/" + pipeFolder)
+#renderDir = (shotRoot + "/" + pipeFolder)
 #fileOutputListQT = [renderDir, renderFileName, renderFormatExt]
 #fileOutputListImageSeq =  [renderDir, renderFileName,]
 
