@@ -29,9 +29,11 @@
 #  but I probably had trouble getting that to work.
 #===============================================================================
 
+#def llamaTest():
+#    print("Llamas. That is all.")
+
 import nuke
 import cowOnLoad
-
 
 pipeCodeUserSelect = int(nuke.thisNode().knob('pipeSelect').getValue())
 renderFormatUserSelect = int(nuke.thisNode().knob('renderFormat').getValue())
@@ -57,6 +59,7 @@ pipeCodeFolder = {
 }
 
 renderTypeStr = pipeCodeSelect.get(pipeCodeUserSelect)
+pipeFolder = pipeCodeFolder[renderTypeStr]
 
 renderFormatSelect = {
     0: "dpx",
@@ -87,18 +90,18 @@ customLabelStr = str(nuke.thisNode().knob('customLabel').getValue())        # Us
 versionUserDefined = str(nuke.thisNode().knob('vers').getValue())           # User field: Bug_001_013_cmp_main_v[versionUserDefined]
 
 if pipeCodeUserSelect == 2:
-    if len(nuke.thisNode().knob('customLabel').getValue()) > 0:
+    if len(customLabelStr) > 0:
         renderLabel = "plt_DN" + str(nuke.thisNode().knob('customLabel').getValue())       # If custom label is filled in on Denoise Plate selection, label is "DN[customLabel]"
     else:
         renderLabel = "plt_DN"
-elif len(nuke.thisNode().knob('customLabel').getValue()) > 0: # Any text detected in custom label field gets assigned here.
-    renderLabel = str(nuke.thisNode().knob('customLabel').getValue())
+elif len(customLabelStr) > 0: # Any text detected in custom label field gets assigned here.
+    renderLabel = customLabelStr
 else: # Otherwise assume "main". Hard-coding the underscore is stupid.
     renderLabel = currentDescriptor
 
 
 
-renderDir = currentSceneDir + '/' + pipeFolder[renderTypeStr]
+renderDir = currentSceneDir + '/' + pipeFolder
 renderFilenameList = [currentSceneNameFull, renderTypeStr, renderLabel, "v" + currentVersionStr]
 renderFileName = "_".join(renderFilenameList)
 #renderFileName = currentSceneNameFull + "_" + renderTypeStr + renderLabel + "_v" + versionUserDefined   # Name for render without frame padding or file exension - Bug_001_013_cmp_main_v001.
@@ -121,10 +124,10 @@ if nuke.thisNode().knob('renderFormat').getValue() == 2: # Knobs specific to jpe
     nuke.thisNode().knob('file_type').setValue('jpeg')
     nuke.thisNode().knob('_jpeg_quality').setValue('1')
 
-
-
-
-
-
+outputDir = nuke.thisNode().knob('file').getValue()
+outputMessage = "File out directory set to: " + outputDir
+#print("test")
+#print("llamas")
+print(outputMessage)
 
 # Llamas. That is all.

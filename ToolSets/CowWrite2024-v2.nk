@@ -2,18 +2,18 @@ set cut_paste_input [stack 0]
 version 10.0 v4
 push $cut_paste_input
 Write {
- file K:/Freelance/Tonal/5-SHOTS/000/TNL_000_027/Comp/TNL_000_027_cmp_main_v002/exr/TNL_000_027_cmp_main_v002.%04d.exr
+ file K:/Freelance/Tonal/5-SHOTS/000/TNL_000_027/Comp/_Renders/TNL_000_027_cmp_main_v002/exr/TNL_000_027_cmp_main_v002.%04d.exr
  file_type exr
  version 4
  beforeRender "\n2\n3\nimport os\nif not os.path.isdir(os.path.dirname(nuke.thisNode()\['file'].evaluate())):\n  os.makedirs(os.path.dirname(nuke.thisNode()\['file'].evaluate()))"
  name CowWrite2024
  tile_color 0x9fffff
  label "\nCustom Label: \[knob customLabel]\nCustom Version: \[knob vers]"
- note_font "Verdana Bold Bold"
+ note_font "Verdana Bold Bold Bold"
  note_font_size 12
  selected true
- xpos 71
- ypos 1923
+ xpos -289
+ ypos 1941
  addUserKnob {20 User}
  addUserKnob {4 pipeSelect l "Pipeline Step" M {Comp Precomp "Denoise Plate" Roto Paint Test Plate "" "" ""}}
  addUserKnob {4 renderFormat l Format M {DPX EXR JPEG MOV}}
@@ -22,7 +22,7 @@ Write {
  addUserKnob {26 customLabelNote l "" +STARTLINE T "If Custom Label is empty, renders will take on \"main\" as their descriptor.\nDenoise plates will be \"DN\" by default but can be overridden to \"DN\[yourtext]\""}
  addUserKnob {1 vers l Version t "If unspecified, will inheret current project version."}
  addUserKnob {26 versionNote l "" +STARTLINE T "Version will pull from the current project version by default.\nUse this if you need to override that."}
- addUserKnob {22 setPath l "Set Output Path" t "Click to set file output directory based on parameters above." T "import cowWrite2024_Functionality_v2.py" +STARTLINE}
+ addUserKnob {22 setPath l "Set Output Path" t "Click to set file output directory based on parameters above." T "import nuke\nimport cowOnLoad\nimport cowWriteGo\n\ncowWriteGo.setFileOut()" +STARTLINE}
  addUserKnob {26 ""}
  addUserKnob {22 refresh l "Refresh Project Variables" t "This will likely need to be refreshed if you've versioned up without re-opening the script." T "import nuke\nimport cowOnLoad\n\ncowOnLoad.roundUpVariables()" +STARTLINE}
  addUserKnob {20 endGroup n -1}
