@@ -1,7 +1,7 @@
 #===============================================================================
 # cowOnLoad.py
 # Version: 1.0.0
-# Last Updated: April 16, 2024
+# Last Updated: April 29, 2024
 # Author: Nathaniel Caauwe
 # www.NateCow.com
 #===============================================================================
@@ -9,9 +9,12 @@
 #===============================================================================
 # USAGE:
 #
-# - To be executed on project load, storing variables for custom write node tool.
-# - May initially set this as a menu command to run, in case project opening doesn't follow pattern.
+# - Available to run under the Cow menu, or pressing F8.
+# - Available as "Refresh project variables" button in the User tap of a CowWrite2024-v2 node.
+#
+# TODO:
 # - Should do a check initially to make sure file hierarchy and filename match pipeline.
+# - Execute on project load if filename/hierarchy checks out.
 #===============================================================================
 
 import nuke
