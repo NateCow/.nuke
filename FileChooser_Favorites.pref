@@ -26,5 +26,6 @@ add_favorite_dir -image -script -project -python -font -geo -misc -sequence Bug2
 add_favorite_dir -image -script -project -python -font -geo -misc -sequence cd4k cd4k "" "Core Differences Remaster" K:/Projects/cd4k_vfx/
 add_favorite_dir -image -script -project -python -font -geo -misc -sequence "Snow - VFX" "Snow - VFX" "" "K:/snow-vfx/5 - SHOTS/"
 add_favorite_dir -image -script -project -python -font -geo -misc -sequence Tonal Tonal "" K:/Freelance/Tonal/5-SHOTS/000/
+add_favorite_dir -image -script -project -python -font -geo -misc -sequence "TLR Shots" "TLR Shots" "" K:/Freelance/TheLastRodeo/5-SHOTS/
 
 # End of generated file.
