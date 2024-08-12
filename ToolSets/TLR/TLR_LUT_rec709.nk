@@ -1,0 +1,40 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+push $cut_paste_input
+Group {
+ name TLR_LUT_bull_rec709
+ tile_color 0xff005fff
+ note_font "Verdana Bold Bold Bold Bold Bold Bold Bold Bold Bold"
+ note_font_size 15
+ selected true
+ xpos -514
+ ypos -366
+ hide_input true
+}
+ Input {
+  inputs 0
+  name Input1
+  xpos -563
+  ypos -332
+ }
+ OCIOColorSpace {
+  in_colorspace linear
+  out_colorspace rec709
+  name OCIOColorSpace1
+  xpos -563
+  ypos -292
+ }
+ OCIOFileTransform {
+  file "K:/Freelance/TheLastRodeo/4-ASSETS/Color/TLR_INTERIOR BULL RIDING_V2_LOG2709.cube"
+  working_space linear
+  name OCIOFileTransform1
+  xpos -563
+  ypos -266
+  disable true
+ }
+ Output {
+  name Output1
+  xpos -563
+  ypos -166
+ }
+end_group

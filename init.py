@@ -16,8 +16,8 @@ nuke.pluginAddPath('./icons')
 
 
 # Project Settings > Default format: TWWS
-nuke.knobDefault("Root.format", "Zuko 2k Full")
-nuke.knobDefault("fps", "24")
+nuke.knobDefault("Root.format", "The Last Rodeo 4k")
+nuke.knobDefault("fps", "23.976")
 
 
 nuke.addFormat("4096 1728 1 Memoir_4k")
@@ -45,6 +45,7 @@ nuke.addFormat("2048 1152 1 Zuko 2k Full")
 nuke.addFormat("2048 952 1 Zuko 2k Crop")
 nuke.addFormat("3840 1607 1 Hangman 4k")
 nuke.addFormat("4608 3164 1 The Shift 4k")
+nuke.addFormat("4096 2304 1 The Last Rodeo 4k")
 
 nuke.pluginAddPath('j:/nuke_plugins')
 nuke.pluginAddPath('j:/nuke_plugins/errorReport')
