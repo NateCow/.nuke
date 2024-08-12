@@ -1,1 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><script>test = nuke.root().name()</script><script>test</script><script>test2 = nuke.selectedNode()['file'].value()</script><script>test2</script><script></script>
