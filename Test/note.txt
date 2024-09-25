@@ -1,0 +1,6 @@
+
+2
+3
+import os
+if not os.path.isdir(os.path.dirname(nuke.thisNode()['file'].evaluate())):
+  os.makedirs(os.path.dirname(nuke.thisNode()['file'].evaluate()))
