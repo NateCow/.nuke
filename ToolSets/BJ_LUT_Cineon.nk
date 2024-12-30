@@ -1,0 +1,40 @@
+set cut_paste_input [stack 0]
+version 10.0 v4
+push $cut_paste_input
+Group {
+name Viewer_LUT
+tile_color 0x1f00ffff
+label "Cineon + LUT"
+note_font "Verdana Bold Bold Bold Bold Bold Bold Bold"
+note_font_size 20
+selected true
+xpos -309
+ypos -385
+hide_input true
+}
+Input {
+inputs 0
+name Input1
+xpos -520
+ypos -442
+}
+OCIOColorSpace {
+in_colorspace linear
+out_colorspace Cineon
+name OCIOColorSpace1
+xpos -520
+ypos -376
+}
+OCIOFileTransform {
+file "K:/Freelance/BenJerrys/4-ASSETS/Color/TC - SONY CONVERSION_STANDARD CONVERSION.cube"
+working_space linear
+name OCIOFileTransform1
+xpos -520
+ypos -300
+}
+Output {
+name Output1
+xpos -520
+ypos -205
+}
+end_group
