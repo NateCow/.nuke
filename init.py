@@ -47,7 +47,6 @@ nuke.addFormat("3840 1607 1 Hangman 4k")
 nuke.addFormat("4608 3164 1 The Shift 4k")
 nuke.addFormat("4096 2304 1 The Last Rodeo 4k")
 nuke.addFormat("2160 3840 1 4k Vertical")
-nuke.addFormat("3164 4608 1 4.5k Vertical")
 
 nuke.pluginAddPath('j:/nuke_plugins')
 nuke.pluginAddPath('j:/nuke_plugins/errorReport')
